@@ -3,7 +3,11 @@
 use App\Http\Controllers\EcofriendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
-use App\Http\Controllers\Page\OprecController;
+use App\Http\Controllers\OpenRecruitment\OprecController;
+use App\Http\Controllers\OpenRecruitment\OprecTableController;
+use App\Http\Controllers\Auth\RegisterAdminController;
+use App\Http\Controllers\Auth\LoginAdminController;
+use App\Http\Controllers\Auth\LogoutAdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,10 +36,20 @@ Route::get('/', function () {
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
-Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecform');
 Route::get('/register', [EcofriendController::class, 'registerView'])->name('registerView');
 Route::post('/register', [EcofriendController::class, 'register'])->name('register');
+Route::post('/open-recruitment-form', [OprecController::class,'viewform'])->name('oprecForm');
 
+
+Route::post('/logoutAdmin',[LogoutAdminController::class, 'store'])->name('logoutAdmin');
+
+Route::get('/registerAdmin',[RegisterAdminController::class, 'index'])->name('registerAdmin');
+Route::post('/registerAdmin',[RegisterAdminController::class, 'store']);
+
+Route::get('/loginAdmin',[LoginAdminController::class, 'index'])->name('loginAdmin');
+Route::post('/loginAdmin',[LoginAdminController::class, 'store']);
+
+Route::get('/admin-table',[OprecTableController::class, 'index'])->name('oprecTable');
 
 // Redirect home on random url
 Route::any(
