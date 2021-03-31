@@ -14,6 +14,15 @@ use App\Http\Controllers\Page\OprecController;
 |
 */
 
+Route::get('/test', function () {
+  $test = DB::table('user')->get();
+  $maxval = DB::table('progressutopia')->count();
+  $minval = DB::table('progressutopia')->where('status','=',1)->count();
+  return view('test.test',
+  ['tests' => $test,
+   'maxval' => $maxval,
+   'minval' => $minval]);
+});
 
 Route::get('/', function () {
     return view('cms.page.home', ['title' => 'UMN ECO 2021']);
@@ -29,3 +38,4 @@ Route::post('/open-recruitment-form', [OprecController::class,'viewform'])->name
 Route::any('{query}',
   function() { return redirect('/'); })
   ->where('query', '.*');
+
