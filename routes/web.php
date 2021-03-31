@@ -19,15 +19,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 |
 */
 
-Route::get('/test', function () {
-  $test = DB::table('user')->get();
-  $maxval = DB::table('progressutopia')->count();
-  $minval = DB::table('progressutopia')->where('status','=',1)->count();
-  return view('test.test',
-  ['tests' => $test,
-   'maxval' => $maxval,
-   'minval' => $minval]);
-});
+
 
 Route::get('/', function () {
   return view('cms.page.home', ['title' => 'UMN ECO 2021']);
@@ -38,18 +30,18 @@ Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecV
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 Route::get('/register', [EcofriendController::class, 'registerView'])->name('registerView');
 Route::post('/register', [EcofriendController::class, 'register'])->name('register');
-Route::post('/open-recruitment-form', [OprecController::class,'viewform'])->name('oprecForm');
+Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
 
 
-Route::post('/logoutAdmin',[LogoutAdminController::class, 'store'])->name('logoutAdmin');
+Route::post('/logoutAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
 
-Route::get('/registerAdmin',[RegisterAdminController::class, 'index'])->name('registerAdmin');
-Route::post('/registerAdmin',[RegisterAdminController::class, 'store']);
+Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
+Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 
-Route::get('/loginAdmin',[LoginAdminController::class, 'index'])->name('loginAdmin');
-Route::post('/loginAdmin',[LoginAdminController::class, 'store']);
+Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
+Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 
-Route::get('/admin-table',[OprecTableController::class, 'index'])->name('oprecTable');
+Route::get('/admin-table', [OprecTableController::class, 'index'])->name('oprecTable');
 
 // Redirect home on random url
 Route::any(
@@ -57,5 +49,4 @@ Route::any(
   function () {
     return redirect('/');
   }
-)
-  ->where('query', '.*');
+)->where('query', '.*');
