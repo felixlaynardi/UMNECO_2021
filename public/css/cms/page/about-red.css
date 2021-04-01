@@ -27,7 +27,16 @@ body, html {
 
 .red-content p{
     text-align: justify;
+    align-items: center;
+    top: 50%;
 }
+
+.logo {
+    display: flex;
+    justify-content: center;
+}
+
+
 
 .cloud {
     left: -300px;
@@ -41,14 +50,15 @@ body, html {
     left: -50%;
     position:absolute;
     object-fit: cover;
-    top:300px;
-    z-index: 0;
+    top:150px;
+    z-index: 1;
     width: "300px";
 }
 
 .city {
     bottom: 0;
-    z-index: 1;
+    position:relative;
+    z-index: 3;
 }
 
 .section-2{
@@ -56,4 +66,7 @@ body, html {
     z-index: 99;
 }
 
-
+.logo-red {
+    width: 75%;
+    background-color: white;
+}
