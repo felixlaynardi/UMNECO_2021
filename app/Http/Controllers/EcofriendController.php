@@ -89,9 +89,18 @@ class EcofriendController extends Controller
     {
         //Change email title and add name and other data to be sent to registerMail.blade.php
         $details = [
-            'title' => '[WELCOME TO RED, ECO FRIENDS!]',
+            'title' => '[WELCOME TO RED, ' . $data['name'] . ']',
+            'name' => $data['name']
         ];
 
         Mail::to($data['email'])->send(new RegisterMail($details));
+    }
+
+    public function login($data)
+    {
+    }
+
+    public function loginView($data)
+    {
     }
 }
