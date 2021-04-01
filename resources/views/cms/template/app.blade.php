@@ -21,8 +21,6 @@
     <link rel="stylesheet" href="{{ asset('css/cms/base/preloader.css') }}">
     <!-- Custom Navbar -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/navbar.css') }}">
-    <!-- Slick-1.8.1 -->
-    <link rel="stylesheet" href="{{ asset('css/cms/base/slick-1.8.1/slick.css') }}">
     <!-- Footer -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/footer.css') }}">
     <!-- Jquery UI -->
@@ -52,8 +50,6 @@
     <script src="{{ asset('js/cms/base/gsap-3.6.0/gsap.min.js') }}"></script>
     <script src="{{ asset('js/cms/base/gsap-3.6.0/ScrollTrigger.min.js') }}"></script>
     <!-- <script src="{{ asset('js/cms/base/gsap-3.6.0/CSSRulePlugin.min.js') }}"></script> -->
-    <!-- Slick-1.8.1 -->
-    <script src="{{ asset('js/cms/base/slick-1.8.1/slick.min.js') }}"></script>
     <!-- Sweetalert -->
     <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
     <!-- Preloader -->
