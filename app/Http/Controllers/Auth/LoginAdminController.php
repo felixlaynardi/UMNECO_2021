@@ -7,22 +7,25 @@ use Illuminate\Http\Request;
 
 class LoginAdminController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         $this->middleware(['guest']);
     }
 
-    public function index(){
+    public function index()
+    {
         return view('admin.page.admin_login');
     }
 
-    public function store(Request $request){
-        $this->validate($request,[
+    public function store(Request $request)
+    {
+        $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required'
         ]);
 
-        if(!auth()->attempt($request->only('email','password'), $request->remember)){
-            return back()->with('status','Invalid login details');
+        if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
+            return back()->with('status', 'Invalid login details');
         };
 
         return redirect()->route('oprecTable');

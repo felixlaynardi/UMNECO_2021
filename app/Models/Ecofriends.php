@@ -15,9 +15,9 @@ class EcoFriends extends Model
         return DB::table('eco_friends')->get();
     }
 
-    public function getEcoFriendsByStudentId($id)
+    public function getEcoFriendsByEmail($email)
     {
-        return DB::table('eco_friends')->where('Student_id', $id)->first();
+        return DB::table('eco_friends')->where('email', $email)->first();
     }
 
     public function registerEcoFriend($data)
