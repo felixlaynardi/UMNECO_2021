@@ -21,7 +21,7 @@ body {
 }
 
 .content-container{
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 /* styling header */
@@ -42,7 +42,7 @@ body {
     font-size: 45px;
     line-height: 65px;
     color: #FFF;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .profile-name{
@@ -52,7 +52,7 @@ body {
     font-size: 92px;
     line-height: 65px;
     color: #FFF;
-    margin-left: 10%;
+    margin-left: 15%;
 }
 
 .profile-data{
@@ -155,8 +155,8 @@ body {
     right: 0;
     width: 50%;
     height: 150px;
-    border-top-left-radius: 90px;
-    border-bottom-left-radius: 90px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     background: #FF416C;  /*fallback for old browsers*/
     background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -165,7 +165,6 @@ body {
     font-style: normal;
     font-weight: 700;
     color: #fff;
-    font-size: 30px;
  }
 .time-count p{
     text-align: center;

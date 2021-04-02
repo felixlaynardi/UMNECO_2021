@@ -49,7 +49,7 @@
                 </div>
                 <div class="time-count">
                     <p>Time Left For Submission</p>
-                    <p>01:12:34</p>
+                    <p>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;01:12:34</p>
                 </div>
             </div>
         </div>
