@@ -1,5 +1,9 @@
 <!--Ganti error message didalem div yang classnya error, if nya sesuain cari error gara2 apa -->
-<form action="{{route('register')}}" method="post">
+
+<div class="container-fluid">
+    <img src="/images/regis/Header.png">
+</div>
+<form action="{{route('register')}}" method="post" class="form">
     @csrf
     <input type="text" name="name" id="name" placeholder="name">
     @if($errors->has('name'))
@@ -61,3 +65,8 @@
 
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+<footer>
+<img src="/images/login/Footer.png">
+<img src="/images/login/Logo Footer.png">
+</footer>
+</header>
