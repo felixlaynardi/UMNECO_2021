@@ -16,7 +16,11 @@ body {
     /* background-image: url(../../../images/home/graphics_1.png); */
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: wheat;
+    background-color: #e8d3d3;
+}
+
+.content-container{
+    margin-left: 10%;
 }
 
 /* styling header */
@@ -34,7 +38,7 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
+    font-size: 45px;
     line-height: 65px;
     color: #FFF;
     margin-left: 10%;
@@ -54,60 +58,39 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 35px;
-    line-height: 56px;
+    font-size: 45px;
+    line-height: 100px;
     color: #161616;
-    margin: 18px 0px 0px 8px;
+    
 }
 
 .profile-name-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 56px;
     color: #161616;
-    margin: 1.8px 0px 0px 8px;
+    
 }
 
 .profile-nim-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 56px;
     color: #161616;
-    margin: 1.8px 0px 0px 8px;
 }
 
 .profile-email-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 30px;
     line-height: 56px;
     color: #161616;
-    margin: 1.8px 0px 0px 8px;
-}
-
-.profile-journey-bg {
-    width: 50%;
-    margin-right: 100px;
-    padding-top: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.profile-journey{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    text-align: right;
-    line-height: 56px;
-    color: #fff;
-    margin-left: 30%;
+    
 }
 
 .logout{
@@ -121,6 +104,24 @@ body {
 
 .logout img{
     width: 100px;
+}
+
+.profile-journey-bg {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+      
+}
+
+.profile-journey{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: right;
+    line-height: 56px;
+    color: #fff;
+    margin-right: 30%;
 }
 
 

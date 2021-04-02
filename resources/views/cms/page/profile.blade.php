@@ -20,26 +20,27 @@
             <img src="images/profile/Log Out@2x.png" alt=""><p>LOG OUT</p>
         </a>
         </div>
-        <div class="profile-data">
-            ECO Friend Profile
-        </div>
-        <div class="profile-data-eco-friend">
-            <div class="profile-name-eco-friend">
-                Name:
+        <div class="content-container">
+            <div class="profile-data">
+                ECO Friend Profile
             </div>
-            <div class="profile-nim-eco-friend">    
-                NIM:
+            <div class="profile-data-eco-friend">
+                <div class="profile-name-eco-friend">
+                    Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                </div>
+                <div class="profile-nim-eco-friend">    
+                    NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                </div>
+                <div class="profile-email-eco-friend">
+                    Student Email &emsp;&nbsp;:
+                </div>
             </div>
-            <div class="profile-email-eco-friend">
-                Student Email:
-            </div>
-        </div>
-<!--         
-        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/home">Logout<i class="fa fa-power-off"></i></a></li> -->
-        
-        <div class="profile-journey-bg" style="padding-top:10rem;padding-bottom:10rem;background-image:url({{ asset('images/profile/Bar Merah Your Journey@2x.png') }});">
-            <div class="profile-journey">
-                YOUR JOURNEY IN RED
+
+            <div class="profile-journey-bg">
+                <div class="profile-journey">
+                    YOUR JOURNEY IN RED
+                </div>
+                
             </div>
         </div>
     </div>
