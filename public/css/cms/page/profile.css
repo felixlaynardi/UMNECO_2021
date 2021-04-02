@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Heavitas";
+    font-family: "MADE Tommy Soft";
     font-style: normal;
     font-weight: bold;
 }
@@ -24,7 +24,7 @@ body {
 
 .profile-header {
     width: 120%;
-    margin: auto;
+    /* margin: auto; */
     padding-top: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     line-height: 65px;
     color: #F4ECDC;
     margin-left: 10%;
@@ -44,7 +44,7 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 102px;
+    font-size: 92px;
     line-height: 65px;
     color: #F4ECDC;
     margin-left: 10%;
@@ -53,10 +53,56 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 35px;
     line-height: 56px;
     color: #161616;
-    margin: 0.8px 0.9px 0px 0px;
+    margin: 18px 0px 0px 8px;
+}
+.profile-name-eco-friend{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 56px;
+    color: #161616;
+    margin: 1.8px 0px 0px 8px;
+}
+.profile-nim-eco-friend{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 56px;
+    color: #161616;
+    margin: 1.8px 0px 0px 8px;
+}
+.profile-email-eco-friend{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 56px;
+    color: #161616;
+    margin: 1.8px 0px 0px 8px;
+}
+
+.profile-journey-bg {
+    width: 80%;
+    margin-right: 100px;
+    padding-top: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.profile-journey{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    text-align: right;
+    line-height: 56px;
+    color: #161616;
+    margin-left: 30%;
 }
 /* .oprec-text {
     width: 60%;
