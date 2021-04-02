@@ -21,6 +21,15 @@
 //     utile.style.display = "block";
 // }
 
-function togglePopup(){
+function togglePopup1(){
     document.getElementById("rise").classList.toggle("active");
+}
+function togglePopup2(){
+    document.getElementById("utopia").classList.toggle("active");
+}
+function togglePopup3(){
+    document.getElementById("raconteur").classList.toggle("active");
+}
+function togglePopup4(){
+    document.getElementById("utile").classList.toggle("active");
 }

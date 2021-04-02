@@ -18,24 +18,28 @@ body, html {
 
 /* -----section1----- */
 .section-1 {
-    padding-top: 50vh;
+    padding-top: 575px;
     padding-bottom: 100px;
     min-height: 200vh;
 }
 
 .red-content {
     z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .red-content p{
-    text-align: justify;
-    align-items: center;
     top: 50%;
 }
 
 .about-logo {
     display: flex;
     justify-content: center;
+}
+.logo-red {
+    width: 75%;
 }
 
 
@@ -47,10 +51,6 @@ body, html {
     justify-content: center;
 }
 
-.logo-red {
-    width: 75%;
-    background-color: white;
-}
 
 .city {
     bottom: 0;
@@ -98,8 +98,62 @@ body, html {
     background: rgba(0,0,0,0.7); /* Black w/ opacity */
 }
 
+.popup-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.671);
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
 
-.popup-page .popup-content {
+.popup-content {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.popup-rise{
+    background-image: url(../../../images/about-red/rise.png);
+}
+.popup-utopia{
+    background-image: url(../../../images/about-red/utopia.png);
+}
+.popup-raconteur{
+    background-image: url(../../../images/about-red/raconteur.png);
+}
+.popup-utile{
+    background-image: url(../../../images/about-red/utile.png);
+}
+
+.close-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 50px;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+}
+
+.popup-bg.active {
+    display: flex;
+    transition: all 300ms ease-in-out;
+}
+/* .popup-page .popup-content {
 
     background: rgba(0,0,0,0.7);
     background-image: url(../../../images/about-red/rise.png);
@@ -130,7 +184,7 @@ body, html {
 .popup-page.active .popup-content{
     transition: all 300ms ease-in-out;
     transform: translate(-50%, -50%) scale(1);
-}
+} */
 
 
 /* -----section4----- */
@@ -175,10 +229,25 @@ body, html {
 }
 
 .circle {
-    left: -50%;
+    left: -40%;
     position:absolute;
     object-fit: cover;
     top:150px;
     z-index: 1;
     width: "300px";
+}
+
+.white-circle {
+    position: absolute;
+    background-color: white;
+    z-index: 3;
+    border-radius: 50%;
+    left: -20%;
+    top: 500px;
+}
+
+.white-circle img{
+    visibility: hidden;
+    width: 867.5px;
+
 }
