@@ -16,7 +16,7 @@
         <div class="profile-name">
             NIKOLAS
         </div>
-        <a href="" class="logout">
+        <a href="/logout" class="logout">
             <img src="images/profile/Log Out@2x.png" alt="">
             <p>LOG OUT</p>
         </a>
@@ -28,7 +28,7 @@
         
         <div class="profile-data-eco-friend">
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
             </div>
             <div class="profile-nim-eco-friend">
                 NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:

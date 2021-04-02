@@ -35,11 +35,11 @@ Route::get('/register', [EcofriendController::class, 'registerView'])->name('reg
 Route::post('/register', [EcofriendController::class, 'register'])->name('register');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
-Route::post('/logout', [EcofriendController::class, 'logout'])->name('logout');
+Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 
 
 //admin side
-Route::post('/logoutAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
+Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
 Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
 Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 
