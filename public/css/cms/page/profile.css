@@ -137,12 +137,17 @@ body {
     grid-template-columns: auto auto auto;
     grid-template-rows: 80px 50px;
     grid-gap: 10px;
-    background-color: #2196F3;
+    /* background-color: #2196F3; */
     padding: 10px;
 }
 
 .day-count p{
-    font-size: 60px;
+    font-size: 130px;
+    font-weight: 900;
+}
+
+.day-left p{
+    font-size: 50px;
 }
 
 .time-count{    
@@ -152,16 +157,15 @@ body {
     height: 150px;
     border-top-left-radius: 90px;
     border-bottom-left-radius: 90px;
-    background: #FF416C;  fallback for old browsers
+    background: #FF416C;  /*fallback for old browsers*/
     background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-size: 50px;
     text-align: center;
-    /* line-height: 34px; */
+    font-size: 50px;
     font-style: normal;
     font-weight: 700;
     color: #fff;
-    font-size: 46px;
+    font-size: 30px;
  }
 .time-count p{
     text-align: center;
