@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use DB;
 
 class EcofriendController extends Controller
 {
@@ -20,6 +21,7 @@ class EcofriendController extends Controller
 
     public function login(Request $request)
     {
+               
         $model = new Ecofriends();
         if ($request->input('action') == "register") {
             return redirect()->route('registerView');
@@ -30,13 +32,31 @@ class EcofriendController extends Controller
                 $request->session()->put('user', $data['email']);
             }
         }
+
+
+
+        return redirect()->route('profileView');
     }
 
-    public function logout()
-    {
-        if (session()->has('user')) {
-            session()->pull('user');
+    public function profileView(Request $request){
+        if (!session()->has('user')) {
+            return redirect()->route('loginView');
         }
+        $model = new Ecofriends();
+        $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
+        // dd($request->session()->get('user'));
+
+        return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data'=>$data]);
+        
+    }
+
+    public function logout(Request $request)
+    {
+        // dd($request);
+        // if ($request->session()->has('user')) {
+            $request->session()->forget('user');
+            $request->session()->flush();
+        // }
         return redirect()->route('loginView');
     }
 
