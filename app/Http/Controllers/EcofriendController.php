@@ -15,7 +15,29 @@ class EcofriendController extends Controller
     //
     public function registerView()
     {
-        return view('cms.page.register', ['title' => 'UMN ECO 2021 - Join eco Friends']);
+        return view('cms.page.register', ['title' => 'UMN ECO 2021 - Join Eco Friends']);
+    }
+
+    public function login(Request $request)
+    {
+        $model = new Ecofriends();
+        if ($request->input('action') == "register") {
+            return redirect()->route('registerView');
+        } else {
+            $data = $request->input();
+            $check_data = $model->getEcoFriendsByEmail($data['email']);
+            if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
+                $request->session()->put('user', $data['email']);
+            }
+        }
+    }
+
+    public function logout()
+    {
+        if (session()->has('user')) {
+            session()->pull('user');
+        }
+        return redirect()->route('loginView');
     }
 
     public function register(Request $request)
@@ -96,11 +118,10 @@ class EcofriendController extends Controller
         Mail::to($data['email'])->send(new RegisterMail($details));
     }
 
-    public function login($data)
-    {
-    }
 
-    public function loginView($data)
+
+    public function loginView()
     {
+        return view('cms.page.login', ['title' => 'UMN ECO 2021 - Login Eco Friends']);
     }
 }
