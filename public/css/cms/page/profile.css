@@ -7,24 +7,23 @@ body {
 .swal2-content, .swal2-header{
     font-family: 'MADE Tommy Soft';
 }
+
 .main-container {
     margin: 0;
     margin: auto;
     width: 100%;
     min-height: 100vh;
-    background-image: url(../../../images/home/graphics_1.png);
+    /* background-image: url(../../../images/home/graphics_1.png); */
     background-size: cover;
     background-repeat: no-repeat;
+    background-color: wheat;
 }
 
-.container {
-    margin: auto;
-    width: 100%;
-}
-
+/* styling header */
 .profile-header {
-    width: 120%;
-    /* margin: auto; */
+    width: 100%;
+    margin: auto;
+    position: relative;
     padding-top: 0;
     background-repeat: no-repeat;
     background-position: center;
@@ -37,18 +36,20 @@ body {
     font-weight: 700;
     font-size: 35px;
     line-height: 65px;
-    color: #F4ECDC;
+    color: #FFF;
     margin-left: 10%;
-  }
+}
+
 .profile-name{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
     font-size: 92px;
     line-height: 65px;
-    color: #F4ECDC;
+    color: #FFF;
     margin-left: 10%;
 }
+
 .profile-data{
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -58,6 +59,7 @@ body {
     color: #161616;
     margin: 18px 0px 0px 8px;
 }
+
 .profile-name-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -67,6 +69,7 @@ body {
     color: #161616;
     margin: 1.8px 0px 0px 8px;
 }
+
 .profile-nim-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -76,6 +79,7 @@ body {
     color: #161616;
     margin: 1.8px 0px 0px 8px;
 }
+
 .profile-email-eco-friend{
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -87,13 +91,14 @@ body {
 }
 
 .profile-journey-bg {
-    width: 80%;
+    width: 50%;
     margin-right: 100px;
     padding-top: 0;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
+
 .profile-journey{
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -101,9 +106,24 @@ body {
     font-size: 45px;
     text-align: right;
     line-height: 56px;
-    color: #161616;
+    color: #fff;
     margin-left: 30%;
 }
+
+.logout{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 5px;
+}
+
+.logout img{
+    width: 100px;
+}
+
+
 /* .oprec-text {
     width: 60%;
     margin: auto;
