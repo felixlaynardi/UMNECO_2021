@@ -27,7 +27,6 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
-
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
