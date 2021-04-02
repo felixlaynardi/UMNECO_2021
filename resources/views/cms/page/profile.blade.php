@@ -28,22 +28,32 @@
         
         <div class="profile-data-eco-friend">
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{ $data->name }}
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
             </div>
             <div class="profile-nim-eco-friend">
                 NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
             </div>
             <div class="profile-email-eco-friend">
                 Student Email &emsp;&nbsp;:
+
+            <div class="profile-journey">
+                <p>YOUR JOURNEY IN RED</p>
+            </div>
+
+            <div class="count-container">
+                <div class="day-count">
+                    <p>DAY 3</p>
+                    <div class="day-left">
+                        <p>9 days left</p>
+                    </div>
+                </div>
+                <div class="time-count">
+                    <p>Time Left For Submission</p>
+                    <p>01:12:34</p>
+                </div>
             </div>
         </div>
-        
-
-        <div class="profile-journey-bg">
-            <!-- <div class="profile-journey"> -->
-            <p>YOUR JOURNEY IN RED</p>
-            <!-- </div>                 -->
-        </div>
+    
     </div>
 </div>
 </div>

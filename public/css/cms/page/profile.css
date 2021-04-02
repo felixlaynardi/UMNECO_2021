@@ -107,21 +107,10 @@ body {
     width: 100px;
 }
 
-/* .profile-journey-bg {
-    width: 33.33%;
-    margin: auto;
-}
-
-.profile-journey {
-    width: 100%;
-} */
-
-.profile-journey-bg{
+.profile-journey{
     position: absolute;
-    right: 0px;
-    width: 47%;
-    /* height: 30%; */
-    background-repeat: no-repeat;
+    right: 0;
+    width: 60%;
     border-top-left-radius: 90px;
     border-bottom-left-radius: 90px;
     background: #FF416C;  /* fallback for old browsers */
@@ -129,54 +118,56 @@ body {
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 50px;
     text-align: center;
-    /* line-height: 100px; */
-    /* font-style: normal;
-    font-weight: 700;
-    color: #fff;
-    font-size: 60px; */
-}
-.profile-journey-bg p{
-    text-align: center;
-    height: 100%;
-    margin-bottom: 0;
-}
-
-/* .profile-journey{
-    font-family: MADE Tommy Soft;
+    line-height: 100px;
     font-style: normal;
     font-weight: 700;
     color: #fff;
     font-size: 60px;
-     text-align: center; 
-} */
+}
 
-/* .oprec-text {
-    width: 60%;
-    margin: auto;
+.profile-journey p{
+    height: 100%;
     text-align: center;
-    margin-top: 2%;
-    color: #f4ecdc;
-}
-.oprec-text h1 {
-    font-size: 3.8vw;
-} */
-
-/* .logo {
-    width: 65%;
-    margin: auto;
-    margin-top: 7%;
-    justify-content: center;
-    padding-bottom: 10%;
+    margin-bottom: 0;
 }
 
-.logo-tim {
-    width: 33.33%;
-    margin: auto;
-} */
-
-.image-fluid {
-    width: 100%;
+.count-container{
+    margin-top: 12%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 50px;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
 }
+
+.day-count p{
+    font-size: 60px;
+}
+
+.time-count{    
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 150px;
+    border-top-left-radius: 90px;
+    border-bottom-left-radius: 90px;
+    background: #FF416C;  fallback for old browsers
+    background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-size: 50px;
+    text-align: center;
+    /* line-height: 34px; */
+    font-style: normal;
+    font-weight: 700;
+    color: #fff;
+    font-size: 46px;
+ }
+.time-count p{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}    
 
 @media (max-width: 768px) {
     .logo-tim {
