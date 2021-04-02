@@ -37,10 +37,9 @@
             </div>
 
             <div class="profile-journey-bg">
-                <div class="profile-journey">
-                    YOUR JOURNEY IN RED
-                </div>
-                
+                <!-- <div class="profile-journey"> -->
+                    <p>YOUR JOURNEY IN RED</p>
+                <!-- </div>                 -->
             </div>
         </div>
     </div>
