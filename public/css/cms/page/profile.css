@@ -120,7 +120,7 @@ body {
     position: absolute;
     right: 0px;
     width: 47%;
-    height: 30%;
+    /* height: 30%; */
     background-repeat: no-repeat;
     border-top-left-radius: 90px;
     border-bottom-left-radius: 90px;
@@ -129,15 +129,17 @@ body {
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     font-size: 50px;
     text-align: center;
-    line-height: 100px;
+    /* line-height: 100px; */
     /* font-style: normal;
     font-weight: 700;
     color: #fff;
     font-size: 60px; */
 }
-/* .profile-journey-bg p{
+.profile-journey-bg p{
     text-align: center;
-} */
+    height: 100%;
+    margin-bottom: 0;
+}
 
 /* .profile-journey{
     font-family: MADE Tommy Soft;
