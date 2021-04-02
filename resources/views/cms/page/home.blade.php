@@ -7,9 +7,13 @@
 @section('content')
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
-    <div id="scene-1" class="container-xl position-relative" style="">
-        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-absolute col-2" style="z-index:0">
-        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-absolute col-2" style="right:0;z-index:0;bottom:-10vh">
+    <div id="scene-1" class="container-fluid position-relative" style="">
+        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-absolute col-3 left-pipe" style="">
+
+        <img src="{{ asset('images/home/hose.png')}}" alt="" class="position-absolute col-3 hose" style="">
+
+        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-absolute col-3 right-pipe" style="">
+        
         <a href="#" id="glass-a"><img src="{{ asset('images/home/glass-1.png')}}" alt="" class="position-absolute col-3" id="glass" style=""></a>
     </div>
     <div id="scene-2" class="position-relative mx-auto">
