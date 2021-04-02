@@ -4,7 +4,7 @@
              <div class="col-11">
                  <div class="row ">
                      <div class="col-sm-6 col-12 my-auto mx-auto footer-umn-eco-logo" style="text-align:center;">
-                         <img class="mb-md-0 mb-5 col-10 col-lg-4 " src="{{ asset('images/home/umn-eco-logo.png')}}">
+                         <img class="mb-md-0 mb-5 col-10 col-lg-4 " src="{{ asset('images/profile/umn-eco-logo.png')}}">
                      </div>
                      <div class="col-sm-6 col-12 my-auto mx-auto footer-umn-eco-tagline" style="text-align:center;">
                         <div class="footer-tagline-top mb-5">
