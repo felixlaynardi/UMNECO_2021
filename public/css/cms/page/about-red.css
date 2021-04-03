@@ -1,11 +1,18 @@
 .navbar {
-    background: rgb(184, 31, 4) ;
+    background:#D7110C;
 }
 
-.main {
+.main1 {
     position: relative;
     overflow: hidden;
-    height: 5000px;
+    min-height: 200vh;
+}
+
+.main2 {
+    background-color: #DD2A2A;
+    position: relative;
+    overflow: hidden;
+    min-height: 600vh;
 }
 
 body, html {
@@ -16,11 +23,19 @@ body, html {
     height: 5000px;
 }
 
+.section {
+    min-height: 100vh;
+}
+
 /* -----section1----- */
 .section-1 {
-    padding-top: 575px;
+    padding-top: 100px;
     padding-bottom: 100px;
-    min-height: 200vh;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .red-content {
@@ -30,13 +45,51 @@ body, html {
     justify-content: center;
 }
 
+
+
+.red-content h1 {
+    font-family: MADE Tommy Soft;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+}
+
+.red-content h4 {
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+}
+
 .red-content p{
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;
+    text-align: justified;
+
     top: 50%;
+    text-align: justify;
+    color: white;
 }
 
 .about-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
+    filter: drop-shadow(7px 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+
+.about-logo img {
+    animation: zoom-out 2s;
 }
 .logo-red {
     width: 75%;
@@ -66,9 +119,10 @@ body, html {
     display: flex;
     justify-content: center;
     min-height: 100vh;
+    align-items: center;
 }
 
-.mission-logo-container-row {
+/* .mission-logo-container-row {
     align-items: center;
    
 }
@@ -84,18 +138,95 @@ body, html {
     background-color: rgb(10, 226, 255);
     border-radius: 50%;
     display: inline-block;
+    
 }
 
 .mission-logo:hover{
     cursor: pointer;
+} */
+
+/*carousel content*/
+
+.slide-logo {
+    margin: auto;
+    text-align: center;
 }
 
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 105%;
+}
+
+.carousel button {
+    background-color: transparent;
+    border:none;
+}
+
+.content-container {
+    display: flex;
+    max-width: 100%;
+    position: relative;
+    min-height: 100vh;
+    transition: .5s ease;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.item {
+    justify-content: center;
+    padding: 50px;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+    background-position-x:center;
+    
+}
+
+
+.rise{
+    background-image: url(../../../images/about-red/rise.png);
+}
+.utopia{
+    background-image: url(../../../images/about-red/utopia.png);
+}
+.raconteur{
+    background-image: url(../../../images/about-red/raconteur.png);
+}
+.utile{
+    background-image: url(../../../images/about-red/utile.png);
+}
+/* 
 .popup-page {
     position: fixed;
     z-index: 200;
     width: 100vh;
     height: 100vh;
-    background: rgba(0,0,0,0.7); /* Black w/ opacity */
+    background: rgba(0,0,0,0.7); 
 }
 
 .popup-bg {
@@ -147,12 +278,8 @@ body, html {
 
 .close-btn:hover{
     cursor: pointer;
-}
+} */
 
-.popup-bg.active {
-    display: flex;
-    transition: all 300ms ease-in-out;
-}
 /* .popup-page .popup-content {
 
     background: rgba(0,0,0,0.7);
@@ -189,6 +316,7 @@ body, html {
 
 /* -----section4----- */
 .section-4 {
+    background-color: #DD2A2A;
     justify-content: center;
     align-items: center;
     margin-top: 25vh;
@@ -221,33 +349,68 @@ body, html {
 
 /* -----background properties----- */
 .cloud {
-    left: -300px;
     position:absolute;
-    object-fit: cover;
-    top:100px;
     z-index: 2;
+    width: 2365px;
+    height: 887px;
+    left: -571px;
+    top: 154px;
+    overflow: hidden;
 }
 
 .circle {
-    left: -40%;
     position:absolute;
-    object-fit: cover;
-    top:150px;
     z-index: 1;
     width: "300px";
+    width: 1734px;
+    height: 1735px;
+    left: -766px;
+    top: -380px;
 }
 
 .white-circle {
     position: absolute;
-    background-color: white;
+    background-color: #DFDFDF;
     z-index: 3;
     border-radius: 50%;
-    left: -20%;
-    top: 500px;
+    width: 976px;
+    height: 976px;
+    left: -435px;
+    top: 7px;
 }
 
-.white-circle img{
-    visibility: hidden;
-    width: 867.5px;
+@keyframes zoom-out{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
 
+@keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+
+@media(max-width:1100px) and (min-width:992px){
+    .white-circle{
+        left: -535px;
+    }
+}
+
+@media(max-width:991px) and (min-width:768px){
+    .about-logo{
+      margin: auto;
+    }
 }
