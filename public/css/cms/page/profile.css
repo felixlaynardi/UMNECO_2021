@@ -2,7 +2,6 @@ body {
     margin: 0;
     font-family: "MADE Tommy Soft";
     font-style: normal;
-    font-weight: bold;
     background-color: #e8d3d3;
 }
 .swal2-content, .swal2-header{
@@ -20,10 +19,6 @@ body {
     
 }
 
-.content-container{
-    margin-left: 15%;
-}
-
 /* styling header */
 .profile-header {
     width: 100%;
@@ -35,69 +30,36 @@ body {
     background-size: cover;
 }
 
-.profile-eco-friend{
+.profile-eco-friend {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
     font-size: 45px;
     line-height: 65px;
     color: #FFF;
-    margin-left: 15%;
+    position: absolute;
+    top: 30%;
+    left: 8%;;
+    /* margin-left: 12%; */
 }
 
-.profile-name{
+.profile-name {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
     font-size: 92px;
     line-height: 65px;
     color: #FFF;
-    margin-left: 15%;
-}
-
-.profile-data{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 100px;
-    color: #161616;
-    
-}
-
-.profile-name-eco-friend{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
-    
-}
-
-.profile-nim-eco-friend{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
-}
-
-.profile-email-eco-friend{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
-    
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    /* margin-left: 12%; */
 }
 
 .logout{
     position: absolute;
-    right: 10px;
-    top: 20px;
+    right: 30px;
+    top: 30px;
     text-decoration: none;
     color: white;
     letter-spacing: 5px;
@@ -107,17 +69,45 @@ body {
     width: 100px;
 }
 
+#data{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: #161616;
+}
+
+.profile-data{
+    font-size: 45px;
+    line-height: 100px;
+    color: #161616;
+    text-align: left;
+}
+
+.profile-name-eco-friend{
+    text-align: left;
+}
+
+.profile-nim-eco-friend{
+    text-align: left;
+}
+
+.profile-email-eco-friend{
+    text-align: left;
+}
+
+
 .profile-journey{
     position: absolute;
     right: 0;
-    width: 60%;
+    width: 68%;
     border-top-left-radius: 90px;
     border-bottom-left-radius: 90px;
     background: #FF416C;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-size: 50px;
-    text-align: center;
+    font-size: 70px;
     line-height: 100px;
     font-style: normal;
     font-weight: 700;
@@ -127,53 +117,45 @@ body {
 
 .profile-journey p{
     height: 100%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
+    padding-left: 3%;
 }
 
-.count-container{
-    margin-top: 12%;
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-template-rows: 80px 50px;
-    grid-gap: 10px;
-    /* background-color: #2196F3; */
-    padding: 10px;
+#count{
+    margin-top: 10%;
 }
 
-.day-count p{
-    font-size: 130px;
-    font-weight: 900;
+#day-count{
+    font-size: 100px;
+    font-weight: 700;
+    text-align: left;
+    
 }
 
-.day-left p{
-    font-size: 50px;
-}
-
-.time-count{    
+#time-count{    
     position: absolute;
     right: 0;
-    width: 50%;
-    height: 150px;
+    width: 60%;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     background: #FF416C;  /*fallback for old browsers*/
     background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    text-align: center;
-    font-size: 50px;
+    font-size: 45px;
     font-style: normal;
     font-weight: 700;
     color: #fff;
- }
-.time-count p{
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
+}
+
+#time-count p{
+    text-align: left;
+    height: 100%;
+    padding-left: 3%;
 }    
 
 @media (max-width: 768px) {
-    .logo-tim {
+    .time-count {
         width: 50%;
         margin: 0;
     }
@@ -209,3 +191,4 @@ body::-webkit-scrollbar-thumb {
 .navbar{
 	background-color: #b34646;
 }
+
