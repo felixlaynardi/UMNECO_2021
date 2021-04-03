@@ -34,7 +34,7 @@
 <body>
     <!-- Preloader -->
     <div id="preloader">
-        <img src="{{ asset('images/gif-logo.gif') }}" class="loading-img" style="position:sticky;width:20%;top:50%;left:50%;transform: translate(-50%, -50%);">
+        <img src="{{ asset('images/gif-logo.gif') }}" class="loading-img" style="position:fixed;width:20%;top:50%;left:50%;transform: translate(-50%, -50%);">
     </div>
 
     @include('cms.template.navbar')

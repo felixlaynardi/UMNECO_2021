@@ -30,6 +30,8 @@ class EcofriendController extends Controller
             $check_data = $model->getEcoFriendsByEmail($data['email']);
             if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                 $request->session()->put('user', $data['email']);
+            }else{
+                return redirect()->route('loginView');
             }
         }
 

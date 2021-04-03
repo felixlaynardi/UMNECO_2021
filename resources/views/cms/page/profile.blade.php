@@ -25,36 +25,96 @@
         <div class="profile-data">
             ECO Friend Profile
         </div>
-        
+
         <div class="profile-data-eco-friend">
             <div class="profile-name-eco-friend">
                 Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
             </div>
             <div class="profile-nim-eco-friend">
-                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->student_id}}
             </div>
             <div class="profile-email-eco-friend">
-                Student Email &emsp;&nbsp;:
-
-            <div class="profile-journey">
-                <p>YOUR JOURNEY IN RED</p>
+                Student Email &emsp;&nbsp;: {{$data->email}}
             </div>
 
+            <!-- jangan make grid
             <div class="count-container">
                 <div class="day-count">
                     <p>DAY 3</p>
-                    <div class="day-left">
-                        <p>9 days left</p>
-                    </div>
                 </div>
-                <div class="time-count">
-                    <p>Time Left For Submission</p>
+                <div class="day-remaining">
+                    <p>9 days left</p>
+                </div>
+                <div class="background-time-desc">
+                    <p class="time-left-text">Time Left For Submission</p>
                     <p>01:12:34</p>
                 </div>
+
+            </div> -->
+
+        </div>
+
+        <!-- <div class="profile-journey">
+            <p>YOUR JOURNEY IN RED</p>
+        </div> -->
+    </div>
+
+    <div class="container progress-graph">
+        <div class="chart small-font-size">
+            <!-- bar pertama -->
+            <div class="bar bar-60 utopia">
+                <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar kedua -->
+            <div class="bar bar-25 rise">
+                <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar ketiga -->
+            <div class="bar bar-35 utile">
+                <img style="width: 2em" src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar keempat -->
+            <div class="bar bar-80 racounter">
+                <img style="width: 2em" src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
             </div>
         </div>
-    
     </div>
+
 </div>
-</div>
+@endsection
+
+@section('custom-js')
+<script src="{{ asset('js/cms/page/profile.js') }}"></script>
 @endsection
