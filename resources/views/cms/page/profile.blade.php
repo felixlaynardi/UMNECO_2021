@@ -16,7 +16,7 @@
         <div class="profile-name">
             NIKOLAS
         </div>
-        <a href="/logout" class="logout">
+        <a href="{{url('logout')}}" class="logout">
             <img src="images/profile/Log Out@2x.png" alt="">
             <p>LOG OUT</p>
         </a>
@@ -25,7 +25,7 @@
         <div class="profile-data">
             ECO Friend Profile
         </div>
-        
+
         <div class="profile-data-eco-friend">
             <div class="profile-name-eco-friend">
                 Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
@@ -36,25 +36,35 @@
             <div class="profile-email-eco-friend">
                 Student Email &emsp;&nbsp;:
 
-            <div class="profile-journey">
-                <p>YOUR JOURNEY IN RED</p>
-            </div>
+                <div class="profile-journey">
+                    <p>YOUR JOURNEY IN RED</p>
+                </div>
 
-            <div class="count-container">
-                <div class="day-count">
-                    <p>DAY 3</p>
-                    <div class="day-left">
-                        <p>9 days left</p>
+                <div class="count-container">
+                    <div class="day-count">
+                        <p>DAY 3</p>
+                        <div class="day-left">
+                            <p>9 days left</p>
+                        </div>
+                    </div>
+                    <div class="time-count">
+                        <p>Time Left For Submission</p>
+                        <p>01:12:34</p>
                     </div>
                 </div>
-                <div class="time-count">
-                    <p>Time Left For Submission</p>
-                    <p>01:12:34</p>
-                </div>
             </div>
+
         </div>
-    
     </div>
 </div>
-</div>
+@endsection
+@section('custom-js')
+<script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
+@if (session('status') == 'Success')
+
+<script>
+    Swal.fire("Selamat datang", "{{$data->name}}", "success");
+</script>
+@endif
+
 @endsection

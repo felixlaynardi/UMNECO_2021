@@ -29,6 +29,6 @@ class RegisterMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('Test mail')->view('cms.email.registerMail');
+        return $this->subject($this->details['title'])->view('cms.email.registerMail');
     }
 }
