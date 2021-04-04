@@ -209,6 +209,10 @@ body::-webkit-scrollbar-thumb {
     width: 100%;
 }
 
+/* .mx{
+margin-top: 0 !important;
+} */
+
 @media (max-width: 768px) {
     .logo-quest {
         width: 70%;
