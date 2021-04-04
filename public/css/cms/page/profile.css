@@ -34,12 +34,12 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 65px;
     color: #FFF;
     position: absolute;
     top: 30%;
-    left: 8%;;
+    left: 8%;
     /* margin-left: 12%; */
 }
 
@@ -71,6 +71,31 @@ body {
 
 /* styling eco friend data */
 #data{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: #161616;
+}
+
+#name{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: #161616;
+}
+#nim{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 56px;
+    color: #161616;
+}
+#email{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
@@ -128,14 +153,21 @@ body {
 }
 
 #day-count{
-    font-size: 100px;
-    font-weight: 700;
     text-align: left;
-    
+}
+
+.day-n{
+    font-size: 80px;
+    line-height: 100px;
+}
+
+.day-left{
+    font-size: 50px;
 }
 
 #time-count{    
     position: absolute;
+    margin-top: 1.2em;
     right: 0;
     width: 60%;
     border-top-left-radius: 50px;
@@ -155,10 +187,199 @@ body {
     padding-left: 3%;
 }    
 
-@media (max-width: 768px) {
-    .time-count {
-        width: 50%;
-        margin: 0;
+.logo {
+    width: 65%;
+    margin: auto;
+    margin-top: 7%;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.logo-submit {
+    margin: auto;
+}
+.submit{
+    width: 25%;
+    background-image: linear-gradient(to top, #277600, #379308, #47b113, #58d01d, #6af027);
+    border-radius: 50px;
+    color:white;
+    outline: none;
+}
+.image-fluid {
+    width: 100%;
+}
+
+
+/* breakpoints */
+@media  (max-width:1012px) {
+    .profile-eco-friend{
+        font-size: 60px;
+        /* left:8%; */
+    }
+    .profile-name{
+        font-size: 60px;
+        /* left:8%; */
+    }
+    .profile-data{
+        left: 8%;
+        font-size: 30px;
+    }
+    .profile-name-eco-friend{
+        left: 8%;
+        font-size: 30px;
+    }
+    .profile-nim-eco-friend{
+        left: 8%;
+        font-size: 30px;
+    }
+    .profile-email-eco-friend{
+        left: 8%;
+        font-size:30px;
+    }
+
+    .profile-journey{
+        font-size: 30px;
+        line-height: 80px;
+    }
+    .day-n{
+        font-size: 35px;
+        line-height: 50%;
+    }
+    .day-left{
+        font-size: 25px;
+    }
+    #time-count{
+        line-height: 30px;
+    }
+    .time-left{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .time-countdown{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 2px;
+    }
+
+    .logout img{
+        width: 75px;
+    }
+}
+
+@media  (max-width:768px) {
+    .profile-eco-friend{
+        font-size: 50px;
+        /* left:8%; */
+    }
+    .profile-name{
+        font-size: 50px;
+        /* left:8%; */
+    }
+    .profile-data{
+        left: 8%;
+        font-size: 20px;
+    }
+    .profile-name-eco-friend{
+        left: 8%;
+        font-size: 20px;
+    }
+    .profile-nim-eco-friend{
+        left: 8%;
+        font-size: 20px;
+    }
+    .profile-email-eco-friend{
+        left: 8%;
+        font-size:20px;
+    }
+
+    .profile-journey{
+        font-size: 20px;
+        line-height: 70px;
+    }
+    .day-n{
+        font-size: 30px;
+        line-height: 50%;
+    }
+    .day-left{
+        font-size: 20px;
+    }
+    #time-count{
+        line-height: 30px;
+    }
+    .time-left{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .time-countdown{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 2px;
+    }
+
+    .logout img{
+        width: 70px;
+    }
+}
+
+@media(max-width:320px){
+    .profile-eco-friend{
+        font-size: 15px;
+        left:8%;
+    }
+    .profile-name{
+        font-size: 15px;
+        left:8%;
+    }
+    .profile-data{
+        left: 8%;
+        font-size: 15px;
+    }
+    .profile-name-eco-friend{
+        left: 8%;
+        font-size: 15px;
+    }
+    .profile-nim-eco-friend{
+        left: 8%;
+        font-size: 15px;
+    }
+    .profile-email-eco-friend{
+        left: 8%;
+        font-size: 15px;
+    }
+
+    .profile-journey{
+        font-size: 10px;
+        line-height: 70px;
+    }
+    .day-n{
+        font-size: 25px;
+        /* margin-top: 15%; */
+        line-height: 25%;
+    }
+    .day-left{
+        font-size: 20px;
+        margin-top: 15%;
+    }
+    .time-left{
+        font-size: 10px;
+        margin-top: 15%;
+    }
+    .time-countdown{
+        font-size: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 1px;
+    }
+
+    .logout img{
+        width: 40px;
     }
 }
 
@@ -175,8 +396,6 @@ body::-webkit-scrollbar-thumb {
     outline: 1px solid slategrey;
 }
 
-
-
 [id=main-navigation-toggle] ~ label {
     position: absolute;
 }
@@ -187,6 +406,14 @@ body::-webkit-scrollbar-thumb {
 .navbar{
 	background-color: #b34646;
 }
+@media (max-width: 768px) {
+    .logo-tim {
+        width: 50%;
+        margin: 0;
+    }
+}
+
+
 
 /* progress bar styling */
 /*
@@ -197,7 +424,9 @@ START // CHART'S RULES
 */
 .progress-graph{
     margin-top: 30px;
+    left: 40%;
     height: 100vh;
+    width: 50%;
 }
 
 .chart {
@@ -206,7 +435,7 @@ START // CHART'S RULES
     flex-direction: row;
     height: 12em;
     justify-content: center;
-    perspective: 1000px;
+    perspective:2000px;
     perspective-origin: 50% 50%;
 }
 
@@ -1594,26 +1823,3 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     content: '85';
 }
 
-
-/* breakpoints */
-/* @media(max-width:1200px){
-    .profile-journey{
-        font-size: 42px;
-    }
-}
-
-@media (max-width: 767px) {
-
-    [id=main-navigation-toggle]~label span,
-    .toggler-container {
-        opacity: 1;
-        display: block;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-tim {
-        width: 50%;
-        margin: 0;
-    }
-} */
