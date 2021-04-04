@@ -10,11 +10,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('images/login/Hydrant BG.png')}}" class="BG">
-            <img src="{{ asset('images/login/Alas Hydrant.png')}}" class="alas">
-            <img src="{{ asset('images/login/Hydrant.gif')}}" class="hydrant">
+            <img id="image-left" src="{{ asset('images/login/Hydrant BG.png')}}" class="BG">
+            <img id="image-left" src="{{ asset('images/login/Alas Hydrant.png')}}" class="alas">
+            <img id="image-left" src="{{ asset('images/login/Hydrant.gif')}}" class="hydrant">
         </div>
-        <div class="col-md-6 form form-group">
+        <div class="col-md-6 form form-group" id="form">
             <h1>ENTER RED</h1><br>
             <form action="{{route('login')}}" method="post">
                 @csrf
