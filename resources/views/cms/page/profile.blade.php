@@ -17,23 +17,21 @@
             <div class="profile-name">
                 NIKOLAS
             </div>
-            <a href="" class="logout">
+            <a href="{{url('logout')}}" class="logout">
                 <img src="images/profile/Log Out@2x.png" alt="">
                 <p>LOG OUT</p>
             </a>            
         </div>
-        <a href="{{url('logout')}}" class="logout">
-            <img src="images/profile/Log Out@2x.png" alt="">
-            <p>LOG OUT</p>
-        </a>
     </div>
-    <div class="content-container">
-        <div class="profile-data">
-            ECO Friend Profile
-        </div>
-        <div class="profile-data-eco-friend">
+    
+    <div class="container" >
+        <div class="row text-center"id ="data">    
+            <div class="profile-data">
+                ECO Friend Profile
+            </div>
+        
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->firstname}} {{$data->lastname}}
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
             </div>
             <div class="profile-nim-eco-friend">
                 NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->student_id}}
@@ -125,11 +123,10 @@
 @section('custom-js')
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('js/cms/page/profile.js') }}"></script>
-
 @if (session('status') == 'Success')
 
 <script>
-    Swal.fire("Selamat datang", "{{$data->firstname}}", "success");
+    Swal.fire("Selamat datang", "{{$data->name}}", "success");
 </script>
 @endif
 
