@@ -15,7 +15,7 @@
                 Hello ECO Friend,
             </div>
             <div class="profile-name">
-                NIKOLAS
+                <p style="text-transform: uppercase;">{{$data->name}}</p>
             </div>
             <a href="{{url('logout')}}" class="logout">
                 <img src="images/profile/Log Out@2x.png" alt="">

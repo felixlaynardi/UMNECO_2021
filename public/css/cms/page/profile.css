@@ -47,7 +47,7 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 80px;
     line-height: 65px;
     color: #FFF;
     position: absolute;
@@ -161,15 +161,6 @@ body {
         margin: 0;
     }
 }
-
-
-/* 
-.day-left p{
-    font-size: 50px;
-} */
-
-  
-
 
 body::-webkit-scrollbar {
     width: 0.3em;
