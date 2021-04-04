@@ -16,7 +16,8 @@ class EcoFriends extends Migration
         //
         Schema::create('eco_friends', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('firstname');
+            $table->string('lastname');
             $table->string('student_id')->unique();
             $table->string('email')->unique();
             $table->string('major');

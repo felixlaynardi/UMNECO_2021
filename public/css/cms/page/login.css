@@ -1,0 +1,28 @@
+h1{
+    color: red;
+    font-family: "MADE Tommy Soft";
+}
+label{
+    color:red;
+    font-family: "MADE Tommy Soft";
+
+}
+.BG{
+    width: 100%;
+}
+.alas{
+    width: 75%;
+    text-align: center;
+    margin-top: -200px;
+    margin-left: 13%;
+}
+.hydrant{
+    width: 100%;
+    margin-top: -95%;
+}
+.form{
+    margin-top: 17%;
+    width: 40%;
+    margin-left: 4%;
+    height: auto;
+}
