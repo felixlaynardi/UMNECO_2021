@@ -62,19 +62,57 @@
             </div>
         </div>
     </div>
-    
-    <div class="logo row mx-auto">
-        <div class="logo-quest">
-            <a href="#0" class="open-popup"><img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
-        </div>
-        <div class="logo-quest">
-            <a href="#1" class="open-popup"><img src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
-        </div>
-        <div class="logo-quest">
-            <a href="#2" class="open-popup"><img src="{{ asset('images/profile/Mystery@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
-        </div>
-        <div class="logo-quest">
-            <a href="#3" class="open-popup"><img src="{{ asset('images/profile/Mystery@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+     
+    <div class="container progress-graph">
+        <div class="chart small-font-size">
+            <!-- bar pertama -->
+            <div class="bar bar-60 utopia">
+                <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar kedua -->
+            <div class="bar bar-25 rise">
+                <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar ketiga -->
+            <div class="bar bar-35 utile">
+                <img style="width: 2em" src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
+            <!-- bar keempat -->
+            <div class="bar bar-80 racounter">
+                <img style="width: 2em" src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" alt="">
+                <div class="face side-0">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face side-1">
+                    <div class="growing-bar"></div>
+                </div>
+                <div class="face top"></div>
+                <div class="face floor"></div>
+            </div>
         </div>
     </div>
 </div>
