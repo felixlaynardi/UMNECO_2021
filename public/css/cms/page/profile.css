@@ -270,9 +270,9 @@ body {
 .logo-umn-eco img{
     position: absolute;
     top: 13%;
+    left: 5%;
     width: 20%;
     opacity: 50%;
-    /* transform: translateY(-50%); */
 }
 
 /* breakpoints */
@@ -335,6 +335,19 @@ body {
     .submit{
         font-size: 20px;
     }
+    
+    .eco-umn-tagline p{
+        font-size: 30px;
+    }
+    
+    .eco-red p{
+        font-size: 30px;
+    }
+    
+    .logo-umn-eco img{
+        width: 10%;
+        margin-left: 40%;
+    }
 }
 
 @media  (max-width:768px) {
@@ -396,6 +409,18 @@ body {
     .submit{
         font-size: 13px;
     }
+    .profile-footer{
+        width: 100%;
+    }
+    
+    .eco-umn-tagline p{
+        font-size: 20px;
+    }
+    
+    .eco-red p{
+        font-size: 20px;
+    }
+
 }
 
 @media(max-width:320px){
@@ -455,6 +480,22 @@ body {
     .submit{
         font-size: 8px;
         border-radius: 20px;
+    }
+    .profile-footer{
+        width: 100%;
+    }
+    
+    .eco-umn-tagline p{
+        font-size: 10px;
+    }
+    
+    .eco-red p{
+        font-size: 10px;
+    }
+    
+    .logo-umn-eco img{
+        width: 15%;
+        margin-left: 35%;
     }
 }
 
