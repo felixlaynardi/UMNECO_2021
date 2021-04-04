@@ -25,10 +25,9 @@
         <div class="profile-data">
             ECO Friend Profile
         </div>
-
         <div class="profile-data-eco-friend">
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->firstname}} {{$data->lastname}}
             </div>
             <div class="profile-nim-eco-friend">
                 NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
@@ -63,7 +62,7 @@
 @if (session('status') == 'Success')
 
 <script>
-    Swal.fire("Selamat datang", "{{$data->name}}", "success");
+    Swal.fire("Selamat datang", "{{$data->firstname}}", "success");
 </script>
 @endif
 
