@@ -31,13 +31,13 @@
             </div>
         
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
+                <p style="text-transform: capitalize;">Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}</p>
             </div>
             <div class="profile-nim-eco-friend">
-                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->student_id}}
+                <p>NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->student_id}}</p>
             </div>
             <div class="profile-email-eco-friend">
-                Student Email &emsp;&nbsp;: {{$data->email}}
+                <p>Student Email &emsp;&nbsp;: {{$data->email}}</p>
             </div>    
         </div>
     </div> 
