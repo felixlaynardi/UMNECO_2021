@@ -1,0 +1,69 @@
+@extends('cms.template.app')
+
+@section('custom-css')
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ asset('css/cms/page/modal.css') }}">
+<link rel="stylesheet" href="{{ asset('css/cms/page/profile.css') }}">
+@endsection
+
+@section('content')
+<div id="main" class="main-container pt-5">
+    <div class="profile-header" style="padding-top:10rem;padding-bottom:10rem;background-image:url({{ asset('images/profile/Header@2x.png') }});">
+        <div class="profile-eco-friend">
+            Hello ECO Friend,
+        </div>
+        <div class="profile-name">
+            NIKOLAS
+        </div>
+        <a href="{{url('logout')}}" class="logout">
+            <img src="images/profile/Log Out@2x.png" alt="">
+            <p>LOG OUT</p>
+        </a>
+    </div>
+    <div class="content-container">
+        <div class="profile-data">
+            ECO Friend Profile
+        </div>
+        <div class="profile-data-eco-friend">
+            <div class="profile-name-eco-friend">
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->firstname}} {{$data->lastname}}
+            </div>
+            <div class="profile-nim-eco-friend">
+                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+            </div>
+            <div class="profile-email-eco-friend">
+                Student Email &emsp;&nbsp;:
+
+                <div class="profile-journey">
+                    <p>YOUR JOURNEY IN RED</p>
+                </div>
+
+                <div class="count-container">
+                    <div class="day-count">
+                        <p>DAY 3</p>
+                        <div class="day-left">
+                            <p>9 days left</p>
+                        </div>
+                    </div>
+                    <div class="time-count">
+                        <p>Time Left For Submission</p>
+                        <p>01:12:34</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+@endsection
+@section('custom-js')
+<script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
+@if (session('status') == 'Success')
+
+<script>
+    Swal.fire("Selamat datang", "{{$data->firstname}}", "success");
+</script>
+@endif
+
+@endsection

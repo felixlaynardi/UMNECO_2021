@@ -1,0 +1,33 @@
+header{
+    padding-top: 0%;
+}
+.BG{
+    width: 100%;
+}
+h5{
+    padding-top: 0%;
+    color: seashell;
+    font-family: "MADE Tommy Soft";
+}
+h1{
+    color: seashell;
+    font-family: "MADE Tommy Soft";
+    
+}
+.checkbox{
+    color: red;
+    font-family: "MADE Tommy soft 2";
+}
+.form{
+    padding-top: 40px;
+    width: 40%;
+    margin-left: 30%;
+}
+.footer{
+    background: linear-gradient(to right, );
+}
+.logo{
+    width: 13%;
+    margin-left: 43.5%;
+    padding-bottom: 40px;
+}
