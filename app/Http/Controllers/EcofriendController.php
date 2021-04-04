@@ -30,6 +30,8 @@ class EcofriendController extends Controller
             $check_data = $model->getEcoFriendsByEmail($data['email']);
             if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                 $request->session()->put('user', $data['email']);
+            }else{
+                return redirect()->route('loginView');
             }
         }
 
@@ -39,19 +41,24 @@ class EcofriendController extends Controller
     }
 
     public function profileView(Request $request){
+        if (!session()->has('user')) {
+            return redirect()->route('loginView');
+        }
         $model = new Ecofriends();
         $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-        // dd($data);
+        // dd($request->session()->get('user'));
 
         return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data'=>$data]);
         
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
-        if (session()->has('user')) {
-            session()->pull('user');
-        }
+        // dd($request);
+        // if ($request->session()->has('user')) {
+            $request->session()->forget('user');
+            $request->session()->flush();
+        // }
         return redirect()->route('loginView');
     }
 

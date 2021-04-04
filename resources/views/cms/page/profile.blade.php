@@ -31,13 +31,13 @@
             </div>
         
             <div class="profile-name-eco-friend">
-                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: 
+                Name &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->name}}
             </div>
             <div class="profile-nim-eco-friend">
-                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                NIM &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;: {{$data->student_id}}
             </div>
             <div class="profile-email-eco-friend">
-                Student Email &emsp;&nbsp;:
+                Student Email &emsp;&nbsp;: {{$data->email}}
             </div>    
         </div>
     </div> 
@@ -115,5 +115,10 @@
             </div>
         </div>
     </div>
+
 </div>
+@endsection
+
+@section('custom-js')
+<script src="{{ asset('js/cms/page/profile.js') }}"></script>
 @endsection
