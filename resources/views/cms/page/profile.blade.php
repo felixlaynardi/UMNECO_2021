@@ -63,5 +63,19 @@
         </div>
     </div>
     
+    <div class="logo row mx-auto">
+        <div class="logo-quest">
+            <a href="#0" class="open-popup"><img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+        </div>
+        <div class="logo-quest">
+            <a href="#1" class="open-popup"><img src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+        </div>
+        <div class="logo-quest">
+            <a href="#2" class="open-popup"><img src="{{ asset('images/profile/Mystery@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+        </div>
+        <div class="logo-quest">
+            <a href="#3" class="open-popup"><img src="{{ asset('images/profile/Mystery@2x.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+        </div>
+    </div>
 </div>
 @endsection

@@ -192,3 +192,27 @@ body::-webkit-scrollbar-thumb {
 	background-color: #b34646;
 }
 
+.logo {
+    width: 45%;
+    margin: auto;
+    margin-top: 7%;
+    justify-content: center;
+    padding-bottom: 10%;
+}
+
+.logo-quest {
+    width: 25%;
+    margin: auto;
+}
+
+.image-fluid {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .logo-quest {
+        width: 70%;
+        margin: 0;
+    }
+}
+
