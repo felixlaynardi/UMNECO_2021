@@ -123,7 +123,6 @@ body {
     text-align: left;
 }
 
-
 .profile-journey{
     position: absolute;
     right: 0;
@@ -197,18 +196,84 @@ body {
 
 .logo-submit {
     margin: auto;
+    display: flex;
 }
-.submit{
-    width: 25%;
-    background-image: linear-gradient(to top, #277600, #379308, #47b113, #58d01d, #6af027);
-    border-radius: 50px;
+.submit-button{
+    width: 55%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 25px;
     color:white;
-    outline: none;
+    text-decoration: none;
+    margin:auto;
+    transition: 0.5s;
+    border:none;
+    box-shadow:  0 0 40px 0px #000;;
+    font-family: 'MADE Tommy Soft';
 }
+
+
+#submit-utopia{
+    background-image: linear-gradient(to top, #a32a2a, #ae3433, #b93e3d, #c34747, #ce5151);
+
+}
+
+#submit-rise{
+    background-image: linear-gradient(to top, #277600, #379308, #47b113, #58d01d, #6af027);
+}
+
+#submit-utopia:hover, #submit-rise:hover{
+    background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e);
+    transform:scale(1.1);
+}
+#submit-utile{
+    background-image: linear-gradient(to top, #bbb4b4, #aaa4a4, #9a9494, #8a8585, #7a7676);}
+
+#submit-racounter{
+    background-image: linear-gradient(to top, #bbb4b4, #aaa4a4, #9a9494, #8a8585, #7a7676);
+}
+
+#submit-utile:hover, #submit-racounter:hover{
+    background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e);
+    transform: scale(1.1);
+}
+
 .image-fluid {
     width: 100%;
 }
 
+.profile-footer{
+    position: relative;
+    margin-top: 10%;
+}
+
+.eco-umn-tagline p{
+    margin:auto;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    opacity: 50%;
+}
+
+.eco-red p{
+    margin:auto;
+    font-size: 40px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    opacity: 50%;
+}
+
+.logo-umn-eco img{
+    position: absolute;
+    top: 13%;
+    width: 20%;
+    opacity: 50%;
+    /* transform: translateY(-50%); */
+}
 
 /* breakpoints */
 @media  (max-width:1012px) {
@@ -266,6 +331,9 @@ body {
 
     .logout img{
         width: 75px;
+    }
+    .submit{
+        font-size: 20px;
     }
 }
 
@@ -325,6 +393,9 @@ body {
     .logout img{
         width: 70px;
     }
+    .submit{
+        font-size: 13px;
+    }
 }
 
 @media(max-width:320px){
@@ -381,6 +452,10 @@ body {
     .logout img{
         width: 40px;
     }
+    .submit{
+        font-size: 8px;
+        border-radius: 20px;
+    }
 }
 
 body::-webkit-scrollbar {
@@ -406,13 +481,6 @@ body::-webkit-scrollbar-thumb {
 .navbar{
 	background-color: #b34646;
 }
-@media (max-width: 768px) {
-    .logo-tim {
-        width: 50%;
-        margin: 0;
-    }
-}
-
 
 
 /* progress bar styling */
@@ -435,7 +503,7 @@ START // CHART'S RULES
     flex-direction: row;
     height: 12em;
     justify-content: center;
-    perspective:2000px;
+    perspective:5000px;
     perspective-origin: 50% 50%;
 }
 
