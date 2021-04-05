@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-<div class="container-fluid" style="background:red;">
-</div>
+<header></header>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
@@ -30,8 +30,8 @@
                 <div class="error">{{ $errors->first('password') }}</div>
                 @endif
                 <br><br>
-                <button type="submit" name="action" value="login" class="btn btn-primary">Login</button>
-                <button type="submit" name="action" value="register" class="btn btn-primary register">Register</button>
+                <button class="button" type="submit" name="action" value="login" class="login btn btn-primary">Login</button>
+                <button class="button" type="submit" name="action" value="register" class="btn btn-primary register">Register</button>
             </form>
         </div>
     </div>

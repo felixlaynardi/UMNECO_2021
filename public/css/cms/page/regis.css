@@ -1,33 +1,75 @@
 header{
-    padding-top: 0%;
+    padding-top: 8%;
+    padding-left: 20%;
+    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+    padding-bottom: 10px;
 }
 .BG{
     width: 100%;
 }
 h5{
+    width: 100%;
     padding-top: 0%;
     color: seashell;
     font-family: "MADE Tommy Soft";
+    font-size:28px;
 }
 h1{
+    width: 100%;
     color: seashell;
     font-family: "MADE Tommy Soft";
-    
+    font-size: 50px;
 }
-.checkbox{
+label{
+    font-family: "MADE Tommy Soft";
+    color: #92967d;
+}
+.check{
     color: red;
     font-family: "MADE Tommy soft 2";
+}
+@media(max-width:419px) {
+    div#form{
+        width: 90%;
+        padding-top: 40%;
+        padding-left: 20%;
+    }
 }
 .form{
     padding-top: 40px;
     width: 40%;
     margin-left: 30%;
 }
-.footer{
-    background: linear-gradient(to right, );
+.button{
+    margin-bottom: 5%;
+    margin-right: 2%;
+    width: 120px;
+    font-family:"MADE Tommy Soft 2";
+    font-size: 1em;
+    color: #FC797D;
+    background-color: #f8ede3 ;
+    border: 2px solid;
+    border-radius: 15px;
+    outline: none;
+}
+
+#footer{
+    padding-top: 5px;
+    padding-bottom: 2px;
+    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+    text-align: center;
+
 }
 .logo{
-    width: 13%;
-    margin-left: 43.5%;
+    width: 10%;
+    text-align: center;
     padding-bottom: 40px;
+    opacity: 50%;
+}
+.foot{
+    margin-top: -1%;
+    padding-top: 0%;
+    font-family: "MADE Tommy soft 2";
+    text-align: center;
+    width: 100%;
 }

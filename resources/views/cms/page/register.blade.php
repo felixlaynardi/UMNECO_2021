@@ -79,7 +79,7 @@
         <div class="error">{{ $errors->first('Line_id') }}</div>
         @endif
         <label for="Phone_number">Nomor Telepon</label>
-        <input type="text" name="Phone_number" id="Phone_number" placeholder="phone_number" value="{{ old('Phone_number') }}" class="form-control">
+        <input type="text" name="Phone_number" id="Phone_number" placeholder="08123456789" value="{{ old('Phone_number') }}" class="form-control">
         @if($errors->has('Phone_number'))
         <div class="error">{{ $errors->first('Phone_number') }}</div>
         @endif
@@ -94,17 +94,18 @@
         <div class="error">{{ $errors->first('Password_confirmation') }}</div>
         @endif
         <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-        <label for="availability"> Bersedia menjalankan kegiatan Real Emergency Dailylife selama 12 hari </label><br>
+        <label class="check" for="availability"> Bersedia menjalankan kegiatan Real Emergency Dailylife selama 12 hari </label><br>
         @if($errors->has('Availability'))
         <div class="error">{{ $errors->first('Availability') }}</div>
         @endif
 
         <br>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="button btn btn-primary">Submit</button>
     </form>
 </div>
-<footer>
+<footer id="footer">
     <img src="{{ asset('images/regis/Logo Footer.png')}}" class="logo">
+    <h6 class="foot">© UMN ECO</h6>
 </footer>
 </header>
 

@@ -1,3 +1,7 @@
+header{
+    padding-bottom: 50px;
+    background-color: #D7110C ;
+}
 h1{
     color: red;
     font-family: "MADE Tommy Soft";
@@ -8,7 +12,8 @@ label{
 
 }
 .BG{
-    width: 100%;
+    width: 105%;
+    margin-left: -2%;
 }
 .alas{
     width: 75%;
@@ -18,7 +23,7 @@ label{
 }
 .hydrant{
     width: 100%;
-    margin-top: -95%;
+    margin-top: -98%;
 }
 .form{
     padding-top: 13%;
@@ -27,16 +32,26 @@ label{
     height: 100%;
 
 }
-@media (max-width:768px){
+
+.button{
+    margin-bottom: 5%;
+    margin-right: 2%;
+    width: 120px;
+    font-family:"MADE Tommy Soft 2";
+    font-size: 1em;
+    color: #FC797D;
+    background-color: #f8ede3 ;
+    border: 2px solid;
+    border-radius: 15px;
+    outline: none;
+}
+@media(max-width:768px) {
     img#image-left{
         display: none;
     }
-}
-
-@media(max-width:768px) {
     div#form{
         width: 70%;
-        padding-top: 15%;
+        padding-top: 20;
         padding-left: 25%;
     }
 }
