@@ -2,6 +2,10 @@
     background:#D7110C;
 }
 
+#contact{
+    background-color:#601213;
+}
+
 .main1 {
     position: relative;
     overflow: hidden;
@@ -12,7 +16,7 @@
     background-color: #DD2A2A;
     position: relative;
     overflow: hidden;
-    min-height: 600vh;
+    
 }
 
 body, html {
@@ -56,6 +60,7 @@ body, html {
     letter-spacing: 0em;
     text-align: left;
     color: white;
+    animation: slideup 2s linear;
 }
 
 .red-content h4 {
@@ -65,6 +70,7 @@ body, html {
     font-size: 24px;
     line-height: 30px;
     color: white;
+    animation: slideup 2s linear;
 }
 
 .red-content p{
@@ -77,6 +83,7 @@ body, html {
     top: 50%;
     text-align: justify;
     color: white;
+    animation: slideup 2s linear;
 }
 
 .about-logo {
@@ -439,6 +446,15 @@ body, html {
     }
     100% {
         left: -100%;
+    }
+}
+
+@keyframes slideup {
+    0% {
+        transform: translate(0,200px);
+    }
+    100% {
+        transform: translate(0,0);
     }
 }
 

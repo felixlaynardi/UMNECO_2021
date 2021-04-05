@@ -202,7 +202,7 @@
         </div>
     </div>
 </div> -->
-
+@include('cms.template.footer')
 
 @endsection
 
