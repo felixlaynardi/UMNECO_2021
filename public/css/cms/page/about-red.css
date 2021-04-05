@@ -469,3 +469,10 @@ body, html {
       margin: auto;
     }
 }
+
+@media(max-width:410px){
+    .red-content h1 {
+        font-size: 70px;
+        font-weight: 900;
+    }
+}

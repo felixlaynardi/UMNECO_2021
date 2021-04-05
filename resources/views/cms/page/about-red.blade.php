@@ -2,7 +2,6 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/cms/page/about-red.css') }}">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 @endsection
 
 @section('content')
