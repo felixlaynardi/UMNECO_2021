@@ -37,10 +37,10 @@
         
         <div class="container">
             <div class="row text-center"id ="name">
-                <div class="profile-name-eco-friend col-sm-12 col-md-12 col-lg-3">
+                <div class="profile-name-eco-friend col-sm-6 col-md-6 col-lg-3">
                     <p style="text-transform: capitalize;">Name </p>
                 </div>
-                <div class="profile-name-eco-friend col-sm-12 col-md-12 col-lg-5">
+                <div class="profile-name-eco-friend col-sm-6 col-md-6 col-lg-5">
                     <p style="text-transform: capitalize;"> : {{$data->name}}</p>
                 </div>
             </div>
@@ -48,10 +48,10 @@
 
         <div class="container">
             <div class="row text-center"id ="nim">
-                <div class="profile-nim-eco-friend col-sm-12 col-md-12 col-lg-3">
+                <div class="profile-nim-eco-friend col-sm-6 col-md-6 col-lg-3">
                     <p>NIM</p>
                 </div>
-                <div class="profile-nim-eco-friend col-sm-12 col-md-12 col-lg-5">
+                <div class="profile-nim-eco-friend col-sm-6 col-md-6 col-lg-5">
                     <p>: {{$data->student_id}}</p>
                 </div>
             </div>
@@ -59,10 +59,10 @@
 
         <div class="container">
             <div class="row text-center"id ="email">
-                <div class="profile-email-eco-friend col-sm-12 col-md-12 col-lg-3">
+                <div class="profile-email-eco-friend col-sm-6 col-md-6 col-lg-3">
                     <p>Student Email </p>
                 </div>  
-                <div class="profile-email-eco-friend col-sm-12 col-md-12 col-lg-9">
+                <div class="profile-email-eco-friend col-sm-6 col-md-6 col-lg-9">
                     <p>: {{$data->email}}</p>
                 </div>  
             </div>
