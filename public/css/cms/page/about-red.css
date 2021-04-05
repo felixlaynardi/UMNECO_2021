@@ -20,7 +20,7 @@ body, html {
     margin: 0;
     padding: 0;
     /* height: 100%; */
-    height: 5000px;
+    
 }
 
 .section {
@@ -72,8 +72,7 @@ body, html {
     font-style: normal;
     font-weight: 500;
     line-height: 31px;
-    letter-spacing: 0em;
-    text-align: justified;
+    letter-spacing: 0em;    
 
     top: 50%;
     text-align: justify;
@@ -113,6 +112,13 @@ body, html {
 
 /* -----section3----- */
 
+#mission-btn{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
 .section-3 {
     background-image: url(../../../images/about-red/mission.png);
     background-position: center;
@@ -120,16 +126,18 @@ body, html {
     justify-content: center;
     min-height: 100vh;
     align-items: center;
+    position: relative;
 }
 
-/* .mission-logo-container-row {
+.mission-logo-container-row {
+    padding: 60px;
     align-items: center;
-   
 }
 
 .mission-logo-container-col{
     display: flex;
     justify-content: center;
+    padding: inherit;
 }
 
 .mission-logo {
@@ -138,12 +146,49 @@ body, html {
     background-color: rgb(10, 226, 255);
     border-radius: 50%;
     display: inline-block;
-    
+    padding: 100px;
 }
 
 .mission-logo:hover{
     cursor: pointer;
-} */
+}
+
+.content-container {
+    display: none;
+    max-width: 100%;
+    position: relative;
+    min-height: 100vh;
+    transition: .5s ease;
+}
+
+.content-container p {
+    font-family: MADE Tommy Soft;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-align: justify;
+}
+
+.close-slide{
+    animation: slideout 500ms linear;
+    display: none;
+}
+
+.rise{
+    background-image: url(../../../images/about-red/rise.png);
+}
+.utopia{
+    background-image: url(../../../images/about-red/utopia.png);
+}
+.raconteur{
+    background-image: url(../../../images/about-red/raconteur.png);
+}
+.utile{
+    background-image: url(../../../images/about-red/utile.png);
+}
 
 /*carousel content*/
 
@@ -163,14 +208,6 @@ body, html {
 .carousel button {
     background-color: transparent;
     border:none;
-}
-
-.content-container {
-    display: flex;
-    max-width: 100%;
-    position: relative;
-    min-height: 100vh;
-    transition: .5s ease;
 }
 
 .prev, .next {
@@ -197,7 +234,7 @@ body, html {
 }
 
 .item {
-    justify-content: center;
+    justify-content: space-around;
     padding: 50px;
     align-items: center;
     background-repeat: no-repeat;
@@ -208,18 +245,23 @@ body, html {
 }
 
 
-.rise{
-    background-image: url(../../../images/about-red/rise.png);
+
+
+/* popup */
+
+.close-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 50px;
 }
-.utopia{
-    background-image: url(../../../images/about-red/utopia.png);
+
+.close-btn:hover {
+    cursor: pointer;
 }
-.raconteur{
-    background-image: url(../../../images/about-red/raconteur.png);
-}
-.utile{
-    background-image: url(../../../images/about-red/utile.png);
-}
+
+
 /* 
 .popup-page {
     position: fixed;
@@ -268,13 +310,6 @@ body, html {
     background-image: url(../../../images/about-red/utile.png);
 }
 
-.close-btn {
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    color: white;
-    font-size: 50px;
-}
 
 .close-btn:hover{
     cursor: pointer;
@@ -315,12 +350,13 @@ body, html {
 
 
 /* -----section4----- */
+
 .section-4 {
     background-color: #DD2A2A;
     justify-content: center;
     align-items: center;
-    margin-top: 25vh;
     margin-bottom: 25vh;
+    min-height: 50vh;
 }
 
 .button-container{
@@ -388,20 +424,23 @@ body, html {
     }
 }
 
-@keyframes tonext {
-    75% {
-      left: 0;
+@keyframes slidein {
+    0% {
+        left: -100%;
     }
-    95% {
-      left: 100%;
+    100% {
+        left: 0;
     }
-    98% {
-      left: 100%;
+}
+
+@keyframes slideout {
+    0% {
+        left: 0px;
     }
-    99% {
-      left: 0;
+    100% {
+        left: -100%;
     }
-  }
+}
 
 @media(max-width:1100px) and (min-width:992px){
     .white-circle{

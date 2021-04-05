@@ -33,11 +33,11 @@
 </div>
 
 <div class="main2">
+
+    <!-- --------------------Small device-------------------------- -->
+
     <div id="carouselExampleControls" class="carousel slide d-lg-none d-block" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <!-- <div class="carousel-item active">
-            <img src="..." class="d-block w-100" alt="...">
-            </div> -->
             <div class="item rise row carousel-item active " data-bs-interval="1000000000">
                 <div class="col-lg-5 col-sm-5 slide-logo">
                     <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
@@ -81,46 +81,62 @@
         </button>
     </div>
 
+    <!-- -------------------------------Monitor-------------------------- -->
+
     <div class="section-3 d-lg-block d-none">
-        <div class="content-container">
+        <div class="row mission-logo-container-row px-4" id="mission-btn">
+            <div class="col-lg-6 mission-logo-container-col"> <span class="mission-logo" data="rise" id="rise-btn"></span> </div>
+            <div class="col-lg-6 mission-logo-container-col"> <span class="mission-logo" data="utopia" id="utopia-btn"></span>  </div>
+            <div class="col-lg-6 mission-logo-container-col"> <span class="mission-logo" data="raconteur" id="raconteur-btn"></span>  </div>
+            <div class="col-lg-6 mission-logo-container-col"> <span class="mission-logo" data="utile" id="utile-btn"></span>  </div>
+        </div>
+        
+        <div class="content-container" id="rise">
+            <span class="close-btn" data="rise">&times;</span>
             <div class="item rise row">
                 <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
                 </div>
-                <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="col-3">
+                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
+        </div>
 
+        <div class="content-container" id="utopia">
+            <span class="close-btn" data="utopia">&times;</span>
             <div class="item utopia row">
                 <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
                 </div>
-                <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="col-3">
+                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
+        </div>
+
+        <div class="content-container" id="raconteur">
+            <span class="close-btn" data="raconteur">&times;</span>
             <div class="item raconteur row">
                 <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
                 </div>
-                <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-            </div>               
-            
-
-            <div class="item utile row">
-                <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
-                <div class="col-6">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <div class="col-3">
+                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="content-container" id="utile">
+            <span class="close-btn" data="utile">&times;</span>
+            <div class="item utile row">
+                <div class="col-6">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
+                </div>
+                <div class="col-3">
+                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                </div>
+            </div>
         </div>
     </div>
 
@@ -230,32 +246,45 @@
 //     dots[slideIndex-1].className += " active";
 // }
 </script>
-<!-- <script>
+<script>
     
-// var popupBtn = document.querySelectorAll(".mission-logo");
+var popupBtn = document.querySelectorAll(".mission-logo");
 
-// popupBtn.forEach(function(btn) {
-//     btn.onclick = function(){
-//         var popup = btn.getAttribute("data");
+popupBtn.forEach(function(btn) {
+    btn.onclick = function(){
+        var popup = btn.getAttribute("data");
 
-//         document.getElementById(popup).style.display = "flex";
-//     };
-// });
 
-// var closeBtn = document.querySelectorAll(".close-btn");
+        document.getElementById("mission-btn").style.position = "absolute";
+        document.getElementById(popup).style.animation = "slidein 500ms linear";
+        document.getElementById(popup).style.display = "flex";
+    };
+});
 
-// closeBtn.forEach(function(btn) {
-//     btn.onclick = function(){
-//         var popup = (btn.closest(".popup-bg").style.display = "none");
-//     };
-// });
+var closeBtn = document.querySelectorAll(".close-btn");
 
-// window.onclick = function(e){
-//     if(e.target.classList.contains('popup-bg')) {
-//         e.target.style.display = "none";
-//     }
-// };
-</script> -->
+closeBtn.forEach(function(btn) {
+    // btn.onclick = function(){
+    //     var popup = (btn.closest(".content-container").style.display = "none");
+        
+    //     document.getElementById("mission-btn").style.display = "flex";
+    // };
+    btn.onclick = function(){
+        var popup = btn.getAttribute("data");
+
+       
+        document.getElementById(popup).style.animation = "slideout 500ms linear";
+        $(btn.closest(".content-container")).fadeOut(500);
+        // document.getElementById(popup).style.display = "none";
+    };
+});
+
+window.onclick = function(e){
+    if(e.target.classList.contains('popup-bg')) {
+        e.target.style.display = "none";
+    }
+};
+</script>
 
 
 
