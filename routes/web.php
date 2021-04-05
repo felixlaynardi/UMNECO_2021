@@ -23,7 +23,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 
 
 Route::get('/', function () {
-  return view('cms.page.register', ['title' => 'UMN ECO 2021']);
+  return view('cms.page.home', ['title' => 'UMN ECO 2021']);
 });
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
