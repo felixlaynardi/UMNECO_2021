@@ -1,4 +1,3 @@
-<!--Ganti error message didalem div yang classnya error, if nya sesuain cari error gara2 apa -->
 @extends('cms.template.app')
 
 @section('custom-css')
@@ -51,7 +50,7 @@
             <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
             <option value="Arsitektur">Arsitektur</option>
             <option value="Film & Animasi">Film & Animasi</option>
-        </select >
+        </select>
         @if($errors->has('major'))
         <div class="error">{{ $errors->first('major') }}</div>
         @endif
@@ -70,7 +69,7 @@
         @endif
         <label for="Instagram_account">Username IG (Tidak di private) </label>
         <input type="text" name="Instagram_account" id="Instagram_account" placeholder="umn_eco" value="{{ old('Instagram_account') }}" class="form-control">
-        @if($errors->has('Instagram_account')) 
+        @if($errors->has('Instagram_account'))
         <div class="error">{{ $errors->first('Instagram_account') }}</div>
         @endif
         <label for="Generation">ID Line</label>
@@ -114,6 +113,12 @@
 @section('custom-js')
 <script src="{{ asset('js/cms/page/home.js') }}"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
-
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
+
+@if ($errors->any())
+<script>
+    Swal.fire("Selamat datang", "Data yang di input tidak valid", "error");
+</script>
+@endif
 @endsection

@@ -92,10 +92,10 @@ class EcofriendController extends Controller
     {
         $model = new Ecofriends();
         $data = $request->input();
-
+        //cut the front 0 in Student_id (NIM) 
         $data['Student_id'] = (int)$data['Student_id'];
 
-
+        //Set rules for the form
         $rule = array(
             'Firstname' => 'required',
             'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
@@ -154,6 +154,9 @@ class EcofriendController extends Controller
 
         if (!$validator->fails()) {
             unset($data['Password_confirmation'], $data['_token'], $data['Availability']);
+            //Compensation false = Haven't used any compensation
+            $data['utopia_compensation'] = false;
+            $data['rise_compensation'] = false;
 
             $data['Password'] = Hash::make($request['Password']);
 
@@ -161,7 +164,11 @@ class EcofriendController extends Controller
 
             $model->registerEcoFriend($data);
 
-            return redirect()->route('registerView');
+            session()->put('user', $data['Email']);
+
+            session()->put('status', 'Success');
+
+            return redirect()->route('profileView');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input());
         }
