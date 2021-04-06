@@ -54,13 +54,23 @@ class EcofriendController extends Controller
             Carbon::now()->timezone("Asia/Jakarta");
             $startTime = Carbon::create(2021, 4, 6);
             // $endTime = Carbon::create(2021, 4, 18);
-            $currTime = Carbon::create(2021, 4, 6);
-
+            $currTime = Carbon::create(2021, 4, 8);
             $now = Carbon::create("today");
             $misiKe_N = $currTime->diffInDays($startTime);
             $misiKe_N++;
 
-            return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data' => $data,  'misiKe_N'=> $misiKe_N], compact('data'));
+            //check link submitted or no in that day
+            $progressModel = new MissionProgress();
+            $allMissionProgress = $progressModel->getMissionProgress($data->id, $misiKe_N);
+            // dd($allMissionProgress);
+            
+            return view('cms.page.profile', 
+            [
+            'title' => 'UMN ECO 2021',
+            'data' => $data, 
+            'misiKe_N'=> $misiKe_N,
+            'allMissionProgress' => $allMissionProgress
+            ]);
         }
     }
     
@@ -84,7 +94,6 @@ class EcofriendController extends Controller
                         session()->put('user', $data['email']);
                         return redirect()->route('profileView')->with('status', 'Success');;
                     } else {
-                        dd($check_data);
                         $error = array(
                             'login' => "Email atau password salah"
                         );
@@ -220,7 +229,7 @@ class EcofriendController extends Controller
         $missionUtopiaID = $request->input("misiKe_N");
         $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
         // dd($data);
-        $progressModel->missionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
+        $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
         
         return redirect()->route('profileView');
     }

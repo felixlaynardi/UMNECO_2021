@@ -149,24 +149,32 @@
     <div class="container" id="button-submit">
         <div class="row">
             <div class="col-3">
+                @if ($allMissionProgress["utopia"] == 0)
                 <div class="logo-submit">
                     <button class="submit-button" id="submit-utopia">Submit</button>
                 </div>
+                @endif
             </div>
             <div class="col-3">
+                @if ($allMissionProgress["rise"] == 0)
                 <div class="logo-submit">
                     <button class="submit-button" id="submit-rise">Submit</button>
                 </div>
+                @endif
             </div>
             <div class="col-3">
+                @if ($allMissionProgress["utile"] == 0)
                 <div class="logo-submit">
                     <button class="submit-button" id="submit-utile">Submit</button>
                 </div>
+                @endif
             </div>
             <div class="col-3">
+                @if ($allMissionProgress["raconteur"] == 0)
                 <div class="logo-submit">
                     <button class="submit-button" id="submit-racounter">Submit</button>
                 </div>
+                @endif
             </div>
         </div>
     </div>
@@ -198,7 +206,10 @@
 @if (session('status') == 'Success')
 <script>
     Swal.fire("Welcome", "{{$data->firstname}}", "success");
+</script>
+@endif
 
+<script>
     $("#submit-utopia").click(function() {
         Swal.fire({
             title: 'Submit Link',
@@ -271,6 +282,5 @@
         })
     })
 </script>
-@endif
 
 @endsection
