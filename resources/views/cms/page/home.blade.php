@@ -7,14 +7,21 @@
 @section('content')
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
-    <div id="scene-1" class="container-fluid position-relative" style="">
-        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-absolute col-3 left-pipe" style="">
+    <div id="scene-1" class="position-relative" style="">
+        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 left-pipe" id="left-pipe-id" style="">
 
-        <img src="{{ asset('images/home/hose.png')}}" alt="" class="position-absolute col-3 hose" style="">
+        <img src="{{ asset('images/home/hose.png')}}" alt="" class="position-fixed col-lg-3 hose" id="hose-id">
 
-        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-absolute col-3 right-pipe" style="">
+        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 right-pipe" id="right-pipe-id" style="">
         
-        <a href="#" id="glass-a"><img src="{{ asset('images/home/glass-1.png')}}" alt="" class="position-absolute col-3" id="glass" style=""></a>
+        <div class="glass-section position-fixed col-12" style="text-align:center;">
+            <a href="#" id="glass-a">
+                <img src="{{ asset('images/home/glass-1.png')}}" alt="" class="col-md-3 col-8" id="glass" style="">
+                <span class="marker"></span>
+            </a>
+
+            <div class="glass-text" class="position-fixed col-md-3 col-8">BREAK TO ENTER</div>
+        </div>
     </div>
     <div id="scene-2" class="position-relative mx-auto">
         <div class="fixed-wrapper">
@@ -137,7 +144,7 @@
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
-        $('#glass').on( "click", function() {
+        $('#glass-a').on( "click", function() {
             glass_src = $("#glass").attr('src');
             code = parseInt(glass_src[glass_src.length - 5]);
             if(code < 3){
@@ -146,6 +153,7 @@
                 $("#glass").attr("src", glass_src);
             }
             if(code == 3){
+                $('.marker').fadeOut();
                 $("#glass-a").attr('href', '/about-red');
             }
         });

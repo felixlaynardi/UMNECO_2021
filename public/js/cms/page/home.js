@@ -21,7 +21,10 @@ ScrollTrigger.create({
   end: "+=500",
   scrub: 3
 });
-scene_1_2.to("#lower-lava", { top: '0vh' }, 0);
+scene_1_2.to(".glass-section", { top: '-100vh' }, 0);
+scene_1_2.to(".right-pipe", { top: '-200vh' }, 0);
+scene_1_2.to(".left-pipe", { top: '-200vh' }, 0);
+scene_1_2.to(".hose", { top: '-200vh' }, 0);
 // Third Frame
 let scene_1_3 = gsap.timeline();
 ScrollTrigger.create({
@@ -79,6 +82,9 @@ ScrollTrigger.create({
 });
 scene_2_1.to(".cloud-left", { left: '-20vh' }, 0);
 scene_2_1.to(".cloud-right", { right: '-20vh' }, 0);
+scene_2_1.to(".navbar", { backgroundColor: '#1B3627' }, 0);
+scene_2_1.to(".toggler-container", { background: '#2A6B49' }, 0);
+scene_2_1.to(".nav-main", { className: 'nav-main green-nav' }, 0);
 // Second Frame
 let scene_2_2 = gsap.timeline();
 ScrollTrigger.create({
@@ -156,13 +162,13 @@ ScrollTrigger.create({
 scene_2_6.to(".navbar", { display: 'block' }, 0);
 scene_2_6.to(".navbar", { opacity: '1' }, 0);
 scene_2_6.to(".scroll-icon", { display: 'none' }, 0);
-if($( window ).width() <= 767){
-  scene_2_6.to(".navigation-toggle-span", { display: 'block' }, 0);
-  scene_2_6.to(".navigation-toggle-span", { opacity: '1' }, 0);
-  scene_2_6.to(".toggler-container", { display: 'block' }, 0);
-  scene_2_6.to(".toggler-container", { opacity: '1' }, 0);
+// if($( window ).width() <= 767){
+//   scene_2_6.to(".navigation-toggle-span", { display: 'block' }, 0);
+//   scene_2_6.to(".navigation-toggle-span", { opacity: '1' }, 0);
+//   scene_2_6.to(".toggler-container", { display: 'block' }, 0);
+//   scene_2_6.to(".toggler-container", { opacity: '1' }, 0);
 
-}
+// }
 // Z-index
 let scene_2_z = gsap.timeline();
 ScrollTrigger.create({
