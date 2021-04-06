@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 use DB;
 use Symfony\Component\Console\Input\Input;
 
@@ -63,11 +64,19 @@ class EcofriendController extends Controller
                 );
                 return Redirect::back()->withErrors($error)->withInput($request->input());
             } else {
+                $data['email'] = Str::lower($data['email']);
                 $check_data = $model->getEcoFriendsByEmail($data['email']);
-                if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
-                    session()->put('user', $data['email']);
-                    session()->put('status', 'Success');
-                    return redirect()->route('profileView');
+                if ($check_data != null) {
+                    if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
+                        session()->put('user', $data['email']);
+                        return redirect()->route('profileView')->with('status', 'Success');;
+                    } else {
+                        dd($check_data);
+                        $error = array(
+                            'login' => "Email atau password salah"
+                        );
+                        return Redirect::back()->withErrors($error)->withInput($request->input());
+                    }
                 } else {
                     $error = array(
                         'login' => "Email atau password salah"
@@ -92,12 +101,20 @@ class EcofriendController extends Controller
     {
         $model = new Ecofriends();
         $data = $request->input();
-        //cut the front 0 in Student_id (NIM) 
+        //Capitalize first letter of names and lowercases Line_id, IG Account and Email
+        $data['Firstname'] = ucwords(Str::lower($data['Firstname']));
+        $data['Lastname'] = ucwords(Str::lower($data['Lastname']));
+        $data['Line_id'] = Str::lower($data['Line_id']);
+        $data['Instagram_account'] = Str::lower($data['Instagram_account']);
+        $data['Email'] = Str::lower($data['Email']);
+
+        //Cut the front 0 in Student_id (NIM) 
         $data['Student_id'] = (int)$data['Student_id'];
 
         //Set rules for the form
         $rule = array(
-            'Firstname' => 'required',
+            'Firstname' => 'required|regex:/^[\pL\s\-]+$/u',
+            'Lastname' => 'regex:/^[\pL\s\-]+$/u',
             'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
             'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id',
             'Major' => 'required',
@@ -113,6 +130,9 @@ class EcofriendController extends Controller
 
         $messages = [
             'Firstname.required' => 'Kamu perlu mengisi nama kamu',
+            'Firstname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
+
+            'Lastname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
 
             'Student_id.required' => 'Kamu perlu mengisi NIM kamu',
             'Student_id.unique' => 'NIM kamu sudah terdaftar',
@@ -166,11 +186,9 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            session()->put('status', 'Success');
-
             return redirect()->route('profileView');
         } else {
-            return Redirect::back()->withErrors($validator)->withInput($request->input());
+            return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
     }
 
