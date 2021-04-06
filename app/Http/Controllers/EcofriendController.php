@@ -47,7 +47,7 @@ class EcofriendController extends Controller
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data' => $data], compact('data'));
+            return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data' => $data]);
         }
     }
 
@@ -71,7 +71,6 @@ class EcofriendController extends Controller
                         session()->put('user', $data['email']);
                         return redirect()->route('profileView')->with('status', 'Success');;
                     } else {
-                        dd($check_data);
                         $error = array(
                             'login' => "Email atau password salah"
                         );
@@ -121,7 +120,7 @@ class EcofriendController extends Controller
             'Generation' => 'required',
             'Instagram_account' => 'required|unique:eco_friends,instagram_account',
             'Line_id' => 'required|unique:eco_friends,line_id',
-            'Phone_number' => 'min:11|max:12|unique:eco_friends,phone_number',
+            'Phone_number' => 'min:11|max:12|unique:eco_friends,phone_number|numeric',
             'Password' => 'required|min:8|max:25|confirmed',
             'Password_confirmation' => 'required|min:8|max:25',
             'Availability' => 'required|in:1'
@@ -141,7 +140,7 @@ class EcofriendController extends Controller
             'Email.required' => 'Kamu perlu mengisi email kamu',
             'Email.email' => 'Email harus menggunakan email student',
             'Email.unique' => 'Email kamu sudah terdaftar',
-            'Email.ends_with' => 'Email harus menggunakan email student',
+            'Email.ends_with' => 'Email harus menggunakan email student UMN',
 
             'Major.required' => 'Kamu perlu mengisi jurusan kamu',
 
@@ -157,6 +156,7 @@ class EcofriendController extends Controller
             'Phone_number.min' => 'Nomor telepon terlalu pendek',
             'Phone_number.max' => 'Nomor telepon terlalu panjang',
             'Phone_number.unique' => 'Nomor telepon kamu sudah terdaftar',
+            'Phone_number.numeric' => 'Nomor telepon harus berupa angka',
 
             'Password.required' => 'Kamu perlu mengisi password kamu',
             'Password.min' => 'Password minimal terdiri dari 8 karakter',
