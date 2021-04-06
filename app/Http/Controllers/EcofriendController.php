@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
 use App\Models\Ecofriends;
+use App\Models\MissionProgress;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use Carbon\Carbon;
 use DB;
 use Symfony\Component\Console\Input\Input;
 
@@ -46,10 +48,21 @@ class EcofriendController extends Controller
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data' => $data], compact('data'));
+
+            //set mission hari ke N
+            Carbon::now()->timezone("Asia/Jakarta");
+            $startTime = Carbon::create(2021, 4, 6);
+            // $endTime = Carbon::create(2021, 4, 18);
+            $currTime = Carbon::create(2021, 4, 6);
+
+            $now = Carbon::create("today");
+            $misiKe_N = $currTime->diffInDays($startTime);
+            $misiKe_N++;
+
+            return view('cms.page.profile', ['title' => 'UMN ECO 2021', 'data' => $data,  'misiKe_N'=> $misiKe_N], compact('data'));
         }
     }
-
+    
     public function login(Request $request)
     {
         $model = new Ecofriends();
@@ -77,9 +90,7 @@ class EcofriendController extends Controller
             }
         }
     }
-
-
-
+    
     public function logout(Request $request)
     {
         if (session()->has('user')) {
@@ -87,15 +98,15 @@ class EcofriendController extends Controller
         }
         return redirect()->route('loginView');
     }
-
+    
     public function register(Request $request)
     {
         $model = new Ecofriends();
         $data = $request->input();
-
+        
         $data['Student_id'] = (int)$data['Student_id'];
-
-
+        
+        
         $rule = array(
             'Firstname' => 'required',
             'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
@@ -109,64 +120,64 @@ class EcofriendController extends Controller
             'Password_confirmation' => 'required|min:8|max:25',
             'Availability' => 'required|in:1'
         );
-
-
+        
+        
         $messages = [
             'Firstname.required' => 'Kamu perlu mengisi nama kamu',
-
+            
             'Student_id.required' => 'Kamu perlu mengisi NIM kamu',
             'Student_id.unique' => 'NIM kamu sudah terdaftar',
             'Student_id.not_in' => 'Kamu perlu mengisi NIM kamu',
-
+            
             'Email.required' => 'Kamu perlu mengisi email kamu',
             'Email.email' => 'Email harus menggunakan email student',
             'Email.unique' => 'Email kamu sudah terdaftar',
             'Email.ends_with' => 'Email harus menggunakan email student',
-
+            
             'Major.required' => 'Kamu perlu mengisi jurusan kamu',
-
+            
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
-
+            
             'Instagram_account.required' => 'Kamu perlu mengisi nama akun instagram kamu',
             'Instagram_account.unique' => 'Instagram kamu sudah terdaftar',
-
+            
             'Line_id.required' => 'Kamu perlu mengisi id line kamu',
             'Line_id.unique' => 'Line kamu sudah terdaftar',
-
+            
             'Phone_number.required' => 'Kamu perlu mengisi nomor telepon kamu',
             'Phone_number.min' => 'Nomor telepon terlalu pendek',
             'Phone_number.max' => 'Nomor telepon terlalu panjang',
             'Phone_number.unique' => 'Nomor telepon kamu sudah terdaftar',
-
+            
             'Password.required' => 'Kamu perlu mengisi password kamu',
             'Password.min' => 'Password minimal terdiri dari 8 karakter',
             'Password.max' => 'Password maximal terdiri dari 25 karakter',
             'Password.confirmed' => 'Password tidak sama',
-
+            
             'Password_confirmation.required' => 'Kamu perlu mengisi password kamu',
             'Password_confirmation.min' => 'Password minimal terdiri dari 8 karakter',
             'Password_confirmation.max' => 'Password maximal terdiri dari 25 karakter',
-
+            
             'Availability.required' => 'Kamu perlu menyetujui ketentuan yang berlaku'
         ];
-
+        
         $validator = Validator::make($data, $rule, $messages);
-
+        
         if (!$validator->fails()) {
             unset($data['Password_confirmation'], $data['_token'], $data['Availability']);
-
+            
             $data['Password'] = Hash::make($request['Password']);
-
+            
             $this->sendEmail($data);
-
+            
             $model->registerEcoFriend($data);
-
+            
             return redirect()->route('registerView');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input());
         }
     }
-
+    
     public function sendEmail($data)
     {
         $details = [
@@ -175,4 +186,18 @@ class EcofriendController extends Controller
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
     }
+    
+    public function submitLink(Request $request){
+        $progressModel = new MissionProgress();
+        $model = new Ecofriends();
+        $missionType = $request->input("type");
+        $submittedLink = $request->input("link");
+        $missionUtopiaID = $request->input("misiKe_N");
+        $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
+        // dd($data);
+        $progressModel->missionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
+        
+        return redirect()->route('profileView');
+    }
+    
 }
