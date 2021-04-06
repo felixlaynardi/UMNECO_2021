@@ -109,35 +109,60 @@ class MissionProgress extends Model
         // dd($allMissionProgress);
         return $allMissionProgress;
         
-        
-        // if ($missionType == 2) {
-        //     DB::table('progress_rise')->insert([
-        //         'userid' => $userid,
-        //         'mission_rise_id' => $mission_X_ID,
-        //         'status' => false,
-        //         'link' => $submittedLink,
-        //         'date' => $mytime
-        //     ]);
-        // }
-        
-        // if ($missionType == 3) {
-        //     DB::table('progress_utile')->insert([
-        //         'userid' => $userid,
-        //         'mission_utile_id' => $mission_X_ID,
-        //         'status' => false,
-        //         'link' => $submittedLink,
-        //         'date' => $mytime
-        //     ]);
-        // }
-        
-        // if{
-        //     DB::table('progress_raconteur')->insert([
-        //         'userid' => $userid,
-        //         'mission_raconteur_id' => $mission_X_ID,
-        //         'status' => false,
-        //         'link' => $submittedLink,
-        //         'date' => $mytime
-        //     ]);
-        // }
+    }
+
+    public function getProgresBarPercentage($userid){
+
+        //count all mission in every mission table
+        $totalUtopia = DB::table('mission_utopia')
+            ->count();
+        $totalUtile = DB::table('mission_utile')
+            ->count();
+        $totalRise = DB::table('mission_rise')
+            ->count();
+        $totalRaconteur = DB::table('mission_raconteur')
+            ->count();
+        // dd($totalUtopia, $totalUtile, $totalRise, $totalRaconteur);
+
+        //find all true(1) progress in progress table
+        $progressUtopia = DB::table('progress_utopia')
+            ->where('status', true)
+            ->where('userid', '=', $userid)
+            ->count();
+
+        $progressRise = DB::table('progress_rise')
+            ->where('status', true)
+            ->where('userid', '=', $userid)
+            ->count();
+
+        $progressUtile = DB::table('progress_utile')
+            ->where('status', true)
+            ->where('userid', '=', $userid)
+            ->count();
+
+        $progressRaconteur = DB::table('progress_raconteur')
+            ->where('status', true)
+            ->where('userid', '=', $userid)
+            ->count();
+        // dd($progressUtopia, $progressRise, $progressUtile, $progressRaconteur);
+
+        $utopiaPercentage = intval(floor(($progressUtopia / $totalUtopia) *100));
+        $risePercentage = intval(floor(($progressRise / $totalRise) *100));
+        $utilePercentage = intval(floor(($progressUtile / $totalUtile) *100));
+        $raconteurPercentage = intval(floor(($progressRaconteur / $totalRaconteur) *100));
+        // dd($utopiaPercentage, $risePercentage, $utilePercentage, $raconteurPercentage);
+
+        $percentageAllMission = [
+            "utopiaPercentage" => $utopiaPercentage,
+            "risePercentage" => $risePercentage,
+            "utilePercentage" => $utilePercentage,
+            "raconteurPercentage" => $raconteurPercentage
+        ];
+        // dd($progressAllMission);
+
+
+        return $percentageAllMission;
+
+        // dd($progressAllMission);
     }
 }

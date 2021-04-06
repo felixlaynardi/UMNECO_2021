@@ -50,7 +50,8 @@ class EcofriendController extends Controller
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
 
-            //set mission hari ke N
+            //set mission day-N
+            //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
             $startTime = Carbon::create(2021, 4, 6);
             // $endTime = Carbon::create(2021, 4, 18);
@@ -63,13 +64,20 @@ class EcofriendController extends Controller
             $progressModel = new MissionProgress();
             $allMissionProgress = $progressModel->getMissionProgress($data->id, $misiKe_N);
             // dd($allMissionProgress);
+
+            //data for display to progress bar
+            $percentageAllMission = $progressModel->getProgresBarPercentage($data->id);
+
+            //showing special sweet alert for raconteur and utile for user to choose
+            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 10);
             
             return view('cms.page.profile', 
             [
-            'title' => 'UMN ECO 2021',
-            'data' => $data, 
-            'misiKe_N'=> $misiKe_N,
-            'allMissionProgress' => $allMissionProgress
+                'title' => 'UMN ECO 2021',
+                'data' => $data, 
+                'misiKe_N'=> $misiKe_N,
+                'allMissionProgress' => $allMissionProgress,
+                'percentageAllMission' => $percentageAllMission
             ]);
         }
     }

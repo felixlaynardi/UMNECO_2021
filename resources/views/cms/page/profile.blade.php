@@ -96,7 +96,7 @@
     <div class="container progress-graph">
         <div class="chart small-font-size">
             <!-- bar pertama -->
-            <div class="bar bar-60 utopia col-sm-3">
+            <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
                 <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
@@ -108,7 +108,7 @@
                 <div class="face floor"></div>
             </div>
             <!-- bar kedua -->
-            <div class="bar bar-25 rise col-sm-3">
+            <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
                 <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
@@ -120,7 +120,7 @@
                 <div class="face floor"></div>
             </div>
             <!-- bar ketiga -->
-            <div class="bar bar-35 utile col-sm-3">
+            <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
                 <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
@@ -132,7 +132,7 @@
                 <div class="face floor"></div>
             </div>
             <!-- bar keempat -->
-            <div class="bar bar-80 racounter col-sm-3">
+            <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
                 <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
                 <div class="face side-0">
                     <div class="growing-bar"></div>
