@@ -24,6 +24,7 @@ label{
     font-family: "MADE Tommy Soft";
     color: #92967d;
 }
+
 .check{
     color: red;
     font-family: "MADE Tommy soft 2";
@@ -35,12 +36,14 @@ label{
         padding-left: 20%;
     }
 }
-.form{
+.container form{
     padding-top: 40px;
     width: 40%;
     margin-left: 30%;
 }
 .button{
+    margin: auto;
+    /* text-align: center; */
     margin-bottom: 5%;
     margin-right: 2%;
     width: 120px;
@@ -72,4 +75,13 @@ label{
     font-family: "MADE Tommy soft 2";
     text-align: center;
     width: 100%;
+}
+.step{
+    display: none;
+}
+.step.active{
+    display: block;
+}
+button.next{
+    margin-bottom: 5%;
 }
