@@ -26,6 +26,8 @@ class EcoFriends extends Migration
             $table->string('line_id')->unique();
             $table->string('phone_number')->unique();
             $table->string('password');
+            $table->boolean('utopia_compensation');
+            $table->boolean('rise_compensation');
         });
     }
 

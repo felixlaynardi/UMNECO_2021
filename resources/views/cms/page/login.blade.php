@@ -5,16 +5,16 @@
 @endsection
 
 @section('content')
-<div class="container-fluid" style="background:red;">
-</div>
+<header></header>
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-6">
-            <img src="{{ asset('images/login/Hydrant BG.png')}}" class="BG">
-            <img src="{{ asset('images/login/Alas Hydrant.png')}}" class="alas">
-            <img src="{{ asset('images/login/Hydrant.gif')}}" class="hydrant">
+            <img id="image-left" src="{{ asset('images/login/Hydrant BG.png')}}" class="BG">
+            <img id="image-left" src="{{ asset('images/login/Alas Hydrant.png')}}" class="alas">
+            <img id="image-left" src="{{ asset('images/login/Hydrant.gif')}}" class="hydrant">
         </div>
-        <div class="col-md-6 form form-group">
+        <div class="col-md-6 form form-group" id="form">
             <h1>ENTER RED</h1><br>
             <form action="{{route('login')}}" method="post">
                 @csrf
@@ -30,8 +30,8 @@
                 <div class="error">{{ $errors->first('password') }}</div>
                 @endif
                 <br><br>
-                <button type="submit" name="action" value="login" class="btn btn-primary">Login</button>
-                <button type="submit" name="action" value="register" class="btn btn-primary register">Register</button>
+                <button class="button" type="submit" name="action" value="login" class="login btn btn-primary">Login</button>
+                <button class="button" type="submit" name="action" value="register" class="btn btn-primary register">Register</button>
             </form>
         </div>
     </div>
