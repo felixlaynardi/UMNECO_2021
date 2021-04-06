@@ -44,9 +44,9 @@ class MissionProgress extends Model
                 'date' => $mytime
             ]);
         } else {
-            DB::table('progress_racounter')->insert([
+            DB::table('progress_raconteur')->insert([
                 'userid' => $userid,
-                'mission_racounter_id' => $mission_X_ID,
+                'mission_raconteur_id' => $mission_X_ID,
                 'status' => false,
                 'link' => $submittedLink,
                 'date' => $mytime

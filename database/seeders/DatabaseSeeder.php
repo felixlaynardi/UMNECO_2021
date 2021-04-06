@@ -30,5 +30,17 @@ class DatabaseSeeder extends Seeder
             );
             $model->addRise($data);
         }
+
+        $data = array(
+            'mission_utile_id' => 1,
+            'mission_desc' => 'Utopia' . 1
+        );
+        $model->addUtile($data);
+
+        $data = array(
+            'mission_raconteur_id' => 1,
+            'mission_desc' => 'Utopia' . 1
+        );
+        $model->addRaconteur($data);
     }
 }
