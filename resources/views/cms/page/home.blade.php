@@ -5,41 +5,26 @@
 @endsection
 
 @section('content')
-<!-- <div class="scroll-downs">
-  <div class="mousey">
-    <div class="scroller"></div>
-  </div>
-</div> -->
-<!-- <div class="scroll-text">Scroll Down Slowly</div> -->
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
-    <div id="scene-1" class="position-relative mx-auto">
-        <div id="upper-lava" style="background:url({{ asset('images/home/upper-lava.png')}});" class="position-fixed assets">
-            
-        </div>
-        <div id="lower-lava" style="background:url({{ asset('images/home/lower-lava.png')}});" class="position-fixed assets">
+    <div id="scene-1" class="position-relative" style="">
+        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 left-pipe" id="left-pipe-id" style="">
 
-        </div>
-        <!-- <img src="{{ asset('images/home/upper-lava.png')}}" alt="" class="position-fixed w-100"> -->
-        <!-- <img src="{{ asset('images/home/lower-lava.png')}}" alt="" class="position-fixed w-100" style="top:20%"> -->
+        <img src="{{ asset('images/home/hose.png')}}" alt="" class="position-fixed col-lg-3 hose" id="hose-id">
 
-        <div id="lava-flow" style="background:url({{ asset('images/home/lava-flow.png')}});" class="position-fixed assets">
-            
-        </div>
-        <div id="lava-flow-2" style="background:url({{ asset('images/home/lava-flow.png')}});" class="position-fixed assets">
-            
-        </div>
-        <img src="{{ asset('images/home/oprec.png')}}" alt="" class="position-fixed oprec-text col-12 col-lg-4 col-md-6" style="">
-        <!-- <div id="scene-2" style="background:url({{ asset('images/home/sky.png')}});"> -->
+        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 right-pipe" id="right-pipe-id" style="">
+        
+        <div class="glass-section position-fixed col-12" style="text-align:center;">
+            <a href="#" id="glass-a">
+                <img src="{{ asset('images/home/glass-1.png')}}" alt="" class="col-md-3 col-8" id="glass" style="">
+                <span class="marker"></span>
+            </a>
 
-        <!-- </div> -->
+            <div class="glass-text" class="position-fixed col-md-3 col-8">BREAK TO ENTER</div>
+        </div>
     </div>
     <div id="scene-2" class="position-relative mx-auto">
         <div class="fixed-wrapper">
-            <img src="{{ asset('images/home/cloud-left.png')}}" alt="" class="position-fixed cloud-left col-12 col-lg-6 col-md-8 scene-2-img">
-
-            <img src="{{ asset('images/home/cloud-right.png')}}" alt="" class="position-fixed cloud-right col-12 col-lg-6 col-md-8 scene-2-img">
-
             <img src="{{ asset('images/home/umn-eco-logo.png')}}" alt="" class="position-fixed umn-eco-logo col-6 col-xl-2 col-sm-3 scene-2-img" style="">
 
             <div id="mountain-left" style="background:url({{ asset('images/home/mountain-left.png')}});" class="position-fixed assets col-6">
@@ -48,9 +33,6 @@
             <div id="mountain-right" style="background:url({{ asset('images/home/mountain-right.png')}});" class="position-fixed assets">
             
             </div>
-            <!-- <div id="foreground-2" style="background:url({{ asset('images/home/foreground.png')}});" class="position-fixed assets">
-            
-            </div> -->
             <div id="foreground" style="background:url({{ asset('images/home/foreground.png')}});" class="position-fixed assets">
             
             </div>
@@ -106,18 +88,6 @@
                     </div>
                     <div class="home-theme-content mt-3 pb-5 position-relative">
                         Di tahun 2021, UMN ECO akan mengangkat tema <em>‘Environmental Compassion for Our Nation’</em> sebagai agenda dasar utama. Tema tersebut mencerminkan rasa keprihatinan secara mendalam yang ingin diberikan terhadap bangsa terutama dalam ranah lingkungan, yang mana didalamnya terdapat komponen biotik dan abiotik yang saling berhubungan secara timbal balik.
-                        <!-- <div class="home-theme-point mt-4 mb-1">
-                            ENVIRONMENTAL
-                        </div>
-                        Kondisi alam tempat manusia, hewan, dan tumbuhan terhubung dengan lingkungan. 
-                        <div class="home-theme-point mt-4 mb-1">
-                            OUR NATION
-                        </div>
-                        Bangsa kita, yaitu bangsa Indonesia yang terdiri dari banyak manusia yang beragam dan memiliki perannya masing-masing
-                        <div class="home-theme-point mt-4 mb-1">
-                            COMPASSION
-                        </div>
-                        Perasaan simpati yang kuat terhadap suatu keprihatinan sehingga memunculkan keinginan untuk membantu merubah keprihatinan tersebut.  -->
                     </div>
                 </div>
                 <div class="home-theme-right col-lg-5 col-12 position-relative" style="margin-top: -10%;">
@@ -173,4 +143,19 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script>
+        $('#glass-a').on( "click", function() {
+            glass_src = $("#glass").attr('src');
+            code = parseInt(glass_src[glass_src.length - 5]);
+            if(code < 3){
+                code++;
+                glass_src = glass_src.substring(0, glass_src.length - 5) + code + glass_src.substring(glass_src.length - 4, glass_src.length);
+                $("#glass").attr("src", glass_src);
+            }
+            if(code == 3){
+                $('.marker').fadeOut();
+                $("#glass-a").attr('href', '/about-red');
+            }
+        });
+    </script>
 @endsection

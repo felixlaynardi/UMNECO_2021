@@ -27,6 +27,10 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
+Route::get('/about-red', function () {
+  return view('cms.page.about-red', ['title' => 'UMN ECO 2021']);
+});
+
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
