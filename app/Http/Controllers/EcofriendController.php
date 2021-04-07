@@ -54,8 +54,11 @@ class EcofriendController extends Controller
             //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
             $startTime = Carbon::create(2021, 4, 6);
-            // $endTime = Carbon::create(2021, 4, 18);
-            $currTime = Carbon::create(2021, 4, 8);
+
+            //currTime only used for debugging
+            $currTime = Carbon::create(2021, 4, 9);
+
+            //use $now for real case
             $now = Carbon::create("today");
             $misiKe_N = $currTime->diffInDays($startTime);
             $misiKe_N++;
@@ -70,14 +73,17 @@ class EcofriendController extends Controller
 
             //showing special sweet alert for raconteur and utile for user to choose
             $ChooseSpecialMissionDate = Carbon::create(2021, 4, 10);
-            
+            $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
+            // dd($specialMissionLaunch);
+
             return view('cms.page.profile', 
             [
                 'title' => 'UMN ECO 2021',
                 'data' => $data, 
                 'misiKe_N'=> $misiKe_N,
                 'allMissionProgress' => $allMissionProgress,
-                'percentageAllMission' => $percentageAllMission
+                'percentageAllMission' => $percentageAllMission,
+                'dateForSpecialMission' => $ChooseSpecialMissionDate
             ]);
         }
     }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use Exception;
 
 class MissionProgress extends Model
 {
@@ -150,6 +151,7 @@ class MissionProgress extends Model
         $risePercentage = intval(floor(($progressRise / $totalRise) *100));
         $utilePercentage = intval(floor(($progressUtile / $totalUtile) *100));
         $raconteurPercentage = intval(floor(($progressRaconteur / $totalRaconteur) *100));
+
         // dd($utopiaPercentage, $risePercentage, $utilePercentage, $raconteurPercentage);
 
         $percentageAllMission = [
