@@ -36,7 +36,7 @@
         </div>
 
         <div class="container">
-            <div class="row text-center"id ="name">
+            <div class="row text-center" id="name">
                 <div class="profile-name-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p style="text-transform: capitalize;">Name </p>
                 </div>
@@ -48,7 +48,7 @@
         </div>
 
         <div class="container">
-            <div class="row text-center"id ="nim">
+            <div class="row text-center" id="nim">
                 <div class="profile-nim-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p>NIM</p>
                 </div>
@@ -60,14 +60,14 @@
         </div>
 
         <div class="container">
-            <div class="row text-center"id ="email">
+            <div class="row text-center" id="email">
                 <div class="profile-email-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p>Student Email </p>
-                </div>  
+                </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1">:</div>
                 <div class="profile-email-eco-friend col-sm-7 col-md-7 col-lg-8">
                     <p>{{$data->email}}</p>
-                </div>  
+                </div>
             </div>
         </div>
     </div>
@@ -91,18 +91,18 @@
                 <p class="time-left">Time Left For Submission
                 <p>
                 <p class="time-countdown">
-                    <div id="days" class="d-none">
-                        01
-                    </div>
-                    <div id="hours" class="d-inline-block float-start ms-4">
-                        01 :
-                    </div>
-                    <div id="minutes" class="d-inline-block float-start">
+                <div id="days" class="d-none">
+                    01
+                </div>
+                <div id="hours" class="d-inline-block float-start ms-4">
+                    01 :
+                </div>
+                <div id="minutes" class="d-inline-block float-start">
                     12 :
-                    </div>
-                    <div id="seconds" class="d-inline-block float-start">
+                </div>
+                <div id="seconds" class="d-inline-block float-start">
                     34
-                    </div>
+                </div>
                 <P>
             </div>
         </div>
@@ -123,14 +123,15 @@
                     <div class="face top"></div>
                     <div class="face floor"></div>
                 </div>
-
                 <div class="desc-utopia">
                     <p class="col-12">UTOPIA</p>
                 </div>
 
+                @if ($allMissionProgress["utopia"] == 0)
                 <div class="logo-submit col-12">
                     <button class="submit-button" id="submit-utopia">Submit</button>
                 </div>
+                @endif
             </div>
 
             <!-- bar kedua -->
@@ -150,10 +151,11 @@
                 <div class="desc-rise">
                     <p class="col-12">RISE</p>
                 </div>
-
+                @if ($allMissionProgress["rise"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-rise">Submit</button>
+                    <button class="submit-button" id="submit-rise">Submit</button>
                 </div>
+                @endif
             </div>
 
             <!-- bar ketiga -->
@@ -173,10 +175,11 @@
                 <div class="desc-utile">
                     <p class="col-12">?</p>
                 </div>
-
+                @if ($allMissionProgress["utile"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-utile">Locked</button>
+                    <button class="submit-button" id="submit-utile">Locked</button>
                 </div>
+                @endif
             </div>
 
             <!-- bar keempat -->
@@ -196,12 +199,13 @@
                 <div class="desc-racounter">
                     <p class="col-12">?</p>
                 </div>
-
+                @if ($allMissionProgress["raconteur"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-racounter">Locked</button>
+                    <button class="submit-button" id="submit-racounter">Locked</button>
                 </div>
+                @endif
             </div>
-        
+
         </div>
     </div>
 
@@ -250,7 +254,7 @@
                 </div>
                 @if ($allMissionProgress["rise"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-rise">Submit</button>
+                    <button class="submit-button" id="submit-rise">Submit</button>
                 </div>
                 @endif
             </div>
@@ -279,7 +283,7 @@
                 </div>
                 @if ($allMissionProgress["utile"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-utile">Locked</button>
+                    <button class="submit-button" id="submit-utile">Locked</button>
                 </div>
                 @endif
             </div>
@@ -303,35 +307,35 @@
                 </div>
                 @if ($allMissionProgress["raconteur"] == 0)
                 <div class="logo-submit col-12">
-                    <button class="submit-button"id="submit-racounter">Locked</button>
+                    <button class="submit-button" id="submit-racounter">Locked</button>
                 </div>
                 @endif
             </div>
-        
+
         </div>
     </div>
-    
-    <div class="col-12" id="footer">        
-        <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
-            <div class="container" id="footer-items">      
-                    <div class="eco-umn-tagline">
-                        <p>#WeActForTheBetterEarth</p>
-                    </div>
-                    <div class="eco-red">
-                        <p>#RealEmergencyDailyLife</p>
-                    </div>
-                    <div class="logo-umn-eco">
-                        <img src="/images/profile/Logo UMN@2x.png" alt="logo-umn-eco">
-                    </div>
-                    <div class="logo-umn-eco-red">
-                        <img src="/images/profile/LOGO RED FINAL.png" alt="logo-umn-eco">
-                    </div>
+
+    <div class="col-12" id="footer">
+        <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">
+            <div class="container" id="footer-items">
+                <div class="eco-umn-tagline">
+                    <p>#WeActForTheBetterEarth</p>
+                </div>
+                <div class="eco-red">
+                    <p>#RealEmergencyDailyLife</p>
+                </div>
+                <div class="logo-umn-eco">
+                    <img src="/images/profile/Logo UMN@2x.png" alt="logo-umn-eco">
+                </div>
+                <div class="logo-umn-eco-red">
+                    <img src="/images/profile/LOGO RED FINAL.png" alt="logo-umn-eco">
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-</div>    
+</div>
 
 @endsection
 
@@ -418,5 +422,46 @@
         })
     })
 </script>
+
+<!-- SCRIPT FOR SPECIAL MISSION -->
+@if($dateForSpecialMission == 0)
+<script>
+    console.log("SPECIAL MISSION RIBET WOI");
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+            confirmButton: 'btn btn-success',
+            cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+    })
+
+    swalWithBootstrapButtons.fire({
+        title: 'Select Mystery Quest?',
+        text: "Choose One",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+            )
+        } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+        ) {
+            swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+            )
+        }
+    })
+</script>
+@endif
 
 @endsection

@@ -56,7 +56,7 @@ class EcofriendController extends Controller
             $startTime = Carbon::create(2021, 4, 6);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 9);
+            $currTime = Carbon::create(2021, 4, 11  );
 
             //use $now for real case
             $now = Carbon::create("today");
@@ -72,7 +72,7 @@ class EcofriendController extends Controller
             $percentageAllMission = $progressModel->getProgresBarPercentage($data->id);
 
             //showing special sweet alert for raconteur and utile for user to choose
-            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 10);
+            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 11);
             $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
@@ -83,7 +83,7 @@ class EcofriendController extends Controller
                 'misiKe_N'=> $misiKe_N,
                 'allMissionProgress' => $allMissionProgress,
                 'percentageAllMission' => $percentageAllMission,
-                'dateForSpecialMission' => $ChooseSpecialMissionDate
+                'dateForSpecialMission' => $specialMissionLaunch
             ]);
         }
     }
@@ -212,6 +212,7 @@ class EcofriendController extends Controller
             //Compensation false = Haven't used any compensation
             $data['utopia_compensation'] = false;
             $data['rise_compensation'] = false;
+            $data['mystery_quest'] = 0;
 
             $data['Password'] = Hash::make($request['Password']);
             
