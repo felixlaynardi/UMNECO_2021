@@ -28,6 +28,8 @@ class EcoFriends extends Migration
             $table->string('password');
             $table->boolean('utopia_compensation');
             $table->boolean('rise_compensation');
+            $table->boolean('take_part_in_utile')->nullable();
+            $table->boolean('take_part_in_raconteur')->nullable();
         });
     }
 

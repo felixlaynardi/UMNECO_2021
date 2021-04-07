@@ -120,7 +120,7 @@ class EcofriendController extends Controller
             'Generation' => 'required',
             'Instagram_account' => 'required|unique:eco_friends,instagram_account',
             'Line_id' => 'required|unique:eco_friends,line_id',
-            'Phone_number' => 'min:11|max:12|unique:eco_friends,phone_number|numeric',
+            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,12',
             'Password' => 'required|min:8|max:25|confirmed',
             'Password_confirmation' => 'required|min:8|max:25',
             'Availability' => 'required|in:1'
