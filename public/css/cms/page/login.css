@@ -23,7 +23,7 @@ label{
 }
 .hydrant{
     width: 100%;
-    margin-top: -98%;
+    margin-top: -95%;
 }
 .form{
     padding-top: 13%;
@@ -44,6 +44,9 @@ label{
     border: 2px solid;
     border-radius: 15px;
     outline: none;
+}
+.error{
+    background-color: #ff7171;
 }
 @media(max-width:768px) {
     img#image-left{
