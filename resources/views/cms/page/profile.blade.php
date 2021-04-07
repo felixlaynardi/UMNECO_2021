@@ -36,35 +36,38 @@
         </div>
 
         <div class="container">
-            <div class="row text-center" id="name">
-                <div class="profile-name-eco-friend col-sm-6 col-md-6 col-lg-3">
+            <div class="row text-center"id ="name">
+                <div class="profile-name-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p style="text-transform: capitalize;">Name </p>
                 </div>
-                <div class="profile-name-eco-friend col-sm-6 col-md-6 col-lg-5">
-                    <p style="text-transform: capitalize;"> : {{$data->firstname}} {{$data->lastname}}</p>
+                <div class="colon col-sm-1 col-md-1 col-lg-1">:</div>
+                <div class="profile-name-eco-friend col-sm-7 col-md-7 col-lg-6">
+                    <p style="text-transform: capitalize;">{{$data->firstname}} {{$data->lastname}}</p>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="row text-center" id="nim">
-                <div class="profile-nim-eco-friend col-sm-6 col-md-6 col-lg-3">
+            <div class="row text-center"id ="nim">
+                <div class="profile-nim-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p>NIM</p>
                 </div>
-                <div class="profile-nim-eco-friend col-sm-6 col-md-6 col-lg-5">
-                    <p>: {{$data->student_id}}</p>
+                <div class="colon col-sm-1 col-md-1 col-lg-1">:</div>
+                <div class="profile-nim-eco-friend col-sm-7 col-md-7 col-lg-5">
+                    <p>{{$data->student_id}}</p>
                 </div>
             </div>
         </div>
 
         <div class="container">
-            <div class="row text-center" id="email">
-                <div class="profile-email-eco-friend col-sm-6 col-md-6 col-lg-3">
+            <div class="row text-center"id ="email">
+                <div class="profile-email-eco-friend col-sm-3 col-md-4 col-lg-3">
                     <p>Student Email </p>
-                </div>
-                <div class="profile-email-eco-friend col-sm-6 col-md-6 col-lg-9">
-                    <p>: {{$data->email}}</p>
-                </div>
+                </div>  
+                <div class="colon col-sm-1 col-md-1 col-lg-1">:</div>
+                <div class="profile-email-eco-friend col-sm-7 col-md-7 col-lg-8">
+                    <p>{{$data->email}}</p>
+                </div>  
             </div>
         </div>
     </div>
@@ -108,107 +111,227 @@
     <div class="container progress-graph">
         <div class="chart small-font-size">
             <!-- bar pertama -->
-            <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
-                <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
-                <div class="face side-0">
-                    <div class="growing-bar"></div>
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
+                    <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
                 </div>
-                <div class="face side-1">
-                    <div class="growing-bar"></div>
+
+                <div class="desc-utopia">
+                    <p class="col-12">UTOPIA</p>
                 </div>
-                <div class="face top"></div>
-                <div class="face floor"></div>
+
+                <div class="logo-submit col-12">
+                    <button class="submit-button" id="submit-utopia">Submit</button>
+                </div>
             </div>
+
             <!-- bar kedua -->
-            <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
-                <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
-                <div class="face side-0">
-                    <div class="growing-bar"></div>
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
                 </div>
-                <div class="face side-1">
-                    <div class="growing-bar"></div>
+
+                <div class="desc-rise">
+                    <p class="col-12">RISE</p>
                 </div>
-                <div class="face top"></div>
-                <div class="face floor"></div>
+
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-rise">Submit</button>
+                </div>
             </div>
+
             <!-- bar ketiga -->
-            <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
-                <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
-                <div class="face side-0">
-                    <div class="growing-bar"></div>
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
                 </div>
-                <div class="face side-1">
-                    <div class="growing-bar"></div>
+
+                <div class="desc-utile">
+                    <p class="col-12">?</p>
                 </div>
-                <div class="face top"></div>
-                <div class="face floor"></div>
+
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-utile">Locked</button>
+                </div>
             </div>
+
             <!-- bar keempat -->
-            <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
-                <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
-                <div class="face side-0">
-                    <div class="growing-bar"></div>
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
                 </div>
-                <div class="face side-1">
-                    <div class="growing-bar"></div>
+
+                <div class="desc-racounter">
+                    <p class="col-12">?</p>
                 </div>
-                <div class="face top"></div>
-                <div class="face floor"></div>
+
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-racounter">Locked</button>
+                </div>
             </div>
+        
         </div>
     </div>
 
-    <div class="container" id="button-submit">
-        <div class="row">
-            <div class="col-3">
+    <div class="container progress-graph-top">
+        <div class="chart small-font-size">
+            <!-- bar pertama -->
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-60 utopia col-sm-3">
+                    <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
+                </div>
+
+                <div class="desc-utopia">
+                    <p class="col-12">UTOPIA</p>
+                </div>
                 @if ($allMissionProgress["utopia"] == 0)
-                <div class="logo-submit">
+                <div class="logo-submit col-12">
                     <button class="submit-button" id="submit-utopia">Submit</button>
                 </div>
                 @endif
             </div>
-            <div class="col-3">
+
+            <!-- bar kedua -->
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-25 rise col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
+                </div>
+
+                <div class="desc-rise">
+                    <p class="col-12">RISE</p>
+                </div>
                 @if ($allMissionProgress["rise"] == 0)
-                <div class="logo-submit">
-                    <button class="submit-button" id="submit-rise">Submit</button>
-                </div>
-                @endif
-            </div>
-            <div class="col-3">
-                @if ($allMissionProgress["utile"] == 0)
-                <div class="logo-submit">
-                    <button class="submit-button" id="submit-utile">Submit</button>
-                </div>
-                @endif
-            </div>
-            <div class="col-3">
-                @if ($allMissionProgress["raconteur"] == 0)
-                <div class="logo-submit">
-                    <button class="submit-button" id="submit-racounter">Submit</button>
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-rise">Submit</button>
                 </div>
                 @endif
             </div>
         </div>
     </div>
 
-    <div class="col-12" id="footer">
-        <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">
-            <div class="container" id="footer-items">
-                <div class="eco-umn-tagline">
-                    <p>#WeActForTheBetterEarth</p>
+    <div class="container progress-graph-bottom">
+        <div class="chart small-font-size">
+
+            <!-- bar ketiga -->
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-35 utile col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
                 </div>
-                <div class="eco-red">
-                    <p>#RealEmergencyDailyLife</p>
+
+                <div class="desc-utile">
+                    <p class="col-12">?</p>
                 </div>
-                <div class="logo-umn-eco">
-                    <img src="/images/profile/Logo UMN@2x.png" alt="logo-umn-eco">
+                @if ($allMissionProgress["utile"] == 0)
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-utile">Locked</button>
+                </div>
+                @endif
+            </div>
+
+            <!-- bar keempat -->
+            <div class="container col-3" id="bar-submit">
+                <div class="bar bar-80 racounter col-sm-3">
+                    <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                    <div class="face side-0">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face side-1">
+                        <div class="growing-bar"></div>
+                    </div>
+                    <div class="face top"></div>
+                    <div class="face floor"></div>
+                </div>
+
+                <div class="desc-racounter">
+                    <p class="col-12">?</p>
+                </div>
+                @if ($allMissionProgress["raconteur"] == 0)
+                <div class="logo-submit col-12">
+                    <button class="submit-button"id="submit-racounter">Locked</button>
+                </div>
+                @endif
+            </div>
+        
+        </div>
+    </div>
+    
+    <div class="col-12" id="footer">        
+        <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
+            <div class="container" id="footer-items">      
+                    <div class="eco-umn-tagline">
+                        <p>#WeActForTheBetterEarth</p>
+                    </div>
+                    <div class="eco-red">
+                        <p>#RealEmergencyDailyLife</p>
+                    </div>
+                    <div class="logo-umn-eco">
+                        <img src="/images/profile/Logo UMN@2x.png" alt="logo-umn-eco">
+                    </div>
+                    <div class="logo-umn-eco-red">
+                        <img src="/images/profile/LOGO RED FINAL.png" alt="logo-umn-eco">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <footer>
-</div>
-</div>
+
+</div>    
 
 @endsection
 
