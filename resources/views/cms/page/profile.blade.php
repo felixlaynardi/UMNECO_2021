@@ -87,7 +87,19 @@
             <div class="col-sm-4" id="time-count">
                 <p class="time-left">Time Left For Submission
                 <p>
-                <p class="time-countdown">01:12:34
+                <p class="time-countdown">
+                    <div id="days" class="d-none">
+                        01
+                    </div>
+                    <div id="hours" class="d-inline-block float-start ms-4">
+                        01 :
+                    </div>
+                    <div id="minutes" class="d-inline-block float-start">
+                    12 :
+                    </div>
+                    <div id="seconds" class="d-inline-block float-start">
+                    34
+                    </div>
                 <P>
             </div>
         </div>
@@ -202,6 +214,7 @@
 
 @section('custom-js')
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
+<script src="{{ asset('js/cms/page/timer.js') }}"></script>
 
 @if (session('status') == 'Success')
 <script>
