@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="{{ asset('css/cms/base/footer.css') }}">
     <!-- Jquery UI -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/jquery/jquery-ui.css') }}">
+    <!-- Animate -->
+    <link rel="stylesheet" href="{{ asset('css/cms/base/animate/animate.css') }}">
 
     <!-- Custom CSS -->
     @yield('custom-css')
