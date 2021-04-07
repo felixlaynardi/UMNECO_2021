@@ -155,7 +155,7 @@ class EcofriendController extends Controller
             'Generation' => 'required',
             'Instagram_account' => 'required|unique:eco_friends,instagram_account',
             'Line_id' => 'required|unique:eco_friends,line_id',
-            'Phone_number' => 'min:11|max:12|unique:eco_friends,phone_number',
+            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,12',
             'Password' => 'required|min:8|max:25|confirmed',
             'Password_confirmation' => 'required|min:8|max:25',
             'Availability' => 'required|in:1'
@@ -175,8 +175,8 @@ class EcofriendController extends Controller
             'Email.required' => 'Kamu perlu mengisi email kamu',
             'Email.email' => 'Email harus menggunakan email student',
             'Email.unique' => 'Email kamu sudah terdaftar',
-            'Email.ends_with' => 'Email harus menggunakan email student',
-            
+            'Email.ends_with' => 'Email harus menggunakan email student UMN',
+
             'Major.required' => 'Kamu perlu mengisi jurusan kamu',
             
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
@@ -191,7 +191,8 @@ class EcofriendController extends Controller
             'Phone_number.min' => 'Nomor telepon terlalu pendek',
             'Phone_number.max' => 'Nomor telepon terlalu panjang',
             'Phone_number.unique' => 'Nomor telepon kamu sudah terdaftar',
-            
+            'Phone_number.numeric' => 'Nomor telepon harus berupa angka',
+
             'Password.required' => 'Kamu perlu mengisi password kamu',
             'Password.min' => 'Password minimal terdiri dari 8 karakter',
             'Password.max' => 'Password maximal terdiri dari 25 karakter',

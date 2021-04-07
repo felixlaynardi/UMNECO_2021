@@ -41,8 +41,8 @@ label{
     margin-left: 30%;
 }
 .button{
-    margin-bottom: 5%;
-    margin-right: 2%;
+    float: right;
+    margin-bottom: 5px;
     width: 120px;
     font-family:"MADE Tommy Soft 2";
     font-size: 1em;
@@ -52,7 +52,10 @@ label{
     border-radius: 15px;
     outline: none;
 }
+#next-btn{
+    width: 200px;
 
+}
 #footer{
     padding-top: 5px;
     padding-bottom: 2px;
@@ -72,4 +75,11 @@ label{
     font-family: "MADE Tommy soft 2";
     text-align: center;
     width: 100%;
+}
+.step{
+    display: none;
+}
+.step.active{
+    display: block;
+    transition: 1s;
 }
