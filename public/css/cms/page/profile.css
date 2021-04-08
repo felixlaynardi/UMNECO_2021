@@ -1980,6 +1980,7 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     .progress-graph-bottom{
         margin-bottom: 50%;
     }
+
 }
 
 @media(max-width:425px){

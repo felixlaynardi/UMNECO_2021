@@ -44,6 +44,9 @@ Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 //submit link challange
 Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
 
+// mysteryQuest
+Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
+
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
 Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');

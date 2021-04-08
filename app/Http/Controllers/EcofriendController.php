@@ -250,4 +250,18 @@ class EcofriendController extends Controller
         return redirect()->route('profileView');
     }
     
+    public function mysteryQuest(Request $request){
+        //1 = Utile
+        //2 = Raconteur
+        //3 = skip
+        $progressMission = new MissionProgress();
+        $data = new Ecofriends();
+        $data = $data->getEcoFriendsByEmail($request->session()->get('user'));
+        $mysteryQuest = $request->mysteryQuest;
+        
+        $progressMission->mysteryQuest($data->id, $mysteryQuest);
+        
+        return redirect()->route('profileView');
+    }
+    
 }

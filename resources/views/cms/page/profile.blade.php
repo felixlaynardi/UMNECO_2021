@@ -173,12 +173,22 @@
                 </div>
 
                 <div class="desc-utile">
+                    @if($data->mystery_quest == 1)
+                    <p class="col-12">Utile</p>
+                    @else
                     <p class="col-12">?</p>
+                    @endif
                 </div>
                 @if ($allMissionProgress["utile"] == 0)
+                @if($data->mystery_quest == 1)
                 <div class="logo-submit col-12">
-                    <button class="submit-button" id="submit-utile">Locked</button>
+                    <button class="submit-button" id="submit-utile">Submit</button>
                 </div>
+                @else
+                <div class="logo-submit col-12">
+                    <button class="submit-button" id="submit-utile" disabled>Locked</button>
+                </div>
+                @endif
                 @endif
             </div>
 
@@ -197,12 +207,22 @@
                 </div>
 
                 <div class="desc-racounter">
+                    @if($data->mystery_quest == 2)
+                    <p class="col-12">Raconteur</p>
+                    @else
                     <p class="col-12">?</p>
+                    @endif
                 </div>
                 @if ($allMissionProgress["raconteur"] == 0)
+                @if($data->mystery_quest == 2)
                 <div class="logo-submit col-12">
-                    <button class="submit-button" id="submit-racounter">Locked</button>
+                    <button class="submit-button" id="submit-racounter">Submit</button>
                 </div>
+                @else
+                <div class="logo-submit col-12">
+                    <button class="submit-button" id="submit-racounter" disabled>Locked</button>
+                </div>
+                @endif
                 @endif
             </div>
 
@@ -279,12 +299,22 @@
                 </div>
 
                 <div class="desc-utile">
+                    @if($data->mystery_quest == 1)
+                    <p class="col-12">Utile</p>
+                    @else
                     <p class="col-12">?</p>
+                    @endif
                 </div>
                 @if ($allMissionProgress["utile"] == 0)
+                @if($data->mystery_quest == 1)
                 <div class="logo-submit col-12">
-                    <button class="submit-button" id="submit-utile">Locked</button>
+                    <button class="submit-button" id="submit-utile">Submit</button>
                 </div>
+                @else
+                <div class="logo-submit col-12">
+                    <button class="submit-button" id="submit-utile" disabled>Locked</button>
+                </div>
+                @endif
                 @endif
             </div>
 
@@ -303,12 +333,22 @@
                 </div>
 
                 <div class="desc-racounter">
+                    @if($data->mystery_quest == 2)
+                    <p class="col-12">Raconteur</p>
+                    @else
                     <p class="col-12">?</p>
+                    @endif
                 </div>
                 @if ($allMissionProgress["raconteur"] == 0)
+                @if($data->mystery_quest == 2)
                 <div class="logo-submit col-12">
-                    <button class="submit-button" id="submit-racounter">Locked</button>
+                    <button class="submit-button" id="submit-racounter">Submit</button>
                 </div>
+                @else
+                <div class="logo-submit col-12">
+                    <button class="submit-button" id="submit-racounter" disabled>Locked</button>
+                </div>
+                @endif
                 @endif
             </div>
 
@@ -424,15 +464,15 @@
 </script>
 
 <!-- SCRIPT FOR SPECIAL MISSION -->
-@if($dateForSpecialMission == 0)
+@if($dateForSpecialMission == 0 && $data->mystery_quest == 0)
 <script>
     console.log("SPECIAL MISSION RIBET WOI");
     Swal.mixin({
         confirmButtonText: 'Next &rarr;',
-        showCancelButton: true,
+        showCancelButton: false,
         progressSteps: ['1', '2']
     }).queue([{
-            title: 'Info',
+            title: 'Choose Mystery Quest',
             text: '...',
             icon: 'warning'
         },
@@ -442,17 +482,24 @@
             <div class="sweet-alert-container">
                 <div class="utile-box">
                     <img src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" />
-                    <button type="button" class="btn btn-primary">Utile</button>
+                    <form action="{{ route('mysteryQuest') }}" method="post">
+                        @csrf
+                        <input type="number" value="1" name="mysteryQuest" style="display:none;">
+                        <button type="submit" class="btn btn-primary">Utile</button>
+                    </form>
                 </div>
                 <div class="raconteur-box">
                     <img src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" />
-                    <button type="button" class="btn btn-primary">Raconteur</button>
+                    <form action="{{ route('mysteryQuest') }}" method="post">
+                        @csrf
+                        <input type="number" value="2" name="mysteryQuest" style="display:none;">
+                        <button type="submit" class="btn btn-primary">Raconteur</button>
+                    </form>
                 </div>
             </div>
             
             `,
             confirmButtonText: 'Skip For Now',
-
             showCancelButton: false,
         }
     ])

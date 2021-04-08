@@ -167,4 +167,12 @@ class MissionProgress extends Model
 
         // dd($progressAllMission);
     }
+
+    public function mysteryQuest($userid, $mysteryQuest){
+        $updateMysteryQuest = DB::table('eco_friends')
+            ->where('id', $userid)
+            ->update(['mystery_quest' => $mysteryQuest]);
+
+        // dd($updateMysteryQuest);
+    }
 }
