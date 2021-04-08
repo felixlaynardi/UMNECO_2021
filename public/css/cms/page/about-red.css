@@ -60,7 +60,7 @@ body, html {
     letter-spacing: 0em;
     text-align: left;
     color: white;
-    animation: slideup 2s linear;
+    /* animation: slideup 2s linear; */
 }
 
 .red-content h4 {
@@ -70,7 +70,7 @@ body, html {
     font-size: 24px;
     line-height: 30px;
     color: white;
-    animation: slideup 2s linear;
+    /* animation: slideup 2s linear; */
 }
 
 .red-content p{
@@ -83,12 +83,13 @@ body, html {
     top: 50%;
     text-align: justify;
     color: white;
-    animation: slideup 2s linear;
+    /* animation: slideup 2s linear; */
 }
 
 .red-content ul{
     color: white;
-    animation: slideup 2s linear;
+    margin-bottom: 0;
+    /* animation: slideup 2s linear; */
 }
 
 .about-logo {
@@ -370,14 +371,27 @@ body, html {
     background-color: #DD2A2A;
     justify-content: center;
     align-items: center;
-    margin-bottom: 25vh;
     min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-container{
-    width: 450px;
-    position: relative;
+    display: flex;
+    background-color: #eeebdd;
+    padding: 20px 80px 17px 80px;
+    border-radius: 50px;
     text-decoration: none;
+    box-shadow: 0px 5px #9b9a9a;
+   
+}
+
+.button-container:hover{
+    
+    transition: all 0.3s ease;
+    background-color: #ffc2b4;
+    box-shadow: 0px 5px #570606;
 }
 
 .button{
@@ -386,15 +400,14 @@ body, html {
 }
 
 .button-text{
-    color: wheat;
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 800;
+    color: #000000;
+    margin: auto;
     text-decoration: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width:100%;
     text-align: center;
-    font-size: large;
+    font-size: 25px;
 }
 
 
