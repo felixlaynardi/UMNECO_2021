@@ -427,40 +427,35 @@
 @if($dateForSpecialMission == 0)
 <script>
     console.log("SPECIAL MISSION RIBET WOI");
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-            confirmButton: 'btn btn-success',
-            cancelButton: 'btn btn-danger'
-        },
-        buttonsStyling: false
-    })
-
-    swalWithBootstrapButtons.fire({
-        title: 'Select Mystery Quest?',
-        text: "Choose One",
-        icon: 'warning',
+    Swal.mixin({
+        confirmButtonText: 'Next &rarr;',
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        cancelButtonText: 'No, cancel!',
-        reverseButtons: true
-    }).then((result) => {
-        if (result.isConfirmed) {
-            swalWithBootstrapButtons.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-            )
-        } else if (
-            /* Read more about handling dismissals below */
-            result.dismiss === Swal.DismissReason.cancel
-        ) {
-            swalWithBootstrapButtons.fire(
-                'Cancelled',
-                'Your imaginary file is safe :)',
-                'error'
-            )
+        progressSteps: ['1', '2']
+    }).queue([{
+            title: 'Info',
+            text: '...',
+            icon: 'warning'
+        },
+        {
+            title: 'Choose Secret Mission?',
+            html: `
+            <div class="sweet-alert-container">
+                <div class="utile-box">
+                    <img src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" />
+                    <button type="button" class="btn btn-primary">Utile</button>
+                </div>
+                <div class="raconteur-box">
+                    <img src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" />
+                    <button type="button" class="btn btn-primary">Raconteur</button>
+                </div>
+            </div>
+            
+            `,
+            confirmButtonText: 'Skip For Now',
+
+            showCancelButton: false,
         }
-    })
+    ])
 </script>
 @endif
 

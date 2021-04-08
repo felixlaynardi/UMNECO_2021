@@ -308,6 +308,48 @@ body {
     opacity: 50%;
 }
 
+/* sweet alert modal styling */
+.sweet-alert-container{
+    width: 100%;
+    /* background: red; */
+}
+
+.utile-box,
+.raconteur-box {
+    width: 50%;
+    display: inline-block;
+    width: 200px;
+    height: 50%;
+}
+
+.raconteur-box{
+    width: 50%;
+    display: inline-block;
+    width: 200px;
+    height: 50%;
+}
+
+.sweet-alert-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.sweet-alert-container button {
+    display: block;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sweet-alert-container .raconteur-box button {
+    background: linear-gradient(180deg, #FF8F00 0%, #FF2900 100%);
+}
+
+.sweet-alert-container .utile-box button {
+    background: linear-gradient(180deg, #FBDF00 0%, #FBB03B 100%);
+}
 /* progress bar styling */
 /*
 *
