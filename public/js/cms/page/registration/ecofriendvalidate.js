@@ -1,4 +1,14 @@
 $(document).ready(function(){
+    jQuery.validator.setDefaults({
+        errorPlacement: function(error, element) {
+            if (element.attr("name") === "Availability") {
+                $("#uploadFile").addClass("error");
+                error.insertAfter(".check");
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
     jQuery.validator.addMethod("emailstudent", function(value, element) {
         return this.optional(element) || /^.+@student.umn.ac.id$/.test(value);
     }, "Masukkan email student."

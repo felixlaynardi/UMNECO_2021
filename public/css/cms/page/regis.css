@@ -1,12 +1,12 @@
 header{
-    padding-top: 8%;
-    padding-left: 20%;
     background-image: linear-gradient(to right,#FC797D, #fc3f3f );
-    padding-bottom: 10px;
     margin-bottom: 2%;
 }
 .BG{
     width: 100%;
+}
+.navbar{
+    position: unset;
 }
 h5{
     width: 100%;
@@ -23,12 +23,20 @@ h1{
 }
 label{
     font-family: "MADE Tommy Soft";
-    color: #92967d;
+    /* color: #92967d; */
+    color: #545839
 }
 .check{
     color: red;
     font-family: "MADE Tommy soft 2";
-    padding-bottom: 6%;
+}
+.error{
+    font-family: "Made Tommy soft 2";
+}
+@media(max-width:684px) {
+    .check{
+        vertical-align: middle;
+    }
 }
 @media(max-width:419px) {
     div#form{
@@ -48,9 +56,21 @@ label{
 }
 .form{
     padding-top: 20px;
-    width: 50%;
-    margin-left: 25%;
     padding-bottom: 2%;
+}
+.form-control{
+    background-color: #ffebeb;
+    font-family: "MADE Tommy soft 2";
+}
+.has-error .form-control, .form-control.error {
+    background-color: #ffc0a4;
+    /* color: #eb5e28; */
+    border-color: #eb5e28;
+}
+label.error:not(.form-control) {
+    color: #eb5e28;
+    font-weight: 300;
+    font-size: 0.8em;
 }
 .button{
     width: 120px;
@@ -62,6 +82,14 @@ label{
     outline: none;
     position: relative;
     float: right;
+    transition: 0.5s;
+}
+.button:hover{
+    color: white;
+    background:#FC797D;
+}
+.button:focus{
+    outline: none;
 }
 .tombol{
     padding-bottom: 20px;
@@ -70,9 +98,9 @@ label{
     width: 200px;
 }
 #footer{
+    margin-top: 10%;
     padding-top: 1%;
-    margin-top: 5px;
-    padding-bottom: 2px;
+    padding-bottom: 25px;
     background-image: linear-gradient(to right,#FC797D, #fc3f3f );
     text-align: center;
 }
@@ -83,7 +111,7 @@ label{
 }
 .foot{
     margin-top: 1%;
-    font-family: "MADE Tommy soft 2";
+    font-family: "MADE Tommy soft";
     text-align: center;
 }
 .step{
