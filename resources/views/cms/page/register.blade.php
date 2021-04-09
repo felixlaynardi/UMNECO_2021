@@ -19,7 +19,7 @@
             </div>
         </div>
     </form>
-    <div class="step step-2">
+    <div class="step step-2 registerform">
         <form action="{{route('register')}}" method="post" class="form- mb-2">
             @csrf
             <label for="Firstname" class="label">Nama Depan</label>
@@ -130,6 +130,9 @@
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
+<script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script src="{{ asset('js/cms/page/registration/ecofriendvalidate.js') }}"></script>
 
 @if ($errors->any())
 <script>
