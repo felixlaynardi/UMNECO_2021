@@ -78,6 +78,7 @@ body {
 	column-gap: 10px;
     list-style: none;
 	grid-template-columns: repeat(3, 1fr);
+    padding: 0;
 }
 .countdown li {
 	text-align: center;
@@ -157,16 +158,17 @@ body {
 
 #day-count{
     text-align: left;
+    font-family: 'Heavitas';
+    letter-spacing: 3px;
 }
 
 .day-n{
     font-size: 80px;
-    line-height: 100px;
     font-weight: 800;
 }
 
 .day-left{
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 600;
 }
 
@@ -1816,13 +1818,13 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
         font-size: 1.3em;
     } */
     .day-n{
-        font-size: 65px;
-        line-height: 50%;
+        font-size: 57px;
     }
-    /* .day-left{
-        font-size: 45px;
+    .day-left{
+        font-size: 25px;
     }
-    #time-count{
+    
+    /* #time-count{
         line-height: 30px;
     }
     .time-left{
@@ -1874,9 +1876,6 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     .submit-button {
         margin-left: 15%;
     }   
-    .progress-graph{
-        height: 100vh;
-    }
     .desc-mission{
         font-size: 1.5em;
     }
@@ -1926,6 +1925,10 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     .profile-journey{
         font-size: 20px;
         line-height: 70px;
+        border-radius: 0;
+    }
+    .profile-journey p{
+        text-align: center;
     }
     .day-n{
         font-size: 35px;
@@ -2005,6 +2008,9 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
         margin-left: 0;
     }
 
+    .progress-graph{
+        height: 100vh;
+    }
     .progress-graph-top{
         margin-top: 5%;
         margin-bottom: 40%;
@@ -2250,10 +2256,12 @@ body::-webkit-scrollbar-thumb {
 
 /* container */
 #time-countdown{
-    background: #E13A3A;
+    background: linear-gradient(to right, #fc797d, #fd6c6e, #fe5e5f, #fd4f50, #fc3f3f);
     border-radius: 50px;
     justify-content: center;
     display: none;
+    color:white;
+    margin:auto;
 }
 #time-count h1 {
 	margin-bottom: 16px;

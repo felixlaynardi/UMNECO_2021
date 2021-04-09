@@ -65,7 +65,7 @@
             </div>
         </div>
 
-        <div class="row mt-2">
+        <div class="row mt-5 mb-1">
             <div class="profile-journey col-12 col-md-8">
                 <p>YOUR JOURNEY IN RED</p>
             </div>
@@ -78,10 +78,10 @@
                 <p class="day-left">9 Days Left<p>
             </div>
             <div class="col-md-8 col-12" id="time-count">
-                <div class="time-left mt-3">Time Left For Submission</div>
+                <div class="time-left mt-3">Remaining Time for Submission</div>
                 <div class="time-countdown">01:12:34</div> 
             </div>
-            <div class="col-md-8 col-12" id="time-countdown">
+            <div class="col-md-8 col-11" id="time-countdown">
                 <ul class="countdown">
                     <li>
                         <div class="num">12</div>
