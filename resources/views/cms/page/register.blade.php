@@ -13,7 +13,7 @@
     <form class="Persetujuan">
         <div class="row">
             <div class="step step-1 active">
-                <object class="regulation-obj mb-2" data="{{ asset('files/PDF_REGULASI_RED.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width:100%; height:650px">
+                <object class="regulation-obj mb-2" data="{{ asset('files/REGULASI_RED.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" style="width:100%; height:650px">
                 </object>
                 <button class="button" type="button" id="next-btn">Menuju Registrasi</button>
             </div>
