@@ -40,7 +40,7 @@
                 </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1 col-1">:</div>
                 <div class="profile-content col-sm-7 col-md-7 col-lg-6 col-9">
-                    <p style="text-transform: capitalize;">{{$data->firstname}} {{$data->lastname}}</p>
+                    <p style="text-transform: capitalize;white-space: nowrap;">{{$data->firstname}} {{$data->lastname}}</p>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@
                 <!-- bar pertama -->
                 <div class="col-3" id="bar-submit">
                     <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
-                        <img src="{{ asset('images/profile/Utopia Temp Logo@2x.png') }}" alt="">
+                        <img src="{{ asset('images/utopia.png') }}" alt="">
                         <div class="face side-0">
                             <div class="growing-bar"></div>
                         </div>
@@ -123,17 +123,15 @@
                         <p class="col-12">UTOPIA</p>
                     </div>
 
-                    @if ($allMissionProgress["utopia"] == 0)
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-utopia">Submit</button>
+                        <button @if ($allMissionProgress['utopia'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utopia'] == 1) submit-disabled @endif" id="submit-utopia">Submit</button>
                     </div>
-                    @endif
                 </div>
 
                 <!-- bar kedua -->
                 <div class="col-3" id="bar-submit">
                     <div class="bar bar-25 rise col-sm-3">
-                        <img style="width: 2em" src="{{ asset('images/profile/Rise Temp Logo@2x.png') }}" alt="">
+                        <img style="width: 2em" src="{{ asset('images/rise.png') }}" alt="">
                         <div class="face side-0">
                             <div class="growing-bar"></div>
                         </div>
@@ -148,17 +146,15 @@
                         <p class="col-12">RISE</p>
                     </div>
 
-                    @if ($allMissionProgress["rise"] == 0)
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-rise">Submit</button>
+                        <button @if ($allMissionProgress['rise'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['rise'] == 1) submit-disabled @endif" id="submit-rise">Submit</button>
                     </div>
-                    @endif
                 </div>
 
                 <!-- bar ketiga -->
                 <div class="col-3" id="bar-submit">
                     <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
-                        <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                        <img style="width: 2em" src="@if($data->mystery_quest == 1) {{ asset('images/utile.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif" alt="">
                         <div class="face side-0">
                             <div class="growing-bar"></div>
                         </div>
@@ -169,31 +165,29 @@
                         <div class="face floor"></div>
                     </div>
 
-                    <div class="desc-utile desc-mission">
+                    <div class="desc-utile desc-mission @if($data->mystery_quest == 1) no-margin2 utile-font @endif">
                         @if($data->mystery_quest == 1)
-                        <p class="col-12">Utile</p>
+                        <p class="col-12">UTILE</p>
                         @else
                         <p class="col-12">?</p>
                         @endif
                     </div>
-
-                    @if ($allMissionProgress["utile"] == 0)
+                    
                     @if($data->mystery_quest == 1)
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-utile">Submit</button>
+                        <button @if ($allMissionProgress['utile'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utile'] == 1) submit-disabled @endif" id="submit-utile">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-utile" disabled>Locked</button>
+                        <button class="submit-button submit-disabled" id="submit-utile" disabled>Locked</button>
                     </div>
-                    @endif
                     @endif
                 </div>
 
                 <!-- bar keempat -->
                 <div class="col-3" id="bar-submit">
                     <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
-                        <img style="width: 2em" src="{{ asset('images/profile/Mystery@2x.png') }}" alt="">
+                        <img style="width: 2em" src="@if($data->mystery_quest == 2) {{ asset('images/raconteur.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif " alt="">
                         <div class="face side-0">
                             <div class="growing-bar"></div>
                         </div>
@@ -204,24 +198,23 @@
                         <div class="face floor"></div>
                     </div>
 
-                    <div class="desc-racounter desc-mission">
+                    <div class="desc-racounter desc-mission @if($data->mystery_quest == 2) no-margin raconteur-font @endif">
                         @if($data->mystery_quest == 2)
-                        <p class="col-12">Raconteur</p>
+                        <p class="col-12">RACONTEUR</p>
                         @else
                         <p class="col-12">?</p>
                         @endif
                     </div>
 
-                    @if ($allMissionProgress["raconteur"] == 0)
+                    
                     @if($data->mystery_quest == 2)
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-racounter">Submit</button>
+                        <button @if ($allMissionProgress['raconteur'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['raconteur'] == 1) submit-disabled @endif" id="submit-raconteur">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
-                        <button class="submit-button" id="submit-racounter" disabled>Locked</button>
+                        <button class="submit-button submit-disabled" id="submit-racounter" disabled>Locked</button>
                     </div>
-                    @endif
                     @endif
                 </div>
             
@@ -236,7 +229,7 @@
                 <p>#WeActForTheBetterEarth</p>
             </div>
             <div class="eco-red">
-                <p>#RealEmergencyDailyLife</p>
+                <p>#RealEmergencyDailylife</p>
             </div>
             <div class="logo-umn-eco">
                 <img src="/images/profile/Logo UMN@2x.png" alt="logo-umn-eco">
@@ -315,7 +308,7 @@
         })
     })
 
-    $("#submit-racounter").click(function() {
+    $("#submit-raconteur").click(function() {
         Swal.fire({
             title: 'Submit Link',
             html: `
