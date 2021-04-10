@@ -152,7 +152,7 @@ class EcofriendController extends Controller
             'Firstname' => 'required|regex:/^[\pL\s\-]+$/u',
             'Lastname' => 'regex:/^[\pL\s\-]+$/u',
             'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
-            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id',
+            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
             'Major' => 'required',
             'Generation' => 'required',
             'Instagram_account' => 'required|unique:eco_friends,instagram_account',
@@ -175,7 +175,7 @@ class EcofriendController extends Controller
             'Student_id.not_in' => 'Kamu perlu mengisi NIM kamu',
             
             'Email.required' => 'Kamu perlu mengisi email kamu',
-            'Email.email' => 'Email harus menggunakan email student',
+            'Email.email' => 'Email harus menggunakan email student atau email dari UMN',
             'Email.unique' => 'Email kamu sudah terdaftar',
             'Email.ends_with' => 'Email harus menggunakan email student UMN',
 

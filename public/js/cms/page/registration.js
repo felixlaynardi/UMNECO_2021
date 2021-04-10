@@ -10,8 +10,8 @@ $(document).ready(function(){
         }
     });
     jQuery.validator.addMethod("emailstudent", function(value, element) {
-        return this.optional(element) || /^.+@student.umn.ac.id$/ || /^.+@umn.ac.id$/.test(value);
-    }, "Masukkan email student atau email dari UMN"
+        return this.optional(element) || /^.+@student.umn.ac.id$/ || /^.+@umn.ac.id$/ || /^.+@lecturer.umn.ac.id$/.test(value);
+    }, "Email harus menggunakan email student atau email dari UMN"
     );
     jQuery.validator.addMethod("regexeco", function(value, element) {
         return this.optional(element) || /^[a-z ]+$/i.test(value);
