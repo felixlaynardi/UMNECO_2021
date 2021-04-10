@@ -24,12 +24,12 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 
 Route::get('/', function () {
   return view('cms.page.home', ['title' => 'UMN ECO 2021']);
-});
+})->name('home');
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
 Route::get('/about-red', function () {
   return view('cms.page.about-red', ['title' => 'UMN ECO 2021']);
-});
+})->name('about-red');
 
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');

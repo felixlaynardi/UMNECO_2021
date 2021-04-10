@@ -8,16 +8,16 @@
             <ul class="navbar-nav col-12">
                 <div class="nav-item-container mx-auto w-100 row">
                     <li class="nav-item col-3">
-                        <a class="nav-link active" href="/#home">Home</a>
+                        <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="/#aboutus">About RED</a>
+                        <a class="nav-link" href="{{ route('about-red') }}">About RED</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="/#contact">Our Team</a>
+                        <a class="nav-link" href="{{ route('home') }}">Our Team</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="/open-recruitment">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}">Login</a>
                     </li>
                 </div>
             </ul>
@@ -36,16 +36,16 @@
 <nav id="main-navigation" class="nav-main">
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link" href="/#home">Home</a>
+            <a class="menu__link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#aboutus">About RED</a>
+            <a class="menu__link" href="{{ route('about-red') }}">About RED</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#contact">Our Team</a>
+            <a class="menu__link" href="{{ route('home') }}">Our Team</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/open-recruitment">Login</a>
+            <a class="menu__link" href="{{ route('login') }}">Login</a>
         </li>
     </ul>
 </nav>
