@@ -67,7 +67,7 @@
             </div>
             <div class="form-group mb-3">
                 <label for="Student_id" class="label">NIM</label>
-                <input type="text" name="Student_id" id="Student_id" placeholder="0000001234" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
+                <input type="text" name="Student_id" id="Student_id" placeholder="00000012345" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
                 @if($errors->has('Student_id'))
                 <div class="error error-message">{{ $errors->first('Student_id') }}</div>
                 @endif
