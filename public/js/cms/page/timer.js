@@ -35,8 +35,8 @@
         }
           
         (document.getElementById("days").innerText = Math.floor(distance / day)),
-          (document.getElementById("hours").innerText = h + ' : \u00A0 '),
-          (document.getElementById("minutes").innerText = m + ' : \u00A0 '),
+          (document.getElementById("hours").innerText = h),
+          (document.getElementById("minutes").innerText = m),
           (document.getElementById("seconds").innerText = s)
 
         //do something later when date is reached
