@@ -10,8 +10,8 @@ $(document).ready(function(){
         }
     });
     jQuery.validator.addMethod("emailstudent", function(value, element) {
-        return this.optional(element) || /^.+@student.umn.ac.id$/.test(value);
-    }, "Masukkan email student"
+        return this.optional(element) || /^.+@student.umn.ac.id$/ || /^.+@umn.ac.id$/.test(value);
+    }, "Masukkan email student atau email dari UMN"
     );
     jQuery.validator.addMethod("regexeco", function(value, element) {
         return this.optional(element) || /^[a-z ]+$/i.test(value);
@@ -106,7 +106,7 @@ $(document).ready(function(){
             Phone_number:{
                 required: true,
                 minlength: 11,
-                maxlength: 12,
+                maxlength: 13,
                 digits: true,
                 unique_phone: true
             },

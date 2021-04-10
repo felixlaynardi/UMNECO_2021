@@ -117,12 +117,12 @@ class EcofriendController extends Controller
             'Firstname' => 'required|regex:/^[\pL\s\-]+$/u',
             'Lastname' => 'regex:/^[\pL\s\-]+$/u',
             'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
-            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id',
+            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id',
             'Major' => 'required',
             'Generation' => 'required',
             'Instagram_account' => 'required|unique:eco_friends,instagram_account',
             'Line_id' => 'required|unique:eco_friends,line_id',
-            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,12',
+            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
             'Password' => 'required|min:8|max:25|confirmed',
             'Password_confirmation' => 'required|min:8|max:25',
             'Availability' => 'required|in:1'
@@ -181,6 +181,8 @@ class EcofriendController extends Controller
             $data['rise_compensation'] = false;
 
             $data['Password'] = Hash::make($request['Password']);
+            
+            $data['mystery_quest'] = 0;
 
             $this->sendEmail($data);
 
