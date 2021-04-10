@@ -12,14 +12,21 @@
     
     <div class="section-1">
         <div class="row container">
-            <div class="col-lg-6 col-md-8 col-sm-12 red-content about-logo">
-                 <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-red">
+            <div class="col-lg-6 col-md-8 col-sm-12 red-content about-logo ">
+                 <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-red  animate__animated animate__zoomIn animate__delay-1s">
                  <div class="white-bg"></div>
                 </div>
-            <div class="col-lg-6 col-sm-12 red-content text"> 
-                <h1>WHAT IS RED?</h1> 
-                <h4>Real . Emergency . Daily Life</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="col-lg-6 col-sm-12 red-content text animate__animated animate__fadeInRight animate__delay-1s"> 
+                <h1 >WHAT IS RED?</h1> 
+                <h4 >Real . Emergency . Daily life</h4>
+                <p ><b>Real Emergency Daily life atau disingkat RED</b> adalah salah satu rangkaian kegiatan, sekaligus acara pembuka dari kegiatan <b>UMN ECO 2021</b>.</p>
+                    <ul >
+                        <li><p><b>Real Emergency</b> dikaitkan dengan masalah-masalah pencemaran lingkungan alam yang sedang terjadi pada dunia saat ini.</p></li>
+                        <li><p><b>Daily life dikaitkan</b> dengan kegiatan sehari-hari yang dapat kita lakukan untuk membantu mengurangi pencemaran lingkungan alam yang sedang terjadi. </p></li>
+                    </ul> 
+                <p  >Melalui quests yang ada di kegiatan <b>RED, UMN ECO 2021</b> ingin mengajak <b>ECO Friends</b> untuk mengambil bagian dalam mengurangi pencemaran lingkungan alam dan membangun kebiasaan baru secara nyata di kegiatan sehari-hari kalian yang dapat berdampak untuk mengurangi pencemaran lingkungan alam.</p>
+                <a href="#" class="button-container mx-auto" id="pdf-download">Unduh Peraturan dan Ketentuan RED</a>
+                
             </div>
             
         </div>
@@ -139,10 +146,9 @@
         </div>
     </div>
 
-    <div class="section-4 row">
+    <div class="section-4">
         <a href="#" class="button-container">
-            <img src="{{ asset('images/about-red/button.png') }}" class="button"> 
-            <p class="button-text"> BECOME ECOFRIENDS</p>
+            BECOME ECO FRIENDS
         </a>
     </div>
 </div> 

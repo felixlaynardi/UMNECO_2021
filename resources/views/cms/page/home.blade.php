@@ -140,9 +140,6 @@
 
 @section('custom-js')
     <script src="{{ asset('js/cms/page/home.js') }}"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
-
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <script>
         $('#glass-a').on( "click", function() {
             glass_src = $("#glass").attr('src');

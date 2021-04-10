@@ -11,13 +11,13 @@
                         <a class="nav-link active" href="/#home">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="/#aboutus">RED</a>
+                        <a class="nav-link" href="/#aboutus">About RED</a>
                     </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" href="/#contact">Eco Family</a>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" href="/#contact">Our Team</a>
                     </li>
-                    <li class="nav-item col-4">
-                        <a class="nav-link" href="/profile">Account</a>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" href="/open-recruitment">Login</a>
                     </li>
                 </div>
             </ul>
@@ -39,13 +39,13 @@
             <a class="menu__link" href="/#home">Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#aboutus">Red</a>
+            <a class="menu__link" href="/#aboutus">About RED</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#contact">Eco Family</a>
+            <a class="menu__link" href="/#contact">Our Team</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/profile">Account</a>
+            <a class="menu__link" href="/open-recruitment">Login</a>
         </li>
     </ul>
 </nav>
