@@ -27,6 +27,10 @@ Route::get('/', function () {
 });
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
+Route::get('/about-red', function () {
+  return view('cms.page.about-red', ['title' => 'UMN ECO 2021']);
+});
+
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
@@ -37,6 +41,11 @@ Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 
+//submit link challange
+Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
+
+// mysteryQuest
+Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
 
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');

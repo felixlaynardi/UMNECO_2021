@@ -1,0 +1,478 @@
+.navbar {
+    background:#D7110C;
+}
+
+#contact{
+    background-color:#601213;
+}
+
+.main1 {
+    position: relative;
+    overflow: hidden;
+    min-height: 200vh;
+}
+
+.main2 {
+    background-color: #DD2A2A;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+body, html {
+    background-color: #e83c3c;
+    margin: 0;
+    padding: 0;
+    /* height: 100%; */
+    
+}
+
+.section {
+    min-height: 100vh;
+}
+
+/* -----section1----- */
+.section-1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.red-content {
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+.red-content h1 {
+    font-family: MADE Tommy Soft;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    animation: slideup 2s linear;
+}
+
+.red-content h4 {
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: white;
+    animation: slideup 2s linear;
+}
+
+.red-content p{
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;    
+
+    top: 50%;
+    text-align: justify;
+    color: white;
+    animation: slideup 2s linear;
+}
+
+.about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(7px 15px 20px rgba(0, 0, 0, 0.25));
+}
+
+
+.about-logo img {
+    animation: zoom-out 2s;
+}
+.logo-red {
+    width: 75%;
+}
+
+
+/* -----section2----- */
+.section-2{
+    min-height: 100vh;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+}
+
+
+.city {
+    bottom: 0;
+    position:relative;
+    z-index: 3;
+}
+
+/* -----section3----- */
+
+#mission-btn{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.section-3 {
+    background-image: url(../../../images/about-red/mission.png);
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+}
+
+.mission-logo-container-row {
+    padding: 60px;
+    align-items: center;
+}
+
+.mission-logo-container-col{
+    display: flex;
+    justify-content: center;
+    padding: inherit;
+}
+
+.mission-logo {
+    height: 25vh;
+    width: 25vh;
+    background-color: rgb(10, 226, 255);
+    border-radius: 50%;
+    display: inline-block;
+    padding: 100px;
+}
+
+.mission-logo:hover{
+    cursor: pointer;
+}
+
+.content-container {
+    display: none;
+    max-width: 100%;
+    position: relative;
+    min-height: 100vh;
+    transition: .5s ease;
+}
+
+.content-container p {
+    font-family: MADE Tommy Soft;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 60px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-align: justify;
+}
+
+.close-slide{
+    animation: slideout 500ms linear;
+    display: none;
+}
+
+.rise{
+    background-image: url(../../../images/about-red/rise.png);
+}
+.utopia{
+    background-image: url(../../../images/about-red/utopia.png);
+}
+.raconteur{
+    background-image: url(../../../images/about-red/raconteur.png);
+}
+.utile{
+    background-image: url(../../../images/about-red/utile.png);
+}
+
+/*carousel content*/
+
+.slide-logo {
+    margin: auto;
+    text-align: center;
+}
+
+.carousel {
+    overflow: hidden;
+}
+
+.carousel-inner {
+    width: 105%;
+}
+
+.carousel button {
+    background-color: transparent;
+    border:none;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    user-select: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.item {
+    justify-content: space-around;
+    padding: 50px;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y:center;
+    background-position-x:center;
+    
+}
+
+
+
+
+/* popup */
+
+.close-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 50px;
+}
+
+.close-btn:hover {
+    cursor: pointer;
+}
+
+
+/* 
+.popup-page {
+    position: fixed;
+    z-index: 200;
+    width: 100vh;
+    height: 100vh;
+    background: rgba(0,0,0,0.7); 
+}
+
+.popup-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.671);
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 60px;
+}
+
+.popup-rise{
+    background-image: url(../../../images/about-red/rise.png);
+}
+.popup-utopia{
+    background-image: url(../../../images/about-red/utopia.png);
+}
+.popup-raconteur{
+    background-image: url(../../../images/about-red/raconteur.png);
+}
+.popup-utile{
+    background-image: url(../../../images/about-red/utile.png);
+}
+
+
+.close-btn:hover{
+    cursor: pointer;
+} */
+
+/* .popup-page .popup-content {
+
+    background: rgba(0,0,0,0.7);
+    background-image: url(../../../images/about-red/rise.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0);
+    z-index: 201;
+    padding: 75px;
+    max-width: 100%;
+   
+}
+
+.popup-page .close-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 50px;
+    color: white;
+}
+
+.popup-page.active .popup-page-bg{
+    display: block;
+}
+
+.popup-page.active .popup-content{
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+} */
+
+
+/* -----section4----- */
+
+.section-4 {
+    background-color: #DD2A2A;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25vh;
+    min-height: 50vh;
+}
+
+.button-container{
+    width: 450px;
+    position: relative;
+    text-decoration: none;
+}
+
+.button{
+    text-align: center;
+    width: 100%;
+}
+
+.button-text{
+    color: wheat;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width:100%;
+    text-align: center;
+    font-size: large;
+}
+
+
+/* -----background properties----- */
+.cloud {
+    position:absolute;
+    z-index: 2;
+    width: 2365px;
+    height: 887px;
+    left: -571px;
+    top: 154px;
+    overflow: hidden;
+}
+
+.circle {
+    position:absolute;
+    z-index: 1;
+    width: "300px";
+    width: 1734px;
+    height: 1735px;
+    left: -766px;
+    top: -380px;
+}
+
+.white-circle {
+    position: absolute;
+    background-color: #DFDFDF;
+    z-index: 3;
+    border-radius: 50%;
+    width: 976px;
+    height: 976px;
+    left: -435px;
+    top: 7px;
+}
+
+@keyframes zoom-out{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes slidein {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes slideout {
+    0% {
+        left: 0px;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes slideup {
+    0% {
+        transform: translate(0,200px);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
+
+@media(max-width:1100px) and (min-width:992px){
+    .white-circle{
+        left: -535px;
+    }
+}
+
+@media(max-width:991px) and (min-width:768px){
+    .about-logo{
+      margin: auto;
+    }
+}
+
+@media(max-width:410px){
+    .red-content h1 {
+        font-size: 70px;
+        font-weight: 900;
+    }
+}
