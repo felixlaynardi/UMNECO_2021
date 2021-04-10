@@ -40,7 +40,7 @@
                 </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1 col-1">:</div>
                 <div class="profile-content col-sm-7 col-md-7 col-lg-6 col-9">
-                    <p style="text-transform: capitalize;">{{$data->firstname}}</p>
+                    <p style="text-transform: capitalize;">{{$data->firstname}} {{$data->lastname}}</p>
                 </div>
             </div>
 
