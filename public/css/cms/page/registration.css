@@ -45,13 +45,13 @@ label{
         padding-left: 20%;
     }
     h5{
-        font-size: .70em;
+        font-size: 0.9em;
     }
     h1{
-        font-size: 1.17em;
+        font-size: 2em;
     }
     label.check{
-        font-size: .60em ;
+        font-size: 0.8em;
     }
 }
 .form{
