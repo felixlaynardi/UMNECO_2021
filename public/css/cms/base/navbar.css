@@ -4,9 +4,9 @@
     /* backdrop-filter: saturate(180%) blur(20px); */
     background: #D7110C;;
     /* padding:0; */
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 99999999;
 }
 [id=main-navigation-toggle] ~ label span, .toggler-container{
   opacity: 0;
@@ -60,7 +60,7 @@
     width: 2rem;
     background: #96160c;
     border-radius: 10px;
-    z-index: 1022;
+    z-index: 999999999;
     top: 12px;
 }
 
@@ -130,7 +130,7 @@
   position: fixed;
   right: 1rem;
   top: 0.7rem;
-  z-index: 1022;
+  z-index: 999999999;
 }
 [id=main-navigation-toggle] ~ label span {
   display: none;
