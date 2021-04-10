@@ -37,13 +37,25 @@ label{
 }
 .form{
     height: 100%;
+    padding: 0;
 
 }
 .form-control{
     width: 85%;
-    background-color: #ffebeb;
+    background-color: #fff5f5;
 }
-
+.has-error .form-control, .form-control.error {
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
+label.error:not(.form-control) {
+    color: #eb5e28;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+.error {
+    font-family: "Made Tommy soft 2";
+}
 .button{
     margin-right: 2%;
     width: 120px;
@@ -63,8 +75,9 @@ label{
 .button:focus{
     outline: none;
 }
-.error{
-    background-color: #ff7171;
+.btn-register{
+    text-decoration: none;
+    text-align: center;
 }
 .login-title{
     color:#DD2A2A;
@@ -72,16 +85,45 @@ label{
     font-family: 'Heavitas';
     letter-spacing: 2px;
 }
+#footer{
+    padding-top: 3%;
+    padding-bottom: 25px;
+    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    padding-bottom: 10px;
+    opacity: 50%;
+}
+.foot{
+    margin-top: 1%;
+    font-family: "MADE Tommy soft";
+    text-align: center;
+}
 
 @media(max-width:767px) {
     .left-content{
         display: none;
     }
+    .right-content{
+        margin:auto;
+        margin-top:20%;
+    }
+    .form{
+        min-height: 95vh;
+    }
+    .form-control{
+        width: 100%;
+    }
 }
 @media(max-width:419px) {
-    div#form{
+    /* div#form{
         width: 70%;
         padding-top: 40%;
         padding-left: 25%;
+    } */
+    .button{
+        width: 90px;
     }
 }

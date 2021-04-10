@@ -21,10 +21,12 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
-    public function registerView()
+    public function registrationView()
     {
         if (!session()->has('user')) {
-            return view('cms.page.register', ['title' => 'UMN ECO 2021 - Join Eco Friends']);
+            $model = new Ecofriends();
+            $ecofriends = $model->getAllEcoFriends();
+            return view('cms.page.registration', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
         } else {
             return redirect()->route('profileView');
         }
@@ -54,8 +56,8 @@ class EcofriendController extends Controller
     public function login(Request $request)
     {
         $model = new Ecofriends();
-        if ($request->input('action') == "register") {
-            return redirect()->route('registerView');
+        if ($request->input('action') == "registration") {
+            return redirect()->route('registrationView');
         } else {
             $data = $request->input();
             if ($data['email'] == null || $data['password'] == null) {
@@ -147,10 +149,10 @@ class EcofriendController extends Controller
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
 
             'Instagram_account.required' => 'Kamu perlu mengisi nama akun instagram kamu',
-            'Instagram_account.unique' => 'Instagram kamu sudah terdaftar',
+            'Instagram_account.unique' => 'Akun instagram kamu sudah terdaftar',
 
             'Line_id.required' => 'Kamu perlu mengisi id line kamu',
-            'Line_id.unique' => 'Line kamu sudah terdaftar',
+            'Line_id.unique' => 'Akun line kamu sudah terdaftar',
 
             'Phone_number.required' => 'Kamu perlu mengisi nomor telepon kamu',
             'Phone_number.min' => 'Nomor telepon terlalu pendek',

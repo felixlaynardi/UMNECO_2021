@@ -31,8 +31,8 @@ Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profi
 Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
-Route::get('/register', [EcofriendController::class, 'registerView'])->name('registerView');
-Route::post('/register', [EcofriendController::class, 'register'])->name('register');
+Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
+Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');

@@ -1,10 +1,37 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-<link rel="stylesheet" href="{{ asset('css/cms/page/regis.css') }}">
+<link rel="stylesheet" href="{{ asset('css/cms/page/registration.css') }}">
 @endsection
 
 @section('content')
+<script>
+    var student_id_list = [
+        @foreach ($ecofriends as $e)
+            '{{ $e->student_id }}',
+        @endforeach
+    ]
+    var email_list = [
+        @foreach ($ecofriends as $e)
+            '{{ $e->email }}',
+        @endforeach
+    ]
+    var instagram_list = [
+        @foreach ($ecofriends as $e)
+            '{{ $e->instagram_account }}',
+        @endforeach
+    ]
+    var line_list = [
+        @foreach ($ecofriends as $e)
+            '{{ $e->line_id }}',
+        @endforeach
+    ]
+    var phone_list = [
+        @foreach ($ecofriends as $e)
+            '{{ $e->phone_number }}',
+        @endforeach
+    ]
+</script>
 <header class="py-5">
     <div class="col-md-6 col-10 mx-auto">
         <h5>Real Emergency Daily life</h5>
@@ -22,7 +49,7 @@
         </div>
     </form>
     <div class="step step-2 registerform">
-        <form action="{{route('register')}}" method="post" class="form- mb-2">
+        <form action="{{route('registration')}}" method="post" class="mb-2" id="form-register">
             @csrf
             <div class="form-group mb-3">
                 <label for="Firstname" class="label">Nama Depan</label>
@@ -161,7 +188,7 @@
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script src="{{ asset('js/cms/page/registration/ecofriendvalidate.js') }}"></script>
+<script src="{{ asset('js/cms/page/registration.js') }}"></script>
 
 @if ($errors->any())
 <script>
@@ -169,9 +196,6 @@
 </script>
 @endif
 <script>
-    $(window).on("load",function() {
-        console.log("window loaded");
-    });
     $("#next-btn").click(function() {
         $('.step-1').removeClass('active');
         $('.step-2').addClass('active');

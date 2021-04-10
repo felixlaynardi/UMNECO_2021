@@ -59,7 +59,7 @@ label{
     padding-bottom: 2%;
 }
 .form-control{
-    background-color: #ffebeb;
+    background-color: #fff5f5;
     font-family: "MADE Tommy soft 2";
 }
 .has-error .form-control, .form-control.error {
@@ -99,7 +99,7 @@ label.error:not(.form-control) {
 }
 #footer{
     margin-top: 10%;
-    padding-top: 1%;
+    padding-top: 3%;
     padding-bottom: 25px;
     background-image: linear-gradient(to right,#FC797D, #fc3f3f );
     text-align: center;
