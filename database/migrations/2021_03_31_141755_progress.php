@@ -19,6 +19,7 @@ class Progress extends Migration
             $table->unsignedBigInteger("mission_utile_id");
             $table->boolean('status');
             $table->text('link');
+            $table->date('date');
 
             $table->foreign('userid')->references('id')->on('eco_friends');
             $table->foreign('mission_utile_id')->references('mission_utile_id')->on('mission_utile');
@@ -29,6 +30,7 @@ class Progress extends Migration
             $table->unsignedBigInteger("mission_raconteur_id");
             $table->boolean('status');
             $table->text('link');
+            $table->date('date');
             
             $table->foreign('userid')->references('id')->on('eco_friends');
             $table->foreign('mission_raconteur_id')->references('mission_raconteur_id')->on('mission_raconteur');
@@ -40,6 +42,7 @@ class Progress extends Migration
             $table->unsignedBigInteger("mission_rise_id");
             $table->boolean('status');
             $table->text('link');
+            $table->date('date');
             
             $table->foreign('userid')->references('id')->on('eco_friends');
             $table->foreign('mission_rise_id')->references('mission_rise_id')->on('mission_rise');
@@ -50,6 +53,7 @@ class Progress extends Migration
             $table->unsignedBigInteger("mission_utopia_id");
             $table->boolean('status');
             $table->text('link');
+            $table->date('date');
 
             $table->foreign('userid')->references('id')->on('eco_friends');
             $table->foreign('mission_utopia_id')->references('mission_utopia_id')->on('mission_utopia');
