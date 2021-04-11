@@ -132,6 +132,19 @@ body, html {
     position: absolute;
 }
 
+.item p {
+    text-align: justify;
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em; 
+    color: #eeebe3; 
+    font-size: large;
+}
+
+
+
 .section-3 {
     background-image: url(../../../images/about-red/mission.png);
     background-position: center;
@@ -175,17 +188,6 @@ body, html {
     position: relative;
     min-height: 100vh;
     transition: .5s ease;
-}
-
-.content-container p {
-    font-family: MADE Tommy Soft;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 60px;
-    letter-spacing: 0em;
-    text-align: left;
-    text-align: justify;
 }
 
 .close-slide{
