@@ -158,6 +158,7 @@
                                 ● Durasi video <em>story</em> untuk hari ke-2 hingga hari ke-12 adalah <b>MAKSIMAL</b> 30 detik atau setara dengan 2 video <em>story.</em>
                                 <br>
                                 ● ECO Friends <b>WAJIB</b> membuat highlight pada Instagram dengan judul <b>Rise</b> serta menggunakan cover <em>highlight</em> dapat diunduh di link berikut:
+                            </div>
                                 <br>
                                 <br>
                                 <div class="link">
@@ -165,6 +166,7 @@
                                     http://bit.ly/CoverHighlightRise
                                     </a>
                                 </div>
+                            <div class="in">
                                 <br>
                                 ● ECO Friends <b>WAJIB</b> menggunakan tagar #RealEmergencyDailylife #TheBeginningofANewLife dan tag @umn_eco pada <b>video <em>story</em> yang pertama saja di setiap harinya.</b>
                                 <br>
