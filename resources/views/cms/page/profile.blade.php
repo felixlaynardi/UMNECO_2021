@@ -253,7 +253,7 @@
     Swal.fire({
         icon: 'success',
         title: 'Welcome, {{$data->firstname}}',
-        text: 'Make these quests your new habit for a better Earth. Welcome to RED!',
+        text: 'Hope these quests can be your new habit for a better Earth.',
     })
 </script>
 @endif
