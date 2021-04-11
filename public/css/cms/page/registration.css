@@ -1,31 +1,34 @@
-header{
-    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+header {
+    background-image: linear-gradient(to right, #fc797d, #fc3f3f);
     margin-bottom: 2%;
 }
-.h2{
+.h2 {
     text-align: center;
 }
-.salam{
+.salam {
     float: right;
 }
-.in{
+.in {
     padding-left: 5%;
 }
-@media(max-width:1024px){
-    object.regulation-obj{
+@media (min-width: 1024px) {
+    object.regulation-obj {
         display: block;
     }
-}
-@media(min-width:1024px){
-    div.rules{
-        display: block;
-        text-align: justify;
-    }
-    object.regulation-obj{
+    div.rules {
         display: none;
     }
 }
-.link{
+@media (max-width: 1024px) {
+    div.rules {
+        display: block;
+        text-align: justify;
+    }
+    object.regulation-obj {
+        display: none;
+    }
+}
+.link {
     text-align: center;
     border: 1px solid;
 }
@@ -33,67 +36,68 @@ header{
     text-align: justify;
     display: none;
 } */
-.BG{
+.BG {
     width: 100%;
 }
-.navbar{
+.navbar {
     position: unset;
 }
-h5{
+h5 {
     width: 100%;
     padding-top: 0%;
     color: seashell;
     font-family: "MADE Tommy Soft";
-    font-size:28px;
+    font-size: 28px;
 }
-h1{
+h1 {
     width: 100%;
     color: seashell;
     font-family: "MADE Tommy Soft";
     font-size: 50px;
 }
-label{
+label {
     font-family: "MADE Tommy Soft";
     /* color: #92967d; */
-    color: #545839
+    color: #545839;
 }
-.check{
+.check {
     color: red;
     font-family: "MADE Tommy soft 2";
 }
-.error{
+.error {
     font-family: "Made Tommy soft 2";
 }
-@media(max-width:684px) {
-    .check{
+@media (max-width: 684px) {
+    .check {
         vertical-align: middle;
     }
 }
-@media(max-width:419px) {
-    div#form{
+@media (max-width: 419px) {
+    div#form {
         width: 60%;
         padding-top: 40%;
         padding-left: 20%;
     }
-    h5{
+    h5 {
         font-size: 0.9em;
     }
-    h1{
+    h1 {
         font-size: 2em;
     }
-    label.check{
+    label.check {
         font-size: 0.8em;
     }
 }
-.form{
+.form {
     padding-top: 20px;
     padding-bottom: 2%;
 }
-.form-control{
+.form-control {
     background-color: #fff5f5;
     font-family: "MADE Tommy soft 2";
 }
-.has-error .form-control, .form-control.error {
+.has-error .form-control,
+.form-control.error {
     background-color: #ffc0a4;
     /* color: #eb5e28; */
     border-color: #eb5e28;
@@ -103,11 +107,11 @@ label.error:not(.form-control) {
     font-weight: 300;
     font-size: 0.8em;
 }
-.button{
+.button {
     width: 120px;
-    font-family:"MADE Tommy Soft 2";
-    color: #FC797D;
-    background-color: #f8ede3 ;
+    font-family: "MADE Tommy Soft 2";
+    color: #fc797d;
+    background-color: #f8ede3;
     border: 1px solid;
     border-radius: 15px;
     outline: none;
@@ -115,43 +119,43 @@ label.error:not(.form-control) {
     float: right;
     transition: 0.5s;
 }
-.button:hover{
+.button:hover {
     color: white;
-    background:#FC797D;
+    background: #fc797d;
 }
-.button:focus{
+.button:focus {
     outline: none;
 }
-.tombol{
+.tombol {
     padding-bottom: 20px;
 }
-#next-btn{
+#next-btn {
     width: 200px;
 }
-#footer{
+#footer {
     margin-top: 10%;
     padding-top: 3%;
     padding-bottom: 25px;
-    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+    background-image: linear-gradient(to right, #fc797d, #fc3f3f);
     text-align: center;
 }
-.logo{
+.logo {
     width: 100px;
     padding-bottom: 10px;
     opacity: 50%;
 }
-.foot{
+.foot {
     margin-top: 1%;
     font-family: "MADE Tommy soft";
     text-align: center;
 }
-.step{
+.step {
     display: none;
 }
-.step.active{
+.step.active {
     display: block;
 }
-.error-message{
+.error-message {
     color: #d8000c;
     background-color: #ffd2d2;
     border-radius: 5px;
