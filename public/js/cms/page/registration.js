@@ -10,7 +10,7 @@ $(document).ready(function(){
         }
     });
     jQuery.validator.addMethod("emailstudent", function(value, element) {
-        return this.optional(element) || /^.+@student.umn.ac.id$/ || /^.+@umn.ac.id$/ || /^.+@lecturer.umn.ac.id$/.test(value);
+        return this.optional(element) || /^.+@(student\.umn\.ac\.id|lecturer\.umn\.ac\.id|umn\.ac\.id)$/.test(value);
     }, "Email harus menggunakan email student atau email dari UMN"
     );
     jQuery.validator.addMethod("regexeco", function(value, element) {
