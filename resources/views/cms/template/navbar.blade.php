@@ -17,7 +17,11 @@
                         <a class="nav-link" href="{{ route('home') }}">Our Team</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        @if(session()->has('user'))
+                        <a class="nav-link" href="{{ route('profileView') }}">Profile</a>
+                        @else
+                        <a class="nav-link" href="{{ route('loginView') }}">Login</a>
+                        @endif
                     </li>
                 </div>
             </ul>
@@ -25,7 +29,7 @@
     </div>
 </nav>
 
-                    
+
 <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
 <div class="toggler-container">
 
