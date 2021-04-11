@@ -9,32 +9,32 @@
 
 @section('content')
 <div class="main-container pt-5">
-    <div class="row-text-center">      
-        <div class="profile-header" style="background-image:url({{ asset('images/profile/Header@2x.png') }});">        
-            <div class="container profile-header-content">    
+    <div class="row-text-center">
+        <div class="profile-header" style="background-image:url({{ asset('images/profile/Header@2x.png') }});">
+            <div class="container profile-header-content">
                 <div class="profile-eco-friend ">
                     Hello ECO Friend,
                 </div>
                 <div class="profile-name ">
                     <p style="text-transform: uppercase;">{{$data->firstname}}</p>
                 </div>
-            <a href="{{url('logout')}}" class="logout">
-                <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
-                <p>LOG OUT</p>
-            </a> 
-            </div>           
+                <a href="{{url('logout')}}" class="logout">
+                    <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
+                    <p>LOG OUT</p>
+                </a>
+            </div>
         </div>
     </div>
-        
+
     <div class="container">
         <div id="eco-friend-identity">
-            <div class="row text-center mt-5 mb-5"id ="data">    
+            <div class="row text-center mt-5 mb-5" id="data">
                 <div class="profile-data">
                     ECO Friend Profile
                 </div>
             </div>
-            
-            <div class="row text-center"id ="name">
+
+            <div class="row text-center" id="name">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p style="text-transform: capitalize;">Name </p>
                 </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="row text-center"id ="nim">
+            <div class="row text-center" id="nim">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p>NIM</p>
                 </div>
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            <div class="row text-center"id ="email">
+            <div class="row text-center" id="email">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p>Email </p>
-                </div>  
+                </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1 col-1">:</div>
                 <div class="profile-content col-sm-7 col-md-7 col-lg-8 col-9">
                     <p>{{$data->email}}</p>
@@ -80,7 +80,7 @@
             </div>
             <div class="col-md-8 col-12" id="time-count">
                 <div class="time-left mt-3">Remaining Time for Submission</div>
-                <div class="time-countdown">01:12:34</div> 
+                <div class="time-countdown">01:12:34</div>
             </div>
             <div class="col-md-8 col-11" id="time-countdown">
                 <ul class="countdown">
@@ -102,7 +102,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="progress-graph">
             <div class="chart small-font-size">
                 <!-- bar pertama -->
@@ -124,7 +124,7 @@
                     </div>
 
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['utopia'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utopia'] == 1) submit-disabled @endif" id="submit-utopia">Submit</button>
+                        <button @if ($allMissionProgress['utopia']==1) disabled @endif class="submit-button @if ($allMissionProgress['utopia'] == 1) submit-disabled @endif" id="submit-utopia">Submit</button>
                     </div>
                 </div>
 
@@ -147,7 +147,7 @@
                     </div>
 
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['rise'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['rise'] == 1) submit-disabled @endif" id="submit-rise">Submit</button>
+                        <button @if ($allMissionProgress['rise']==1) disabled @endif class="submit-button @if ($allMissionProgress['rise'] == 1) submit-disabled @endif" id="submit-rise">Submit</button>
                     </div>
                 </div>
 
@@ -172,10 +172,10 @@
                         <p class="col-12">?</p>
                         @endif
                     </div>
-                    
+
                     @if($data->mystery_quest == 1)
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['utile'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utile'] == 1) submit-disabled @endif" id="submit-utile">Submit</button>
+                        <button @if ($allMissionProgress['utile']==1) disabled @endif class="submit-button @if ($allMissionProgress['utile'] == 1) submit-disabled @endif" id="submit-utile">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
@@ -206,10 +206,10 @@
                         @endif
                     </div>
 
-                    
+
                     @if($data->mystery_quest == 2)
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['raconteur'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['raconteur'] == 1) submit-disabled @endif" id="submit-raconteur">Submit</button>
+                        <button @if ($allMissionProgress['raconteur']==1) disabled @endif class="submit-button @if ($allMissionProgress['raconteur'] == 1) submit-disabled @endif" id="submit-raconteur">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
@@ -217,14 +217,14 @@
                     </div>
                     @endif
                 </div>
-            
+
             </div>
-        </div>   
+        </div>
     </div>
-</div>     
-<div class="col-12" id="footer">        
-    <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
-        <div class="container" id="footer-items">      
+</div>
+<div class="col-12" id="footer">
+    <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">
+        <div class="container" id="footer-items">
             <div class="eco-umn-tagline">
                 <p>#WeActForTheBetterEarth</p>
             </div>
@@ -337,7 +337,9 @@
         progressSteps: ['1', '2']
     }).queue([{
             title: 'Choose Mystery Quest',
-            text: '...',
+            html: `
+                <p>Kamu dapat memilih 1 dari 2 Mystery Quest atau tidak ikut sama sekali. Untuk informasi detail terkait Mystery Quest, dapat kalian akses di <a class="MysteryQuestText" href="{{ route('about-red') }}">What is RED</a>, ya!</p>
+            `,
             icon: 'warning'
         },
         {

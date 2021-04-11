@@ -1824,6 +1824,11 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     content: '85';
 }
 
+.MysteryQuestText{
+    color: red;
+    text-decoration: none;
+}
+
 /* breakpoints */
 @media  (max-width:2560px) {
     .progress-graph-top{
