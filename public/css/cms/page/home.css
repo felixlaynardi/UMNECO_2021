@@ -137,6 +137,7 @@ body, html {
   min-height: 3000px;
   background: linear-gradient(180deg, #EBCDB8 0%, #EBCDB8 16.67%, #67C9D0 45.31%);
   z-index:2;
+  margin-top: -1%;
 }
 #scene-2::before {
   content:' ';
