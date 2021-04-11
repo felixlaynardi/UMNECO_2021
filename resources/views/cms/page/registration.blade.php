@@ -90,7 +90,9 @@
                             <br>
                         </div>
                         <div class="link">
-                            http://bit.ly/CoverHighlightUtopia
+                            <a href="http://bit.ly/CoverHighlightUtopia" target="_blank">
+                                http://bit.ly/CoverHighlightUtopia
+                            </a>
                         </div>
                         <br>
                         <div class="in">
@@ -120,7 +122,9 @@
                     <br>
                     <br>
                     <div class="link">
+                        <a href="http://bit.ly/VideoContohKegiatanUtopi" target="_blank">
                         http://bit.ly/VideoContohKegiatanUtopi
+                        </a>
                     </div>
                     <br>
                     Tata cara pengumpulan video:
@@ -158,7 +162,9 @@
                             <br>
                             <br>
                             <div class="link">
+                                <a href="http://bit.ly/CoverHighlightRise" target="_blank">
                                 http://bit.ly/CoverHighlightRise
+                                </a>
                             </div>
                             <br>
                             ● ECO Friends <b>WAJIB</b> menggunakan tagar #RealEmergencyDailylife #TheBeginningofANewLife dan tag @umn_eco pada <b>video <em>story</em> yang pertama saja di setiap harinya.</b>
@@ -171,8 +177,11 @@
                     <br>
                     <br>
                     <div class="link">
+                        <a href="http://bit.ly/VideoContohKegiatanRise" target="_blank">
                         http://bit.ly/VideoContohKegiatanRise
-                    </div><br>
+                        </a>    
+                    </div>
+                    <br>
                 
                     Tata cara pengumpulan video;
                         <div class="in">
