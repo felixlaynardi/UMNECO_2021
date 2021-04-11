@@ -58,7 +58,7 @@ class EcofriendController extends Controller
             $startTime = Carbon::create(2021, 4, 6);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 11);
+            $currTime = Carbon::create(2021, 4, 12);
 
             //use $now for real case
             $now = Carbon::create("today");

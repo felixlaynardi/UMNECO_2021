@@ -328,7 +328,7 @@
 </script>
 
 <!-- SCRIPT FOR SPECIAL MISSION -->
-@if($dateForSpecialMission == 0 && $data->mystery_quest == 0)
+@if($dateForSpecialMission >= 0 && $data->mystery_quest == 0)
 <script>
     console.log("SPECIAL MISSION RIBET WOI");
     Swal.mixin({
@@ -338,16 +338,16 @@
     }).queue([{
             title: 'Choose Mystery Quest',
             html: `
-                <p>Kamu dapat memilih 1 dari 2 Mystery Quest atau tidak ikut sama sekali. Untuk informasi detail terkait Mystery Quest, dapat kalian akses di <a class="MysteryQuestText" href="{{ route('about-red') }}">What is RED</a>, ya!</p>
+                <p>Kamu dapat memilih 1 dari 2 Mystery Quest atau tidak ikut sama sekali.</p><p> Untuk informasi detail terkait Mystery Quest, dapat kalian akses di <a class="MysteryQuestText" href="{{ route('about-red') }}">What is RED</a>, ya!</p>
             `,
             icon: 'warning'
         },
         {
-            title: 'Choose Secret Mission?',
+            title: 'Choose Mystery Quest?',
             html: `
             <div class="sweet-alert-container">
                 <div class="utile-box">
-                    <img src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" />
+                    <img src="{{ asset('images/utile.png') }}" />
                     <form action="{{ route('mysteryQuest') }}" method="post">
                         @csrf
                         <input type="number" value="1" name="mysteryQuest" style="display:none;">
@@ -355,7 +355,7 @@
                     </form>
                 </div>
                 <div class="raconteur-box">
-                    <img src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" />
+                    <img src="{{ asset('images/raconteur.png') }}" />
                     <form action="{{ route('mysteryQuest') }}" method="post">
                         @csrf
                         <input type="number" value="2" name="mysteryQuest" style="display:none;">
