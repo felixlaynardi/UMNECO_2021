@@ -74,7 +74,7 @@ class EcofriendController extends Controller
             $percentageAllMission = $progressModel->getProgresBarPercentage($data->id);
 
             //showing special sweet alert for raconteur and utile for user to choose
-            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 11);
+            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 29);
             $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 

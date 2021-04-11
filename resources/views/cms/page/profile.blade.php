@@ -249,7 +249,12 @@
 
 @if (session('status') == 'Success')
 <script>
-    Swal.fire("Welcome", "{{$data->firstname}}", "success");
+    // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
+    Swal.fire({
+        icon: 'success',
+        title: 'Welcome, {{$data->firstname}}',
+        text: 'Make these quests your new habit for a better Earth. Welcome to RED!',
+    })
 </script>
 @endif
 
