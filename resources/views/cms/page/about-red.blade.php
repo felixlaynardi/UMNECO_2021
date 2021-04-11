@@ -25,7 +25,7 @@
                         <li><p><b>Daily life dikaitkan</b> dengan kegiatan sehari-hari yang dapat kita lakukan untuk membantu mengurangi pencemaran lingkungan alam yang sedang terjadi. </p></li>
                     </ul> 
                 <p  >Melalui quests yang ada di kegiatan <b>RED, UMN ECO 2021</b> ingin mengajak <b>ECO Friends</b> untuk mengambil bagian dalam mengurangi pencemaran lingkungan alam dan membangun kebiasaan baru secara nyata di kegiatan sehari-hari kalian yang dapat berdampak untuk mengurangi pencemaran lingkungan alam.</p>
-                <a href="#" class="button-container mx-auto" id="pdf-download">Unduh Peraturan dan Ketentuan RED</a>
+                <a href="{{ asset('files/Regulasi_RED.pdf') }}" download class="button-container mx-auto" id="pdf-download">Unduh Peraturan dan Ketentuan RED</a>
                 
             </div>
             
