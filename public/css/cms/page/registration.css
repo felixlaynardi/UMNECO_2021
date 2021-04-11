@@ -2,6 +2,37 @@ header{
     background-image: linear-gradient(to right,#FC797D, #fc3f3f );
     margin-bottom: 2%;
 }
+.h2{
+    text-align: center;
+}
+.salam{
+    float: right;
+}
+.in{
+    padding-left: 5%;
+}
+@media(max-width:1024px){
+    object.regulation-obj{
+        display: block;
+    }
+}
+@media(min-width:1024px){
+    div.rules{
+        display: block;
+        text-align: justify;
+    }
+    object.regulation-obj{
+        display: none;
+    }
+}
+.link{
+    text-align: center;
+    border: 1px solid;
+}
+/* .rules{
+    text-align: justify;
+    display: none;
+} */
 .BG{
     width: 100%;
 }
