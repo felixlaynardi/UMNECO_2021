@@ -163,7 +163,7 @@ body, html {
 .mission-logo {
     height: 25vh;
     width: 25vh;
-    background-color: rgb(10, 226, 255);
+    background-size: contain;
     border-radius: 50%;
     display: inline-block;
     padding: 100px;
@@ -184,13 +184,12 @@ body, html {
     transition: .5s ease;
 }
 
-.content-container p {
-    font-family: MADE Tommy Soft;
-    font-size: 48px;
+.item p {
+    font-family: 'MADE Tommy Soft 2';
     font-style: normal;
-    font-weight: 500;
-    line-height: 60px;
-    letter-spacing: 0em;
+    font-weight: 600;
+    line-height: 31px;
+    letter-spacing: 0em;   
     text-align: left;
     text-align: justify;
 }
@@ -199,6 +198,20 @@ body, html {
     animation: slideout 500ms linear;
     display: none;
 }
+
+#rise-btn{
+    background-image: url(../../../images/rise.png);
+}
+#utopia-btn{
+    background-image: url(../../../images/utopia.png);
+}
+#raconteur-btn{
+    background-image: url(../../../images/raconteur.png);
+}
+#utile-btn{
+    background-image: url(../../../images/utile.png);
+}
+
 
 .rise{
     background-image: url(../../../images/about-red/rise.png);

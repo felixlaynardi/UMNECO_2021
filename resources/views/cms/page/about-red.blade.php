@@ -46,34 +46,40 @@
         <div class="carousel-inner">
             <div class="item rise row carousel-item active " data-bs-interval="1000000000">
                 <div class="col-lg-5 col-sm-5 slide-logo">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                    <img src="{{ asset('images/rise.png') }}" class="logo-rise w-100 pb-5" >
                 </div>
                 <div class="col-lg-5 col-sm-12 ">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                </div>
+                    <p>Kata <em>Rise</em> dalam Bahasa Inggris memiliki arti permulaan/terbit. Pada <em>quest</em> wajib ini, <b>ECO Friends</b> akan melakukan kegiatan menanam tanaman, dimana ini merupakan permulaan sebuah kehidupan baru dalam tanaman. Nantinya, kegiatan <em>Rise</em> akan berjalan dari rumah <b>ECO Friends</b> masing-masing dan dipublikasikan ke Instagram selama 12 hari.</p>
+                    <p>Yuk, sama-sama kita wujudkan perubahan dengan mulai menanam tanaman! Let’s begin our journey! #TheBeginningofANewLife #RealEmergencyDailylife</p>                </div>
             </div>
             <div class="item utopia row carousel-item " data-bs-interval="1000000000">
                 <div class="col-lg-5 col-sm-5 slide-logo">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-utopia w-100">
+                    <img src="{{ asset('images/utopia.png') }}" class="logo-utopia w-100 pb-5">
                 </div>
                 <div class="col-lg-5 col-sm-12">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Kata <em>Utopia</em> dalam Bahasa Inggris memiliki arti, "masyarakat atau lingkungan yang memiliki kualitas hampir sempurna atau sesuai kriteria". Penggunaan kata ini secara spesifik menggambarkan kondisi lingkungan yang lebih baik dan lebih bersih setelah melakukan kegiatan <em>Utopia</em>, dimana <b>ECO Friends</b> akan melakukan penghapusan sampah digital berupa e-mail dan dipublikasikan di Instagram selama 12 hari.</p>
+                    <p>Sama seperti badan kita yang jika semakin banyak beraktivitas, semakin banyak energi yang dikeluarkan, hal ini berlaku juga pada e-mail. Menurut penelitian dari </em>Digital Cleanup Day</em>, bila kita membiarkan 1 GB e-mail tersimpan selama satu tahun, kita menggunakan energi sebesar 32,1 kWh yang setara dengan daya oven memanggang selama 10 jam. Hal ini bisa menyebabkan adanya polusi karbon ke bumi. Kebayang kan berapa banyak energi dan polusi karbon yang dikeluarkan!</p>
+                    <p>Oleh karena itu, yuk, kita selamatkan bumi dimulai dari hal kecil, yaitu menghapus sampah digital berupa e-mail di kegiatan Utopia! #SmallActforBigImpact #RealEmergencyDailylife</p>
                 </div>
             </div>
             <div class="item raconteur row carousel-item" data-bs-interval="1000000000">
                 <div class="col-lg-5 col-sm-5 slide-logo">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-reconteur w-100">
+                    <img src="{{ asset('images/raconteur.png') }}" class="logo-reconteur w-100 pb-5">
                 </div>
                 <div class="col-lg-5 col-sm-12">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <p>Kata <em>raconteur</em> dalam Bahasa Inggris memiliki arti “orang yang pandai bercerita”. Selain menjadi tempat atau wadah bagi <b>ECO Friends</b> untuk peduli terhadap lingkungan alam, UMN ECO juga ingin mengambil ranah peduli terhadap hewan-hewan yang selama ini tidak terlalu diketahui kelangkaan dan dampaknya terhadap Bumi.</p>
+                    <p>Contohnya adalah Owa Jawa! Ternyata, primata asli dari Pulau Jawa ini ikut berkontribusi dalam menyebarkan benih berbagai pohon di hutan yang dapat melestarikan Bumi. Sayangnya, populasi mereka terancam punah karena ulah manusia yang merusak habitatnya dan memburunya untuk diperjualbelikan secara ilegal sebagai hewan peliharaan. Padahal, Owa Jawa mempunyai sifat yang unik, dimana mereka hanya bisa melakukan reproduksi dengan satu Owa Jawa saja. Dengan populasinya yang terancam punah, mereka jadi susah untuk dibudidayakan. </p>
+                    <p>Kami tunggu cerita-cerita menarik yang lain dari kalian ya, <b>ECO Friends!</b> #TellYourTale #RealEmergencyDailylife</p>
                 </div>
             </div>
             <div class="item utile row carousel-item " data-bs-interval="1000000000">
                 <div class="col-lg-5 col-sm-5 slide-logo">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-utile w-100">
+                    <img src="{{ asset('images/utile.png') }}" class="logo-utile w-100 pb-5">
                 </div>
                 <div class="col-lg-5 col-sm-12">
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p>Kata <em>Utile</em> dalam Bahasa Inggris berarti “berguna atau bermanfaat”. Di Utile, ECO Friends kami berharap pandangan <b>ECO Friends</b> terhadap barang-barang yang tadinya dianggap sudah tidak berguna di dalam rumah masing-masing, ternyata masih bisa digunakan untuk menghasilkan suatu karya.</p>
+                <p>Tahukah kalian kalau Kardus bekas yang menumpuk di rumah kalian dapat dijadikan berbagai macam kerajinan tangan? Mulai dari bingkai foto, celengan, hingga rak penyimpan buku atau barang-barang kalian. Selain bermanfaat bagi diri kita sendiri, kita juga dapat menyelamatkan lingkungan, loh, <b>ECO Friends</b>.</p>
+                <p>Maka dari itu, yuk, kita berkreasi bersama untuk membuat barang-barang bekas tersebut menjadi sesuatu yang bisa bermanfaat! #UselessBecomeUseful #RealEmergencyDailylife</p>
                 </div>
             </div>
         </div>
@@ -101,10 +107,11 @@
             <span class="close-btn" data="rise">&times;</span>
             <div class="item rise row">
                 <div class="col-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
+                    <p>Kata <em>Rise</em> dalam Bahasa Inggris memiliki arti permulaan/terbit. Pada <em>quest</em> wajib ini, <b>ECO Friends</b> akan melakukan kegiatan menanam tanaman, dimana ini merupakan permulaan sebuah kehidupan baru dalam tanaman. Nantinya, kegiatan <em>Rise</em> akan berjalan dari rumah <b>ECO Friends</b> masing-masing dan dipublikasikan ke Instagram selama 12 hari.</p>
+                    <p>Yuk, sama-sama kita wujudkan perubahan dengan mulai menanam tanaman! Let’s begin our journey! #TheBeginningofANewLife #RealEmergencyDailylife</p>
                 </div>
                 <div class="col-3">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                    <img src="{{ asset('images/rise.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
         </div>
@@ -113,10 +120,12 @@
             <span class="close-btn" data="utopia">&times;</span>
             <div class="item utopia row">
                 <div class="col-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
+                    <p>Kata <em>Utopia</em> dalam Bahasa Inggris memiliki arti, "masyarakat atau lingkungan yang memiliki kualitas hampir sempurna atau sesuai kriteria". Penggunaan kata ini secara spesifik menggambarkan kondisi lingkungan yang lebih baik dan lebih bersih setelah melakukan kegiatan <em>Utopia</em>, dimana <b>ECO Friends</b> akan melakukan penghapusan sampah digital berupa e-mail dan dipublikasikan di Instagram selama 12 hari.</p>
+                    <p>Sama seperti badan kita yang jika semakin banyak beraktivitas, semakin banyak energi yang dikeluarkan, hal ini berlaku juga pada e-mail. Menurut penelitian dari </em>Digital Cleanup Day</em>, bila kita membiarkan 1 GB e-mail tersimpan selama satu tahun, kita menggunakan energi sebesar 32,1 kWh yang setara dengan daya oven memanggang selama 10 jam. Hal ini bisa menyebabkan adanya polusi karbon ke bumi. Kebayang kan berapa banyak energi dan polusi karbon yang dikeluarkan!</p>
+                    <p>Oleh karena itu, yuk, kita selamatkan bumi dimulai dari hal kecil, yaitu menghapus sampah digital berupa e-mail di kegiatan Utopia! #SmallActforBigImpact #RealEmergencyDailylife</p>
                 </div>
                 <div class="col-3">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                    <img src="{{ asset('images/utopia.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
         </div>
@@ -125,10 +134,12 @@
             <span class="close-btn" data="raconteur">&times;</span>
             <div class="item raconteur row">
                 <div class="col-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
+                    <p>Kata <em>raconteur</em> dalam Bahasa Inggris memiliki arti “orang yang pandai bercerita”. Selain menjadi tempat atau wadah bagi <b>ECO Friends</b> untuk peduli terhadap lingkungan alam, UMN ECO juga ingin mengambil ranah peduli terhadap hewan-hewan yang selama ini tidak terlalu diketahui kelangkaan dan dampaknya terhadap Bumi.</p>
+                    <p>Contohnya adalah Owa Jawa! Ternyata, primata asli dari Pulau Jawa ini ikut berkontribusi dalam menyebarkan benih berbagai pohon di hutan yang dapat melestarikan Bumi. Sayangnya, populasi mereka terancam punah karena ulah manusia yang merusak habitatnya dan memburunya untuk diperjualbelikan secara ilegal sebagai hewan peliharaan. Padahal, Owa Jawa mempunyai sifat yang unik, dimana mereka hanya bisa melakukan reproduksi dengan satu Owa Jawa saja. Dengan populasinya yang terancam punah, mereka jadi susah untuk dibudidayakan. </p>
+                    <p>Kami tunggu cerita-cerita menarik yang lain dari kalian ya, <b>ECO Friends!</b> #TellYourTale #RealEmergencyDailylife</p>
                 </div>
                 <div class="col-3">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                    <img src="{{ asset('images/raconteur.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
         </div>
@@ -137,10 +148,12 @@
             <span class="close-btn" data="utile">&times;</span>
             <div class="item utile row">
                 <div class="col-6">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ac ornare vitae lobortis non vitae.</p>
+                <p>Kata <em>Utile</em> dalam Bahasa Inggris berarti “berguna atau bermanfaat”. Di Utile, ECO Friends kami berharap pandangan <b>ECO Friends</b> terhadap barang-barang yang tadinya dianggap sudah tidak berguna di dalam rumah masing-masing, ternyata masih bisa digunakan untuk menghasilkan suatu karya.</p>
+                <p>Tahukah kalian kalau Kardus bekas yang menumpuk di rumah kalian dapat dijadikan berbagai macam kerajinan tangan? Mulai dari bingkai foto, celengan, hingga rak penyimpan buku atau barang-barang kalian. Selain bermanfaat bagi diri kita sendiri, kita juga dapat menyelamatkan lingkungan, loh, <b>ECO Friends</b>.</p>
+                <p>Maka dari itu, yuk, kita berkreasi bersama untuk membuat barang-barang bekas tersebut menjadi sesuatu yang bisa bermanfaat! #UselessBecomeUseful #RealEmergencyDailylife</p>
                 </div>
                 <div class="col-3">
-                    <img src="{{ asset('images/about-red/logo-red.png') }}" class="logo-rise w-100" >
+                    <img src="{{ asset('images/utile.png') }}" class="logo-rise w-100" >
                 </div>
             </div>
         </div>
