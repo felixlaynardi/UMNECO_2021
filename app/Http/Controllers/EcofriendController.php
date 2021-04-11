@@ -81,7 +81,7 @@ class EcofriendController extends Controller
             return view(
                 'cms.page.profile',
                 [
-                    'title' => 'UMN ECO 2021',
+                    'title' => 'UMN ECO 2021 - Profile',
                     'data' => $data,
                     'misiKe_N' => $misiKe_N,
                     'allMissionProgress' => $allMissionProgress,

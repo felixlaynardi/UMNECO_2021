@@ -10,7 +10,8 @@ use App\Models\Oprec;
 class OprecController extends Controller
 {
     public function index(){
-        return view('cms.page.oprec', ['title' => 'UMN ECO 2021 - Open Recruitment']);
+        // return view('cms.page.oprec', ['title' => 'UMN ECO 2021 - Open Recruitment']);
+        return view('cms.page.oprec', ['title' => 'UMN ECO 2021 - Our Team']);
     }
     public function store(Request $request){
         // dd($request->photo->extension());
