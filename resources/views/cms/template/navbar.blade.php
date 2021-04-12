@@ -8,16 +8,20 @@
             <ul class="navbar-nav col-12">
                 <div class="nav-item-container mx-auto w-100 row">
                     <li class="nav-item col-3">
-                        <a class="nav-link active" href="/#home">Home</a>
+                        <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="/#aboutus">RED</a>
+                        <a class="nav-link" href="{{ route('about-red') }}">About RED</a>
                     </li>
-                    <li class="nav-item col-2">
-                        <a class="nav-link" href="/#contact">Eco Family</a>
+                    <li class="nav-item col-3">
+                        <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
                     </li>
-                    <li class="nav-item col-4">
-                        <a class="nav-link" href="/profile">Account</a>
+                    <li class="nav-item col-3">
+                        @if(session()->has('user'))
+                        <a class="nav-link" href="{{ route('profileView') }}">Profile</a>
+                        @else
+                        <a class="nav-link" href="{{ route('loginView') }}">Login</a>
+                        @endif
                     </li>
                 </div>
             </ul>
@@ -25,7 +29,7 @@
     </div>
 </nav>
 
-                    
+
 <input type="checkbox" id="main-navigation-toggle" class="btn btn--close" title="Toggle main navigation" />
 <div class="toggler-container">
 
@@ -36,16 +40,16 @@
 <nav id="main-navigation" class="nav-main">
     <ul class="menu">
         <li class="menu__item">
-            <a class="menu__link" href="/#home">Home</a>
+            <a class="menu__link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#aboutus">Red</a>
+            <a class="menu__link" href="{{ route('about-red') }}">About RED</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/#contact">Eco Family</a>
+            <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="/profile">Account</a>
+            <a class="menu__link" href="{{ route('login') }}">Login</a>
         </li>
     </ul>
 </nav>

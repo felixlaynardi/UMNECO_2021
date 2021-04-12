@@ -24,21 +24,28 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 
 Route::get('/', function () {
   return view('cms.page.home', ['title' => 'UMN ECO 2021']);
-});
+})->name('home');
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
+Route::get('/about-red', function () {
+  return view('cms.page.about-red', ['title' => 'UMN ECO 2021 - About RED']);
+})->name('about-red');
+
 // Route::post('/registration', [RegistrationController::class, 'index']);
-Route::get('/open-recruitment', [OprecController::class, 'index'])->name('oprecView');
+Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
-Route::get('/register', [EcofriendController::class, 'registerView'])->name('registerView');
-Route::post('/register', [EcofriendController::class, 'register'])->name('register');
+Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
+Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 
 //submit link challange
 Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
+
+// mysteryQuest
+Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
 
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');

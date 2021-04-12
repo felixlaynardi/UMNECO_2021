@@ -1,3 +1,6 @@
+body{
+    font-family: 'Made Tommy Soft';
+}
 header{
     padding-bottom: 50px;
     background-color: #D7110C ;
@@ -11,30 +14,49 @@ label{
     font-family: "MADE Tommy Soft";
 
 }
-.BG{
-    width: 105%;
-    margin-left: -2%;
+.left-content{
+    position: relative;
+    min-height: 95vh;
+    padding: 0;
 }
-.alas{
-    width: 75%;
+
+.hydrant-shadow{
+    width: 80%;
     text-align: center;
-    margin-top: -200px;
-    margin-left: 13%;
+    position: absolute;
+    bottom: 25%;
+    transform: translate(-50%, 100%);
+    left: 50%;
 }
 .hydrant{
     width: 100%;
-    margin-top: -98%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
 }
 .form{
-    padding-top: 13%;
-    width: 40%;
-    margin-left: 4%;
     height: 100%;
+    padding: 0;
 
 }
-
+.form-control{
+    width: 85%;
+    background-color: #fff5f5;
+}
+.has-error .form-control, .form-control.error {
+    background-color: #ffc0a4;
+    border-color: #eb5e28;
+}
+label.error:not(.form-control) {
+    color: #eb5e28;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+.error {
+    font-family: "Made Tommy soft 2";
+}
 .button{
-    margin-bottom: 5%;
     margin-right: 2%;
     width: 120px;
     font-family:"MADE Tommy Soft 2";
@@ -44,21 +66,64 @@ label{
     border: 2px solid;
     border-radius: 15px;
     outline: none;
+    transition: 0.5s;
 }
-@media(max-width:768px) {
-    img#image-left{
+.button:hover{
+    color: white;
+    background:#FC797D;
+}
+.button:focus{
+    outline: none;
+}
+.btn-register{
+    text-decoration: none;
+    text-align: center;
+}
+.login-title{
+    color:#DD2A2A;
+    font-size: 50px;
+    font-family: 'Heavitas';
+    letter-spacing: 2px;
+}
+#footer{
+    padding-top: 3%;
+    padding-bottom: 25px;
+    background-image: linear-gradient(to right,#FC797D, #fc3f3f );
+    text-align: center;
+}
+.logo{
+    width: 100px;
+    padding-bottom: 10px;
+    opacity: 50%;
+}
+.foot{
+    margin-top: 1%;
+    font-family: "MADE Tommy soft";
+    text-align: center;
+}
+
+@media(max-width:767px) {
+    .left-content{
         display: none;
     }
-    div#form{
-        width: 70%;
-        padding-top: 20;
-        padding-left: 25%;
+    .right-content{
+        margin:auto;
+        margin-top:20%;
+    }
+    .form{
+        min-height: 95vh;
+    }
+    .form-control{
+        width: 100%;
     }
 }
 @media(max-width:419px) {
-    div#form{
+    /* div#form{
         width: 70%;
         padding-top: 40%;
         padding-left: 25%;
+    } */
+    .button{
+        width: 90px;
     }
 }

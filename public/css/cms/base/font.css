@@ -5,9 +5,9 @@
     font-style: normal;
 }
 @font-face{
-    font-family: 'MADE Tommy Soft';
+    font-family: 'MADE Tommy Soft 3';
     src:url('../../../fonts/MADE-Tommy-Soft-ExtraBold.otf') format('opentype');
-    font-weight: bold;
+    font-weight: normal;
 }
 @font-face{
     font-family: 'MADE Tommy Soft 2';

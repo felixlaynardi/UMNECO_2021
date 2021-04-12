@@ -2,11 +2,11 @@
 /* Bootstrap Navbar Changes */
 .navbar{
     /* backdrop-filter: saturate(180%) blur(20px); */
-    background: #1B3627;
+    background: #D7110C;;
     /* padding:0; */
-    position: absolute;
+    position: fixed;
     width: 100%;
-    z-index: 99;
+    z-index: 99999999;
 }
 [id=main-navigation-toggle] ~ label span, .toggler-container{
   opacity: 0;
@@ -58,9 +58,9 @@
     right: 16px;
     height: 2rem;
     width: 2rem;
-    background: #2A6B49;
+    background: #96160c;
     border-radius: 10px;
-    z-index: 1022;
+    z-index: 999999999;
     top: 12px;
 }
 
@@ -107,7 +107,7 @@
   transition: transform calc(var(--td) * 2) var(--td) var(--te);
   width: 100%;
   z-index: -100;
-  background: #1B3627;
+  background: #D7110C;
 }
 .nav-main::before {
   top: 0;
@@ -130,7 +130,7 @@
   position: fixed;
   right: 1rem;
   top: 0.7rem;
-  z-index: 1022;
+  z-index: 999999999;
 }
 [id=main-navigation-toggle] ~ label span {
   display: none;
@@ -328,4 +328,15 @@
         /* background: #D8BD88; */
         transition: 1s;
     }
+    .toggler-container, .navigation-toggle-span{
+      display: block!important;
+      opacity: 1!important;
+    }
+}
+
+.green-nav::after {
+  background: #1B3627;
+}
+.green-nav::before {
+  background: #1B3627;
 }

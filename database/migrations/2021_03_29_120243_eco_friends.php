@@ -28,6 +28,7 @@ class EcoFriends extends Migration
             $table->string('password');
             $table->boolean('utopia_compensation');
             $table->boolean('rise_compensation');
+            $table->integer('mystery_quest');
         });
     }
 

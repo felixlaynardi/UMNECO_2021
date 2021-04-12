@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "MADE Tommy Soft";
+    font-family: "MADE Tommy Soft 3";
     font-style: normal;
     background-color: #e8d3d3;
 }
@@ -23,8 +23,7 @@ body {
 .profile-header {
     width: 100%;
     margin: auto;
-    position: relative;
-    padding-top: 0;
+    padding-bottom: 5rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -34,12 +33,9 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 3em;
     line-height: 65px;
     color: #FFF;
-    position: absolute;
-    top: 30%;
-    left: 8%;
     /* margin-left: 12%; */
 }
 
@@ -47,13 +43,14 @@ body {
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 80px;
+    font-size: 5em;
     line-height: 65px;
     color: #FFF;
-    position: absolute;
-    top: 50%;
-    left: 8%;
     /* margin-left: 12%; */
+}
+.profile-header-content{
+    padding-top: 5rem;
+    position: relative;
 }
 
 .logout{
@@ -63,75 +60,83 @@ body {
     text-decoration: none;
     color: white;
     letter-spacing: 5px;
+    text-align:center;
+}
+.logout:hover{
+    text-decoration: none;
+    color: #e8d3d3;
 }
 
 .logout img{
     width: 100px;
 }
 
-/* styling eco friend data */
-#data{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
+
+/* countdown */
+.countdown {
+	display: grid;
+	column-gap: 10px;
+    list-style: none;
+	grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+}
+.countdown li {
+	text-align: center;
+	position: relative;
+}
+.countdown li + li:before {
+	content: ":";
+	display: block;
+	font-size: 22px;
+	position: absolute;
+	top: 18%;
+	left: -8px;
+}
+.countdown .num {
+	margin-bottom: 8px;
+	font-size: 48px;
+	font-weight: bold;
+}
+.countdown .txt {
+	font-size: 12px;
+	text-transform: uppercase;
 }
 
-#name{
+/* styling eco friend data */
+#eco-friend-identity{
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
+    font-size: 1.6em;
+    /* line-height: 56px; */
     color: #161616;
 }
-#nim{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
-}
-#email{
-    font-family: MADE Tommy Soft;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 56px;
-    color: #161616;
+#data{
+    font-size: 1.7em;
 }
 
 .profile-data{
-    font-size: 45px;
-    line-height: 100px;
     color: #161616;
     text-align: left;
+    font-size: 1.75em;    
+    font-family: 'Heavitas';
+    letter-spacing: 4.5px;
+    text-align: center
 }
 
-.profile-name-eco-friend{
+.profile-title{
     text-align: left;
 }
-
-.profile-nim-eco-friend{
-    text-align: left;
-}
-
-.profile-email-eco-friend{
+.profile-content{
+    color: #c82121;
     text-align: left;
 }
 
 .profile-journey{
-    position: absolute;
-    right: 0;
-    width: 68%;
+    margin-left: auto;
     border-top-left-radius: 90px;
     border-bottom-left-radius: 90px;
-    background: #FF416C;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to right, #fc797d, #fd6c6e, #fe5e5f, #fd4f50, #fc3f3f);
     font-size: 70px;
     line-height: 100px;
     font-style: normal;
@@ -153,51 +158,99 @@ body {
 
 #day-count{
     text-align: left;
+    font-family: 'Heavitas';
+    letter-spacing: 3px;
 }
 
 .day-n{
     font-size: 80px;
-    line-height: 100px;
+    font-weight: 800;
 }
 
 .day-left{
-    font-size: 50px;
+    font-size: 35px;
+    font-weight: 600;
 }
 
 #time-count{    
-    position: absolute;
-    margin-top: 1.2em;
-    right: 0;
-    width: 60%;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    background: #FF416C;  /*fallback for old browsers*/
-    background: -webkit-linear-gradient(to right, #FF416C,#FF4B2B );  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FF416C, #FF4B2B ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-image: linear-gradient(to right, #fc797d, #fd6c6e, #fe5e5f, #fd4f50, #fc3f3f);
     font-size: 45px;
     font-style: normal;
     font-weight: 700;
     color: #fff;
 }
 
-#time-count p{
+#time-count div{
     text-align: left;
-    height: 100%;
     padding-left: 3%;
 }    
 
-.logo {
-    width: 65%;
-    margin: auto;
-    margin-top: 7%;
-    justify-content: center;
-    padding-bottom: 10%;
+#bar-submit{
+    display: block;
+    margin-bottom: 40px;
 }
 
-.logo-submit {
-    margin: auto;
-    display: flex;
+.desc-utopia{
+    font-family:"MADE Tommy Soft";
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 5%;
+    background: #A32A2A;
+    background: -webkit-linear-gradient(to right, #A32A2A 0%, #CE5151 100%);
+    background: -moz-linear-gradient(to right, #A32A2A 0%, #CE5151 100%);
+    background: linear-gradient(to right, #A32A2A 0%, #CE5151 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+.desc-rise{
+    font-family:"MADE Tommy Soft";
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 15%;
+    background: #277600;
+    background: -webkit-linear-gradient(to right, #277600 0%, #6af027 100%);
+    background: -moz-linear-gradient(to right, #277600 0%, #6af027 100%);
+    background: linear-gradient(to right, #277600 0%, #6af027 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.desc-utile{
+    font-family:"MADE Tommy Soft";
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 25%;
+    background: #BBB4B4;
+    background: -webkit-linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    background: -moz-linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    background: linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.desc-racounter{
+    font-family:"MADE Tommy Soft";
+    font-size: 2em;
+    font-weight: 700;
+    margin-left: 25%;
+    background: #BBB4B4;
+    background: -webkit-linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    background: -moz-linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    background: linear-gradient(to right, #BBB4B4 0%, #7a7676 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.no-margin{
+    margin-left: 0!important;
+}
+.no-margin2{
+    margin-left: 38px!important;
+}
+.logo-submit {
+    display: block;
+    width:100%;
+}
+
 .submit-button{
     width: 55%;
     padding-top: 20px;
@@ -208,34 +261,52 @@ body {
     margin:auto;
     transition: 0.5s;
     border:none;
-    box-shadow:  0 0 40px 0px #000;;
+    box-shadow:  0 0 20px 0px rgb(110, 109, 109);;
     font-family: 'MADE Tommy Soft';
+    font-size: 1.5em;
 }
-
 
 #submit-utopia{
     background-image: linear-gradient(to top, #a32a2a, #ae3433, #b93e3d, #c34747, #ce5151);
-
+    
 }
 
 #submit-rise{
     background-image: linear-gradient(to top, #277600, #379308, #47b113, #58d01d, #6af027);
 }
 
-#submit-utopia:hover, #submit-rise:hover{
-    background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e);
-    transform:scale(1.1);
+
+#submit-utopia:hover, #submit-rise:hover, #submit-utile:hover, #submit-raconteur:hover{
+    /* background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e); */
+    transform:scale(1.3);
 }
+
 #submit-utile{
-    background-image: linear-gradient(to top, #bbb4b4, #aaa4a4, #9a9494, #8a8585, #7a7676);}
-
-#submit-racounter{
-    background-image: linear-gradient(to top, #bbb4b4, #aaa4a4, #9a9494, #8a8585, #7a7676);
+    background-image: linear-gradient(180deg, #FBDF00 0%, #FBB03B 100%);
 }
 
-#submit-utile:hover, #submit-racounter:hover{
-    background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e);
-    transform: scale(1.1);
+#submit-raconteur{
+    background-image: linear-gradient(180deg, #FF8F00 0%, #FF2900 100%);
+}
+
+.submit-disabled{
+    background-image: linear-gradient(to top, #bbb4b4, #aaa4a4, #9a9494, #8a8585, #7a7676)!important;
+}
+
+.submit-disabled:hover{
+    /* background-image: linear-gradient(to top, #000000, #181818, #292929, #3b3b3b, #4e4e4e)!important; */
+    transform: scale(1.3);
+}
+
+.utile-font{
+    background-image: linear-gradient(180deg, #FBDF00 0%, #FBB03B 100%);
+}
+.raconteur-font{
+    background-image : linear-gradient(180deg, #FF8F00 0%, #FF2900 100%);
+}
+
+button:focus{
+    outline:none;
 }
 
 .image-fluid {
@@ -274,256 +345,56 @@ body {
     width: 20%;
     opacity: 50%;
 }
-
-/* breakpoints */
-@media  (max-width:1012px) {
-    .profile-eco-friend{
-        font-size: 60px;
-        /* left:8%; */
-    }
-    .profile-name{
-        font-size: 60px;
-        /* left:8%; */
-    }
-    .profile-data{
-        left: 8%;
-        font-size: 30px;
-    }
-    .profile-name-eco-friend{
-        left: 8%;
-        font-size: 30px;
-    }
-    .profile-nim-eco-friend{
-        left: 8%;
-        font-size: 30px;
-    }
-    .profile-email-eco-friend{
-        left: 8%;
-        font-size:30px;
-    }
-
-    .profile-journey{
-        font-size: 30px;
-        line-height: 80px;
-    }
-    .day-n{
-        font-size: 35px;
-        line-height: 50%;
-    }
-    .day-left{
-        font-size: 25px;
-    }
-    #time-count{
-        line-height: 30px;
-    }
-    .time-left{
-        font-size: 25px;
-        margin-top: 10px;
-    }
-    .time-countdown{
-        font-size: 25px;
-        margin-bottom: 10px;
-    }
-    
-    .logout p{
-        letter-spacing: 2px;
-    }
-
-    .logout img{
-        width: 75px;
-    }
-    .submit{
-        font-size: 20px;
-    }
-    
-    .eco-umn-tagline p{
-        font-size: 30px;
-    }
-    
-    .eco-red p{
-        font-size: 30px;
-    }
-    
-    .logo-umn-eco img{
-        width: 10%;
-        margin-left: 40%;
-    }
-}
-
-@media  (max-width:768px) {
-    .profile-eco-friend{
-        font-size: 50px;
-        /* left:8%; */
-    }
-    .profile-name{
-        font-size: 50px;
-        /* left:8%; */
-    }
-    .profile-data{
-        left: 8%;
-        font-size: 20px;
-    }
-    .profile-name-eco-friend{
-        left: 8%;
-        font-size: 20px;
-    }
-    .profile-nim-eco-friend{
-        left: 8%;
-        font-size: 20px;
-    }
-    .profile-email-eco-friend{
-        left: 8%;
-        font-size:20px;
-    }
-
-    .profile-journey{
-        font-size: 20px;
-        line-height: 70px;
-    }
-    .day-n{
-        font-size: 30px;
-        line-height: 50%;
-    }
-    .day-left{
-        font-size: 20px;
-    }
-    #time-count{
-        line-height: 30px;
-    }
-    .time-left{
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .time-countdown{
-        font-size: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .logout p{
-        letter-spacing: 2px;
-    }
-
-    .logout img{
-        width: 70px;
-    }
-    .submit{
-        font-size: 13px;
-    }
-    .profile-footer{
-        width: 100%;
-    }
-    
-    .eco-umn-tagline p{
-        font-size: 20px;
-    }
-    
-    .eco-red p{
-        font-size: 20px;
-    }
-
-}
-
-@media(max-width:320px){
-    .profile-eco-friend{
-        font-size: 15px;
-        left:8%;
-    }
-    .profile-name{
-        font-size: 15px;
-        left:8%;
-    }
-    .profile-data{
-        left: 8%;
-        font-size: 15px;
-    }
-    .profile-name-eco-friend{
-        left: 8%;
-        font-size: 15px;
-    }
-    .profile-nim-eco-friend{
-        left: 8%;
-        font-size: 15px;
-    }
-    .profile-email-eco-friend{
-        left: 8%;
-        font-size: 15px;
-    }
-
-    .profile-journey{
-        font-size: 10px;
-        line-height: 70px;
-    }
-    .day-n{
-        font-size: 25px;
-        /* margin-top: 15%; */
-        line-height: 25%;
-    }
-    .day-left{
-        font-size: 20px;
-        margin-top: 15%;
-    }
-    .time-left{
-        font-size: 10px;
-        margin-top: 15%;
-    }
-    .time-countdown{
-        font-size: 10px;
-    }
-    
-    .logout p{
-        letter-spacing: 1px;
-    }
-
-    .logout img{
-        width: 40px;
-    }
-    .submit{
-        font-size: 8px;
-        border-radius: 20px;
-    }
-    .profile-footer{
-        width: 100%;
-    }
-    
-    .eco-umn-tagline p{
-        font-size: 10px;
-    }
-    
-    .eco-red p{
-        font-size: 10px;
-    }
-    
-    .logo-umn-eco img{
-        width: 15%;
-        margin-left: 35%;
-    }
-}
-
-body::-webkit-scrollbar {
-    width: 0.3em;
-}
-
-body::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}
-
-body::-webkit-scrollbar-thumb {
-    background-color: darkgrey;
-    outline: 1px solid slategrey;
-}
-
-[id=main-navigation-toggle] ~ label {
+.logo-umn-eco-red img{
     position: absolute;
-}
-.toggler-container{
-	position:absolute;
-	background-color:#601C1D;
-}
-.navbar{
-	background-color: #b34646;
+    top: 13%;
+    right: 5%;
+    width: 15%;
+    opacity: 50%;
 }
 
+/* sweet alert modal styling */
+.sweet-alert-container{
+    width: 100%;
+    /* background: red; */
+}
 
+.utile-box,
+.raconteur-box {
+    width: 50%;
+    display: inline-block;
+    width: 200px;
+    height: 50%;
+}
+
+.raconteur-box{
+    width: 50%;
+    display: inline-block;
+    width: 200px;
+    height: 50%;
+}
+
+.sweet-alert-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.sweet-alert-container button {
+    display: block;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sweet-alert-container .raconteur-box button {
+    background: linear-gradient(180deg, #FF8F00 0%, #FF2900 100%);
+}
+
+.sweet-alert-container .utile-box button {
+    background: linear-gradient(180deg, #FBDF00 0%, #FBB03B 100%);
+}
 /* progress bar styling */
 /*
 *
@@ -534,8 +405,26 @@ START // CHART'S RULES
 .progress-graph{
     margin-top: 30px;
     left: 40%;
-    height: 100vh;
-    width: 50%;
+    height: 135vh;
+    width: 100%;    
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+.progress-graph-top{
+    margin-top: 30px;
+    left: 40%;
+    height: 50vh;
+    width: 100%;
+    margin-bottom: 20%;
+    overflow: hidden;
+}
+.progress-graph-bottom{
+    margin-top: 30px;
+    left: 40%;
+    height: 50vh;
+    width: 100%;
+    margin-bottom: 20%;
+    overflow: hidden;
 }
 
 .chart {
@@ -546,13 +435,16 @@ START // CHART'S RULES
     justify-content: center;
     perspective:5000px;
     perspective-origin: 50% 50%;
+    margin-left: 10%;
 }
 
 .bar {
-    font-size: 4em;
+    font-size: 3em;
     position: relative;
-    width: 4em;
-    padding: 1em;
+    width: 8em;
+    height: 16em;
+    padding-left: 6em;
+    padding-top: 2.5em;;
     transition: transform 2s linear;
     transform: rotateX(-30deg) rotateY(220deg);
     transform-style: preserve-3d;
@@ -1865,7 +1757,7 @@ END // CHART'S RULES
     justify-content: center;
 }
 
-label {
+/* label {
     box-sizing: border-box;
     padding: 1em;
     cursor: pointer;
@@ -1874,7 +1766,7 @@ label {
     border: 1px solid rgba(254, 254, 254, 0.6);
     border-radius: 0;
     flex: 0 0 6em;
-}
+} */
 
 label:first-child {
     margin-right: 0;
@@ -1932,3 +1824,561 @@ input[name='set-value']:checked~.content article .chart .bar.bar-1-1 .face.side-
     content: '85';
 }
 
+/* breakpoints */
+@media  (max-width:2560px) {
+    .progress-graph-top{
+        display: none;
+    }
+    .progress-graph-bottom{
+        display: none;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+@media  (max-width:1440px) {
+    .progress-graph-top{
+        display: none;
+    }
+    .progress-graph-bottom{
+        display: none;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+@media  (max-width:1200px){
+    .profile-journey{
+        font-size: 30px;
+        line-height: 80px;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+@media  (max-width:1024px) {
+    .submit-button {
+        font-size: 1em;
+        margin-left: 5%;
+    }
+    .desc-rise{
+        margin-left: 3rem!important;;
+    }
+    .desc-racounter{
+        margin-left: 4rem!important;;
+    }
+    .desc-utile{
+        margin-left: 5rem!important;
+    }
+    .logo-submit{
+        margin-left:1rem;
+    }
+    .utopia-submit{
+        margin-left:0;
+    }
+    /* .profile-eco-friend{
+        font-size: 2.3em;
+    }
+    .profile-name{
+        font-size: 3.7em;
+    }
+    .profile-data{
+        font-size: 1.4em;
+    }
+    #eco-friend-identity{
+        font-size: 1.3em;
+    } */
+    .day-n{
+        font-size: 57px;
+    }
+    .day-left{
+        font-size: 25px;
+    }
+    
+    /* #time-count{
+        line-height: 30px;
+    }
+    .time-left{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    .time-countdown{
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 2px;
+    }
+
+    .logout img{
+        width: 75px;
+    }
+
+    .desc-utopia{
+        font-size: 1.5em;
+    }
+    .desc-rise{
+        font-size: 1.5em;
+    }
+    .desc-utile{
+        font-size: 1.5em;
+    }
+    .desc-racounter{
+        font-size: 1.5em;
+    }
+    .submit-button{
+        font-size: 1.2em;
+    }
+    
+    .eco-umn-tagline p{
+        font-size: 30px;
+    }
+    
+    .eco-red p{
+        font-size: 30px;
+    }
+    
+    .bar{
+        font-size: 2em;
+    } */
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+@media  (max-width:990px) {
+    .submit-button {
+        margin-left: 15%;
+    }   
+    .desc-mission{
+        font-size: 1.5em;
+    }
+    .desc-rise {
+        margin-left: 2rem!important;
+    }
+    .desc-utile {
+        margin-left: 3rem!important;
+    }
+    .desc-racounter {
+        margin-left: 3rem!important;
+    }
+    .logo-submit {
+        margin-left: -0.7rem;
+    }
+    .utopia-submit {
+        margin-left: -14px;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+@media  (max-width:767px) {
+    #time-countdown{
+        display: block!important;
+    }
+    #time-count{
+        display: none;
+    }
+    #day-count{
+        text-align: center;
+    }
+    .profile-eco-friend{
+        font-size: 2em;
+    }
+    .profile-name{
+        font-size: 2.8em;
+
+    }
+    .profile-data{
+        font-size: 2em;
+    }
+    #eco-friend-identity{
+        font-size: 1.2em;
+    }
+    #data{
+        font-size: 1.5em;
+    }
+
+    .profile-journey{
+        font-size: 20px;
+        line-height: 70px;
+        border-radius: 0;
+    }
+    .profile-journey p{
+        text-align: center;
+    }
+    .day-n{
+        font-size: 35px;
+        line-height: 50%;
+    }
+    .day-left{
+        font-size: 30px;
+    }
+    #time-count{
+        line-height: 30px;
+    }
+    .time-left{
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .time-countdown{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 2px;
+    }
+
+    .logout img{
+        width: 70px;
+        top: 30px;
+    }
+
+    .submit-button{
+        font-size: 13px;
+    }
+    .profile-footer{
+        width: 100%;
+    }
+    
+    .eco-umn-tagline p{
+        font-size: 20px;
+    }
+    
+    .eco-red p{
+        font-size: 20px;
+    }
+
+    .logo-umn-eco img{
+        width: 15%;
+        margin-left: 30%;
+    }
+
+    .logo-umn-eco-red img{
+        width: 13%;
+        margin-right: 30%;
+    }
+
+    .bar{
+        font-size: 2em;
+    }
+    .progress-graph{
+        height: 100vh;
+    }
+    .desc-mission{
+        font-size: 1.2em;
+    }
+    .desc-rise {
+        margin-left: 2rem!important;
+    }
+    .desc-utile {
+        margin-left: 3rem!important;
+    }
+    .desc-racounter {
+        margin-left: 3rem!important;
+    }
+    .logo-submit {
+        margin-left: 0.3rem;
+    }
+    .utopia-submit {
+        margin-left: 0;
+    }
+
+    .progress-graph{
+        height: 100vh;
+    }
+    .progress-graph-top{
+        margin-top: 5%;
+        margin-bottom: 40%;
+    }
+    .progress-graph-bottom{
+        margin-bottom: 50%;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+
+@media(max-width:576px){
+    #eco-friend-identity{
+        font-size: 1.2em;
+    }    
+    .profile-data{
+        font-size: 2em;
+        text-align: center;
+    }
+    .profile-name-eco-friend{
+        text-align: center;
+    }
+    .profile-nim-eco-friend{
+        text-align: center;
+    }
+    .profile-email-eco-friend{
+        text-align: center;
+    }
+    .logout{
+        right: 10px;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 38px!important;
+    }
+}
+
+@media(max-width:500px){
+    .bar{
+        font-size: 1.5em;
+    }
+    .desc-mission{
+        font-size: 1.0em;
+    }
+    .submit-button{
+        font-size: 0.75em;
+    }
+    .desc-rise {
+        margin-left: 1.5rem!important;
+    }
+    .desc-utile {
+        margin-left: 2.2rem!important;
+    }
+    .desc-racounter {
+        margin-left: 2.2rem!important;
+    }
+    .logo-submit {
+        margin-left: -3px;
+    }
+    .utopia-submit {
+        margin-left: -8px;
+    }
+    .submit-button {
+        margin-left: 0;
+        border-radius: 20px;
+        width: 80%;
+        padding: 0;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 22px!important
+    }
+
+}
+
+@media(max-width:425px){
+    #eco-friend-identity{
+        font-size: 0.8em;
+    }
+    .profile-data{
+        font-size: 2em;
+        text-align: center;
+    }
+    .profile-name-eco-friend{
+        text-align: center;
+    }
+    .profile-nim-eco-friend{
+        text-align: center;
+    }
+    .profile-email-eco-friend{
+        text-align: center;
+    }
+
+    .progress-graph{
+        height: 90vh;
+    }
+    .bar{
+        font-size: 1.3em;
+    }
+    .desc-mission{
+        font-size: 0.6em;
+    }
+    .submit-button{
+        font-size: 0.75em;
+    }
+    .desc-rise {
+        margin-left: 0.9rem!important;
+    }
+    .desc-utile {
+        margin-left: 2.0rem!important;
+    }
+    .desc-racounter {
+        margin-left: 2.0rem!important;
+    }
+    .logo-submit {
+        margin-left: -3px;
+    }
+    .utopia-submit {
+        margin-left: -8px;
+    }
+    .submit-button {
+        margin-left: 0;
+    }
+    .logo-submit{
+        margin:auto;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 22px!important
+    }
+}
+
+@media(max-width:320px){
+    .profile-eco-friend{
+        font-size: 1.4em;
+    }
+    #eco-friend-identity{
+        font-size: 0.7em;
+    }
+    .profile-data{
+        font-size: 2em;
+        text-align: center;
+    }
+    .profile-name{
+        font-size: 1.7em;
+        line-height: 50px;
+    }
+    #eco-friend-identity{
+        font-size: 0.7em;
+    }
+    .profile-name-eco-friend{
+        text-align: center;
+    }
+    .profile-nim-eco-friend{
+        text-align: center;
+    }
+    .profile-email-eco-friend{
+        text-align: center;
+    }
+
+    .day-n{
+        font-size: 25px;
+        line-height: 25%;
+    }
+    .day-left{
+        font-size: 20px;
+        margin-top: 15%;
+    }
+    .time-left{
+        font-size: 10px;
+        margin-top: 15%;
+    }
+    .time-countdown{
+        font-size: 10px;
+    }
+    
+    .logout p{
+        letter-spacing: 1px;
+    }
+
+    .logout img{
+        width: 40px;
+    }
+
+    .profile-footer{
+        width: 100%;
+    }
+    
+    .eco-umn-tagline p{
+        font-size: 10px;
+    }
+    
+    .eco-red p{
+        font-size: 10px;
+    }
+    .logo-umn-eco img{
+        width: 15%;
+        margin-left: 30%;
+    }
+
+    .logo-umn-eco-red img{
+        width: 12%;
+        margin-right: 30%;
+    }
+    
+    .bar {
+        font-size: 1em;
+    }
+    .submit-button{
+        padding: 0;
+        width: 80%;
+    }
+    .no-margin{
+        margin-left: 0!important;
+    }
+    .no-margin2{
+        margin-left: 14px!important;
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0.3em;
+}
+
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+/* .toggler-container{
+	position:absolute;
+	background-color:#601C1D;
+}
+.navbar{
+	background-color: #D7110C;
+} */
+
+/* Timer */
+.blog {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	position: absolute;
+	bottom: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+
+/* container */
+#time-countdown{
+    background: linear-gradient(to right, #fc797d, #fd6c6e, #fe5e5f, #fd4f50, #fc3f3f);
+    border-radius: 50px;
+    justify-content: center;
+    display: none;
+    color:white;
+    margin:auto;
+}
+#time-count h1 {
+	margin-bottom: 16px;
+	font-size: 24px;
+	letter-spacing: 5px;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
