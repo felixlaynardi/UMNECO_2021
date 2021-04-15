@@ -8,6 +8,8 @@ use App\Http\Controllers\OpenRecruitment\OprecTableController;
 use App\Http\Controllers\Auth\RegisterAdminController;
 use App\Http\Controllers\Auth\LoginAdminController;
 use App\Http\Controllers\Auth\LogoutAdminController;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\ListEcoFriendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,7 +57,26 @@ Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
 Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 
+Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
+
+Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
+Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
+
 Route::get('/admin-table', [OprecTableController::class, 'index'])->name('oprecTable');
+
+Route::post('/DisapproveRise', [ListEcoFriendController::class,'disapproveRise'])->name('disRise');
+Route::post('/DisapproveUtopia', [ListEcoFriendController::class,'disapproveUtopia'])->name('disUtopia');
+Route::post('/DisapproveUtile', [ListEcoFriendController::class,'disapproveUtile'])->name('disUtile');
+Route::post('/DisapproveRaconteur', [ListEcoFriendController::class,'disapproveRaconteur'])->name('disRaconteur');
+
+Route::post('/ApproveRise', [ListEcoFriendController::class,'approveRise'])->name('apvRise');
+Route::post('/ApproveUtopia', [ListEcoFriendController::class,'approveUtopia'])->name('apvUtopia');
+Route::post('/ApproveUtile', [ListEcoFriendController::class,'approveUtile'])->name('apvUtile');
+Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconteur'])->name('apvRaconteur');
+
+Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
+Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
+Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
 
 // Redirect home on random url
 Route::any(

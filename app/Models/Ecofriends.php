@@ -32,4 +32,11 @@ class EcoFriends extends Model
             ->where('id', $id)
             ->update(['is_active' => 1, 'email_verified_at' => now()]);
     }
+
+    public function changeEcoFriendPasswordFromAdmin($userid, $usersid, $password){
+        DB::table('eco_friends')
+            ->where('id', $userid)
+            ->where('student_id', $usersid)
+            ->update(['password' => $password]);
+    }
 }

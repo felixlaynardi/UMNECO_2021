@@ -28,6 +28,6 @@ class LoginAdminController extends Controller
             return back()->with('status', 'Invalid login details');
         };
 
-        return redirect()->route('oprecTable');
+        return redirect()->route('AdminDashboard');
     }
 }

@@ -31,11 +31,11 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-sidebarnew sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
-                <img src="{{ asset('images/umn-eco-logo.png') }}" style="width:30%;">
+                <img src="{{ asset('images/umn-eco-logo.png') }}" style="width: 30%;">
                 <div class="sidebar-brand-text mx-3">UMN ECO</div>
             </a>
 
@@ -44,7 +44,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('AdminDashboard') }}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -59,9 +59,9 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('listEF') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>List Eco Friends</span></a>
             </li>
 
             <!-- Divider -->
@@ -190,6 +190,9 @@
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('js/admin/js/demo/datatables-demo.js') }}"></script>
+
+    <!-- Sweetalert -->
+    <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 
     @yield('custom-js')
 </body>
