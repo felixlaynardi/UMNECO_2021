@@ -55,14 +55,14 @@ class EcofriendController extends Controller
             //set mission day-N
             //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
-            $startTime = Carbon::create(2021, 4, 6);
+            $startTime = Carbon::create(2021, 4, 26);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 11);
+            $currTime = Carbon::create(2021, 4, 23);
 
             //use $now for real case
             $now = Carbon::create("today");
-            $misiKe_N = $currTime->diffInDays($startTime);
+            $misiKe_N = $now->diffInDays($startTime);
             $misiKe_N++;
 
             //check link submitted or no in that day
@@ -252,7 +252,7 @@ class EcofriendController extends Controller
         // dd($data);
         $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
 
-        return redirect()->route('profileView');
+        return redirect()->route('profileView')->with('status', 'Submitted');
     }
 
     public function mysteryQuest(Request $request)

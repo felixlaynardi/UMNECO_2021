@@ -80,6 +80,17 @@ label {
         vertical-align: middle;
     }
 }
+.new{
+    display: none;
+}
+@media (max-width: 800px) {
+    .old{
+        display: none;
+    }
+    .new{
+        display: block;
+    }
+}
 @media (max-width: 419px) {
     div#form {
         width: 60%;
@@ -140,12 +151,16 @@ label.error:not(.form-control) {
 #next-btn {
     width: 200px;
 }
-#footer {
+/* #footer {
     margin-top: 10%;
     padding-top: 3%;
     padding-bottom: 25px;
     background-image: linear-gradient(to right, #fc797d, #fc3f3f);
     text-align: center;
+} */
+/* Footer */
+#contact {
+    background-color: #601213;
 }
 .logo {
     width: 100px;

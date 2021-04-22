@@ -20,8 +20,8 @@
                     <div class="col-xl-3 col-md-4 col-sm-4 col-12 ml-xl-3">
                          <ul class="list-unstyled footer-menu mt-sm-0 mt-5" style="text-align:left;">
                              <a href="/#home" class="footer-menu-li"><li>Home</li></a>
-                             <a href="/#aboutus" class="footer-menu-li"><li>About Us</li></a>
-                             <a href="/#contact" class="footer-menu-li"><li>Contact Us</li></a>
+                             <a href="/about-red" class="footer-menu-li"><li>About Red</li></a>
+                             <a href="/our-team" class="footer-menu-li"><li>Our Team</li></a>
                          </ul>
                      </div>
                      <div class="col-xl-4 col-md-4 col-sm-4 col-12 footer-address my-auto" style="text-align:center;">

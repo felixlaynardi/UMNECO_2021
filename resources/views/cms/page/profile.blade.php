@@ -74,13 +74,31 @@
 
         <div class="row mt-5">
             <div class="col-md-4 col-12" id="day-count">
-                <p class="day-n">DAY 3</p>
-                <p class="day-left">9 Days Left
-                <p>
+                <p class="day-n" id="day-now">DAY 3</p>
+                <p class="day-left" id="day-left">9 Days Left</p>
             </div>
             <div class="col-md-8 col-12" id="time-count">
                 <div class="time-left mt-3">Remaining Time for Submission</div>
-                <div class="time-countdown">01:12:34</div> 
+                <div class="time-countdown">
+                    <div id="days" class="d-none">
+                        01
+                    </div>
+                    <div id="hours" class="d-inline-block">
+                        01
+                    </div>
+                    <div class="d-inline-block">
+                        :
+                    </div>
+                    <div id="minutes" class="d-inline-block">
+                        01
+                    </div>
+                    <div class="d-inline-block">
+                        :
+                    </div>
+                    <div id="seconds" class="d-inline-block">
+                        01
+                    </div>
+                </div> 
             </div>
             <div class="col-md-8 col-11" id="time-countdown">
                 <ul class="countdown">
@@ -130,7 +148,7 @@
 
                 <!-- bar kedua -->
                 <div class="col-3" id="bar-submit">
-                    <div class="bar bar-25 rise col-sm-3">
+                    <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
                         <img style="width: 2em" src="{{ asset('images/rise.png') }}" alt="">
                         <div class="face side-0">
                             <div class="growing-bar"></div>
@@ -221,8 +239,9 @@
             </div>
         </div>   
     </div>
-</div>     
-<div class="col-12" id="footer">        
+</div>  
+@include('cms.template.footer')   
+<!-- <div class="col-12" id="footer">        
     <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
         <div class="container" id="footer-items">      
             <div class="eco-umn-tagline">
@@ -239,13 +258,14 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 @endsection
 
 @section('custom-js')
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('js/cms/page/timer.js') }}"></script>
+<script src="{{ asset('js/cms/page/day-timer.js') }}"></script>
 
 @if (session('status') == 'Success')
 <script>
@@ -254,6 +274,16 @@
         icon: 'success',
         title: 'Welcome, {{$data->firstname}}',
         text: 'Hope these quests can be your new habit for a better Earth.',
+    })
+</script>
+@endif
+
+@if (session('status') == 'Submitted')
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Your link has been submitted',
+        text: 'Our team will validate your submitted link soon!',
     })
 </script>
 @endif
@@ -335,7 +365,7 @@
 <!-- SCRIPT FOR SPECIAL MISSION -->
 @if($dateForSpecialMission == 0 && $data->mystery_quest == 0)
 <script>
-    console.log("SPECIAL MISSION RIBET WOI");
+    // console.log("SPECIAL MISSION RIBET WOI");
     Swal.mixin({
         confirmButtonText: 'Next &rarr;',
         showCancelButton: false,

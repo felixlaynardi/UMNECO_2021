@@ -36,7 +36,7 @@
                             @endif
                             <br><br>
                         </div>
-                        <button class="button p-2" type="submit" name="action" value="login">Login</button>
+                        <button class="button p-2" id="btn-login" type="submit" name="action" value="login">Login</button>
                         <a class="button p-2 btn-register" type="submit" href="{{ route('registration' )}}" value="register">Register</a>
                     </form>
                 </div>
@@ -46,10 +46,11 @@
 
     </div>
     </div>
-    <footer id="footer">
+    @include('cms.template.footer') 
+    <!-- <footer id="footer">
         <img src="{{ asset('images/regis/Logo Footer.png')}}" class="logo mx-auto">
         <h6 class="foot mx-auto">© UMN ECO</h6>
-    </footer>
+    </footer> -->
 
     @endsection
 

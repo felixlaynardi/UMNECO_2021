@@ -307,7 +307,7 @@
     $(document).ready(function() {
         var name = window.location.href;
         var lastChar = name.slice(-1);
-        if (lastChar != 't' && lastChar != '#') {
+        if (lastChar != 'm' && lastChar != '#') {
             $(".navbar").hide();
             if ($(window).width() <= 767) {
                 $('.navigation-toggle-span').attr('style','display:none !important');
