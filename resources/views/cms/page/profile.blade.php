@@ -333,7 +333,7 @@
                 @csrf
                 <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="3" name="type" style="display:none;">
-                <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
+                <input type="number" value="1" name="misiKe_N" style="display:none;">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         `,
@@ -351,7 +351,7 @@
                 @csrf
                 <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="4" name="type" style="display:none;">
-                <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
+                <input type="number" value="1" name="misiKe_N" style="display:none;">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         `,
