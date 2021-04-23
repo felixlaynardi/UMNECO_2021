@@ -200,30 +200,30 @@ body, html {
 }
 
 #rise-btn{
-    background-image: url(../../../images/rise.png);
+    background-image: url(/images/rise.png);
 }
 #utopia-btn{
-    background-image: url(../../../images/utopia.png);
+    background-image: url(/images/utopia.png);
 }
 #raconteur-btn{
-    background-image: url(../../../images/raconteur.png);
+    background-image: url(/images/raconteur.png);
 }
 #utile-btn{
-    background-image: url(../../../images/utile.png);
+    background-image: url(/images/utile.png);
 }
 
 
 .rise{
-    background-image: url(../../../images/about-red/rise.png);
+    background-image: url(/images/about-red/rise.png);
 }
 .utopia{
-    background-image: url(../../../images/about-red/utopia.png);
+    background-image: url(/images/about-red/utopia.png);
 }
 .raconteur{
-    background-image: url(../../../images/about-red/raconteur.png);
+    background-image: url(/images/about-red/raconteur.png);
 }
 .utile{
-    background-image: url(../../../images/about-red/utile.png);
+    background-image: url(/images/about-red/utile.png);
 }
 
 /*carousel content*/

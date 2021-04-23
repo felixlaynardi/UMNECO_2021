@@ -14,7 +14,7 @@
                         <a class="nav-link" href="{{ route('about-red') }}">About RED</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('home') }}">Our Team</a>
+                        <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
                     </li>
                     <li class="nav-item col-3">
                         @if(session()->has('user'))
@@ -46,7 +46,7 @@
             <a class="menu__link" href="{{ route('about-red') }}">About RED</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('home') }}">Our Team</a>
+            <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('login') }}">Login</a>

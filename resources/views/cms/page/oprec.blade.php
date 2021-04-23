@@ -11,11 +11,11 @@
 <div id="main" class="main-container pt-5">
     <section id="oprec" class="container">
         <div class="oprec-logo">
-            <img src="{{ asset('images/oprec/oprec-text.png') }}" alt="" class="image-fluid">
+            <img src="{{ asset('images/oprec/oprec-text-2.png') }}" alt="" class="image-fluid">
         </div>
-        <div class="oprec-text">
+        <!-- <div class="oprec-text">
             <h1>Registration Closed</h1>
-        </div>
+        </div> -->
         <div class="logo row mx-auto">
             <div class="logo-tim">
                 <a href="#0" class="open-popup"><img src="{{ asset('images/oprec/logo/GENTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
@@ -73,11 +73,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="genta">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick">Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -106,11 +101,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="gantar">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -139,11 +129,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="orta">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -172,11 +157,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="lua">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -205,11 +185,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="anta">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -238,11 +213,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="liku">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -271,11 +241,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="bacarita">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -304,11 +269,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="arto">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -337,11 +297,6 @@
             </div>
 
         </div>
-        <form action="{{ route('oprecForm') }}" method="post">
-            @csrf
-            <input type="hidden" name="tim" value="lawang">
-            <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
-        </form>
     </div>
 </div>
 
@@ -352,11 +307,11 @@
     $(document).ready(function() {
         var name = window.location.href;
         var lastChar = name.slice(-1);
-        if (lastChar != 't' && lastChar != '#') {
+        if (lastChar != 'm' && lastChar != '#') {
             $(".navbar").hide();
             if ($(window).width() <= 767) {
-                $(".navigation-toggle-span").hide();
-                $(".toggler-container").hide();
+                $('.navigation-toggle-span').attr('style','display:none !important');
+                $('.toggler-container').attr('style','display:none !important');
             }
         }
     });
@@ -368,8 +323,8 @@
         x.style.overflow = "hidden";
         $(".navbar").hide();
         if ($(window).width() <= 767) {
-            $(".navigation-toggle-span").hide();
-            $(".toggler-container").hide();
+            $('.navigation-toggle-span').attr('style','display:none !important');
+            $('.toggler-container').attr('style','display:none !important');
         }
     }
 
@@ -380,8 +335,8 @@
         x.style.overflow = "auto";
         $(".navbar").show();
         if ($(window).width() <= 767) {
-            $(".navigation-toggle-span").show();
-            $(".toggler-container").show();
+            $('.navigation-toggle-span').attr('style','display:block !important');
+            $('.toggler-container').attr('style','display:block !important');
         }
     }
 </script>

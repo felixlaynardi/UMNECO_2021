@@ -55,14 +55,14 @@ class EcofriendController extends Controller
             //set mission day-N
             //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
-            $startTime = Carbon::create(2021, 4, 6);
+            $startTime = Carbon::create(2021, 4, 26);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 12);
+            $currTime = Carbon::create(2021, 4, 23);
 
             //use $now for real case
             $now = Carbon::create("today");
-            $misiKe_N = $currTime->diffInDays($startTime);
+            $misiKe_N = $now->diffInDays($startTime);
             $misiKe_N++;
 
             //check link submitted or no in that day
@@ -74,14 +74,14 @@ class EcofriendController extends Controller
             $percentageAllMission = $progressModel->getProgresBarPercentage($data->id);
 
             //showing special sweet alert for raconteur and utile for user to choose
-            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 11);
+            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 29);
             $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
             return view(
                 'cms.page.profile',
                 [
-                    'title' => 'UMN ECO 2021',
+                    'title' => 'UMN ECO 2021 - Profile',
                     'data' => $data,
                     'misiKe_N' => $misiKe_N,
                     'allMissionProgress' => $allMissionProgress,
@@ -252,7 +252,7 @@ class EcofriendController extends Controller
         // dd($data);
         $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
 
-        return redirect()->route('profileView');
+        return redirect()->route('profileView')->with('status', 'Submitted');
     }
 
     public function mysteryQuest(Request $request)

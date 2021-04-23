@@ -85,11 +85,15 @@ label.error:not(.form-control) {
     font-family: 'Heavitas';
     letter-spacing: 2px;
 }
-#footer{
+/* #footer{
     padding-top: 3%;
     padding-bottom: 25px;
     background-image: linear-gradient(to right,#FC797D, #fc3f3f );
     text-align: center;
+} */
+/* Footer */
+#contact {
+    background-color: #601213;
 }
 .logo{
     width: 100px;
