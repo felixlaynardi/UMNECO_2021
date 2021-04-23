@@ -58,7 +58,7 @@ class EcofriendController extends Controller
             $startTime = Carbon::create(2021, 4, 26);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 23);
+            $currTime = Carbon::create(2021, 5, 8);
 
             //use $now for real case
             $now = Carbon::create("today");
@@ -75,7 +75,7 @@ class EcofriendController extends Controller
 
             //showing special sweet alert for raconteur and utile for user to choose
             $ChooseSpecialMissionDate = Carbon::create(2021, 4, 29);
-            $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
+            $specialMissionLaunch = $now->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
             return view(

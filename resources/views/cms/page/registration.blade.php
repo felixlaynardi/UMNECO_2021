@@ -481,7 +481,7 @@
 
             <br>
             <div class="tombol mt-5">
-                <button type="submit" class="button p-2">Submit</button>
+                <button type="submit" class="button p-2" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </div>
         </form>
     </div>

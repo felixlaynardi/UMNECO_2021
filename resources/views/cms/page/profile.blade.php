@@ -295,10 +295,10 @@
             html: `
             <form action="{{route('submitLink')}}" method="post">
                 @csrf
-                <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="url" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="1" name="type" style="display:none;">
                 <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
@@ -313,10 +313,10 @@
             html: `
             <form action="{{route('submitLink')}}" method="post">
                 @csrf
-                <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="url" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="2" name="type" style="display:none;">
                 <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
@@ -333,8 +333,8 @@
                 @csrf
                 <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="3" name="type" style="display:none;">
-                <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="number" value="1" name="misiKe_N" style="display:none;">
+                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
@@ -351,8 +351,8 @@
                 @csrf
                 <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="4" name="type" style="display:none;">
-                <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <input type="number" value="1" name="misiKe_N" style="display:none;">
+                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
@@ -363,7 +363,7 @@
 </script>
 
 <!-- SCRIPT FOR SPECIAL MISSION -->
-@if($dateForSpecialMission == 0 && $data->mystery_quest == 0)
+@if($dateForSpecialMission >= 0 && $data->mystery_quest == 0)
 <script>
     // console.log("SPECIAL MISSION RIBET WOI");
     Swal.mixin({
@@ -380,19 +380,19 @@
             html: `
             <div class="sweet-alert-container">
                 <div class="utile-box">
-                    <img src="{{ asset('images/profile/Utile Temp Logo@2x.png') }}" />
+                    <img src="{{ asset('images/utile.png') }}" />
                     <form action="{{ route('mysteryQuest') }}" method="post">
                         @csrf
                         <input type="number" value="1" name="mysteryQuest" style="display:none;">
-                        <button type="submit" class="btn btn-primary">Utile</button>
+                        <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Utile</button>
                     </form>
                 </div>
                 <div class="raconteur-box">
-                    <img src="{{ asset('images/profile/Racounter Temp Logo@2x.png') }}" />
+                    <img src="{{ asset('images/raconteur.png') }}" />
                     <form action="{{ route('mysteryQuest') }}" method="post">
                         @csrf
                         <input type="number" value="2" name="mysteryQuest" style="display:none;">
-                        <button type="submit" class="btn btn-primary">Raconteur</button>
+                        <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Raconteur</button>
                     </form>
                 </div>
             </div>

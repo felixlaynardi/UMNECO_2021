@@ -64,7 +64,7 @@ class MissionProgress extends Model
 
         $checkUtileProgressInTable = DB::table('progress_utile')
             ->where('userid', '=', $userid)
-            ->where('mission_utile_id', '=', $misiKe_N)
+            ->where('mission_utile_id', '=', 1)
             ->get();
         // dd($checkUtopiaProgressInTable);
 
@@ -75,7 +75,7 @@ class MissionProgress extends Model
 
         $checkRaconteurProgressInTable = DB::table('progress_raconteur')
         ->where('userid', '=', $userid)
-            ->where('mission_raconteur_id', '=', $misiKe_N)
+            ->where('mission_raconteur_id', '=', 1)
             ->get();
         
         // 0 mean there is no record/data in that table
