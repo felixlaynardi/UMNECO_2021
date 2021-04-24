@@ -25,7 +25,7 @@ class ListEcoFriendController extends Controller
         // dd($items->getAllEcoFriends());
 
         $curr_date = Carbon::now('Asia/Jakarta');
-        $start_date = Carbon::create(2021, 4, 15, 0, 0, 0, 'Asia/Jakarta');
+        $start_date = Carbon::create(2021, 4, 20, 0, 0, 0, 'Asia/Jakarta');
         
         if($curr_date->greaterThan($start_date)){
             $different_days = $start_date->diffInDays($curr_date);
@@ -65,7 +65,7 @@ class ListEcoFriendController extends Controller
         
         
         $curr_date = Carbon::now('Asia/Jakarta');
-        $start_date = Carbon::create(2021, 4, 12, 0, 0, 0, 'Asia/Jakarta');
+        $start_date = Carbon::create(2021, 4, 21, 0, 0, 0, 'Asia/Jakarta');
         
         if($curr_date->greaterThan($start_date)){
             $different_days = $start_date->diffInDays($curr_date);
