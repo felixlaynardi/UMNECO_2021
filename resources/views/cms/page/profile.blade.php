@@ -290,74 +290,130 @@
 
 <script>
     $("#submit-utopia").click(function() {
+        var re = /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i
+        var valid_utopia = false;
         Swal.fire({
             title: 'Submit Link',
             html: `
-            <form action="{{route('submitLink')}}" method="post">
+            <form action="{{route('submitLink')}}" method="post" id="form-utopia">
                 @csrf
-                <input type="url" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="url" name="link" id="submitted-link-utopia" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="1" name="type" style="display:none;">
                 <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
-            showConfirmButton: false,
-            focusConfirm: false
+            confirmButtonText: 'Submit',
+            focusConfirm: false,
+            preConfirm: () => {
+                const url = Swal.getPopup().querySelector('#submitted-link-utopia').value
+                valid_utopia = true
+                if (!url || !re.test(url) ) {
+                    Swal.showValidationMessage(`Harus menggunakan url yang valid`)
+                    valid_utopia = false
+                }
+                return { url: valid_utopia }
+            }
+        }).then((result) => {
+            if(valid_utopia){
+                $("#form-utopia").submit()
+            }
         })
     })
 
     $("#submit-rise").click(function() {
+        var re = /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i
+        var valid_rise = false;
         Swal.fire({
             title: 'Submit Link',
             html: `
-            <form action="{{route('submitLink')}}" method="post">
+            <form action="{{route('submitLink')}}" method="post" id="form-rise">
                 @csrf
-                <input type="url" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="url" name="link" id="submitted-link-rise" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="2" name="type" style="display:none;">
                 <input type="number" value="{{ $misiKe_N }}" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
-            showConfirmButton: false,
-            focusConfirm: false
+            confirmButtonText: 'Submit',
+            focusConfirm: false,
+            preConfirm: () => {
+                const url = Swal.getPopup().querySelector('#submitted-link-rise').value
+                valid_rise = true
+                if (!url || !re.test(url) ) {
+                    Swal.showValidationMessage(`Harus menggunakan url yang valid`)
+                    valid_rise = false
+                }
+                return { url: valid_rise }
+            }
+        }).then((result) => {
+            if(valid_rise){
+                $("#form-rise").submit()
+            }
         })
     })
 
     $("#submit-utile").click(function() {
+        var re = /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i
+        var valid_utile = false;
         Swal.fire({
             title: 'Submit Link',
             html: `
-            <form action="{{route('submitLink')}}" method="post">
+            <form action="{{route('submitLink')}}" method="post" id="form-utile">
                 @csrf
-                <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="text" name="link" id="submitted-link-utile" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="3" name="type" style="display:none;">
                 <input type="number" value="1" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
-            showConfirmButton: false,
-            focusConfirm: false
+            confirmButtonText: 'Submit',
+            focusConfirm: false,
+            preConfirm: () => {
+                const url = Swal.getPopup().querySelector('#submitted-link-utile').value
+                valid_utile = true
+                if (!url || !re.test(url) ) {
+                    Swal.showValidationMessage(`Harus menggunakan url yang valid`)
+                    valid_utile = false
+                }
+                return { url: valid_utile }
+            }
+        }).then((result) => {
+            if(valid_utile){
+                $("#form-utile").submit()
+            }
         })
     })
 
     $("#submit-raconteur").click(function() {
+        var re = /^(https?|s?ftp):\/\/(((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:)*@)?(((\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5]))|((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?)(:\d*)?)(\/((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)+(\/(([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)*)*)?)?(\?((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|[\uE000-\uF8FF]|\/|\?)*)?(#((([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(%[\da-f]{2})|[!\$&'\(\)\*\+,;=]|:|@)|\/|\?)*)?$/i
+        var valid_raconteur = false;
         Swal.fire({
             title: 'Submit Link',
             html: `
-            <form action="{{route('submitLink')}}" method="post">
+            <form action="{{route('submitLink')}}" method="post" id="form-raconteur">
                 @csrf
-                <input type="text" name="link" id="submitted-link" class="swal2-input" placeholder="Insert Link">
+                <input type="text" name="link" id="submitted-link-raconteur" class="swal2-input" placeholder="Insert Link">
                 <input type="number" value="4" name="type" style="display:none;">
                 <input type="number" value="1" name="misiKe_N" style="display:none;">
-                <button type="submit" class="btn btn-primary" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
             </form>
         `,
             showCancelButton: false,
-            showConfirmButton: false,
-            focusConfirm: false
+            confirmButtonText: 'Submit',
+            focusConfirm: false,
+            preConfirm: () => {
+                const url = Swal.getPopup().querySelector('#submitted-link-raconteur').value
+                valid_raconteur = true
+                if (!url || !re.test(url) ) {
+                    Swal.showValidationMessage(`Harus menggunakan url yang valid`)
+                    valid_raconteur = false
+                }
+                return { url: valid_raconteur }
+            }
+        }).then((result) => {
+            if(valid_raconteur){
+                $("#form-raconteur").submit()
+            }
         })
     })
 </script>
