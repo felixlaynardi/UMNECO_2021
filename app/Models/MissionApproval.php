@@ -10,10 +10,6 @@ class MissionApproval extends Model
 {
     use HasFactory;
 
-    public function getAllApprovals(){
-        return DB::table('mission_approval')->get();
-    }
-
     public function getRiseMissionApprovalDataByDayandUserId($userid, $missionid){
         return DB::table('mission_approval')
             ->where('userid', $userid)
@@ -84,5 +80,7 @@ class MissionApproval extends Model
             ->where('id',$data['userid'])
             ->update(['utopia_compensation' => true]);
         }
+
+        
     }
 }
