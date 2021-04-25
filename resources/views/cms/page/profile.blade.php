@@ -80,22 +80,22 @@
             <div class="col-md-8 col-12" id="time-count">
                 <div class="time-left mt-3">Remaining Time for Submission</div>
                 <div class="time-countdown">
-                    <div id="days" class="d-none">
+                    <div id="" class="d-none days">
                         01
                     </div>
-                    <div id="hours" class="d-inline-block">
-                        01
-                    </div>
-                    <div class="d-inline-block">
-                        :
-                    </div>
-                    <div id="minutes" class="d-inline-block">
+                    <div id="" class="d-inline-block hours">
                         01
                     </div>
                     <div class="d-inline-block">
                         :
                     </div>
-                    <div id="seconds" class="d-inline-block">
+                    <div id="" class="d-inline-block minutes">
+                        01
+                    </div>
+                    <div class="d-inline-block">
+                        :
+                    </div>
+                    <div id="" class="d-inline-block seconds">
                         01
                     </div>
                 </div>
@@ -106,15 +106,15 @@
                         01
                     </div>
                     <li>
-                        <div class="num" id="hours">12</div>
+                        <div class="num hours" id="">12</div>
                         <div class="txt">hours</div>
                     </li>
                     <li>
-                        <div class="num" id="minutes">36</div>
+                        <div class="num minutes" id="">36</div>
                         <div class="txt">minutes</div>
                     </li>
                     <li>
-                        <div class="num" id="seconds">48</div>
+                        <div class="num seconds" id="">48</div>
                         <div class="txt">seconds</div>
                     </li>
                 </ul>
@@ -240,7 +240,11 @@
         </div>
     </div>
 </div>
+<<<<<<< Updated upstream
 @include('cms.template.footer')
+=======
+@include('cms.template.footer')   
+>>>>>>> Stashed changes
 <!-- <div class="col-12" id="footer">        
     <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
         <div class="container" id="footer-items">      
@@ -264,8 +268,8 @@
 
 @section('custom-js')
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
-<script src="{{ asset('js/cms/page/timer.js') }}"></script>
-<script src="{{ asset('js/cms/page/day-timer.js') }}"></script>
+<!-- <script src="{{ asset('js/cms/page/timer.js') }}"></script> -->
+<!-- <script src="{{ asset('js/cms/page/day-timer.js') }}"></script> -->
 
 @if (session('status') == 'Success')
 <script>
@@ -287,6 +291,100 @@
     })
 </script>
 @endif
+
+<!-- Day Timer -->
+<script>
+    (function () {
+        const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+        
+        var curr = new Date().getTime()
+        var carbon_time = '{{ $current_time }}'
+        var diff_d = curr - carbon_time
+
+        // console.log(diff)
+        // console.log(curr)
+        // console.log(carbon_time)
+
+        var oprec = new Date('May 8, 2021 00:00:00');
+        countDown_d = oprec.getTime(),
+        
+        x = setInterval(function () {
+            let now_d = new Date().getTime(),
+            distance = countDown_d - now_d - diff_d;
+            
+            (document.getElementById("day-now").innerText = "DAY " + (12 - Math.floor(distance / day))),
+            (document.getElementById("day-left").innerText = Math.floor(distance / day) + " DAYS LEFT")
+
+            //do something later when date is reached
+            if (distance < 0) {  
+            clearInterval(x);
+            }
+            //seconds
+        }, 0);
+    })();
+</script>
+
+<!-- Timer -->
+<script>
+    (function () {
+        const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+        
+        var curr = new Date().getTime()
+        var carbon_time = '{{ $current_time }}'
+        var diff = curr - carbon_time
+
+        var oprec = new Date();
+        oprec.setDate(oprec.getDate() + 1)
+        oprec.setHours( 0,0,0,0 );
+        countDown = oprec.getTime(),
+        
+        x = setInterval(function () {
+            let now = new Date().getTime(),
+            distance = countDown - now - diff;
+
+            if(Math.floor((distance % day) / hour) >= 10){
+            h = Math.floor((distance % day) / hour)
+            }
+            else{
+            h = "0" + Math.floor((distance % day) / hour)
+            }
+            
+            if(Math.floor((distance % hour) / minute) >= 10){
+            m = Math.floor((distance % hour) / minute)
+            }
+            else{
+            m = "0" + Math.floor((distance % hour) / minute)
+            }
+            
+            if((Math.floor((distance % minute) / second)) >= 10){
+            s = Math.floor((distance % minute) / second)
+            }
+            else{
+            s = "0" + Math.floor((distance % minute) / second)
+            }
+            
+            ($(".days").html(Math.floor(distance / day))),
+            ($(".hours").html(h)),
+            ($(".minutes").html(m)),
+            ($(".seconds").html(s))
+
+            //do something later when date is reached
+            if (distance <= 1) {  
+                clearInterval(x);
+                location.reload();
+            }
+            //seconds
+        }, 0);
+    })();
+  
+
+</script>
 
 <script>
     $("#submit-utopia").click(function() {

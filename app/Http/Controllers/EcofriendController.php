@@ -78,6 +78,8 @@ class EcofriendController extends Controller
             $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
+            $current_time = Carbon::now()->getPreciseTimestamp(3);
+
             return view(
                 'cms.page.profile',
                 [
@@ -86,7 +88,8 @@ class EcofriendController extends Controller
                     'misiKe_N' => $misiKe_N,
                     'allMissionProgress' => $allMissionProgress,
                     'percentageAllMission' => $percentageAllMission,
-                    'dateForSpecialMission' => $specialMissionLaunch
+                    'dateForSpecialMission' => $specialMissionLaunch,
+                    'current_time' => $current_time
                 ]
             );
         }
