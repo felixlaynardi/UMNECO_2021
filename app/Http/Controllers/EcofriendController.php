@@ -55,14 +55,14 @@ class EcofriendController extends Controller
             //set mission day-N
             //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
-            $startTime = Carbon::create(2021, 4, 26);
+            $startTime = Carbon::create(2021, 4, 25);
 
             //currTime only used for debugging
-            $currTime = Carbon::create(2021, 5, 8);
+            $currTime = Carbon::create(2021, 4, 26);
 
             //use $now for real case
             $now = Carbon::create("today");
-            $misiKe_N = $now->diffInDays($startTime);
+            $misiKe_N = $currTime->diffInDays($startTime);
             $misiKe_N++;
 
             //check link submitted or no in that day
@@ -75,7 +75,7 @@ class EcofriendController extends Controller
 
             //showing special sweet alert for raconteur and utile for user to choose
             $ChooseSpecialMissionDate = Carbon::create(2021, 4, 29);
-            $specialMissionLaunch = $now->diffInDays($ChooseSpecialMissionDate);
+            $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
             return view(

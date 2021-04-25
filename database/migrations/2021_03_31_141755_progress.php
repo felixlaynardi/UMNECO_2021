@@ -15,6 +15,7 @@ class Progress extends Migration
     {
         //
         Schema::create('progress_utile', function (Blueprint $table) {
+            $table->increments('progress_utile_id');
             $table->unsignedBigInteger('userid');
             $table->unsignedBigInteger("mission_utile_id");
             $table->boolean('status');
@@ -26,6 +27,7 @@ class Progress extends Migration
         });
 
         Schema::create('progress_raconteur', function (Blueprint $table) {
+            $table->increments('progress_raconteur_id');
             $table->unsignedBigInteger('userid');
             $table->unsignedBigInteger("mission_raconteur_id");
             $table->boolean('status');
@@ -38,6 +40,7 @@ class Progress extends Migration
 
 
         Schema::create('progress_rise', function (Blueprint $table) {
+            $table->increments('progress_rise_id');
             $table->unsignedBigInteger('userid');
             $table->unsignedBigInteger("mission_rise_id");
             $table->boolean('status');
@@ -49,6 +52,7 @@ class Progress extends Migration
         });
 
         Schema::create('progress_utopia', function (Blueprint $table) {
+            $table->increments('progress_utopia_id');
             $table->unsignedBigInteger('userid');
             $table->unsignedBigInteger("mission_utopia_id");
             $table->boolean('status');
