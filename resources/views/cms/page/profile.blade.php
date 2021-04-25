@@ -9,32 +9,32 @@
 
 @section('content')
 <div class="main-container pt-5">
-    <div class="row-text-center">      
-        <div class="profile-header" style="background-image:url({{ asset('images/profile/Header@2x.png') }});">        
-            <div class="container profile-header-content">    
+    <div class="row-text-center">
+        <div class="profile-header" style="background-image:url({{ asset('images/profile/Header@2x.png') }});">
+            <div class="container profile-header-content">
                 <div class="profile-eco-friend ">
                     Hello ECO Friend,
                 </div>
                 <div class="profile-name ">
                     <p style="text-transform: uppercase;">{{$data->firstname}}</p>
                 </div>
-            <a href="{{url('logout')}}" class="logout">
-                <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
-                <p>LOG OUT</p>
-            </a> 
-            </div>           
+                <a href="{{url('logout')}}" class="logout">
+                    <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
+                    <p>LOG OUT</p>
+                </a>
+            </div>
         </div>
     </div>
-        
+
     <div class="container">
         <div id="eco-friend-identity">
-            <div class="row text-center mt-5 mb-5"id ="data">    
+            <div class="row text-center mt-5 mb-5" id="data">
                 <div class="profile-data">
                     ECO Friend Profile
                 </div>
             </div>
-            
-            <div class="row text-center"id ="name">
+
+            <div class="row text-center" id="name">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p style="text-transform: capitalize;">Name </p>
                 </div>
@@ -44,7 +44,7 @@
                 </div>
             </div>
 
-            <div class="row text-center"id ="nim">
+            <div class="row text-center" id="nim">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p>NIM</p>
                 </div>
@@ -54,10 +54,10 @@
                 </div>
             </div>
 
-            <div class="row text-center"id ="email">
+            <div class="row text-center" id="email">
                 <div class="profile-title col-sm-3 col-md-4 col-lg-3 col-2">
                     <p>Email </p>
-                </div>  
+                </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1 col-1">:</div>
                 <div class="profile-content col-sm-7 col-md-7 col-lg-8 col-9">
                     <p>{{$data->email}}</p>
@@ -98,7 +98,7 @@
                     <div id="seconds" class="d-inline-block">
                         01
                     </div>
-                </div> 
+                </div>
             </div>
             <div class="col-md-8 col-11" id="time-countdown">
                 <ul class="countdown">
@@ -120,7 +120,7 @@
                 </ul>
             </div>
         </div>
-        
+
         <div class="progress-graph">
             <div class="chart small-font-size">
                 <!-- bar pertama -->
@@ -142,7 +142,7 @@
                     </div>
 
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['utopia'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utopia'] == 1) submit-disabled @endif" id="submit-utopia">Submit</button>
+                        <button @if ($allMissionProgress['utopia']==1) disabled @endif class="submit-button @if ($allMissionProgress['utopia'] == 1) submit-disabled @endif" id="submit-utopia">Submit</button>
                     </div>
                 </div>
 
@@ -165,7 +165,7 @@
                     </div>
 
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['rise'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['rise'] == 1) submit-disabled @endif" id="submit-rise">Submit</button>
+                        <button @if ($allMissionProgress['rise']==1) disabled @endif class="submit-button @if ($allMissionProgress['rise'] == 1) submit-disabled @endif" id="submit-rise">Submit</button>
                     </div>
                 </div>
 
@@ -190,10 +190,10 @@
                         <p class="col-12">?</p>
                         @endif
                     </div>
-                    
+
                     @if($data->mystery_quest == 1)
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['utile'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['utile'] == 1) submit-disabled @endif" id="submit-utile">Submit</button>
+                        <button @if ($allMissionProgress['utile']==1) disabled @endif class="submit-button @if ($allMissionProgress['utile'] == 1) submit-disabled @endif" id="submit-utile">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
@@ -224,10 +224,10 @@
                         @endif
                     </div>
 
-                    
+
                     @if($data->mystery_quest == 2)
                     <div class="logo-submit col-12">
-                        <button @if ($allMissionProgress['raconteur'] == 1) disabled @endif class="submit-button @if ($allMissionProgress['raconteur'] == 1) submit-disabled @endif" id="submit-raconteur">Submit</button>
+                        <button @if ($allMissionProgress['raconteur']==1) disabled @endif class="submit-button @if ($allMissionProgress['raconteur'] == 1) submit-disabled @endif" id="submit-raconteur">Submit</button>
                     </div>
                     @else
                     <div class="logo-submit col-12">
@@ -235,12 +235,12 @@
                     </div>
                     @endif
                 </div>
-            
+
             </div>
-        </div>   
+        </div>
     </div>
-</div>  
-@include('cms.template.footer')   
+</div>
+@include('cms.template.footer')
 <!-- <div class="col-12" id="footer">        
     <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
         <div class="container" id="footer-items">      
@@ -308,14 +308,16 @@
             preConfirm: () => {
                 const url = Swal.getPopup().querySelector('#submitted-link-utopia').value
                 valid_utopia = true
-                if (!url || !re.test(url) ) {
+                if (!url || !re.test(url)) {
                     Swal.showValidationMessage(`Harus menggunakan url yang valid`)
                     valid_utopia = false
                 }
-                return { url: valid_utopia }
+                return {
+                    url: valid_utopia
+                }
             }
         }).then((result) => {
-            if(valid_utopia){
+            if (valid_utopia) {
                 $("#form-utopia").submit()
             }
         })
@@ -340,14 +342,16 @@
             preConfirm: () => {
                 const url = Swal.getPopup().querySelector('#submitted-link-rise').value
                 valid_rise = true
-                if (!url || !re.test(url) ) {
+                if (!url || !re.test(url)) {
                     Swal.showValidationMessage(`Harus menggunakan url yang valid`)
                     valid_rise = false
                 }
-                return { url: valid_rise }
+                return {
+                    url: valid_rise
+                }
             }
         }).then((result) => {
-            if(valid_rise){
+            if (valid_rise) {
                 $("#form-rise").submit()
             }
         })
@@ -372,14 +376,16 @@
             preConfirm: () => {
                 const url = Swal.getPopup().querySelector('#submitted-link-utile').value
                 valid_utile = true
-                if (!url || !re.test(url) ) {
+                if (!url || !re.test(url)) {
                     Swal.showValidationMessage(`Harus menggunakan url yang valid`)
                     valid_utile = false
                 }
-                return { url: valid_utile }
+                return {
+                    url: valid_utile
+                }
             }
         }).then((result) => {
-            if(valid_utile){
+            if (valid_utile) {
                 $("#form-utile").submit()
             }
         })
@@ -404,14 +410,16 @@
             preConfirm: () => {
                 const url = Swal.getPopup().querySelector('#submitted-link-raconteur').value
                 valid_raconteur = true
-                if (!url || !re.test(url) ) {
+                if (!url || !re.test(url)) {
                     Swal.showValidationMessage(`Harus menggunakan url yang valid`)
                     valid_raconteur = false
                 }
-                return { url: valid_raconteur }
+                return {
+                    url: valid_raconteur
+                }
             }
         }).then((result) => {
-            if(valid_raconteur){
+            if (valid_raconteur) {
                 $("#form-raconteur").submit()
             }
         })
@@ -421,7 +429,6 @@
 <!-- SCRIPT FOR SPECIAL MISSION -->
 @if($dateForSpecialMission >= 0 && $data->mystery_quest == 0)
 <script>
-    // console.log("SPECIAL MISSION RIBET WOI");
     Swal.mixin({
         confirmButtonText: 'Next &rarr;',
         showCancelButton: false,
