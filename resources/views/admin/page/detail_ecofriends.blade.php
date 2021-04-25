@@ -106,17 +106,7 @@
                             @if($day == 0)
                                 <div class="h6 mb-0 font-weight-bold text-gray-800">Event haven't started</div>
                             @elseif($day >= 1)
-                                @php
-                                    $riseperday = ""
-                                @endphp
-                                @foreach($allRise as $rise)
-                                    @if(!empty($rise->mission_rise_id == $day))
-                                        @php
-                                            $riseperday = "ne"
-                                        @endphp
-                                    @endif
-                                @endforeach
-                                @if($riseperday == "ne")
+                                @if(count($allRise) > 0)
                                     @if(count($riseMissionApp) != 0)
                                         @foreach($allRise as $rise)
                                             @if($rise->userid == $item->id && $rise->mission_rise_id == $day && $rise->status == true)
@@ -156,17 +146,8 @@
                             @if($day == 0)
                                 <div class="h6 mb-0 font-weight-bold text-gray-800">Event haven't started</div>
                             @elseif($day >= 1)
-                                @php
-                                    $utopiaperday = ""
-                                @endphp
-                                @foreach($allUtopia as $utopia)
-                                    @if(!empty($utopia->mission_utopia_id == $day))
-                                        @php
-                                            $utopiaperday = "ne"
-                                        @endphp
-                                    @endif
-                                @endforeach
-                                @if($utopiaperday == "ne")
+                               
+                                @if(count($allUtopia) > 0)
                                     @if(count($utopiaMissionApp) != 0)
                                         @foreach($allUtopia as $utopia)
                                             @if($utopia->userid == $item->id && $utopia->mission_utopia_id == $day && $utopia->status == true)
@@ -208,17 +189,8 @@
                             @if($day == 0)
                                 <div class="h6 mb-0 font-weight-bold text-gray-800">Event haven't started</div>
                             @elseif($day >= 1)
-                                @php
-                                    $utileperday = ""
-                                @endphp
-                                @foreach($allUtile as $utile)
-                                    @if(!empty($utile->mission_utile_id == $day))
-                                        @php
-                                            $utileperday = "ne"
-                                        @endphp
-                                    @endif
-                                @endforeach
-                                @if($utileperday == "ne")
+                                
+                                @if(count($allUtile) > 0)
                                     @if(count($utileMissionApp) != 0)
                                         @foreach($allUtile as $utile)
                                             @if($utile->userid == $item->id && $utile->mission_utile_id == $day && $utile->status == true)
@@ -261,17 +233,8 @@
                             @if($day == 0)
                                 <div class="h6 mb-0 font-weight-bold text-gray-800">Event haven't started</div>
                             @elseif($day >= 1)
-                                @php
-                                    $raconteurperday = ""
-                                @endphp
-                                @foreach($allRaconteur as $raconteur)
-                                    @if(!empty($raconteur->mission_raconteur_id == $day))
-                                        @php
-                                            $raconteurperday = "ne"
-                                        @endphp
-                                    @endif
-                                @endforeach
-                                @if($raconteurperday == "ne")
+                                
+                                @if(count($allRaconteur) > 0)
                                     @if(count($raconteurMissionApp) != 0)
                                         @foreach($allRaconteur as $raconteur)
                                             @if($raconteur->userid == $item->id && $raconteur->mission_raconteur_id == $day && $raconteur->status == true)
@@ -625,11 +588,11 @@
         
         $("#btnRiseComp").click(function() {
             Swal.fire({
-                title: 'Rise Compensation',
+                title: 'Compensation Rise for day {{ $day }}',
                 html: `
                 <form action="{{ route('riseComp') }}" method="post">
                     @csrf
-                    <textarea type="textarea" name="notes" id="notes" class="swal2-textarea" placeholder="Type your compensation notes here..."></textarea>
+                    <textarea type="textarea" name="notes" id="notes" class="swal2-textarea" placeholder="Type your notes here..."></textarea>
                     <input type="number" value="{{ $day }}" name="missionid" style="display:none;">
                     <input type="number" value="{{ $item->id }}" name="userid" style="display:none;">
                     <input type="text" value="Rise" name="missionname" style="display:none;">
@@ -645,11 +608,11 @@
 
         $("#btnUtopiaComp").click(function() {
             Swal.fire({
-                title: 'Utopia Compensation ',
+                title: 'Compensation Utopia for day {{ $day }}',
                 html: `
                 <form action="{{ route('utopiaComp') }}" method="post">
                     @csrf
-                    <textarea type="textarea" name="notes" id="notes" class="swal2-textarea" placeholder="Type your compensation notes here..."></textarea>
+                    <textarea type="textarea" name="notes" id="notes" class="swal2-textarea" placeholder="Type your notes here..."></textarea>
                     <input type="number" value="{{ $day }}" name="missionid" style="display:none;">
                     <input type="number" value="{{ $item->id }}" name="userid" style="display:none;">
                     <input type="text" value="Utopia" name="missionname" style="display:none;">
