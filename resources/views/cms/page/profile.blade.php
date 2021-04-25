@@ -124,7 +124,7 @@
         <div class="progress-graph">
             <div class="chart small-font-size">
                 <!-- bar pertama -->
-                <div class="col-3" id="bar-submit">
+                <div class="col-3" id="bar-submit bar-utopia">
                     <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
                         <img src="{{ asset('images/utopia.png') }}" alt="">
                         <div class="face side-0">
@@ -147,7 +147,7 @@
                 </div>
 
                 <!-- bar kedua -->
-                <div class="col-3" id="bar-submit">
+                <div class="col-3" id="bar-submit bar-rise">
                     <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
                         <img style="width: 2em" src="{{ asset('images/rise.png') }}" alt="">
                         <div class="face side-0">
@@ -170,7 +170,7 @@
                 </div>
 
                 <!-- bar ketiga -->
-                <div class="col-3" id="bar-submit">
+                <div class="col-3" id="bar-submit bar-utile">
                     <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
                         <img style="width: 2em" src="@if($data->mystery_quest == 1) {{ asset('images/utile.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif" alt="">
                         <div class="face side-0">
@@ -203,7 +203,7 @@
                 </div>
 
                 <!-- bar keempat -->
-                <div class="col-3" id="bar-submit">
+                <div class="col-3" id="bar-submit bar-raconteur">
                     <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
                         <img style="width: 2em" src="@if($data->mystery_quest == 2) {{ asset('images/raconteur.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif " alt="">
                         <div class="face side-0">
