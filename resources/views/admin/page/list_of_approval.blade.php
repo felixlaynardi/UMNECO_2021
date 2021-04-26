@@ -87,7 +87,7 @@
         $("#{{ $missionapp->id }}").click(function() {
             Swal.fire({
                 title: 'Notes',
-                text: '{{ $missionapp->notes }}',
+                text: `{{ $missionapp->notes }}`,
                 showCancelButton: false,
                 showCloseButton: true,
                 focusConfirm: false
