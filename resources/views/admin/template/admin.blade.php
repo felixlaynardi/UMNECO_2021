@@ -63,11 +63,6 @@
                     <i class="fas fa-fw fa-table"></i>
                     <span>List Eco Friends</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('listApproval') }}">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>List of Approval</span></a>
-            </li>
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">

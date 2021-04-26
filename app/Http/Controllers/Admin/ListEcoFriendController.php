@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Models\Ecofriends;
 use App\Models\MissionProgress;
 use App\Models\MissionApproval;
-use App\Models\User;
 use Illuminate\Support\Facades\Redirect;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
@@ -26,7 +25,7 @@ class ListEcoFriendController extends Controller
         // dd($items->getAllEcoFriends());
 
         $curr_date = Carbon::now('Asia/Jakarta');
-        $start_date = Carbon::create(2021, 4, 20, 0, 0, 0, 'Asia/Jakarta');
+        $start_date = Carbon::create(2021, 4, 15, 0, 0, 0, 'Asia/Jakarta');
         
         if($curr_date->greaterThan($start_date)){
             $different_days = $start_date->diffInDays($curr_date);
@@ -66,7 +65,7 @@ class ListEcoFriendController extends Controller
         
         
         $curr_date = Carbon::now('Asia/Jakarta');
-        $start_date = Carbon::create(2021, 4, 21, 0, 0, 0, 'Asia/Jakarta');
+        $start_date = Carbon::create(2021, 4, 12, 0, 0, 0, 'Asia/Jakarta');
         
         if($curr_date->greaterThan($start_date)){
             $different_days = $start_date->diffInDays($curr_date);
@@ -261,20 +260,5 @@ class ListEcoFriendController extends Controller
         $ecofriends->changeEcoFriendPasswordFromAdmin($request->userid, $request->usersid, $new_password);
 
         return redirect()->back()->with('msg', 'User password have been changed successfully!');
-    }
-
-    public function approvalList(){
-        $ecofriends = new Ecofriends();
-        $missionapps = new MissionApproval();
-        $teams = new User();
-
-        $allEcoFriends = $ecofriends-> getAllEcoFriends();
-        $allMissionApp = $missionapps->getAllApprovals();
-        $allTeams = $teams->getAllUsers();
-
-        return view('admin.page.list_of_approval', ['title' => 'UMN ECO 2021 - List of Approval'])
-        ->with(compact('allEcoFriends'))
-        ->with(compact('allMissionApp'))
-        ->with(compact('allTeams'));
     }
 }

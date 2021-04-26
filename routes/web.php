@@ -60,7 +60,6 @@ Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
 
 Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
-Route::get('/ApprovalList', [ListEcoFriendController::class,'approvalList'])->name('listApproval');
 Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
 
 Route::get('/admin-table', [OprecTableController::class, 'index'])->name('oprecTable');
