@@ -240,11 +240,9 @@
         </div>
     </div>
 </div>
-<<<<<<< Updated upstream
+
 @include('cms.template.footer')
-=======
-@include('cms.template.footer')   
->>>>>>> Stashed changes
+
 <!-- <div class="col-12" id="footer">        
     <div class="profile-footer" style="padding-top:10rem;padding-bottom:10rem;background-image: linear-gradient(to top, #d74646, #e15251, #eb5d5d, #f56968, #ff7474);;">   
         <div class="container" id="footer-items">      
