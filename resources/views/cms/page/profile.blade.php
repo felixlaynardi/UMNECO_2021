@@ -269,16 +269,6 @@
 <!-- <script src="{{ asset('js/cms/page/timer.js') }}"></script> -->
 <!-- <script src="{{ asset('js/cms/page/day-timer.js') }}"></script> -->
 
-@if (session('status') == 'Success')
-<script>
-    // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
-    Swal.fire({
-        icon: 'success',
-        title: 'Welcome, {{$data->firstname}}',
-        text: 'Hope these quests can be your new habit for a better Earth.',
-    })
-</script>
-@endif
 
 @if (session('status') == 'Submitted')
 <script>
@@ -290,14 +280,36 @@
 </script>
 @endif
 
+@if (session('status') == 'UnSubmitted')
+<script>
+    Swal.fire({
+        icon: 'fail',
+        title: 'You have already submitted a link',
+        text: 'You can only submit once',
+    })
+</script>
+@endif
+
+@if (session('status') == 'Success')
+<script>
+    // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
+    Swal.fire({
+        icon: 'success',
+        title: 'Welcome, {{$data->firstname}}',
+        text: 'Hope these quests can be your new habit for a better Earth.',
+    })
+</script>
+@endif
+
+
 <!-- Day Timer -->
 <script>
-    (function () {
+    (function() {
         const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-        
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
         var curr = new Date().getTime()
         var carbon_time = '{{ $current_time }}'
         var diff_d = curr - carbon_time
@@ -308,80 +320,75 @@
 
         var oprec = new Date('May 8, 2021 00:00:00');
         countDown_d = oprec.getTime(),
-        
-        x = setInterval(function () {
-            let now_d = new Date().getTime(),
-            distance = countDown_d - now_d - diff_d;
-            
-            (document.getElementById("day-now").innerText = "DAY " + (12 - Math.floor(distance / day))),
-            (document.getElementById("day-left").innerText = Math.floor(distance / day) + " DAYS LEFT")
 
-            //do something later when date is reached
-            if (distance < 0) {  
-            clearInterval(x);
-            }
-            //seconds
-        }, 0);
+            x = setInterval(function() {
+                let now_d = new Date().getTime(),
+                    distance = countDown_d - now_d - diff_d;
+
+                (document.getElementById("day-now").innerText = "DAY " + (12 - Math.floor(distance / day))),
+                (document.getElementById("day-left").innerText = Math.floor(distance / day) + " DAYS LEFT")
+
+                //do something later when date is reached
+                if (distance < 0) {
+                    clearInterval(x);
+                }
+                //seconds
+            }, 0);
     })();
 </script>
 
 <!-- Timer -->
 <script>
-    (function () {
+    (function() {
         const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
-        
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
         var curr = new Date().getTime()
         var carbon_time = '{{ $current_time }}'
         var diff = curr - carbon_time
 
         var oprec = new Date();
         oprec.setDate(oprec.getDate() + 1)
-        oprec.setHours( 0,0,0,0 );
+        oprec.setHours(0, 0, 0, 0);
         countDown = oprec.getTime(),
-        
-        x = setInterval(function () {
-            let now = new Date().getTime(),
-            distance = countDown - now - diff;
 
-            if(Math.floor((distance % day) / hour) >= 10){
-            h = Math.floor((distance % day) / hour)
-            }
-            else{
-            h = "0" + Math.floor((distance % day) / hour)
-            }
-            
-            if(Math.floor((distance % hour) / minute) >= 10){
-            m = Math.floor((distance % hour) / minute)
-            }
-            else{
-            m = "0" + Math.floor((distance % hour) / minute)
-            }
-            
-            if((Math.floor((distance % minute) / second)) >= 10){
-            s = Math.floor((distance % minute) / second)
-            }
-            else{
-            s = "0" + Math.floor((distance % minute) / second)
-            }
-            
-            ($(".days").html(Math.floor(distance / day))),
-            ($(".hours").html(h)),
-            ($(".minutes").html(m)),
-            ($(".seconds").html(s))
+            x = setInterval(function() {
+                let now = new Date().getTime(),
+                    distance = countDown - now - diff;
 
-            //do something later when date is reached
-            if (distance <= 1) {  
-                clearInterval(x);
-                location.reload();
-            }
-            //seconds
-        }, 0);
+                if (Math.floor((distance % day) / hour) >= 10) {
+                    h = Math.floor((distance % day) / hour)
+                } else {
+                    h = "0" + Math.floor((distance % day) / hour)
+                }
+
+                if (Math.floor((distance % hour) / minute) >= 10) {
+                    m = Math.floor((distance % hour) / minute)
+                } else {
+                    m = "0" + Math.floor((distance % hour) / minute)
+                }
+
+                if ((Math.floor((distance % minute) / second)) >= 10) {
+                    s = Math.floor((distance % minute) / second)
+                } else {
+                    s = "0" + Math.floor((distance % minute) / second)
+                }
+
+                ($(".days").html(Math.floor(distance / day))),
+                ($(".hours").html(h)),
+                ($(".minutes").html(m)),
+                ($(".seconds").html(s))
+
+                //do something later when date is reached
+                if (distance <= 1) {
+                    clearInterval(x);
+                    location.reload();
+                }
+                //seconds
+            }, 0);
     })();
-  
-
 </script>
 
 <script>

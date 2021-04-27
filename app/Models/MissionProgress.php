@@ -12,6 +12,20 @@ class MissionProgress extends Model
 {
     use HasFactory;
 
+    public function getSpecificProgress($userId, $missionType, $mission_X_ID)
+    {
+        if ($missionType == 1) {
+            return DB::table('progress_utopia')->where('userid', $userId)->where('mission_utopia_id', $mission_X_ID)->first();
+        } else if ($missionType == 2) {
+            return DB::table('progress_rise')->where('userid', $userId)->where('mission_rise_id', $mission_X_ID)->first();
+        } else if ($missionType == 3) {
+            return DB::table('progress_utile')->where('userid', $userId)->where('mission_utile_id', $mission_X_ID)->first();
+        } else if ($missionType == 4) {
+            return DB::table('progress_raconteur')->where('userid', $userId)->where('mission_raconteur_id', $mission_X_ID)->first();
+        }
+    }
+
+
     public function insertMissionProgress($userid, $missionType, $submittedLink, $mission_X_ID)
     {
         $mytime = Carbon::now();
@@ -55,8 +69,9 @@ class MissionProgress extends Model
         }
     }
 
-    public function getMissionProgress($userid, $misiKe_N){
-    
+    public function getMissionProgress($userid, $misiKe_N)
+    {
+
         $checkUtopiaProgressInTable = DB::table('progress_utopia')
             ->where('userid', '=', $userid)
             ->where('mission_utopia_id', '=', $misiKe_N)
@@ -69,20 +84,20 @@ class MissionProgress extends Model
         // dd($checkUtopiaProgressInTable);
 
         $checkRiseProgressInTable = DB::table('progress_rise')
-        ->where('userid', '=', $userid)
+            ->where('userid', '=', $userid)
             ->where('mission_rise_id', '=', $misiKe_N)
             ->get();
 
         $checkRaconteurProgressInTable = DB::table('progress_raconteur')
-        ->where('userid', '=', $userid)
+            ->where('userid', '=', $userid)
             ->where('mission_raconteur_id', '=', 1)
             ->get();
-        
+
         // 0 mean there is no record/data in that table
-        if($checkUtopiaProgressInTable->isEmpty()){
+        if ($checkUtopiaProgressInTable->isEmpty()) {
             $checkUtopiaProgressThatDay = 0;
-        }else{
-            $checkUtopiaProgressThatDay = 1;   
+        } else {
+            $checkUtopiaProgressThatDay = 1;
         }
 
         if ($checkUtileProgressInTable->isEmpty()) {
@@ -103,16 +118,17 @@ class MissionProgress extends Model
             $checkRaconteurProgressThatDay = 1;
         }
         $allMissionProgress = [
-            "utopia" => $checkUtopiaProgressThatDay, 
-            "utile" => $checkUtileProgressThatDay, 
-            "rise" => $checkRiseProgressThatDay, 
-            "raconteur" => $checkRaconteurProgressThatDay];
+            "utopia" => $checkUtopiaProgressThatDay,
+            "utile" => $checkUtileProgressThatDay,
+            "rise" => $checkRiseProgressThatDay,
+            "raconteur" => $checkRaconteurProgressThatDay
+        ];
         // dd($allMissionProgress);
         return $allMissionProgress;
-        
     }
 
-    public function getProgresBarPercentage($userid){
+    public function getProgresBarPercentage($userid)
+    {
 
         //count all mission in every mission table
         $totalUtopia = DB::table('mission_utopia')
@@ -147,10 +163,10 @@ class MissionProgress extends Model
             ->count();
         // dd($progressUtopia, $progressRise, $progressUtile, $progressRaconteur);
 
-        $utopiaPercentage = intval(floor(($progressUtopia / $totalUtopia) *100));
-        $risePercentage = intval(floor(($progressRise / $totalRise) *100));
-        $utilePercentage = intval(floor(($progressUtile / $totalUtile) *100));
-        $raconteurPercentage = intval(floor(($progressRaconteur / $totalRaconteur) *100));
+        $utopiaPercentage = intval(floor(($progressUtopia / $totalUtopia) * 100));
+        $risePercentage = intval(floor(($progressRise / $totalRise) * 100));
+        $utilePercentage = intval(floor(($progressUtile / $totalUtile) * 100));
+        $raconteurPercentage = intval(floor(($progressRaconteur / $totalRaconteur) * 100));
 
         // dd($utopiaPercentage, $risePercentage, $utilePercentage, $raconteurPercentage);
 
@@ -168,89 +184,106 @@ class MissionProgress extends Model
         // dd($progressAllMission);
     }
 
-    public function mysteryQuest($userid, $mysteryQuest){
+    public function mysteryQuest($userid, $mysteryQuest)
+    {
         $updateMysteryQuest = DB::table('eco_friends')
             ->where('id', $userid)
             ->update(['mystery_quest' => $mysteryQuest]);
     }
-        // dd($updateMysteryQuest);
+    // dd($updateMysteryQuest);
     //get all mission progress data
-    public function getRiseMissionProgressByMissionID($id){
+    public function getRiseMissionProgressByMissionID($id)
+    {
         return DB::table('progress_rise')->where('mission_rise_id', $id)->get();
     }
-    public function getUtopiaMissionProgressByMissionID($id){
+    public function getUtopiaMissionProgressByMissionID($id)
+    {
         return DB::table('progress_utopia')->where('mission_utopia_id', $id)->get();
     }
-    public function getUtileMissionProgressByMissionID($id){
+    public function getUtileMissionProgressByMissionID($id)
+    {
         return DB::table('progress_utile')->where('mission_utile_id', $id)->get();
     }
-    public function getRaconteurMissionProgressByMissionID($id){
+    public function getRaconteurMissionProgressByMissionID($id)
+    {
         return DB::table('progress_raconteur')->where('mission_raconteur_id', $id)->get();
     }
 
     //get all mission data by user id
-    public function getRiseMissionDatabyId($id){
+    public function getRiseMissionDatabyId($id)
+    {
         return DB::table('progress_rise')->where('userid', $id)->get();
     }
-    public function getUtileMissionDatabyId($id){
+    public function getUtileMissionDatabyId($id)
+    {
         return DB::table('progress_utile')->where('userid', $id)->get();
     }
-    public function getUtopiaMissionDatabyId($id){
+    public function getUtopiaMissionDatabyId($id)
+    {
         return DB::table('progress_utopia')->where('userid', $id)->get();
     }
-    public function getRaconteurMissionDatabyId($id){
+    public function getRaconteurMissionDatabyId($id)
+    {
         return DB::table('progress_raconteur')->where('userid', $id)->get();
     }
 
     //approval for each mission
-    public function riseMissionApproval($userId, $missionId){
+    public function riseMissionApproval($userId, $missionId)
+    {
         DB::table('progress_rise')
-            ->where('userid',$userId)
-            ->where('mission_rise_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_rise_id', $missionId)
             ->update(['status' => true]);
     }
-    public function utopiaMissionApproval($userId, $missionId){
+    public function utopiaMissionApproval($userId, $missionId)
+    {
         DB::table('progress_utopia')
-            ->where('userid',$userId)
-            ->where('mission_utopia_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_utopia_id', $missionId)
             ->update(['status' => true]);
     }
-    public function utileMissionApproval($userId, $missionId){
+    public function utileMissionApproval($userId, $missionId)
+    {
         DB::table('progress_utile')
-            ->where('userid',$userId)
-            ->where('mission_utile_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_utile_id', $missionId)
             ->update(['status' => true]);
     }
-    public function raconteurMissionApproval($userId, $missionId){
+    public function raconteurMissionApproval($userId, $missionId)
+    {
         DB::table('progress_raconteur')
-            ->where('userid',$userId)
-            ->where('mission_raconteur_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_raconteur_id', $missionId)
             ->update(['status' => true]);
     }
 
     // disapproval by each mission
-    public function riseMissionDisapproval($userId, $missionId){
+    public function riseMissionDisapproval($userId, $missionId)
+    {
         DB::table('progress_rise')
-            ->where('userid',$userId)
-            ->where('mission_rise_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_rise_id', $missionId)
             ->update(['status' => false]);
     }
-    public function utopiaMissionDisapproval($userId, $missionId){
+    public function utopiaMissionDisapproval($userId, $missionId)
+    {
         DB::table('progress_utopia')
-            ->where('userid',$userId)
-            ->where('mission_utopia_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_utopia_id', $missionId)
             ->update(['status' => false]);
     }
-    public function utileMissionDisapproval($userId, $missionId){
+    public function utileMissionDisapproval($userId, $missionId)
+    {
         DB::table('progress_utile')
-            ->where('userid',$userId)
-            ->where('mission_utile_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_utile_id', $missionId)
             ->update(['status' => false]);
     }
-    public function raconteurMissionDisapproval($userId, $missionId){
+    public function raconteurMissionDisapproval($userId, $missionId)
+    {
         DB::table('progress_raconteur')
-            ->where('userid',$userId)
-            ->where('mission_raconteur_id',$missionId)
+            ->where('userid', $userId)
+            ->where('mission_raconteur_id', $missionId)
             ->update(['status' => false]);
     }
 }

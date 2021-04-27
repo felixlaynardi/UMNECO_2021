@@ -252,10 +252,12 @@ class EcofriendController extends Controller
         $submittedLink = $request->input("link");
         $missionUtopiaID = $request->input("misiKe_N");
         $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-        // dd($data);
-        $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
-
-        return redirect()->route('profileView')->with('status', 'Submitted');
+        if ($progressModel->getSpecificProgress($data->id, $missionType, $missionUtopiaID) == null) {
+            $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
+            return redirect()->route('profileView')->with('status', 'Submitted');
+        } else {
+            return redirect()->route('profileView')->with('status', 'UnSubmitted');
+        }
     }
 
     public function mysteryQuest(Request $request)
