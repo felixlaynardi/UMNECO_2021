@@ -269,27 +269,6 @@
 <!-- <script src="{{ asset('js/cms/page/timer.js') }}"></script> -->
 <!-- <script src="{{ asset('js/cms/page/day-timer.js') }}"></script> -->
 
-
-@if (session('status') == 'Submitted')
-<script>
-    Swal.fire({
-        icon: 'success',
-        title: 'Your link has been submitted',
-        text: 'Our team will validate your submitted link soon!',
-    })
-</script>
-@endif
-
-@if (session('status') == 'UnSubmitted')
-<script>
-    Swal.fire({
-        icon: 'fail',
-        title: 'You have already submitted a link',
-        text: 'You can only submit once',
-    })
-</script>
-@endif
-
 @if (session('status') == 'Success')
 <script>
     // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
@@ -568,6 +547,26 @@
             showCancelButton: false,
         }
     ])
+</script>
+@endif
+
+@if (session('status') == 'Submitted')
+<script>
+    Swal.fire({
+        icon: 'success',
+        title: 'Your link has been submitted',
+        text: 'Our team will validate your submitted link soon!',
+    })
+</script>
+@endif
+
+@if (session('status') == 'UnSubmitted')
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'You have already submitted a link',
+        text: 'You can only submit your link once!',
+    })
 </script>
 @endif
 
