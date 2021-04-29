@@ -55,15 +55,17 @@ class EcofriendController extends Controller
             //set mission day-N
             //format date (YYYY, M, D)
             Carbon::now()->timezone("Asia/Jakarta");
-            $startTime = Carbon::create(2021, 4, 25);
+            $startTime = Carbon::create(2021, 4, 26, 0, 0, 0, 'Asia/Jakarta');
 
             //currTime only used for debugging
             $currTime = Carbon::create(2021, 4, 26);
 
             //use $now for real case
-            $now = Carbon::create("today");
-            $misiKe_N = $currTime->diffInDays($startTime);
+            $now = Carbon::now("Asia/Jakarta");
+            $misiKe_N = $now->diffInDays($startTime);
             $misiKe_N++;
+
+            // dd($misiKe_N);
 
             //check link submitted or no in that day
             $progressModel = new MissionProgress();
@@ -78,7 +80,13 @@ class EcofriendController extends Controller
             $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
             // dd($specialMissionLaunch);
 
-            $current_time = Carbon::now()->getPreciseTimestamp(3);
+            $current_time = Carbon::now("Asia/Jakarta");
+
+            $days = $current_time->isoFormat('D');
+            $months = $current_time->isoFormat('MMM');
+            $hours = $current_time->isoFormat('HH');
+            $minutes = $current_time->isoFormat('mm');
+            $seconds = $current_time->isoFormat('ss');
 
             return view(
                 'cms.page.profile',
@@ -89,7 +97,11 @@ class EcofriendController extends Controller
                     'allMissionProgress' => $allMissionProgress,
                     'percentageAllMission' => $percentageAllMission,
                     'dateForSpecialMission' => $specialMissionLaunch,
-                    'current_time' => $current_time
+                    'day' => $days,
+                    'month' => $months,
+                    'hour' => $hours,
+                    'minute' => $minutes,
+                    'second' => $seconds,
                 ]
             );
         }

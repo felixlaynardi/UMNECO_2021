@@ -290,12 +290,20 @@
             day = hour * 24;
 
         var curr = new Date().getTime()
-        var carbon_time = '{{ $current_time }}'
-        var diff_d = curr - carbon_time
 
-        // console.log(diff)
-        // console.log(curr)
-        // console.log(carbon_time)
+        var carbon_day = '{{ $day }}'
+        var carbon_month = '{{ $month }}'
+        var carbon_hour = '{{ $hour }}'
+        var carbon_minute = '{{ $minute }}'
+        var carbon_second = '{{ $second }}'
+        var carbon_date = (carbon_month + " " + carbon_day + ", 2021 " + carbon_hour + ":" + carbon_minute + ":" + carbon_second)
+
+        var carbon_time = new Date(carbon_date).getTime();
+        var diff_d = carbon_time - curr
+
+        console.log(diff_d)
+        console.log(curr)
+        console.log(carbon_time)
 
         var oprec = new Date('May 8, 2021 00:00:00');
         countDown_d = oprec.getTime(),
@@ -325,8 +333,16 @@
             day = hour * 24;
 
         var curr = new Date().getTime()
-        var carbon_time = '{{ $current_time }}'
-        var diff = curr - carbon_time
+
+        var carbon_day = '{{ $day }}'
+        var carbon_month = '{{ $month }}'
+        var carbon_hour = '{{ $hour }}'
+        var carbon_minute = '{{ $minute }}'
+        var carbon_second = '{{ $second }}'
+        var carbon_date = (carbon_month + " " + carbon_day + ", 2021 " + carbon_hour + ":" + carbon_minute + ":" + carbon_second)
+        
+        var carbon_time = new Date(carbon_date).getTime();
+        var diff = carbon_time - curr 
 
         var oprec = new Date();
         oprec.setDate(oprec.getDate() + 1)
@@ -509,7 +525,7 @@
 </script>
 
 <!-- SCRIPT FOR SPECIAL MISSION -->
-@if($dateForSpecialMission >= 0 && $data->mystery_quest == 0)
+@if($data->mystery_quest == 0 && $misiKe_N >= 4)
 <script>
     Swal.mixin({
         confirmButtonText: 'Next &rarr;',
