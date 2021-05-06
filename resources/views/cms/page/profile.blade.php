@@ -300,7 +300,7 @@
 
 
 <!-- Day Timer -->
-<script>
+<!-- <script>
     (function() {
         const second = 1000,
             minute = second * 60,
@@ -340,10 +340,10 @@
                 //seconds
             }, 0);
     })();
-</script>
+</script> -->
 
 <!-- Timer -->
-<script>
+<!-- <script>
     (function() {
         const second = 1000,
             minute = second * 60,
@@ -402,7 +402,7 @@
                 //seconds
             }, 0);
     })();
-</script>
+</script> -->
 
 <script>
     $("#submit-utopia").click(function() {
@@ -544,7 +544,7 @@
 
 <!-- SCRIPT FOR SPECIAL MISSION -->
 @if($data->mystery_quest == 0 && $misiKe_N >= 4)
-<script>
+<!-- <script>
     Swal.mixin({
         confirmButtonText: 'Next &rarr;',
         showCancelButton: false,
@@ -581,7 +581,7 @@
             showCancelButton: false,
         }
     ])
-</script>
+</script> -->
 @endif
 
 @if (session('status') == 'Submitted')
