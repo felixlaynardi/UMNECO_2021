@@ -65,14 +65,14 @@
             </div>
         </div>
 
-        <div class="row mt-5 mb-1">
+        <!-- <div class="row mt-5 mb-1">
             <div class="profile-journey col-12 col-md-8">
                 <p>YOUR JOURNEY IN RED</p>
             </div>
 
-        </div>
+        </div> -->
 
-        <div class="row mt-5">
+        <!-- <div class="row mt-5">
             <div class="col-md-4 col-12" id="day-count">
                 <p class="day-n" id="day-now">DAY 3</p>
                 <p class="day-left" id="day-left">9 Days Left</p>
@@ -123,7 +123,7 @@
 
         <div class="progress-graph">
             <div class="chart small-font-size">
-                <!-- bar pertama -->
+                bar pertama
                 <div class="col-3" id="bar-submit bar-utopia">
                     <div class="bar bar-{{ $percentageAllMission['utopiaPercentage'] }} utopia col-sm-3">
                         <img src="{{ asset('images/utopia.png') }}" alt="">
@@ -146,7 +146,7 @@
                     </div>
                 </div>
 
-                <!-- bar kedua -->
+                bar kedua
                 <div class="col-3" id="bar-submit bar-rise">
                     <div class="bar bar-{{ $percentageAllMission['risePercentage'] }} rise col-sm-3">
                         <img style="width: 2em" src="{{ asset('images/rise.png') }}" alt="">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
 
-                <!-- bar ketiga -->
+                bar ketiga
                 <div class="col-3" id="bar-submit bar-utile">
                     <div class="bar bar-{{ $percentageAllMission['utilePercentage'] }} utile col-sm-3">
                         <img style="width: 2em" src="@if($data->mystery_quest == 1) {{ asset('images/utile.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif" alt="">
@@ -202,7 +202,7 @@
                     @endif
                 </div>
 
-                <!-- bar keempat -->
+                bar keempat
                 <div class="col-3" id="bar-submit bar-raconteur">
                     <div class="bar bar-{{ $percentageAllMission['raconteurPercentage'] }} racounter col-sm-3">
                         <img style="width: 2em" src="@if($data->mystery_quest == 2) {{ asset('images/raconteur.png') }} @else {{ asset('images/profile/Mystery@2x.png') }} @endif " alt="">
@@ -236,6 +236,24 @@
                     @endif
                 </div>
 
+            </div>
+        </div> -->
+    
+        <div class="red-over">
+            <div class="red-over-img">
+                <img src="{{ asset('images/profile/illust@3x-20.jpg') }}" class="red-over-picture" >
+            </div>    
+            <div class="red-over-top">
+                <p>Your Journey in RED is Finally Over!</p>
+            </div>
+            <div class="red-over-wording">
+                <p>Thank you for the past 12 days of RED. Let's make our habits
+                last for the betterment of our Earth. Further informations about
+                RED will be announced through our Instagram</p>
+            </div>
+            <div class="red-over-thankyou">
+                <p>THANK YOU FOR YOUR</p> 
+                <p>PARTICIPATION!</p> 
             </div>
         </div>
     </div>
