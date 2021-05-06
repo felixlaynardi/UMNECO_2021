@@ -31,6 +31,38 @@ body, html {
     min-height: 100vh;
 }
 
+
+/* -----modal----- */
+.utile-box,
+.rise-box,
+.utopia-box,
+.raconteur-box {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+    display: inline-block;
+    width: 100px;
+    height:250%;
+}
+h2,
+h6{
+    font-family: MADE Tommy Soft;
+}
+h6{
+    margin-top: 5%;
+}
+.sweet-alert-container{
+    background-image: url(../../../images/profile/illust@3x-20.jpg);
+    background-size: 100%;
+    border-radius: 5px;
+}
+
+.sweet-alert-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
 /* -----section1----- */
 .section-1 {
     padding-top: 100px;

@@ -265,6 +265,44 @@
 // }
 </script>
 <script>
+    Swal.queue([
+        {
+            title: '',
+            html: `
+            <div class="container">
+            <h2>THANK YOU, ECO FRIENDS!</h2>
+                <div class="background">
+                    <div class="sweet-alert-container">
+                        <div class="utile-box">
+                            <img src="{{ asset('images/utile.png') }}" />
+                        </div>
+                        <div class="rise-box">
+                            <img src="{{ asset('images/rise.png') }}" />
+                        </div>
+                        <div class="utopia-box">
+                            <img src="{{ asset('images/utopia.png') }}" />
+                        </div>
+                        <div class="raconteur-box">
+                            <img src="{{ asset('images/raconteur.png') }}" />
+                        </div>
+                    </div>
+                </div>
+                <h6>Your participation in RED have brought a great amount of positive impacts for our Earth</h6>
+
+            </div>
+            
+            `,
+            confirmButtonText: 'Continue',
+            showCancelButton: false,
+        }
+    ])
+<script>
+    Swal.fire({
+        title: 'THANK YOU, ECO FRIENDS!',
+        text: 'Your participations in RED have brought a great amount of positive impacts for our Earth',
+    });
+</script>
+<script>
     
 var popupBtn = document.querySelectorAll(".mission-logo");
 
