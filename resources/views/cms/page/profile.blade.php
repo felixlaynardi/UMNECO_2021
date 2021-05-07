@@ -533,11 +533,11 @@
         progressSteps: ['1', '2']
     }).queue([{
             title: 'Choose Mystery Quest',
-            text: '...',
+            html: 'Kamu dapat memilih 1 dari 2 Mystery Quests atau tidak ikut sama sekali.<br><br>Untuk informasi detail terkait Mystery Quests, dapat kalian akses di <a class="about-red-href" href="{{ route("about-red") }}">About RED</a>',
             icon: 'warning'
         },
         {
-            title: 'Choose Secret Mission?',
+            title: 'Choose Mystery Quest?',
             html: `
             <div class="sweet-alert-container">
                 <div class="utile-box">
