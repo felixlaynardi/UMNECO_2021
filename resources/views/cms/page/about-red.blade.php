@@ -2,6 +2,14 @@
 
 @section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/cms/page/about-red.css') }}">
+    <style>
+        .sweet-alert-container {
+            background-image: url("{{ asset('images/profile/illust@3x-20.jpg') }}");
+            background-size: 100%;
+            border-radius: 5px;
+            background-size: cover;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -265,7 +273,7 @@
 // }
 </script>
 <script>
-    Swal.queue([
+    Swal.fire(
         {
             title: '',
             html: `
@@ -287,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                <h6>Your participation in RED have brought a great amount of positive impacts for our Earth</h6>
+                <h6 class="modal-bottom">Your participation in RED have brought a great amount of positive impacts for our Earth</h6>
 
             </div>
             
@@ -295,12 +303,7 @@
             confirmButtonText: 'Continue',
             showCancelButton: false,
         }
-    ])
-<script>
-    Swal.fire({
-        title: 'THANK YOU, ECO FRIENDS!',
-        text: 'Your participations in RED have brought a great amount of positive impacts for our Earth',
-    });
+    )
 </script>
 <script>
     

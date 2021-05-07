@@ -442,7 +442,6 @@ button:focus {
 .red-over-top {
     color: #c82121;
     font-size: 4em;
-    line-height: 100px;
     margin-top: 5%;
     margin-bottom: 5%;
     text-align: center;
@@ -456,7 +455,6 @@ button:focus {
 .red-over-thankyou {
     text-align: center;
     font-size: 2.8em;
-    line-height: 45px;
     margin-top: 5%;
     margin-bottom: 10%;
 }
@@ -467,7 +465,6 @@ button:focus {
 @media (max-width: 768px) {
     .red-over-top {
         font-size: 3em;
-        line-height: 70px;
     }
     .red-over-wording {
         font-size: 2em;
@@ -479,15 +476,13 @@ button:focus {
 
 @media (max-width: 480px) {
     .red-over-top {
-        font-size: 2.5em;
-        line-height: 55px;
+        font-size: 1.25em;
     }
     .red-over-wording {
-        font-size: 1.4em;
+        font-size: 1.0em;
     }
     .red-over-thankyou {
-        font-size: 2.2em;
-        line-height: 45px;
+        font-size: 1.25em;
     }
     .red-over-thankyou p {
         margin-bottom: 0;

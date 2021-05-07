@@ -49,7 +49,11 @@
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
+            @if(session()->has('user'))
+            <a class="menu__link" href="{{ route('login') }}">Profile</a>
+            @else
             <a class="menu__link" href="{{ route('login') }}">Login</a>
+            @endif
         </li>
     </ul>
 </nav>

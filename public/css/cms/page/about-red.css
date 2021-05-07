@@ -44,18 +44,21 @@ body, html {
     width: 100px;
     height:250%;
 }
-h2,
+.swal2-content{
+    font-family: "Heavitas";
+}
+/* h2,
 h6{
     font-family: MADE Tommy Soft;
-}
-h6{
+} */
+.modal-bottom{
     margin-top: 5%;
 }
-.sweet-alert-container{
+/* .sweet-alert-container{
     background-image: url(../../../images/profile/illust@3x-20.jpg);
     background-size: 100%;
     border-radius: 5px;
-}
+} */
 
 .sweet-alert-container img {
     width: 50%;
