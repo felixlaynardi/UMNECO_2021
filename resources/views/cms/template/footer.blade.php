@@ -4,7 +4,7 @@
              <div class="col-11">
                  <div class="row ">
                      <div class="col-sm-6 col-12 my-auto mx-auto footer-umn-eco-logo" style="text-align:center;">
-                         <img class="mb-md-0 mb-5 col-10 col-lg-4 " src="{{ asset('images/home/umn-eco-logo.png')}}">
+                         <img class="mb-md-0 mb-5 col-10 col-lg-4 " src="{{ asset('images/umn-eco-logo.png')}}">
                      </div>
                      <div class="col-sm-6 col-12 my-auto mx-auto footer-umn-eco-tagline" style="text-align:center;">
                         <div class="footer-tagline-top mb-5">
@@ -20,8 +20,8 @@
                     <div class="col-xl-3 col-md-4 col-sm-4 col-12 ml-xl-3">
                          <ul class="list-unstyled footer-menu mt-sm-0 mt-5" style="text-align:left;">
                              <a href="/#home" class="footer-menu-li"><li>Home</li></a>
-                             <a href="/#aboutus" class="footer-menu-li"><li>About Us</li></a>
-                             <a href="/#contact" class="footer-menu-li"><li>Contact Us</li></a>
+                             <a href="/about-red" class="footer-menu-li"><li>About Red</li></a>
+                             <a href="/our-team" class="footer-menu-li"><li>Our Team</li></a>
                          </ul>
                      </div>
                      <div class="col-xl-4 col-md-4 col-sm-4 col-12 footer-address my-auto" style="text-align:center;">

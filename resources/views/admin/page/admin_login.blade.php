@@ -79,9 +79,6 @@
                                             Login
                                         </button>
                                     </form>
-                                    <div class="text-center">
-                                        <a class="small" href="{{ route('registerAdmin') }}">Create an Account!</a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
