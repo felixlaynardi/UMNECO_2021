@@ -1,0 +1,106 @@
+body{
+    background-color: #1c5c3c;
+}
+
+.section-1{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.section-1 .greenate-content{
+    padding-right: 12%;
+    padding-left: 5%;
+}
+
+.section-1 .greenate-content h1 {
+    font-family: MADE Tommy Soft;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    
+    color: white;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content p{
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;    
+    text-align: justify;
+    top: 50%;
+    
+    color: white;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content ul{
+    color: white;
+    margin-bottom: 0;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content button {
+    color: #1c5c3c;
+    background-color: #ffcc3c;
+    font-family: MADE Tommy Soft;
+    font-style: bold;
+    font-weight: 800;
+    border: none;
+    border-radius: 25px;
+    line-height: 1;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content button:focus {
+    border: none;
+    outline: none;
+    /* animation: slideup 2s linear; */
+}
+
+
+.leaf-1{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 13%;
+    transform: scaleX(-1) rotate(29deg);
+    right: 0;
+    top: 7%;
+}
+
+.leaf-2{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 13%;
+    transform: scaleX(-1) rotate(29deg);
+    right: 0;
+    top: 60%;
+}
+
+.leaf-3{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 10%;
+    transform: scaleX(-1) rotate(107deg);
+    right: 0;
+    top: 80%;
+}
+
+.white-circle {
+    transform: scale(0.8) translate(-50%,-20%);
+    position: absolute;
+    background-color: #DFDFDF;
+    z-index: 3;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+    opacity: 0.3;
+}
