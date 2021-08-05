@@ -63,6 +63,17 @@ body{
 }
 
 
+.section-2 h1{
+    font-family: MADE Tommy Soft;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    margin-top: 30px;
+    color: #ffcc3c;
+}
+
 .leaf-1{
     opacity: 0.3;
     position: absolute;
