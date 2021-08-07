@@ -15,8 +15,10 @@ class GreenOrder extends Migration
     {
         Schema::create('green_order', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('userid');
             $table->foreign('user_id')->references('id')->on('green_eco_friends');
             $table->boolean('dine_in');
+            $table->unsignedBigInteger('takeaway_id');
             $table->foreign('takeaway_id')->references('id')->on('green_takeaway');
             $table->boolean('ordered');
         });
