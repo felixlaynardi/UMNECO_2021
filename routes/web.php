@@ -10,6 +10,7 @@ use App\Http\Controllers\Auth\LoginAdminController;
 use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
+use App\Http\Controllers\ShoppingCartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +78,13 @@ Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconte
 Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
 Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
 Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
+
+
+
+Route::get('/dummyProfile', [ShoppingCartController::class, 'profile'])->name('dummyProfile');
+Route::get('/dummyOrder', [ShoppingCartController::class, 'order'])->name('dummyOrder');
+Route::post('/dummyShoppingCart', [ShoppingCartController::class, 'shoppingCart'])->name('dummyShoppingCart');
+Route::post('/orderSubmit', [ShoppingCartController::class, 'orderSubmit'])->name('orderSubmit');
 
 // Redirect home on random url
 Route::any(
