@@ -26,6 +26,10 @@ class GreenEcoFriends extends Migration
             $table->string('phone_number')->unique();
             $table->string('password');
             $table->boolean('is_internal');
+            $table->boolean('dine_in');
+            $table->unsignedBigInteger('takeaway_id');
+            $table->foreign('takeaway_id')->references('id')->on('green_takeaway');
+            $table->boolean('ordered');
         });
     }
 
@@ -36,6 +40,6 @@ class GreenEcoFriends extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('eco_friends');
+        Schema::dropIfExists('green_eco_friends');
     }
 }
