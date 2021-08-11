@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 class Mission extends Model
 {
     use HasFactory;
+    //red
     public function addUtopia($data)
     {
         DB::table('mission_utopia')->insert($data);
@@ -24,5 +25,11 @@ class Mission extends Model
     public function addRaconteur($data)
     {
         DB::table('mission_raconteur')->insert($data);
+    }
+
+    //green
+    public function addTakeaway($data)
+    {
+        DB::table('green_takeaway')->insert($data);
     }
 }
