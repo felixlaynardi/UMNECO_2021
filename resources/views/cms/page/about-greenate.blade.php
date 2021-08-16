@@ -18,7 +18,7 @@
 
         <div class="row mt-5 justify-content-around pt-5">
             <div class="col-6 d-flex align-items-center justify-content-center">
-                
+                <img src="{{ asset('images/about-greenate/greenate-logo.png') }}" class="m-auto" width="70%">
             </div>
             <div class="col-6 flex-column text-end greenate-content ">
                 <h1 class="text-end">WHAT IS GREENATE?</h1> 
@@ -46,24 +46,21 @@
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="d-block w-50 m-auto" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                    <img src="{{ asset('images/about-greenate/take-away.png') }}" class="d-block m-auto" alt="..." width="50%">
+                    <div class="carousel-caption d-block m-auto container">
+                        <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="d-block w-50 m-auto" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
+                    <img src="{{ asset('images/about-greenate/take-away.png') }}" class="d-block m-auto" alt="..." width="50%">
+                    <div class="carousel-caption d-block m-auto container">
+                        <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="d-block w-50 m-auto" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
+                    <img src="{{ asset('images/about-greenate/take-away.png') }}" class="d-block m-auto" alt="..." width="50%">
+                    <div class="carousel-caption d-block m-auto container">
+                        <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
                     </div>
                 </div>
             </div>
@@ -88,8 +85,8 @@
                 <div class="col-4 p-5">
                     <div class="choices exhort ">
                         <div class="col d-flex flex-column p-3">
-                            <div class="pb-5 quest-logo"><img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" alt="" class="w-auto"></div>
-                            <p><b>[iɡˈzôrt]</b></p>
+                            <div class="py-5 m-5 quest-logo "><img src="{{ asset('images/about-greenate/exhort.png') }}" alt="" width="100%"></div>
+                            <p class="pt-5"><b>[iɡˈzôrt]</b></p>
                             <p><b>to try to influence (someone) by words or advice : to strongly urge (someone) to do something.</b> </p>
                             <p>Pada kegiatan ini, ECO Friends akan menginfluence teman-temannya melalui media sosial dengan membuat video tentang tips bagaimana menyimpan makanan agar dapat bertahan lebih lama guna memerangi food waste.</p>
 
@@ -102,8 +99,8 @@
                 <div class="col-4 p-5">
                     <div class="choices alter ">
                         <div class="col d-flex flex-column p-3">
-                            <div class="pb-5 quest-logo"><img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" alt="" class="w-auto"></div>
-                            <p><b>[ˈôltər]</b></p>
+                            <div class="py-5 m-5 quest-logo"><img src="{{ asset('images/about-greenate/alter.png') }}" alt="" width="100%"></div>
+                            <p class="pt-5"><b>[ˈôltər]</b></p>
                             <p><b>to try to influence (someone) by words or advice : to strongly urge (someone) to do something. [ˈôltər] change or cause to change in character or composition, typically in a comparatively small but significant way / to make different in some way.</b> </p>
                             <p>Pada kegiatan Alter, ECO Friends akan melakukan kegiatan sederhana yang dapat berdampak besar bagi bumi, yakni mengolah kembali sisa makanan menjadi hidangan baru. Dengan begitu, kita dapat memerangi food waste dengan menjadi lebih bertanggung jawab terhadap makanan.</p>
                         </div>
@@ -114,8 +111,8 @@
                 <div class="col-4 p-5">
                     <div class="choices tidbit ">
                         <div class="col d-flex flex-column p-3">
-                            <div class="pb-5 quest-logo"><img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" alt="" class="w-auto"></div>
-                            <p><b>[ˈtidˌbit]</b></p>
+                            <div class="py-5 m-5 quest-logo"><img src="{{ asset('images/about-greenate/tidbit.png') }}" alt=""  width="100%"></div>
+                            <p class="pt-5"><b>[ˈtidˌbit]</b></p>
                             <p><b>a small piece of interesting information, or a small dish of pleasant-tasting food.</b> </p>
                             <p>Pada kegiatan Tidbit, ECO Friends akan membuat video yang memperlihatkan ECO Friends menghabiskan makanan hingga tidak tersisa, tujuannya agar sampah makanan tidak terus bertambah. Dengan begitu, ECO Friends dapat menciptakan berita gembira dengan ikut berdampak dalam mengurangi food waste.</p>
                         </div>
