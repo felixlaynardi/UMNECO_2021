@@ -11,12 +11,12 @@
         <div class="row">
             <div class="col-md-6 left-content" style="background:url('{{ asset('images/login/Hydrant BG.png')}}')">
                 <img id="image-left" src="{{ asset('images/login/Alas Hydrant.png')}}" class="hydrant-shadow">
-                <img id="image-left" src="{{ asset('images/login/Hydrant.gif')}}" class="hydrant">
+                <img id="image-left" src="{{ asset('images/login/Greenate-Logo.gif')}}" class="hydrant">
             </div>
             <div class="col-md-6 col-12 form form-group my-auto" id="form">
                 <div class="right-content mx-5">
                     <div class="login-title">
-                        ENTER RED
+                        Welcome!
                     </div>
                     <form action="{{route('login')}}" id="form-login" method="post">
                         @csrf
