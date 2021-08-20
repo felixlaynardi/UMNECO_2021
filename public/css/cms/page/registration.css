@@ -1,8 +1,34 @@
 header {
-    background-image: linear-gradient(to right, #fc797d, #fc3f3f);
+    /* background-image: linear-gradient(to right, #7FC8A9, #fc3f3f); */
+    background-color: #1B5A3B;
     margin-bottom: 2%;
-    padding-top: 5rem;
+    padding-top: 10rem;
     padding-bottom: 3rem;
+    position: relative;
+}
+.image-header {
+    position: absolute;
+    right: 10%;
+    top: 35%;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 5px;
+    text-align:center;
+    width: 13%;
+}
+.image-leaf1{
+    position: absolute;
+    width: 15%;
+    transform: rotate(80deg);
+    right: 3%;
+    top: 35%;
+}
+.image-leaf2{
+    position: absolute;
+    transform: rotate(260deg);
+    width: 15%;
+    right: 15%;
+    top: 35%;
 }
 .h2 {
     text-align: center;
@@ -60,7 +86,7 @@ label {
     color: #545839;
 }
 .check {
-    color: red;
+    color: #008c15;
     font-family: "MADE Tommy soft 2";
 }
 .error {
@@ -75,38 +101,7 @@ label {
 .navbar{
     position: absolute;
 }
-@media (max-width: 684px) {
-    .check {
-        vertical-align: middle;
-    }
-}
-.new{
-    display: none;
-}
-@media (max-width: 800px) {
-    .old{
-        display: none;
-    }
-    .new{
-        display: block;
-    }
-}
-@media (max-width: 419px) {
-    div#form {
-        width: 60%;
-        padding-top: 40%;
-        padding-left: 20%;
-    }
-    h5 {
-        font-size: 0.9em;
-    }
-    h1 {
-        font-size: 2em;
-    }
-    label.check {
-        font-size: 0.8em;
-    }
-}
+
 .form {
     padding-top: 20px;
     padding-bottom: 2%;
@@ -129,8 +124,9 @@ label.error:not(.form-control) {
 .button {
     width: 120px;
     font-family: "MADE Tommy Soft 2";
-    color: #fc797d;
-    background-color: #f8ede3;
+    font-weight: bold;
+    color: #ffc600;
+    background-color: #f8ede3 ;
     border: 1px solid;
     border-radius: 15px;
     outline: none;
@@ -140,7 +136,7 @@ label.error:not(.form-control) {
 }
 .button:hover {
     color: white;
-    background: #fc797d;
+    background:#ffc600;
 }
 .button:focus {
     outline: none;
@@ -155,7 +151,7 @@ label.error:not(.form-control) {
     margin-top: 10%;
     padding-top: 3%;
     padding-bottom: 25px;
-    background-image: linear-gradient(to right, #fc797d, #fc3f3f);
+    background-image: linear-gradient(to right, #7FC8A9, #fc3f3f);
     text-align: center;
 } */
 /* Footer */
@@ -183,4 +179,45 @@ label.error:not(.form-control) {
     background-color: #ffd2d2;
     border-radius: 5px;
     padding-left: 3px;
+}
+@media (max-width: 684px) {
+    .check {
+        vertical-align: middle;
+    }
+}
+.new{
+    display: none;
+}
+@media (max-width: 800px) {
+    .old{
+        display: none;
+    }
+    .new{
+        display: block;
+    }
+    .image-header{
+        display: none;
+    }
+    .image-leaf1{
+        display: none;
+    }
+    .image-leaf2{
+        display: none;
+    }
+}
+@media (max-width: 419px) {
+    div#form {
+        width: 60%;
+        padding-top: 40%;
+        padding-left: 20%;
+    }
+    h5 {
+        font-size: 0.9em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    label.check {
+        font-size: 0.8em;
+    }
 }

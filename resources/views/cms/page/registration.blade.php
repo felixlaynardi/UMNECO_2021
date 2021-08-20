@@ -34,8 +34,13 @@
 </script>
 <header>
     <div class="col-md-6 col-10 mx-auto">
-        <h5>Real Emergency Daily life</h5>
+        <h5>Greenate</h5>
         <h1>REGISTRATION</h1>
+        
+        <img class="image-leaf1" src="{{ asset('images/regis/Daun 3.png')}}">
+        <img class="image-leaf2" src="{{ asset('images/regis/Daun 3.png')}}">
+        <img class="image-header" src="{{ asset('images/regis/Ayam_1.png')}}">
+
     </div>
 </header>
 <div class="form col-md-6 col-10 mx-auto">
@@ -367,17 +372,25 @@
         <form action="{{route('registration')}}" method="post" class="mb-2" id="form-register">
             @csrf
             <div class="form-group mb-3">
-                <label for="Firstname" class="label">Nama Depan</label>
+                <label for="Firstname" class="label">Nama Lengkap</label>
                 <input type="text" name="Firstname" id="Firstname" placeholder="ECO Family" value="{{ old('Firstname') }}" class="form-control mb-2" required>
                 @if($errors->has('Firstname'))
                 <div class="error error-message">{{ $errors->first('Firstname') }}</div>
                 @endif
             </div>
-            <div class="form-group mb-3">
+            <!-- <div class="form-group mb-3">
                 <label for="Lastname" class="label">Nama Belakang</label>
                 <input type="text" name="Lastname" id="Lastname" placeholder="ECO Family" value="{{ old('Lastname') }}" class="form-control mb-2">
                 @if($errors->has('Lastname'))
                 <div class="error error-message">{{ $errors->first('Lastname') }}</div>
+                @endif
+            </div> -->
+
+            <div class="form-group mb-3">
+                <label for="Email" class="label">Email Student</label>
+                <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
+                @if($errors->has('Email'))
+                <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
             </div>
             <div class="form-group mb-3">
@@ -385,13 +398,6 @@
                 <input type="text" name="Student_id" id="Student_id" placeholder="00000012345" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
                 @if($errors->has('Student_id'))
                 <div class="error error-message">{{ $errors->first('Student_id') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3">
-                <label for="Email" class="label">Email</label>
-                <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
-                @if($errors->has('Email'))
-                <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
             </div>
             <div class="form-group mb-3">
@@ -423,13 +429,14 @@
             <div class="form-group mb-3">
                 <label for="Generation" class="label">Angkatan</label>
                 <select id="Generation" name="Generation" value="{{ old('Generation') }}" class="form-control mb-2" required>
-                    <option value="2014">2014</option>
+                    
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
+                    <option value="2014">2021</option>
                     <option value="Bukan Mahasiswa">Bukan Mahasiswa</option>
                 </select>
                 @if($errors->has('Generation'))
@@ -473,7 +480,7 @@
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Real Emergency Daily life selama 12 hari</label>
+                <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif

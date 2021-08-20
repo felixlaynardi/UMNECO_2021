@@ -9,9 +9,13 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6 left-content" style="background:url('{{ asset('images/login/Hydrant BG.png')}}')">
+            <div class="col-md-6 left-content" >
+            <!-- style="background:url('{{ asset('images/login/Hydrant BG.png')}}')" -->
+                <img id="image-left" src="{{ asset('images/login/Sendok Kayu.png')}}" class="sendok1">
+                <img id="image-left" src="{{ asset('images/login/Sendok Kayu.png')}}" class="sendok2">
                 <img id="image-left" src="{{ asset('images/login/Alas Hydrant.png')}}" class="hydrant-shadow">
-                <img id="image-left" src="{{ asset('images/login/Greenate-Logo.gif')}}" class="hydrant">
+                <img id="image-left" src="{{ asset('images/login/Greenate-Logo.gif')}}" class="greenate">
+ 
             </div>
             <div class="col-md-6 col-12 form form-group my-auto" id="form">
                 <div class="right-content mx-5">
@@ -33,11 +37,13 @@
                             <input type="password" name="password" id="password" placeholder="*********" class="form-control">
                             @if($errors->has('password'))
                             <div class="error">{{ $errors->first('password') }}</div>
-                            @endif
-                            <br><br>
+                            @endif                           
                         </div>
+                        <p style="color: #008c15"> If you are having trouble logging in, please contact us through our official LINE account.</p>
+                        <br><br>
                         <button class="button p-2" id="btn-login" type="submit" name="action" value="login">LOGIN</button>
                         <a class="button p-2 btn-register" type="submit" href="{{ route('registration' )}}" value="register">REGISTER</a>
+                        
                     </form>
                 </div>
             </div>

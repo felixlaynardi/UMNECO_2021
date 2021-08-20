@@ -18,6 +18,7 @@ label{
     position: relative;
     min-height: 95vh;
     padding: 0;
+    background-color: #EAEAEA;
 }
 
 .hydrant-shadow{
@@ -28,12 +29,31 @@ label{
     transform: translate(-50%, 100%);
     left: 50%;
 }
-.hydrant{
+.greenate{
     width: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+.sendok1{
+    position: absolute;
+    width: 15%;
+    height: 85%;
+    left: -5%;
+    top: 10%;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+}
+.sendok2{
+    position: absolute;
+    width: 15%;
+    height: 85%;
+    left: 15%;
+    top: -25%;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    transform: rotate(180deg);
 }
 .form{
     height: 100%;
@@ -59,6 +79,7 @@ label.error:not(.form-control) {
 .button{
     margin-right: 2%;
     width: 120px;
+    font-weight: bold;
     font-family:"MADE Tommy Soft 2";
     font-size: 1em;
     color: #ffc600;
