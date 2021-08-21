@@ -363,7 +363,13 @@
                             </div>
                     </div>
                 </div>
-                
+                   <div class="form-check mb-3">
+                        <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
+                        <label class="check mt-3 col-11" for="Availability">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
+                        @if($errors->has('Availability'))
+                        <div class="error error-message">{{ $errors->first('Availability') }}</div>
+                        @endif
+                    </div>
                 <button class="button p-2" type="button" id="next-btn">Menuju Registrasi</button>
             </div>
         </div>
@@ -437,12 +443,101 @@
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="2014">2021</option>
-                    <option value="Bukan Mahasiswa">Bukan Mahasiswa</option>
+                    <!-- <option value="Bukan Mahasiswa">Bukan Mahasiswa</option> -->
                 </select>
                 @if($errors->has('Generation'))
                 <div class="error error-message">{{ $errors->first('Generation') }}</div>
                 @endif
             </div>
+            <div class="form-group mb-3">
+                <label for="Instagram_account" class="label">Username IG (Tidak di private) </label>
+                <input type="text" name="Instagram_account" id="Instagram_account" placeholder="umn_eco" value="{{ old('Instagram_account') }}" class="form-control mb-2" required>
+                @if($errors->has('Instagram_account'))
+                <div class="error error-message">{{ $errors->first('Instagram_account') }}</div>
+                @endif
+            </div>
+            <div class="form-group mb-3">
+                <label for="Generation" class="label">ID Line</label>
+                <input type="text" name="Line_id" id="Line_id" placeholder="umn_eco" value="{{ old('Line_id') }}" class="form-control mb-2" required>
+                @if($errors->has('Line_id'))
+                <div class="error error-message">{{ $errors->first('Line_id') }}</div>
+                @endif
+            </div>
+            <div class="form-group mb-3">
+                <label for="Phone_number" class="label">Nomor Telepon</label>
+                <input type="text" name="Phone_number" id="Phone_number" placeholder="08123456789" value="{{ old('Phone_number') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
+                @if($errors->has('Phone_number'))
+                <div class="error error-message">{{ $errors->first('Phone_number') }}</div>
+                @endif
+            </div>
+            <div class="form-group mb-3">
+                <label for="Password" class="label">Password</label>
+                <input type="password" name="Password" id="Password" placeholder="*********" class="form-control mb-2" required>
+                @if($errors->has('Password'))
+                <div class="error error-message">{{ $errors->first('Password') }}</div>
+                @endif
+            </div>
+            <div class="form-group mb-3">
+                <label for="Password_Confirmation" class="label">Konfirmasi Password</label>
+                <input type="password" name="Password_confirmation" id="Password_confirmation" placeholder="*********" class="form-control mb-2" required>
+                @if($errors->has('Password_confirmation'))
+                <div class="error error-message">{{ $errors->first('Password_confirmation') }}</div>
+                @endif
+            </div>
+            <div class="form-check mb-3">
+                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
+                <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
+                @if($errors->has('Availability'))
+                <div class="error error-message">{{ $errors->first('Availability') }}</div>
+                @endif
+            </div>
+
+            <br>
+            <div class="tombol mt-5">
+                <button type="submit" class="button p-2" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="step step-2 registerform">
+        <form action="{{route('registration')}}" method="post" class="mb-2" id="form-register">
+            @csrf
+            <div class="form-group mb-3">
+                <label for="Firstname" class="label">Nama Lengkap</label>
+                <input type="text" name="Firstname" id="Firstname" placeholder="ECO Family" value="{{ old('Firstname') }}" class="form-control mb-2" required>
+                @if($errors->has('Firstname'))
+                <div class="error error-message">{{ $errors->first('Firstname') }}</div>
+                @endif
+            </div>
+            <!-- <div class="form-group mb-3">
+                <label for="Lastname" class="label">Nama Belakang</label>
+                <input type="text" name="Lastname" id="Lastname" placeholder="ECO Family" value="{{ old('Lastname') }}" class="form-control mb-2">
+                @if($errors->has('Lastname'))
+                <div class="error error-message">{{ $errors->first('Lastname') }}</div>
+                @endif
+            </div> -->
+
+            <div class="form-group mb-3">
+                <label for="Email" class="label">Email</label>
+                <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
+                @if($errors->has('Email'))
+                <div class="error error-message">{{ $errors->first('Email') }}</div>
+                @endif
+            </div>
+            <!-- <div class="form-group mb-3">
+                <label for="Student_id" class="label">NIM</label>
+                <input type="text" name="Student_id" id="Student_id" placeholder="00000012345" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
+                @if($errors->has('Student_id'))
+                <div class="error error-message">{{ $errors->first('Student_id') }}</div>
+                @endif
+            </div> -->
+            <div class="form-group mb-3">
+                <label for="Institusi" class="label">Institusi</label>
+                <input type="text" name="Institusi" id="Institusi" placeholder="Universitas Multimedia Nusantara" value="{{ old('Institusi') }}" class="form-control mb-2" required>
+                @if($errors->has('Student_id'))
+                <div class="error error-message">{{ $errors->first('Student_id') }}</div>
+                @endif
+            </div>
+            
             <div class="form-group mb-3">
                 <label for="Instagram_account" class="label">Username IG (Tidak di private) </label>
                 <input type="text" name="Instagram_account" id="Instagram_account" placeholder="umn_eco" value="{{ old('Instagram_account') }}" class="form-control mb-2" required>
