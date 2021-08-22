@@ -68,6 +68,7 @@ body{
     border: none;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 20px;
+    outline: none;
 }
 .upload-photo-label:hover, .download-photo-btn:hover{
     transform:scale(1.1);
@@ -76,6 +77,10 @@ body{
     transition-duration: 0.5s;
     outline: none;
 }
+.download-photo-btn:focus,.download-photo-btn:active {
+    outline: none !important;
+    box-shadow: none;
+ }
 .twibbon-switcher{
     display: flex;
     width: 75%;
