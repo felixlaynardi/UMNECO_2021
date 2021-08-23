@@ -44,6 +44,12 @@
     </div>
 </header>
 <div class="form col-md-6 col-10 mx-auto">
+    <div class="popup-choice">
+        <p col-12 id="popup-desc">Kamu adalah ...</p>
+        <button class="button-choice p-2" id="btn-choice1" type="submit" name="action" value="">Internal <br>(UMN)</button>
+
+        <button class="button-choice p-2" id="btn-choice2" type="submit" name="action" value="">External <br>(Non-UMN)</button>
+    </div>
     <form class="Persetujuan">
         <div class="row">
             <div class="step step-1 active">
@@ -364,8 +370,8 @@
                     </div>
                 </div>
                    <div class="form-check mb-3">
-                        <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                        <label class="check mt-3 col-11" for="Availability">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
+                        <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }} ">
+                        <label class="check mt-3 col-11" for="Availability" required>Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
                         @if($errors->has('Availability'))
                         <div class="error error-message">{{ $errors->first('Availability') }}</div>
                         @endif

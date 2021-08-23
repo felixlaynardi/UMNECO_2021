@@ -180,6 +180,74 @@ label.error:not(.form-control) {
     border-radius: 5px;
     padding-left: 3px;
 }
+.popup-choice{
+    position: absolute;
+    width: 40%;
+    height: 35%;
+    left: 33%;
+    top: 30%;
+    background: #FFFFFF;
+    border-radius: 77px;
+}
+#popup-desc{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 3em;
+    text-align: center;
+
+    color: #346B50;
+}
+
+#btn-choice1{   
+    position: absolute;
+    width: 35%;
+    height: 40%;
+    left: 10%;
+    top: 30%;
+
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+}
+
+#btn-choice2{
+    position: absolute;
+    width: 35%;
+    height: 40%;
+    left: 55%;
+    top: 30%;
+
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+.button-choice {
+    color: #FFFFFF;
+    background-color: #ffc600 ;
+    border: 1px solid;
+    border-radius: 15px;
+    outline: none;
+    position: relative;
+    float: right;
+    transition: 0.5s;
+}
+.button-choice:hover {
+    color: #ffc600;
+    background:#f8f7e3;
+}
+.button-choice:focus {
+    outline: none;
+}
 @media (max-width: 684px) {
     .check {
         vertical-align: middle;
