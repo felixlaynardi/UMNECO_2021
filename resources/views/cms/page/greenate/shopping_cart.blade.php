@@ -1,9 +1,22 @@
 {{-- {{ dd($orders[0]); }} --}}
 @extends('cms.template.app')
 
+@section('custom-css')
+    <link rel="stylesheet" href="{{ asset('css/cms/page/shoppingcart.css') }}">
+@endsection
+
 @section('content')
+<header>
+    <div class="col-md-6 col-10 mx-auto" style="background:url('{{ asset('images/shoppingcart/Daun 3.png')}}')>">
+        <h1>Your Shopping Cart</h1>
+    </div>
+</header>
 
-
+<div class="container-fluid">
+    <div class="row">
+    <div class="col-md-2">
+    </div>
+    <div class="col-md-7">
     <table class="table">
         <thead>
             <tr>
@@ -48,8 +61,9 @@
                 </tr> --}}
             </tbody>
         </table>        
-
-
+        </div>
+        
+        <div class="col-md-3">
         <form action="{{ route('orderSubmit') }}" method="post">
             @csrf
             <input type="text" name="dine_in" value="{{ $dine_id }}">
@@ -57,7 +71,11 @@
             <input type="text" name="ordered" value="1">
             <button type="submit" >ORDER NOW</button>
         </form>
-
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+</div>
 @endsection
 
 @section('custom-js')
