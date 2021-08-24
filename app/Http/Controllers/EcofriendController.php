@@ -23,12 +23,23 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
-    public function registrationView()
+    public function registrationInternalView()
     {
         if (!session()->has('user')) {
             $model = new Ecofriends();
             $ecofriends = $model->getAllEcoFriends();
             return view('cms.page.registration', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
+        } else {
+            return redirect()->route('profileView');
+        }
+    }
+
+    public function registrationExternalView()
+    {
+        if (!session()->has('user')) {
+            $model = new Ecofriends();
+            $ecofriends = $model->getAllEcoFriends();
+            return view('cms.page.registration_external', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
         } else {
             return redirect()->route('profileView');
         }

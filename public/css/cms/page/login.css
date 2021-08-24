@@ -96,7 +96,7 @@ label.error:not(.form-control) {
 .button:focus{
     outline: none;
 }
-.btn-register{
+#btn-register{
     text-decoration: none;
     text-align: center;
 }

@@ -370,7 +370,7 @@
                     </div>
                 </div>
                 <div class="form-check mb-3">
-                    <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}" checked disabled>
+                    <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }} " checked disabled>
                     <label class="check mt-3 col-11" for="Availability" required>Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
                     @if($errors->has('Availability'))
                     <div class="error error-message">{{ $errors->first('Availability') }}</div>
@@ -380,8 +380,9 @@
             </div>
         </div>
     </form>
+
     <div class="step step-2 registerform">
-        <form action="{{route('registration')}}" method="post" class="mb-2" id="form-register">
+        <form action="{{route('registration_external')}}" method="post" class="mb-2" id="form-register">
             @csrf
             <div class="form-group mb-3">
                 <label for="Fullname" class="label">Nama Lengkap</label>
@@ -390,71 +391,23 @@
                 <div class="error error-message">{{ $errors->first('Fullname') }}</div>
                 @endif
             </div>
-            <!-- <div class="form-group mb-3">
-                <label for="Lastname" class="label">Nama Belakang</label>
-                <input type="text" name="Lastname" id="Lastname" placeholder="ECO Family" value="{{ old('Lastname') }}" class="form-control mb-2">
-                @if($errors->has('Lastname'))
-                <div class="error error-message">{{ $errors->first('Lastname') }}</div>
-                @endif
-            </div> -->
 
             <div class="form-group mb-3">
-                <label for="Email" class="label">Email Student</label>
+                <label for="Email" class="label">Email</label>
                 <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
                 @if($errors->has('Email'))
                 <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
             </div>
+
             <div class="form-group mb-3">
-                <label for="Student_id" class="label">NIM</label>
-                <input type="text" name="Student_id" id="Student_id" placeholder="00000012345" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
+                <label for="Institusi" class="label">Institusi</label>
+                <input type="text" name="Institusi" id="Institusi" placeholder="Universitas Multimedia Nusantara" value="{{ old('Institusi') }}" class="form-control mb-2" required>
                 @if($errors->has('Student_id'))
                 <div class="error error-message">{{ $errors->first('Student_id') }}</div>
                 @endif
             </div>
-            <div class="form-group mb-3">
-                <label for="Major" class="label">Jurusan</label>
-                <select id="Major" name="Major" value="{{ old('Major') }}" class="form-control mb-2" required>
-                    <option value="Informatika">Informatika</option>
-                    <option value="Teknik Komputer">Teknik Komputer</option>
-                    <option value="Teknik Elektro">Teknik Elektro</option>
-                    <option value="Teknik Fisika">Teknik Fisika</option>
-                    <option value="Sistem Informasi">Sistem Informasi</option>
-
-                    <option value="Akuntansi">Akuntansi</option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Perhotelan">Perhotelan</option>
-
-                    <option value="Komunikasi Strategis">Komunikasi Strategis</option>
-                    <option value="Jurnalistik">Jurnalistik</option>
-
-                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                    <option value="Arsitektur">Arsitektur</option>
-                    <option value="Film & Animasi">Film & Animasi</option>
-
-                    <option value="Bukan Mahasiswa">Bukan Mahasiswa</option>
-                </select>
-                @if($errors->has('major'))
-                <div class="error error-message">{{ $errors->first('major') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3">
-                <label for="Generation" class="label">Angkatan</label>
-                <select id="Generation" name="Generation" value="{{ old('Generation') }}" class="form-control mb-2" required>
-                    
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2014">2021</option>
-                    <!-- <option value="Bukan Mahasiswa">Bukan Mahasiswa</option> -->
-                </select>
-                @if($errors->has('Generation'))
-                <div class="error error-message">{{ $errors->first('Generation') }}</div>
-                @endif
-            </div>
+            
             <div class="form-group mb-3">
                 <label for="Instagram_account" class="label">Username IG (Tidak di private) </label>
                 <input type="text" name="Instagram_account" id="Instagram_account" placeholder="umn_eco" value="{{ old('Instagram_account') }}" class="form-control mb-2" required>
@@ -491,7 +444,7 @@
                 @endif
             </div>
             <div class="form-check mb-3">
-                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}" >
+                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
                 <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
