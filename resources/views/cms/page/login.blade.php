@@ -53,22 +53,26 @@
 </div>
 </div>
 <script>
-const registerClick = () => {
-Swal.fire({
-  title: 'Kamu adalah...',
-  showDenyButton: true,
-  showCancelButton: true,
-  confirmButtonText: `Internal<br>(UMN)`,
-  cancelButtonText: `Eksternal<br>(Non UMN)`,
-}).then((result) => {
-  /* Read more about isConfirmed, isDenied below */
-  if (result.isConfirmed) {
-    window.location.href = "{{ route('registration')}}";
-  } else{
-    window.location.href = "{{ route('registration_external')}}";
-  }
-})
-}
+    const registerClick = () => {
+        Swal.fire({
+            title: 'Kamu adalah...',
+            showCancelButton: true,
+            confirmButtonText: `Internal<br>(UMN)`,
+            cancelButtonText: `Eksternal<br>(Non UMN)`,
+
+            confirmButtonColor: "#ffc600",
+            cancelButtonColor: "#ffc600",   
+            
+        }).then((result) => {
+            /* Read more about isConfirmed, isDenied below */
+            if (result.isConfirmed) {
+                window.location.href = "{{ route('registration')}}";
+            } else{
+                window.location.href = "{{ route('registration_external')}}";
+            }
+        })
+        
+    }
 </script>
 @include('cms.template.footer') 
 <!-- <footer id="footer">
