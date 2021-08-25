@@ -25,10 +25,22 @@
         <div class="twibbon-subtitle">
             Ayo, unggah Twibbon menu yang kamu pilih ke sosial mediamu! Dengan begitu, akan semakin banyak orang yang aware terhadap permasalahan food waste.
         </div>
+        @if($status == 'exhort')
         <div class="twibbon-image col-10 col-md-6 mx-auto mt-5 mb-3" id="frame">
-            <img id="twibbon-photo" src="{{ asset('images/twibbon/placeholder.gif') }}" alt="" style="width:100%">
+            <img id="twibbon-photo" src="{{ asset('images/twibbon/Exhort.gif') }}" alt="" style="width:100%">
             <canvas id="canvas" style="display:none;"></canvas>
         </div>
+        @elseif($status == 'alter')
+        <div class="twibbon-image col-10 col-md-6 mx-auto mt-5 mb-3" id="frame">
+            <img id="twibbon-photo" src="{{ asset('images/twibbon/Alter.gif') }}" alt="" style="width:100%">
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+        @else
+        <div class="twibbon-image col-10 col-md-6 mx-auto mt-5 mb-3" id="frame">
+            <img id="twibbon-photo" src="{{ asset('images/twibbon/Tidbit.gif') }}" alt="" style="width:100%">
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+        @endif
         <div class="upload-content mt-5 mb-5">
             <label class="upload-photo-label" for="uploadphoto">
                 <span class="upload-photo-btn p-3">
