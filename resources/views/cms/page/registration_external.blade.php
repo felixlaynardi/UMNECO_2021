@@ -364,13 +364,10 @@
                     </div>
                 </div>
                 <div class="form-check mb-3">
-                    <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }} " checked disabled>
-                    <label class="check mt-3 col-11" for="Availability" required>Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
-                    @if($errors->has('Availability'))
-                    <div class="error error-message">{{ $errors->first('Availability') }}</div>
-                    @endif
+                    <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
+                    <label class="check mt-3 col-11" for="regulation">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
                 </div>
-                <button class="button p-2" type="button" id="next-btn" type="submit">Menuju Registrasi</button>
+                <button class="button p-2" type="button" id="next-btn" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
             </div>
         </div>
     </form>
@@ -457,6 +454,30 @@
     <img src="{{ asset('images/regis/Logo Footer.png')}}" class="logo mx-auto">
     <h6 class="foot mx-auto">© UMN ECO</h6>
 </footer> -->
+
+<script>
+const regulasiClick = () => {
+    var checkBox = document.getElementById("regulation");
+    if (checkBox.checked == false){
+        Swal.fire({
+        text: "Kamu perlu menyetujui ketentuan yang berlaku!",
+        icon: 'warning',
+
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                document.location.reload(true);
+            } else{
+                document.location.reload(true);
+            }
+        })
+        
+    } else{
+        document.getElementById("next-btn").disabled = false;
+    }
+}
+</script>
 @include('cms.template.footer')
 
 </header>

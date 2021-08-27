@@ -523,14 +523,6 @@ const regulasiClick = () => {
         document.getElementById("next-btn").disabled = false;
     }
 }
-    // function regulasiClick() {
-    //     if (document.getElementById("regulation").checked = false){
-    //         window.location.href = "{{ route('registration')}}";
-    //         alert("Cek list dulu ");
-    //     } else if(document.getElementById("regulation").checked = false){
-    //         document.getElementById("next-btn").disabled = false;
-    //     }
-    // }
 </script>
 @include('cms.template.footer')
 
