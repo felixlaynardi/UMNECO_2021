@@ -44,12 +44,6 @@
     </div>
 </header>
 <div class="form col-md-6 col-10 mx-auto">
-    <!-- <div class="popup-choice">
-        <p col-12 id="popup-desc">Kamu adalah ...</p>
-        <button class="button-choice p-2" id="btn-choice1" type="submit" name="action" value="">Internal <br>(UMN)</button>
-
-        <button class="button-choice p-2" id="btn-choice2" type="submit" name="action" value="">External <br>(Non-UMN)</button>
-    </div> -->
     <form class="Persetujuan">
         <div class="row">
             <div class="step step-1 active">

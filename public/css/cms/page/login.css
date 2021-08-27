@@ -106,15 +106,7 @@ label.error:not(.form-control) {
     font-family: 'Heavitas';
     letter-spacing: 2px;
 }
-/* .popup-desc{
-    background-color: #ffc600;
-}
-.btn-internal{
-    background-color: #ffc600;
-}
-.btn-external{
-    background-color: #ffc600;
-} */
+
 :focus {
     box-shadow: none !important;
 }
