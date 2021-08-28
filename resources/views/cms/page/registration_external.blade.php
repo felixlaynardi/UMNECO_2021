@@ -361,7 +361,7 @@
                             <br>
                             <br>
                         </div>
-                </div>
+                    </div>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
@@ -384,59 +384,17 @@
                 @endif
             </div>
             <div class="form-group mb-3">
-                <label for="Email" class="label">Email Student</label>
+                <label for="Email" class="label">Email</label>
                 <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
                 @if($errors->has('Email'))
                 <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
             </div>
             <div class="form-group mb-3">
-                <label for="Student_id" class="label">NIM</label>
-                <input type="text" name="Student_id" id="Student_id" placeholder="00000012345" value="{{ old('Student_id') }}" class="form-control mb-2" required onkeypress='validateNIM(event)'>
-                @if($errors->has('Student_id'))
-                <div class="error error-message">{{ $errors->first('Student_id') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3">
-                <label for="Major" class="label">Jurusan</label>
-                <select id="Major" name="Major" value="{{ old('Major') }}" class="form-control mb-2" required>
-                    <option value="Informatika">Informatika</option>
-                    <option value="Teknik Komputer">Teknik Komputer</option>
-                    <option value="Teknik Elektro">Teknik Elektro</option>
-                    <option value="Teknik Fisika">Teknik Fisika</option>
-                    <option value="Sistem Informasi">Sistem Informasi</option>
-
-                    <option value="Akuntansi">Akuntansi</option>
-                    <option value="Manajemen">Manajemen</option>
-                    <option value="Perhotelan">Perhotelan</option>
-
-                    <option value="Komunikasi Strategis">Komunikasi Strategis</option>
-                    <option value="Jurnalistik">Jurnalistik</option>
-
-                    <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
-                    <option value="Arsitektur">Arsitektur</option>
-                    <option value="Film & Animasi">Film & Animasi</option>
-
-                    <option value="Bukan Mahasiswa">Bukan Mahasiswa</option>
-                </select>
-                @if($errors->has('major'))
-                <div class="error error-message">{{ $errors->first('major') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3">
-                <label for="Generation" class="label">Angkatan</label>
-                <select id="Generation" name="Generation" value="{{ old('Generation') }}" class="form-control mb-2" required>
-
-                    <option value="2015">2015</option>
-                    <option value="2016">2016</option>
-                    <option value="2017">2017</option>
-                    <option value="2018">2018</option>
-                    <option value="2019">2019</option>
-                    <option value="2020">2020</option>
-                    <option value="2014">2021</option>
-                </select>
-                @if($errors->has('Generation'))
-                <div class="error error-message">{{ $errors->first('Generation') }}</div>
+                <label for="Institution" class="label">Institusi</label>
+                <input type="text" name="Institution" id="Institution" placeholder="Universitas Multimedia Nusantara" value="{{ old('Institusi') }}" class="form-control mb-2" required>
+                @if($errors->has('Institution'))
+                <div class="error error-message">{{ $errors->first('Institution') }}</div>
                 @endif
             </div>
             <div class="form-group mb-3">
@@ -475,7 +433,7 @@
                 @endif
             </div>
             <div class="form-check mb-3">
-                <input type="checkbox" id="Availability" name="Availability" value="{{ old('Availability') }}">
+                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
                 <label class="check check-2 mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
@@ -484,7 +442,7 @@
 
             <br>
             <div class="tombol mt-5">
-                <input type="hidden" id="is_internal" name="is_internal" value="1">
+                <input type="hidden" id="is_internal" name="is_internal" value="0">
                 <button type="submit" class="button p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
         </form>
@@ -503,7 +461,7 @@
 
 @if ($errors->any())
 <script>
-    Swal.fire("Selamat datang", "Data yang di input tidak valid", "error");
+    Swal.fire("", "Data yang di input tidak valid", "error");
 </script>
 @endif
 <script>

@@ -10,7 +10,7 @@ h1{
     font-family: "MADE Tommy Soft";
 }
 label{
-    color:red;
+    color:#ffc600;
     font-family: "MADE Tommy Soft";
 
 }
@@ -18,6 +18,7 @@ label{
     position: relative;
     min-height: 95vh;
     padding: 0;
+    background-color: #EAEAEA;
 }
 
 .hydrant-shadow{
@@ -28,12 +29,31 @@ label{
     transform: translate(-50%, 100%);
     left: 50%;
 }
-.hydrant{
+.greenate{
     width: 100%;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
+}
+.sendok1{
+    position: absolute;
+    width: 15%;
+    height: 85%;
+    left: -5%;
+    top: 10%;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+}
+.sendok2{
+    position: absolute;
+    width: 15%;
+    height: 85%;
+    left: 15%;
+    top: -25%;
+    mix-blend-mode: normal;
+    opacity: 0.1;
+    transform: rotate(180deg);
 }
 .form{
     height: 100%;
@@ -59,9 +79,10 @@ label.error:not(.form-control) {
 .button{
     margin-right: 2%;
     width: 120px;
+    font-weight: bold;
     font-family:"MADE Tommy Soft 2";
     font-size: 1em;
-    color: #FC797D;
+    color: #ffc600;
     background-color: #f8ede3 ;
     border: 2px solid;
     border-radius: 15px;
@@ -70,20 +91,24 @@ label.error:not(.form-control) {
 }
 .button:hover{
     color: white;
-    background:#FC797D;
+    background:#ffc600;
 }
 .button:focus{
     outline: none;
 }
-.btn-register{
+#btn-register{
     text-decoration: none;
     text-align: center;
 }
 .login-title{
-    color:#DD2A2A;
+    color:#008c15;
     font-size: 50px;
     font-family: 'Heavitas';
     letter-spacing: 2px;
+}
+
+:focus {
+    box-shadow: none !important;
 }
 /* #footer{
     padding-top: 3%;
@@ -115,7 +140,7 @@ label.error:not(.form-control) {
         margin-top:20%;
     }
     .form{
-        min-height: 95vh;
+        min-height: 80vh;
     }
     .form-control{
         width: 100%;
@@ -127,6 +152,9 @@ label.error:not(.form-control) {
         padding-top: 40%;
         padding-left: 25%;
     } */
+    .login-title{
+        font-size: 30px;
+    }
     .button{
         width: 90px;
     }
