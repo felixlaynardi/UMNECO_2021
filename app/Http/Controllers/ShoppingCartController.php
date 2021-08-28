@@ -25,49 +25,92 @@ class ShoppingCartController extends Controller
 
     public function orderSubmit(Request $request)
     {
+        // dd($request->input());
         $shoppingCart = new ShoppingCart();
-        $dineIn_choice =  $request->input('dine_in');
-        $takeaway_choice =  $request->input('takeaway_id');
-        $ordered =  $request->input('ordered');
-        
+        $dineInStatus =  $request->input('dineIn');
+        $takeAwayInput =  $request->input('takeAway');
+        $totalOrdered =  $request->input('TotalOrdered');
+
+        if($dineInStatus == "True" && $takeAwayInput != "none"){
+            $dineIn = TRUE;
+            switch($takeAwayInput){
+                case "Alter":
+                    $takeAway = 2;
+                    break;
+                case "Exhort":
+                    $takeAway = 1;
+                    break;
+                case "Tidbit":
+                    $takeAway = 3;
+                    break;
+            }
+        }else if($takeAwayInput != "none" && $dineInStatus == "False"){
+            $dineIn = FALSE;
+            switch($takeAwayInput){
+                case "Alter":
+                    $takeAway = 2;
+                    break;
+                case "Exhort":
+                    $takeAway = 1;
+                    break;
+                case "Tidbit":
+                    $takeAway = 3;
+                    break;
+            }
+        }else if($dineInStatus == "True" && $takeAwayInput == "none"){
+            $dineIn = TRUE;
+            $takeAway = 0;
+        }else if($dineInStatus == "False" && $takeAwayInput == "none"){
+            $dineIn = FALSE;
+            $takeAway = 0;
+        } 
+
         //insert order to database
-        $shoppingCart->insertOrder(1, $dineIn_choice, $takeaway_choice, $ordered);
+        $shoppingCart->insertOrder(1, $dineIn, $takeAway, TRUE);
         
-        return 'INPUT ORDER SUCCESS';
-        // return redirect()->route('dummyProfile');
+        // return 'INPUT ORDER SUCCESS';
+        return redirect()->route('dummyProfile');
     }
 
     //this one need validationr if both data is null
     public function shoppingCart(Request $request){
-        // dd($request->input('WAW'));
         $shoppingCart = new ShoppingCart();
-        $dineIn_choice =  $request->input('Dinein_choice');
-        // if(!$dineIn_choice){
-        //     dd('dineIn tidak ada');
-        // }
-        $takeaway_choice =  $request->input('Takeaway_choice');
+        $dineIn = null;
+        $takeAway = null;
+        $allInput = $request->input();
+        unset($allInput['_token']);
 
-        $takeaway_data = $shoppingCart->getTakeaway($takeaway_choice);
-        // dd($takeaway_data[0]->name);
-        // if(sizeof($takeaway_data) > 0 && !$dineIn_choice){
-        //     $takeaway_data = [];
-        //     dd('data tidak ada');
-        // }
+        foreach($allInput as $key=>$value){
+            if($key == "dineIn"){
+                $dineIn = $value;
+            }else{
+                $takeAway = $value;
+            }
+        }
 
-        // if(sizeof($takeaway_data) > 0 && !$dineIn_choice){
-        //     $takeaway_data = [];
-        //     dd('data tidak ada');
-        // }
         
+        if($dineIn != null && $takeAway != null){
+            $orders = [['MenuItem'=> $dineIn, 'Quantity'=>1, 'Subtotal'=>'1 SKKM'],['MenuItem'=> $takeAway, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']];
+            session(['OrderTotal' => 2]);
+            session(['DineIn' => TRUE]);
+            session(['TakeAway' => $takeAway]);
+        }else if($dineIn != null && $dineIn){
+            $orders = [['MenuItem'=> $dineIn, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']] ;
+            session(['OrderTotal' => 1]);
+            session(['DineIn' => TRUE]);
+            session(['TakeAway' => 'none']);
+        }else if($takeAway != null){
+            $orders = [['MenuItem'=> $takeAway, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']] ;
+            session(['OrderTotal' => 1]);
+            session(['DineIn' => FALSE]);
+            session(['TakeAway' => $takeAway]);
+        }
 
         return view('cms.page.greenate.shopping_cart', [
             'title' => 'Dummy ShoppingCart Page',
-            'orders' => [
-                ['MenuItem'=> 'Dine-In', 'Quantity'=>1, 'Subtotal'=>'1SKKM'],
-                ['MenuItem'=> $takeaway_data[0]->name, 'Quantity'=>1, 'Subtotal'=>'1SKKM']
-            ],
-            'takeaway_id' => $takeaway_choice,
-            'dine_id' => $dineIn_choice
+            'orders' => $orders,
+            'takeAway' => $takeAway,
+            'dineIn' => $dineIn
         ]);
     }
     
