@@ -156,6 +156,7 @@ label.error:not(.form-control) {
 } */
 /* Footer */
 #contact {
+    margin-top: 10%;
     background-color: #601213;
 }
 .logo {

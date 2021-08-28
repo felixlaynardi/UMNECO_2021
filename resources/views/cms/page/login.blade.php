@@ -55,10 +55,13 @@
 <script>
     const registerClick = () => {
         Swal.fire({
-            title: 'Kamu adalah...',
+            title: 'Apakah kamu mahasiswa UMN?',
             showCancelButton: true,
-            confirmButtonText: `Internal<br>(UMN)`,
-            cancelButtonText: `Eksternal<br>(Non UMN)`,
+            confirmButtonText: `Iya`,
+            cancelButtonText: `Tidak`,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            
 
             confirmButtonColor: "#ffc600",
             cancelButtonColor: "#ffc600",   

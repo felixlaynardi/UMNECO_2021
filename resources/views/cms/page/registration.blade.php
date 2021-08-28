@@ -492,7 +492,7 @@
             <br>
             <div class="tombol mt-5">
                 <input type="hidden" id="is_internal" name="is_internal" value="1">
-                <button type="submit" class="button p-2" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
+                <button type="submit" class="button p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
         </form>
     </div>
@@ -523,6 +523,14 @@
 </script>
 @endif
 <script>
+     function checkValid() { 
+        if ($('#form-register').valid()) {   
+            $('#submit-btn').prop('disabled', 'disabled');
+            $('#form-register').submit();
+        } else {
+            $('#submit-btn').prop('disabled', false);
+        }
+    };
     $("#next-btn").click(function() {
         var checkBox = document.getElementById("regulation");
         if (checkBox.checked == true) {

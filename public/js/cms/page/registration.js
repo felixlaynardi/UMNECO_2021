@@ -70,11 +70,8 @@ $(document).ready(function () {
     );
     $('#form-register').validate({
         rules: {
-            Firstname: {
+            Full_name: {
                 required: true,
-                regexeco: true
-            },
-            Lastname: {
                 regexeco: true
             },
             Student_id: {
@@ -86,6 +83,7 @@ $(document).ready(function () {
             },
             Email: {
                 required: true,
+                emailstudent: true,
                 unique_email: true
             },
             Major: {
@@ -125,11 +123,8 @@ $(document).ready(function () {
             }
         },
         messages: {
-            Firstname: {
+            Full_name: {
                 required: 'Kamu perlu mengisi nama kamu',
-                regexeco: 'Nama tidak boleh mengandung angka ataupun simbol'
-            },
-            Lastname: {
                 regexeco: 'Nama tidak boleh mengandung angka ataupun simbol'
             },
             Student_id: {
@@ -139,7 +134,8 @@ $(document).ready(function () {
                 maxlength: 'NIM yang kamu masukkan tidak valid'
             },
             Email: {
-                required: 'Kamu perlu mengisi email kamu'
+                required: 'Kamu perlu mengisi email kamu',
+                emailstudent: 'Email harus menggunakan email student'
             },
             Major: {
                 required: 'Kamu perlu mengisi jurusan kamu'
