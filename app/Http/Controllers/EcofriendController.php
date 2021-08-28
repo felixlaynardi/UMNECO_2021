@@ -122,17 +122,17 @@ class EcofriendController extends Controller
         $model = new Ecofriends();
         $data = $request->input();
         //Capitalize first letter of names and lowercases Line_id, IG Account and Email
-        $data['Firstname'] = ucwords(Str::lower($data['Firstname']));
-        $data['Lastname'] = ucwords(Str::lower($data['Lastname']));
-        $data['Line_id'] = Str::lower($data['Line_id']);
-        $data['Instagram_account'] = Str::lower($data['Instagram_account']);
+        $data['Full_name'] = ucwords(Str::lower($data['Full_name']));
         $data['Email'] = Str::lower($data['Email']);
+        $data['Instagram_account'] = Str::lower($data['Instagram_account']);
+        $data['Line_id'] = Str::lower($data['Line_id']);
 
-        //Cut the front 0 in Student_id (NIM) 
-        $data['Student_id'] = (int)$data['Student_id'];
 
         //Set rules for the form
         if ($data['is_internal'] == true) {
+            //Cut the front 0 in Student_id (NIM) 
+            $data['Student_id'] = (int)$data['Student_id'];
+
             $rule = array(
                 'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
@@ -160,13 +160,9 @@ class EcofriendController extends Controller
             );
         }
 
-
-
         $messages = [
-            'Firstname.required' => 'Kamu perlu mengisi nama kamu',
-            'Firstname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
-
-            'Lastname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
+            'Full_name.required' => 'Kamu perlu mengisi nama kamu',
+            'Full_name.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
 
             'Student_id.required' => 'Kamu perlu mengisi NIM kamu',
             'Student_id.unique' => 'NIM kamu sudah terdaftar',
@@ -220,7 +216,7 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            return redirect()->route('profileView');
+            return redirect()->route('logout');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
@@ -229,7 +225,7 @@ class EcofriendController extends Controller
     public function sendEmail($data)
     {
         $details = [
-            'title' => '[WELCOME TO RED, ' . $data['Firstname'] . ' ' . $data['Lastname'] . ']',
+            'title' => '[WELCOME TO RED, ' . $data['Full_name'] . ']',
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));

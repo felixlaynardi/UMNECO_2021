@@ -17,19 +17,19 @@ class GreenEcoFriends extends Migration
             $table->id();
             $table->string('full_name');
             $table->string('email')->unique();
-            $table->string('student_id')->unique();
-            $table->string('institution');
-            $table->string('major');
-            $table->string('generation');
+            $table->string('student_id')->unique()->nullable();
+            $table->string('institution')->nullable();
+            $table->string('major')->nullable();
+            $table->string('generation')->nullable();
             $table->string('instagram_account')->unique();
             $table->string('line_id')->unique();
             $table->string('phone_number')->unique();
             $table->string('password');
             $table->boolean('is_internal');
-            $table->boolean('dine_in');
-            $table->unsignedBigInteger('takeaway_id');
+            $table->boolean('dine_in')->nullable();
+            $table->unsignedBigInteger('takeaway_id')->nullable();
             $table->foreign('takeaway_id')->references('id')->on('green_takeaway');
-            $table->boolean('ordered');
+            $table->boolean('ordered')->nullable();
         });
     }
 
