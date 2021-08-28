@@ -475,7 +475,7 @@
                 @endif
             </div>
             <div class="form-check mb-3">
-                <input type="checkbox" id="Availability" name="Availability" value="{{ old('Availability') }}">
+                <input value="1" type="checkbox" id="Availability" name="Availability" value="{{ old('Availability') }}">
                 <label class="check check-2 mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>

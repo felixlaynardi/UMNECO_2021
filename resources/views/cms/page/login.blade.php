@@ -15,7 +15,6 @@
             <img id="image-left" src="{{ asset('images/login/Sendok Kayu.png')}}" class="sendok2">
             <img id="image-left" src="{{ asset('images/login/Alas Hydrant.png')}}" class="hydrant-shadow">
             <img id="image-left" src="{{ asset('images/login/Greenate-Logo.gif')}}" class="greenate">
-
         </div>
         <div class="col-md-6 col-12 form form-group my-auto" id="form">
             <div class="right-content mx-5">
@@ -43,7 +42,6 @@
                     <br><br>
                     <button class="button p-2" id="btn-login" type="submit" name="action" value="login">LOGIN</button>
                     <a class="button p-2" id="btn-register" type="submit"  value="register" onclick="registerClick()">REGISTER</a>
-                    
                 </form>
             </div>
         </div>

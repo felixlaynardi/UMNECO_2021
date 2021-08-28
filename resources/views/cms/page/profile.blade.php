@@ -16,7 +16,7 @@
                     Hello ECO Friend,
                 </div>
                 <div class="profile-name ">
-                    <p style="text-transform: uppercase;">{{$data->firstname}}</p>
+                    <p style="text-transform: uppercase;">{{$data->full_name}}</p>
                 </div>
                 <a href="{{url('logout')}}" class="logout">
                     <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
@@ -40,7 +40,7 @@
                 </div>
                 <div class="colon col-sm-1 col-md-1 col-lg-1 col-1">:</div>
                 <div class="profile-content col-sm-7 col-md-7 col-lg-6 col-9">
-                    <p style="text-transform: capitalize;white-space: nowrap;">{{$data->firstname}} {{$data->lastname}}</p>
+                    <p style="text-transform: capitalize;white-space: nowrap;">{{$data->full_name}}</p>
                 </div>
             </div>
 
@@ -274,7 +274,7 @@
     // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
     Swal.fire({
         icon: 'success',
-        title: 'Welcome, {{$data->firstname}}',
+        title: 'Welcome, {{$data->full_name}}',
         text: 'Hope these quests can be your new habit for a better Earth.',
     })
 </script>
