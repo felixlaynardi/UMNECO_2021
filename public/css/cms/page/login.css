@@ -140,7 +140,7 @@ label.error:not(.form-control) {
         margin-top:20%;
     }
     .form{
-        min-height: 95vh;
+        min-height: 80vh;
     }
     .form-control{
         width: 100%;
@@ -152,6 +152,9 @@ label.error:not(.form-control) {
         padding-top: 40%;
         padding-left: 25%;
     } */
+    .login-title{
+        font-size: 30px;
+    }
     .button{
         width: 90px;
     }
