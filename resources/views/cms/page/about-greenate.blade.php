@@ -33,7 +33,7 @@
                         <li><p>Kata GREENATE sendiri terinspirasi dari granat yang dapat memberikan dampak besar kepada sekitarnya. Harapan kami, GREENATE dapat mewujudkan hal yang sama melalui kegiatan yang dilakukan guna mengatasi masalah food waste di Indonesia.</p></li>
                     </ul> 
                 <p  >Melalui kegiatan yang ada di GREENATE, UMN ECO 2021 ingin mengajak ECO Friends untuk mengambil bagian dalam mengurangi food waste dan memberikan dampak yang besar bagi Bumi kita.</p>
-            <div class="row justify-content-s-around  justify-content-between px-5">
+            <div class="row regulation-button px-sm-5 px-1">
                 <div class="col-6">
                     <a href="instagram.com/lifosmin"><button class="p-3">Regulasi Greenate Internal</button></a>
                 </div>
@@ -47,11 +47,11 @@
 
     <div class="section-2 d-flex flex-column justify-content-center text-center">
         <h1>OUR PROGRAM</h1>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-interval="10000000000">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-interval="">
             <div class="carousel-inner">
                 <div class="carousel-item active" data-interval="false">
                     <img src="{{ asset('images/about-greenate/take-away.png') }}" class="d-block m-auto" alt="..." width="50%">
-                    <div class="carousel-caption d-block m-auto container pt-5 mt-5">
+                    <div class="carousel-caption d-block m-auto container pt-5 mt-5 px-3">
                         <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
                     </div>
                     <div class="section-3 mt-5">
@@ -147,8 +147,11 @@
                                     <div class="swiper-pagination"></div>
 
                                     <!-- If we need navigation buttons -->
-                                    <div class="swiper-button-prev"></div>
-                                    <div class="swiper-button-next"></div>
+                                
+                                    <div class="swiper-button-prev"><div class="container-navi-swipe"> </div></div>
+                                   
+                                    
+                                    <div class="swiper-button-next"><div class="container-navi-swipe"> </div></div>
 
                                 </div>
                             </div>
@@ -163,9 +166,9 @@
                     </div>
                 </div>
 
-                <div class="carousel-item" >
+                <div class="carousel-item " data-bs-interval="100000000000">
                     <img src="{{ asset('images/about-greenate/dine-in.png') }}" class="d-block m-auto" alt="..." width="30%">
-                    <div class="carousel-caption d-block m-auto container pt-5 mt-5">
+                    <div class="carousel-caption d-block m-auto container pt-5 mt-5 px-3">
                         <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
                     </div>
 
@@ -173,19 +176,16 @@
                         <div class="container d-flex">
                             <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="leaf-4">
                             <img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" class="leaf-5"> 
-
+                            <img src="{{ asset('images/about-greenate/chicken.png') }}" class="dine-in-chicken">
                             <div class="row content-2">
-                                <div class="col-8 p-5">
+                                <div class="dine-in-text col-lg-6 col-12 ">
                                     <h1>DINE-IN</h1>
                                     <p>Webinar yang diselenggarakan pada GREENATE akan mengangkat topik food waste dengan tagline “Too Good To Be Waste”. </p>
                                     <p>Melalui Webinar ini, ECO Friends diharapkan dapat menyerap materi yang disampaikan dan mengimplementasikannya di dalam kehidupan sehari-hari untuk mengurangi food waste di Bumi kita.</p>
                                 </div>
                             </div>
-                            <div class="row justify-content-center text-center mt-2">
-                                <h6>Not a member yet?</h6>
-                            </div>
-                            <div class="row justify-content-center text-center">
-                                <a href="" class="py-3"><button class="">Become ECO Friends</button></a>
+                            <div class="row justify-content-center text-center mt-2 zoom-container">
+                                <img src="{{ asset('images/about-greenate/zoom.png') }}" class="zoom-logo">
                             </div>
                         </div>
                     </div>
