@@ -2,6 +2,11 @@ body{
     background-color: #1c5c3c;
     overflow-x: hidden;
 }
+
+.main{
+    position: relative;
+    overflow-x: hidden;
+}
   
 .section-1{
     position: relative;
@@ -57,6 +62,11 @@ body{
     /* animation: slideup 2s linear; */
 }
 
+.section-1 .greenate-content button:hover{
+    background: #FFE227;
+    transition-duration: 1s;
+}
+
 .section-1 .greenate-content button:focus {
     border: none;
     outline: none;
@@ -82,13 +92,13 @@ body{
     padding: 15px;
     border-radius: 100%;
     width: auto;
-    top: 100px;
+    top: 25%;
     bottom: auto;
     background-color: #083c24;
     color: #ffcc3c;
     border: none;
     outline: none;
-    right: 7%;
+    right: 20%;
     left: auto;
     overflow: hidden;
 }
@@ -97,8 +107,8 @@ body{
     padding: 15px;
     width: auto;
     border-radius: 100%;
-    top: 100px;
-    left: 7%;
+    top: 25%;
+    left: 20%;
     right: auto;
     bottom: auto;
     background-color: #083c24;
@@ -136,7 +146,12 @@ body{
 }
 
 .section-3{
-    
+    display:none;
+}
+
+.section-3-active{
+    display: block;
+    transition-duration: 1s;
 }
 
 .dine-in-text h1{
@@ -545,7 +560,7 @@ body{
         top: 15%;
         transform:translate(-50%,-50%);
         left: 50%;
-        width: 110%;
+        width: 100%;
     }
     .section-1 .greenate-content h1 {
         font-size: 40px;
@@ -605,4 +620,30 @@ body{
     .swiper-button-prev, .swiper-button-next{
         opacity: 0.8;
     }
+}
+
+
+/* Add ons */
+.greenate-logo{
+    width: 80%;
+}
+#contact{
+    margin-top: 10%;
+    background: #063920;
+}
+@media (max-width: 768px){
+    .section-2 .carousel-control-next{
+        top: 30%;
+        right: 0%;
+    }
+    
+    .section-2 .carousel-control-prev{
+        top: 30%;
+        left: 0%;
+    }
+}
+.become-eco-friends-button:hover{
+    background: #ffcc3c;
+    color: #1c5c3c;;
+    transition-duration: 1s;
 }
