@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
+use App\Mail\OrderEmail;
 use App\Models\Ecofriends;
 use App\Models\MissionProgress;
 use Illuminate\Http\Request;
