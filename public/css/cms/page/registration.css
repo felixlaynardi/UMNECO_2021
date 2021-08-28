@@ -153,6 +153,9 @@ label.error:not(.form-control) {
     text-align: center;
 } */
 /* Footer */
+.navbar{
+    background: none;
+}
 #contact {
     margin-top: 10%;
 }
