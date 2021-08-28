@@ -2,8 +2,6 @@ body{
     background-color: #1c5c3c;
     overflow-x: hidden;
 }
-
-
   
 .section-1{
     position: relative;
@@ -439,7 +437,7 @@ body{
 .swiper {
     max-width: 650px;
     max-height: 1000px;
-    overflow: visible;
+    overflow-x: hidden;
   }
 
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -578,13 +576,15 @@ body{
 }
 
 @media (max-width: 450px){
+    .dine-in-text{
+        padding: 50px 60px;
+    }
     .section-1 .regulation-button{
         justify-content: space-between;
     }
     .swiper {
         max-width: 380px;
         max-height: 1000px;
-        overflow: visible;
       }
       .swiper-slide{
         padding-bottom: 30px;
@@ -595,7 +595,6 @@ body{
     .swiper {
         max-width: 340px;
         max-height: 980px;
-        overflow: visible;
       }
     .swiper-slide{
         padding-top: 50px;
