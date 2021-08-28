@@ -361,13 +361,15 @@
                             <br>
                             <br>
                         </div>
-                    </div>
+                </div>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
                     <label class="check mt-3 col-11" for="regulation">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
                 </div>
-                <button class="button p-2" type="button" id="next-btn" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                <div class="next-button" style="text-align:center;">
+                    <button class="button p-2" type="button" id="next-btn" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                </div>
             </div>
         </div>
     </form>
@@ -381,14 +383,6 @@
                 <div class="error error-message">{{ $errors->first('Full_name') }}</div>
                 @endif
             </div>
-            <!-- <div class="form-group mb-3">
-                <label for="Lastname" class="label">Nama Belakang</label>
-                <input type="text" name="Lastname" id="Lastname" placeholder="ECO Family" value="{{ old('Lastname') }}" class="form-control mb-2">
-                @if($errors->has('Lastname'))
-                <div class="error error-message">{{ $errors->first('Lastname') }}</div>
-                @endif
-            </div> -->
-
             <div class="form-group mb-3">
                 <label for="Email" class="label">Email Student</label>
                 <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
@@ -440,7 +434,6 @@
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
                     <option value="2014">2021</option>
-                    <!-- <option value="Bukan Mahasiswa">Bukan Mahasiswa</option> -->
                 </select>
                 @if($errors->has('Generation'))
                 <div class="error error-message">{{ $errors->first('Generation') }}</div>
@@ -482,8 +475,8 @@
                 @endif
             </div>
             <div class="form-check mb-3">
-                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
+                <input type="checkbox" id="Availability" name="Availability" value="{{ old('Availability') }}">
+                <label class="check check-2 mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif
@@ -498,20 +491,11 @@
     </div>
 </div>
 
-<!-- <footer id="footer">
-    <img src="{{ asset('images/regis/Logo Footer.png')}}" class="logo mx-auto">
-    <h6 class="foot mx-auto">© UMN ECO</h6>
-</footer> -->
 @include('cms.template.footer')
-
-<!-- </header> -->
 
 @endsection
 
 @section('custom-js')
-<!-- <script src="{{ asset('js/cms/page/home.js') }}"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>

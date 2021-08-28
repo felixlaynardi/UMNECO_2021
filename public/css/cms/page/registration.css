@@ -86,8 +86,8 @@ label {
     color: #545839;
 }
 .check {
-    color: #008c15;
-    font-family: "MADE Tommy soft 2";
+    color: #FFC600;
+    font-family: "MADE Tommy soft";
 }
 .error {
     font-family: "Made Tommy soft 2";
@@ -122,27 +122,25 @@ label.error:not(.form-control) {
     font-size: 0.8em;
 }
 .button {
-    width: 120px;
     font-family: "MADE Tommy Soft 2";
     font-weight: bold;
-    color: #ffc600;
-    background-color: #f8ede3 ;
+    color: #FFFFFF;
+    background: #FFC600;
     border: 1px solid;
-    border-radius: 15px;
+    border-radius: 8px;
     outline: none;
     position: relative;
-    float: right;
     transition: 0.5s;
 }
 .button:hover {
-    color: white;
-    background:#ffc600;
+    background: #FFE227;
 }
 .button:focus {
     outline: none;
 }
 .tombol {
     padding-bottom: 20px;
+    text-align: center;
 }
 #next-btn {
     width: 200px;
@@ -157,7 +155,6 @@ label.error:not(.form-control) {
 /* Footer */
 #contact {
     margin-top: 10%;
-    background-color: #601213;
 }
 .logo {
     width: 100px;
@@ -230,24 +227,7 @@ label.error:not(.form-control) {
     line-height: 1em;
     text-align: center;
 }
-.button-choice {
-    color: #FFFFFF;
-    background-color: #ffc600 ;
-    border: 1px solid;
-    border-radius: 15px;
-    outline: none;
-    position: relative;
-    float: right;
-    transition: 0.5s;
-}
-.button-choice:hover {
-    color: #ffc600;
-    background:#f8f7e3;
-}
-.button-choice:focus {
-    outline: none;
-}
-@media (max-width: 684px) {
+@media (max-width: 1250px) {
     .check {
         vertical-align: middle;
     }
@@ -286,5 +266,21 @@ label.error:not(.form-control) {
     }
     label.check {
         font-size: 0.8em;
+    }
+}
+.swal2-html-container{
+    font-family: "MADE Tommy soft";
+}
+
+
+.check-2{
+    color: #1B5A3B;
+}
+#submit-btn{
+    width: 30%;
+}
+@media (max-width: 1455px) {
+    .check-2 {
+        vertical-align: middle;
     }
 }

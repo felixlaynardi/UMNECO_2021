@@ -365,13 +365,14 @@
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
-                    <label class=" check mt-3 col-11" for="regulation">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
+                    <label class="check mt-3 col-11" for="regulation">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
                 </div>
-                <button class="button p-2" type="button" id="next-btn" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                <div class="next-button" style="text-align:center;">
+                    <button class="button p-2" type="button" id="next-btn" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                </div>
             </div>
         </div>
     </form>
-
     <div class="step step-2 registerform">
         <form action="{{route('registration')}}" method="post" class="mb-2" id="form-register">
             @csrf
@@ -382,7 +383,6 @@
                 <div class="error error-message">{{ $errors->first('Full_name') }}</div>
                 @endif
             </div>
-
             <div class="form-group mb-3">
                 <label for="Email" class="label">Email</label>
                 <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
@@ -390,7 +390,6 @@
                 <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
             </div>
-
             <div class="form-group mb-3">
                 <label for="Institution" class="label">Institusi</label>
                 <input type="text" name="Institution" id="Institution" placeholder="Universitas Multimedia Nusantara" value="{{ old('Institusi') }}" class="form-control mb-2" required>
@@ -398,7 +397,6 @@
                 <div class="error error-message">{{ $errors->first('Institution') }}</div>
                 @endif
             </div>
-
             <div class="form-group mb-3">
                 <label for="Instagram_account" class="label">Username IG (Tidak di private) </label>
                 <input type="text" name="Instagram_account" id="Instagram_account" placeholder="umn_eco" value="{{ old('Instagram_account') }}" class="form-control mb-2" required>
@@ -436,7 +434,7 @@
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
+                <label class="check check-2 mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif
@@ -445,27 +443,17 @@
             <br>
             <div class="tombol mt-5">
                 <input type="hidden" id="is_internal" name="is_internal" value="0">
-                <button type="submit" class="button p-2" onclick="this.disabled=true;this.value='Submitting...'; this.form.submit();">Submit</button>
+                <button type="submit" class="button p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
         </form>
     </div>
 </div>
 
-<!-- <footer id="footer">
-    <img src="{{ asset('images/regis/Logo Footer.png')}}" class="logo mx-auto">
-    <h6 class="foot mx-auto">© UMN ECO</h6>
-</footer> -->
-
 @include('cms.template.footer')
-
-</header>
 
 @endsection
 
 @section('custom-js')
-<!-- <script src="{{ asset('js/cms/page/home.js') }}"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 <script src="{{ asset('js/cms/base/sweetalert/sweetalert.js') }}"></script>
 <script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
@@ -477,6 +465,14 @@
 </script>
 @endif
 <script>
+     function checkValid() { 
+        if ($('#form-register').valid()) {   
+            $('#submit-btn').prop('disabled', 'disabled');
+            $('#form-register').submit();
+        } else {
+            $('#submit-btn').prop('disabled', false);
+        }
+    };
     $("#next-btn").click(function() {
         var checkBox = document.getElementById("regulation");
         if (checkBox.checked == true) {
