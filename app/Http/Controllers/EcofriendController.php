@@ -34,17 +34,6 @@ class EcofriendController extends Controller
         }
     }
 
-    public function registrationExternalView()
-    {
-        if (!session()->has('user')) {
-            $model = new Ecofriends();
-            $ecofriends = $model->getAllEcoFriends();
-            return view('cms.page.registration_external', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
-        } else {
-            return redirect()->route('profileView');
-        }
-    }
-
     public function loginView()
     {
         if (!session()->has('user')) {
@@ -132,6 +121,7 @@ class EcofriendController extends Controller
         if ($data['is_internal'] == true) {
             //Cut the front 0 in Student_id (NIM) 
             $data['Student_id'] = (int)$data['Student_id'];
+            $data['Email_external'] = '';
 
             $rule = array(
                 'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
@@ -147,6 +137,7 @@ class EcofriendController extends Controller
                 'Availability' => 'required|in:1'
             );
         } else if ($data['is_internal'] == false) {
+            $data['Email'] = $data['Email_external'];
             $rule = array(
                 'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
                 'Email' => 'required|email|unique:eco_friends,email',
@@ -206,7 +197,7 @@ class EcofriendController extends Controller
         $validator = Validator::make($data, $rule, $messages);
 
         if (!$validator->fails()) {
-            unset($data['Password_confirmation'], $data['_token'], $data['Availability']);
+            unset($data['Password_confirmation'], $data['_token'], $data['Availability'], $data['Email_external']);
 
             $data['Password'] = Hash::make($request['Password']);
 

@@ -54,27 +54,7 @@
 </div>
 <script>
     const registerClick = () => {
-        Swal.fire({
-            title: 'Apakah kamu mahasiswa UMN?',
-            showCancelButton: true,
-            confirmButtonText: `Iya`,
-            cancelButtonText: `Tidak`,
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            
-
-            confirmButtonColor: "#ffc600",
-            cancelButtonColor: "#ffc600",   
-            
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                window.location.href = "{{ route('registration')}}";
-            } else{
-                window.location.href = "{{ route('registration_external')}}";
-            }
-        })
-        
+        window.location.href = "{{ route('registration')}}";
     }
 </script>
 @include('cms.template.footer') 
