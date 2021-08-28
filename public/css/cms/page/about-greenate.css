@@ -132,7 +132,7 @@ body{
     font-weight: 500;
     line-height: 30px;
     letter-spacing: 0em;    
-    text-align: justify;
+    text-align: left;
     
     color: white;
 }
@@ -439,7 +439,6 @@ body{
 .swiper {
     max-width: 650px;
     max-height: 1000px;
-    overflow: visible;
   }
 
 .swiper-button-next:after, .swiper-button-prev:after{
@@ -584,7 +583,6 @@ body{
     .swiper {
         max-width: 380px;
         max-height: 1000px;
-        overflow: visible;
       }
       .swiper-slide{
         padding-bottom: 30px;
@@ -595,7 +593,6 @@ body{
     .swiper {
         max-width: 340px;
         max-height: 980px;
-        overflow: visible;
       }
     .swiper-slide{
         padding-top: 50px;

@@ -35,10 +35,10 @@
                 <p  >Melalui kegiatan yang ada di GREENATE, UMN ECO 2021 ingin mengajak ECO Friends untuk mengambil bagian dalam mengurangi food waste dan memberikan dampak yang besar bagi Bumi kita.</p>
             <div class="row regulation-button px-sm-5 px-1">
                 <div class="col-6">
-                    <a href="instagram.com/lifosmin"><button class="p-3">Regulasi Greenate Internal</button></a>
+                    <button class="p-3">Regulasi Greenate </br>Internal</button>
                 </div>
                 <div class="col-6">
-                    <button class="p-3">Regulasi Greenate External</button>
+                    <button class="p-3">Regulasi Greenate </br> External</button>
                 </div>
             </div>
             </div>
