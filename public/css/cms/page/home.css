@@ -9,7 +9,7 @@ body, html {
   scroll-behavior: smooth;
 }
 
-@media(max-width: 1441px){
+@media(max-width: 1600px){
   .left-pipe{
     width: 20%;
     left:-3%;
