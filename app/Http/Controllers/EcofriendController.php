@@ -231,4 +231,15 @@ class EcofriendController extends Controller
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
     }
+    public function sendEmailTest()
+    {
+        $details = [
+            'title' => '[GREENATE: ORDER SUCCESSFUL]',
+            'name' => 'Putu Pricillia',
+            'receipt' => 'https://i.imgur.com/08kIz9y.png'
+        ];
+        Mail::to("putu.putri@student.umn.ac.id")->send(new OrderEmail($details));
+
+        dd("done");
+    }
 }

@@ -9,6 +9,7 @@ use Illuminate\Queue\SerializesModels;
 
 class OrderEmail extends Mailable
 {
+    public $details;
     use Queueable, SerializesModels;
 
     /**
@@ -30,9 +31,6 @@ class OrderEmail extends Mailable
     {
         return 
             $this->subject($this->details['title'])
-            ->view('cms.email.orderMail')
-            ->attach(public_path('/images/order-receipt/Alter.png'),[
-                'as' => 'attachment.jpg'
-            ]);
+            ->view('cms.email.orderMail');
     }
 }
