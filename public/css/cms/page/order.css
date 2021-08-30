@@ -349,12 +349,12 @@ label{
     transition: 1s;
 }
 .carousel-item {
-    transition: transform 2.6s ease-in-out;
+    transition: transform 0.4s ease-in-out;
 }
   
 .carousel-fade .active.carousel-item-start,
 .carousel-fade .active.carousel-item-end {
-    transition: opacity 0s 2.6s;
+    transition: opacity 0s 0.4s;
 }
 
 /* Style Java Script */
