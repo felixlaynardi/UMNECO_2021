@@ -9,12 +9,12 @@
 @section('content')
 <div class="main">
     
-    <!-- <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="leaf-1">
+    <img src="{{ asset('images/about-greenate/top-leaf.png') }}" class="leaf-1">
     <img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" class="leaf-2"> 
     <img src="{{ asset('images/about-greenate/bottom-leaf.png') }}" class="leaf-3"> 
     <img src="{{ asset('images/about-greenate/chicken.png') }}" class="chicken">
     <img src="{{ asset('images/about-greenate/burger.png') }}" class="burger">
-    <img src="{{ asset('images/about-greenate/fries.png') }}" class="fries">     -->
+    <img src="{{ asset('images/about-greenate/fries.png') }}" class="fries">    
     <div class="white-circle d-block"></div>
 
     <div class="section-1 mb-5">

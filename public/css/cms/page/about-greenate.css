@@ -5,7 +5,10 @@ body{
 
 .main{
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
 }
   
 .section-1{
@@ -154,7 +157,7 @@ body{
     transition-duration: 1s;
 }
 
-.dine-in-text h1{
+.dine-in-text p, .dine-in-text h1{
     text-align: left;
 }
 
@@ -327,7 +330,7 @@ body{
     width: 13%;
     transform: scaleX(-1) rotate(29deg);
     right: 0;
-    top: 85%;
+    top: 25%;
 }
 
 .leaf-3{
@@ -337,7 +340,7 @@ body{
     width: 10%;
     transform: scaleX(-1) rotate(107deg);
     right: 0;
-    top: 115%;
+    top: 32%;
     mix-blend-mode: overlay;
 }
 
@@ -372,7 +375,7 @@ body{
 }
 
 .chicken{
-    top: 170%;
+    top: 47%;
     opacity: 0.3;
     position: absolute;
     z-index: -1;
@@ -386,7 +389,7 @@ body{
     position: absolute;
     z-index: -1;
     width: 17%;
-    top: 300%;
+    top: 70%;
 }
 
 .fries{
@@ -394,7 +397,7 @@ body{
     position: absolute;
     z-index: -1;
     width: 20%;
-    top: 360%;
+    top: 85%;
     left: -7%
 }
 
@@ -487,6 +490,10 @@ body{
     background-color: #089444!important;
 }
 
+#contact{
+    margin-top: 0!important;
+}
+
 @media (max-width: 1204px){
     .section-1 .greenate-content h1 {
         font-size: 60px;
@@ -557,10 +564,10 @@ body{
 
 @media (max-width: 594px){
     .white-circle {
-        top: 15%;
+        top: 5%;
         transform:translate(-50%,-50%);
         left: 50%;
-        width: 100%;
+        width: 150%;
     }
     .section-1 .greenate-content h1 {
         font-size: 40px;
@@ -623,6 +630,22 @@ body{
 }
 
 
+@media (max-width: 350px){
+    .swiper {
+        max-width: 290px;
+        max-height: 980px;
+      }
+    .swiper-slide{
+        padding-top: 50px;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+        padding-bottom: 5px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        opacity: 0.8;
+    }
+}
+
 /* Add ons */
 .greenate-logo{
     width: 80%;
@@ -642,6 +665,11 @@ body{
         left: 0%;
     }
 }
+
+.become-eco-friends-button{
+    transition-duration: 0.6s;
+}
+
 .become-eco-friends-button:hover{
     background: #ffcc3c;
     color: #1c5c3c;;
