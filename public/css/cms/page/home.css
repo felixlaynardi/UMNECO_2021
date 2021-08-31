@@ -8,7 +8,64 @@ body, html {
   height: 5000px;
   scroll-behavior: smooth;
 }
-
+@media(min-width: 1601px){
+  .left-pipe{
+    width: 20%;
+    left:-3%;
+    top: 20%;
+  }
+  .right-pipe{  
+    width: 20%;
+    left:-3%;
+    top: 20%;
+  }
+  .landing-header{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1260px;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
+    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
+  }
+  .glass-section{
+    width:104%;
+    left: -15%; 
+    top: 20%;
+  }
+  .button{
+    position: absolute;
+    width: 310px;
+    height: 5%;
+    right: 14%;
+    top: 54%;
+  }
+  .welcome{
+    position: absolute;
+    width: 217px;
+    height: 8%;
+    right: 19%;
+    top: 26%;
+    font-size: 75px;
+  }
+  .we{
+    position: absolute;
+    width: 217px;
+    height: 8%;
+    right: 16%;
+    top: 35%;
+    font-size:95px;
+  }
+  .open{
+    position: absolute;
+    width: 217px;
+    height: 8%;
+    right: 17%;
+    top: 44%;
+    font-size: 95px;
+  }
+}
 @media(max-width: 1600px){
   .left-pipe{
     width: 20%;
