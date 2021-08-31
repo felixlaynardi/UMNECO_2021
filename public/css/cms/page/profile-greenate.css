@@ -1,8 +1,8 @@
 .main{
-    
+    flex-flow: column wrap;
+    overflow: hidden;
     background-color: #F4F4F4;
-    overflow-x: hidden;
-
+    display: flex;
 }
 
 .banner{
@@ -42,9 +42,13 @@
 }
 
 
+
 .order-wrapper{
-    padding: 180px;
     position: relative;
+}
+
+.order-content{
+    z-index: 5;
 }
 
 .order-button:hover{
@@ -58,7 +62,12 @@
     box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 34px;
     padding: 100px;
+    
     transition: all 0.2s ease-in-out;
+}
+
+.order-wrapper button{
+    z-index: 10;
 }
 
 .order-button h2{
@@ -102,28 +111,28 @@
     opacity: 0.5;
     transform: scaleX(-1);
     left: -5%;
-    top: 612px;
+    top: 20%;
 }
 .leaf-3{
     position: absolute;
     opacity: 0.5;
     right: -4%;
     width: 30%;
-    top: 609px;
+    top: 30%;
 }
 
 .leaf-4{
     position: absolute;
-
+    z-index: 1;
     width: 30%;
     opacity: 0.5;
-    bottom: -20%;
-    right: 0;
+    bottom: -5%;
+    right: -5%;
 }
 
 .cutting-board{
     position: absolute;
-    left: -12%;
+    left: -15%;
     bottom: -30%;
     opacity: 0.5;
 }
@@ -162,13 +171,60 @@
     width: 100%;
 }
 
+@media (max-width: 1026px){
+
+    .soda{
+        position: absolute;
+        right: 14%;
+        bottom: -42%;
+        width: 15%;
+    
+    }
+
+    .fries{
+        position: absolute;
+        opacity: 0.5;
+        right: -60px;
+        bottom: -90px;
+        width: 22%;
+    }
+
+}
+
+@media (max-width: 890px){
+    .soda{
+        display: none;
+    }
+
+    .fries{
+        display: none;
+    }
+
+    .order-button{
+        padding: 60px;
+    }
+    .order-button h2{
+        font-size: 32px;
+        line-height: 44px;
+    }
+}
+
+
 @media (max-width: 512px){
+    .order-button{
+        padding: 40px;
+    }
+    .order-button h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+
     .banner h3{
         font-family: MADE Tommy Soft;
         font-style: normal;
         font-weight: bold;
-        font-size: 15px;
-        line-height: 36px;
+        font-size: 13px;
+        line-height: 30px;
         text-align: left;
         color: white;
     }
@@ -179,6 +235,28 @@
         font-weight: bold;
         font-size: 52px;
         line-height: 88px;
+        text-align: left;
+        color: white;
+    }
+}
+
+@media (max-width: 350px){
+    .banner h3{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px!important;
+        line-height: 15px;
+        text-align: left;
+        color: white;
+    }
+    
+    .banner h1{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
         text-align: left;
         color: white;
     }
