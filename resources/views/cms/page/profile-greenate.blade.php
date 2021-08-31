@@ -58,9 +58,9 @@
                             <img src="{{ asset('images/about-greenate/exhort.png') }}" alt="" width="100%">
                         </div>
                         <p>Pada kegiatan ini, ECO Friends akan membuat video tentang tips bagaimana menyimpan makanan agar dapat bertahan lebih lama.</p>
-                        <div class="py-2 px-5 d-flex text-center justify-content-center"><button>Submit</button></div>
+                        <div class="py-2 px-5 d-flex text-center justify-content-center submit-twibbon-button"><button>Submit</button></div>
                         
-                        <div class="py-2 px-5 d-flex text-center justify-content-center"><button>Twibbon</button></div>
+                        <div class="py-2 px-5 d-flex text-center justify-content-center submit-twibbon-button"><button>Twibbon</button></div>
                     </div>
                 </div>
                 
