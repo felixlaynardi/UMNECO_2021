@@ -33,7 +33,7 @@
     <!-- ----------------------------------------- -->
 
     <!-- Ordered-------------------------------------------------------------------- -->
-    <!-- <div class="order-wrapper py-5">
+    <div class="order-wrapper py-5">
         <img src="{{ asset('images/profile-greenate/leaf.png') }}" class="leaf-4 d-none d-sm-block">
         <img src="{{ asset('images/profile-greenate/cutting-board.png') }}" class="cutting-board d-none d-sm-block">
         <div class="order-content d-flex justify-content-center align-items-center container py-5">
@@ -67,7 +67,7 @@
                 
             </div>
         </div>
-    </div> -->
+    </div>
     <!-- ----------------------------------------- -->
 
 </div>
