@@ -3,6 +3,7 @@
 use App\Http\Controllers\EcofriendController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
+use App\Http\Controllers\TwibbonController;
 use App\Http\Controllers\OpenRecruitment\OprecController;
 use App\Http\Controllers\OpenRecruitment\OprecTableController;
 use App\Http\Controllers\Auth\RegisterAdminController;
@@ -40,7 +41,7 @@ Route::get('/about-greenate', function () {
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
-Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
+Route::get('/registration', [EcofriendController::class, 'registrationInternalView'])->name('registrationView');
 Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
@@ -51,6 +52,12 @@ Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('su
 
 // mysteryQuest
 Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
+
+// Twibbon
+Route::get('/twibbon', function () {return redirect('/twibbon/exhort');})->name('twibbon');
+Route::get('/twibbon/exhort', [TwibbonController::class, 'exhort'])->name('twibbonExhort');
+Route::get('/twibbon/alter', [TwibbonController::class, 'alter'])->name('twibbonAlter');
+Route::get('/twibbon/tidbit', [TwibbonController::class, 'tidbit'])->name('twibbonTidbit');
 
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');

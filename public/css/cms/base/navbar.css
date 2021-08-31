@@ -2,7 +2,7 @@
 /* Bootstrap Navbar Changes */
 .navbar{
     /* backdrop-filter: saturate(180%) blur(20px); */
-    background: #D7110C;;
+    background: #1B5B3B;
     /* padding:0; */
     position: fixed;
     width: 100%;
@@ -58,7 +58,7 @@
     right: 16px;
     height: 2rem;
     width: 2rem;
-    background: #96160c;
+    background: rgb(61, 92, 62);
     border-radius: 10px;
     z-index: 999999999;
     top: 12px;
@@ -107,7 +107,7 @@
   transition: transform calc(var(--td) * 2) var(--td) var(--te);
   width: 100%;
   z-index: -100;
-  background: #D7110C;
+  background: #1B5B3B;
 }
 .nav-main::before {
   top: 0;
