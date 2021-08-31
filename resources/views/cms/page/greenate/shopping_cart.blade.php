@@ -1,7 +1,7 @@
 {{-- {{ dd($orders[0]); }} --}}
 @extends('cms.template.app')
 
- @section('custom-css')
+@section('custom-css')
     <link rel="stylesheet" href="{{ asset('css/cms/page/recipe.css') }}">
 @endsection
 

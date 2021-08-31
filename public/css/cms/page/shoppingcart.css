@@ -1,0 +1,19 @@
+header {
+    background-image: #1B5A3B ;
+    color: #FFCB3D;
+    margin-bottom: 2%;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    text-align: center;
+
+    background-image: url("public/images/shoppingcart/Daun 3.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+.table{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 11px 35px -13px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 11px 35px -13px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 11px 35px -13px rgba(0,0,0,0.75);;
+}
