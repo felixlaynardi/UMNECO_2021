@@ -15,7 +15,7 @@
                 <img src="{{ asset('images/home/Gabung WITH saos.png')}}" alt="" class="coffee" id="glass" style="">
             </div>
             
-            <a class="button p-2 btn-getin" type="" href="{{ route('about-red' )}}" value="">GET IN</a>
+            <a class="button p-lg-2 btn-getin" type="" href="{{ route('about-red' )}}" value="">GET IN</a>
             <div class="landing-desc">
                 <div class="welcome">Welcome, <br></div>
                 <div class="we">We're <br></div>

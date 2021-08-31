@@ -8,6 +8,23 @@ body, html {
   height: 5000px;
   scroll-behavior: smooth;
 }
+.landing-header{
+  position: absolute; 
+  z-index: 3;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 35%;
+  background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
+}
+.btn-getin{
+  font-family: MADE Tommy Soft;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  color: #1B5A3B;
+}
 @media(min-width: 1601px){
   .left-pipe{
     width: 20%;
@@ -20,14 +37,10 @@ body, html {
     top: 20%;
   }
   .landing-header{
-    position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     height: 1260px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width:104%;
@@ -37,7 +50,6 @@ body, html {
   .button{
     position: absolute;
     width: 310px;
-    height: 5%;
     right: 14%;
     top: 54%;
   }
@@ -83,9 +95,6 @@ body, html {
     left: 0;
     right: 0;
     height: 715px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width:104%;
@@ -95,7 +104,6 @@ body, html {
   .button{
     position: absolute;
     width: 205px;
-    height: 8%;
     right: 20%;
     top: 59%;
   }
@@ -131,9 +139,6 @@ body, html {
     left: 0;
     right: 0;
     height: 613px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width:104%;
@@ -143,7 +148,6 @@ body, html {
   .button{
     position: absolute;
     width: 205px;
-    height: 10%;
     right: 16%;
     top: 59%;
   }
@@ -179,19 +183,18 @@ body, html {
     left: 0;
     right: 0;
     height: 505px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width:104%;
     left: -17%; 
     top: 20%;
   }
+  .btn-getin{
+    font-size: 27px;
+  }
   .button{
     position: absolute;
     width: 205px;
-    height: 12%;
     right: 14%;
     top: 74%;
   }
@@ -227,9 +230,6 @@ body, html {
     left: 0;
     right: 0;
     height: 505px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width:104%;
@@ -239,7 +239,6 @@ body, html {
   .button{
     position: absolute;
     width: 205px;
-    height: 12%;
     right: 14%;
     top: 74%;
   }
@@ -276,9 +275,6 @@ body, html {
     left: 0;
     right: 0;
     height: 505px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width: 109%;
@@ -288,7 +284,6 @@ body, html {
   .button{
     position: absolute;
     width: 164px;
-    height: 12%;
     right: 27%;
     top: 71%;
   }
@@ -325,9 +320,6 @@ body, html {
     left: 0;
     right: 0;
     height: 460px;
-    border-bottom-left-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: linear-gradient(180deg, #1B5A3B 3.65%, #03200E 100%);
   }
   .glass-section{
     width: 109%;
@@ -337,7 +329,6 @@ body, html {
   .button{
     position: absolute;
     width: 161px;
-    height: 13%;
     right: 24%;
     top: 72%;
   }
@@ -425,16 +416,6 @@ body, html {
 }
 .button:focus{
   outline: none;
-}
-.btn-getin{
-  font-family: MADE Tommy Soft;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 45px;
-  text-align: center;
-  text-decoration: none;
-  color: #1B5A3B;
 }
 .landing-desc {
   font-family: MADE Tommy Soft;
