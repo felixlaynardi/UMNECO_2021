@@ -115,7 +115,7 @@ button{
 
 .dineIn{
     text-align: right;
-    margin-top: 5%;
+    margin-top: 50px;
     background-color: #FFFFFF;
     border-radius: 15px;
     box-shadow: 10px 10px 23px -3px rgba(0,0,0,0.75);
@@ -152,7 +152,7 @@ label{
     background-color: #FFC600;
     color: white;
     border-radius: 5px;
-    margin-right: 5%;
+    /* margin-right: 5%; */
     padding-left: 1%;
     padding-right: 1%;
 }
@@ -212,7 +212,7 @@ label{
 
 /* Max width */
 @media(max-width: 1023px) {
-.kanan, .ayam, .monitor{
+.kanan, .ayam, .monitor, .burger, .kentang{
     display: none;
 }
 
@@ -246,7 +246,8 @@ label{
 }
 
 .DineInLogo{
-    margin-left: 17%;
+    margin:auto;
+    margin-top: 10%;
     width: 60%;
 }
 
@@ -293,7 +294,7 @@ label{
 }
 
 .carousel-inner {
-    width: 100%;
+    width: 83.3333333333%;
     margin: auto;
     transition: 1s;
 }
@@ -317,15 +318,20 @@ label{
 }
 .carousel-control-prev-icon{
     margin-left: -10%;
-    background-color: #1B5A3B;
+    background-color:gray;
     border-radius: 15px;
-    opacity: 15%;
 }
 .carousel-control-next-icon{
     margin-right: -10%;
     border-radius: 15px;
-    background-color: #1B5A3B;
-    opacity: 15%;
+    background-color: gray;
+}
+
+.carousel-control-prev{
+    left: 2%;
+}
+.carousel-control-next{
+    right: 2%;
 }
 
 .next {
