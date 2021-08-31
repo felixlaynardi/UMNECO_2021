@@ -3,7 +3,7 @@ $(document).ready(function () {
         errorPlacement: function (error, element) {
             if (element.attr("name") === "Availability") {
                 $("#uploadFile").addClass("error");
-                error.insertAfter(".check");
+                error.insertAfter(".check-2");
             } else {
                 error.insertAfter(element);
             }
@@ -86,10 +86,17 @@ $(document).ready(function () {
                 emailstudent: true,
                 unique_email: true
             },
+            Email_external: {
+                required: true,
+                unique_email: true
+            },
             Major: {
                 required: true
             },
             Generation: {
+                required: true
+            },
+            Institusion: {
                 required: true
             },
             Instagram_account: {
@@ -137,11 +144,17 @@ $(document).ready(function () {
                 required: 'Kamu perlu mengisi email kamu',
                 emailstudent: 'Email harus menggunakan email student'
             },
+            Email_external: {
+                required: 'Kamu perlu mengisi email kamu'
+            },
             Major: {
                 required: 'Kamu perlu mengisi jurusan kamu'
             },
             Generation: {
                 required: 'Kamu perlu mengisi angkatan kamu'
+            },
+            Institution: {
+                required: 'Kamu perlu mengisi institusi kamu'
             },
             Instagram_account: {
                 required: 'Kamu perlu mengisi nama akun instagram kamu'
