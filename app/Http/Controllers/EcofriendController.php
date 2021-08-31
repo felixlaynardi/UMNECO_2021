@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
+use App\Mail\OrderEmail;
 use App\Models\Ecofriends;
 use App\Models\MissionProgress;
 use Illuminate\Http\Request;
@@ -220,5 +221,16 @@ class EcofriendController extends Controller
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
+    }
+    public function sendEmailTest()
+    {
+        $details = [
+            'title' => '[GREENATE: ORDER SUCCESSFUL]',
+            'name' => 'Putu Pricillia',
+            'receipt' => 'https://i.imgur.com/08kIz9y.png'
+        ];
+        Mail::to("putu.putri@student.umn.ac.id")->send(new OrderEmail($details));
+
+        dd("done");
     }
 }
