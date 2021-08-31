@@ -47,9 +47,9 @@
 
     <div class="section-2 d-flex flex-column justify-content-center text-center">
         <h1>OUR PROGRAM</h1>
-        <div id="carouselExampleCaptions" class="carousel slide" data-interval=false>
+        <div id="activityCarousel" class="carousel slide" data-bs-interval="false">
             <div class="carousel-inner">
-                <div class="activity-carousel carousel-item active" data-interval="false" id="take-away-carousel">
+                <div class="activity-carousel carousel-item active" data-bs-interval="false" id="take-away-carousel">
                     <img src="{{ asset('images/about-greenate/take-away-resize.png') }}" class="d-block m-auto col-10 col-md-6 col-lg-3" alt="...">
                     <div class="carousel-caption d-block m-auto container pt-5 px-3">
                         <p>Pada kegiatan Take-Away, ECO Friends akan disajikan dengan tiga menu yang berbeda, yaitu Exhort, Alter, dan Tidbit. Nantinya, ECO Friends akan membawa pulang menu tersebut dan melakukannya dari rumah masing-masing. Kegiatan ini dirancang dalam urutan pengolahan makanan agar ECO Friends dapat merepresentasikan kegiatan ini pada kehidupan sehari-hari sebagai langkah pencegahan food waste.  </p>
@@ -62,11 +62,11 @@
                     </div>                    
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#activityCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#activityCarousel" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -237,14 +237,12 @@
             el: '.swiper-scrollbar',
         },
     });
-    $('#carouselExampleCaptions').bind('slide.bs.carousel', function (e) {
+    $('#activityCarousel').bind('slide.bs.carousel', function (e) {
         if($('#take-away-carousel').hasClass('active')){
-            console.log("takeaway");
             $('#take-away-section').toggleClass('section-3-active');
             $('#dine-in-section').toggleClass('section-3-active');
         }
         else if($('#dine-in-carousel').hasClass('active')){
-            console.log('dinein');
             $('#take-away-section').toggleClass('section-3-active');
             $('#dine-in-section').toggleClass('section-3-active');
         }
@@ -281,7 +279,6 @@
                 maxHeight = height;
         });
         divs.height(maxHeight);
-        console.log("sdf");
     }
     var x = window.matchMedia("(min-width: 1200px)");
     var y = window.matchMedia("(min-width: 1200px)");
