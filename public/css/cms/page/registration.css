@@ -6,29 +6,29 @@ header {
     padding-bottom: 3rem;
     position: relative;
 }
-.image-header {
+.header-deco{
     position: absolute;
     right: 10%;
     top: 35%;
-    text-decoration: none;
-    color: white;
-    letter-spacing: 5px;
-    text-align:center;
     width: 13%;
+}
+.image-header {
+    position: absolute;
+    width: 100%;
 }
 .image-leaf1{
     position: absolute;
-    width: 15%;
-    transform: rotate(80deg);
-    right: 3%;
-    top: 35%;
+    width: 100%;
+    transform: rotate(90deg);
+    left: 61%;
+    top: 40px;
 }
 .image-leaf2{
     position: absolute;
-    transform: rotate(260deg);
-    width: 15%;
-    right: 15%;
-    top: 35%;
+    transform: rotate(279deg);
+    width: 100%;
+    right: 60%;
+    top: -20px;
 }
 .h2 {
     text-align: center;
@@ -156,9 +156,6 @@ label.error:not(.form-control) {
 .navbar{
     background: none;
 }
-#contact {
-    margin-top: 10%;
-}
 .logo {
     width: 100px;
     padding-bottom: 10px;
@@ -245,13 +242,7 @@ label.error:not(.form-control) {
     .new{
         display: block;
     }
-    .image-header{
-        display: none;
-    }
-    .image-leaf1{
-        display: none;
-    }
-    .image-leaf2{
+    .header-deco{
         display: none;
     }
 }
@@ -285,5 +276,11 @@ label.error:not(.form-control) {
 @media (max-width: 1455px) {
     .check-2 {
         vertical-align: middle;
+    }
+}
+@media(min-width:2559px){
+    .header-deco{
+        right: 28%;
+        width: 6%;
     }
 }

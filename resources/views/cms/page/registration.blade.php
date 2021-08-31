@@ -86,11 +86,11 @@
     <div class="col-md-6 col-10 mx-auto">
         <h5>Greenate</h5>
         <h1>REGISTRATION</h1>
-
-        <img class="image-leaf1" src="{{ asset('images/regis/Daun 3.png')}}">
-        <img class="image-leaf2" src="{{ asset('images/regis/Daun 3.png')}}">
-        <img class="image-header" src="{{ asset('images/regis/Ayam_1.png')}}">
-
+        <div class="header-deco">
+            <img class="image-leaf1" src="{{ asset('images/regis/Daun 3.png')}}">
+            <img class="image-leaf2" src="{{ asset('images/regis/Daun 3.png')}}">
+            <img class="image-header" src="{{ asset('images/regis/Ayam_1.png')}}">
+        </div>
     </div>
 </header>
 <div class="form col-md-6 col-10 mx-auto" id="form-page">
@@ -873,8 +873,8 @@
                 @endif
             </div>
 
-            <br>
-            <div class="tombol mt-5">
+            
+            <div class="tombol mt-2">
                 <input type="hidden" id="is_internal" name="is_internal" value="1">
                 <button type="submit" class="button p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>

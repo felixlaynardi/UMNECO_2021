@@ -16,7 +16,7 @@
                     Hello ECO Friend,
                 </div>
                 <div class="profile-name ">
-                    <p style="text-transform: uppercase;">{{$data->firstname}}</p>
+                    <p style="text-transform: uppercase;"></p>
                 </div>
                 <a href="{{url('logout')}}" class="logout">
                     <i class="fas fa-sign-out-alt" style="font-size: 40px;"></i>
@@ -26,7 +26,7 @@
         </div>
     </div>
 
-    <div class="container">
+    {{-- <div class="container">
         <div id="eco-friend-identity">
             <div class="row text-center mt-5 mb-5" id="data">
                 <div class="profile-data">
@@ -238,7 +238,7 @@
 
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 
 @include('cms.template.footer')
@@ -271,10 +271,9 @@
 
 @if (session('status') == 'Success')
 <script>
-    // Swal.fire("Welcome", "{{$data->firstname}}. ", "success");
     Swal.fire({
         icon: 'success',
-        title: 'Welcome, {{$data->firstname}}',
+        title: 'Welcome, user',
         text: 'Hope these quests can be your new habit for a better Earth.',
     })
 </script>
@@ -282,7 +281,7 @@
 
 
 <!-- Day Timer -->
-<script>
+{{-- <script>
     (function() {
         const second = 1000,
             minute = second * 60,
@@ -322,7 +321,7 @@
                 //seconds
             }, 0);
     })();
-</script>
+</script> 
 
 <!-- Timer -->
 <script>
@@ -585,5 +584,5 @@
     })
 </script>
 @endif
-
+--}}
 @endsection
