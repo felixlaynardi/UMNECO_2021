@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\LoginAdminController;
 use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
+use App\Http\Controllers\ShoppingCartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -88,6 +89,10 @@ Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconte
 Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
 Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
 Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
+
+Route::get('/GreenateMenu', [ShoppingCartController::class, 'menu'])->name('greenateMenu');
+Route::post('/GreenateShoppingCart', [ShoppingCartController::class, 'shoppingCart'])->name('greenateSC');
+Route::post('/GreenateOrderSubmit', [ShoppingCartController::class, 'orderSubmit'])->name('greenateOS');
 
 // Redirect home on random url
 Route::any(

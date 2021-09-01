@@ -1,0 +1,292 @@
+.content{
+    font-weight: 700;
+    font-family: MADE Tommy Soft;
+    /* line-height: 128px; */
+    letter-spacing: 0em;
+    font-style: normal;
+    background-color: #F4F4F4;
+}
+
+.main{
+    padding: 100px;
+}
+
+.header{
+    height: 50vh;
+    width: auto;
+    background-color: #1B5A3B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header h1 {
+    color: #FFC600;
+    font-size: 8vh;
+}
+
+/* recipe table */
+.recipe-table{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* background-color: red; */
+    width: 80%;
+    height: 50vh;
+    margin: auto;
+    border-radius: 60px;
+    box-shadow: 0 30px 60px rgb(0 0 0 / 0.2);
+    padding-left: 20px;
+    /* overflow-x: auto; */
+}
+
+.recipe-table .content-table{
+    border-collapse: collapse;
+}
+
+.content-table{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form{
+    background-color: #1B5A3B;
+    width: 40%;
+    height: 100%;
+    border-radius: 60px;
+    text-align: center;
+}
+
+.btn-warning {
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    width:80%;
+    margin-bottom: 20%;
+}
+
+.btn-warning:hover {
+    color: #1B5A3B;
+}
+
+/* style */
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0px;
+    width: 100%;
+    table-layout: fixed;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    border-bottom: 1px solid #dddd;
+    box-shadow: 0 5px 0px -4px rgb(0 0 0 / 0.2);
+    padding: .35em;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+table thead tr{
+    text-align: center;
+    color: #1B5A3B;
+}
+
+table thead tr th{
+    font-size: 25px;
+    border: none;
+}
+
+tbody tr td{
+    font-weight: normal;
+    font-size: 18px;
+    color: #1B5A3B;
+}
+
+.form h2{
+    font-size: 30px;
+    color: #FFC600;
+    margin-top: 20%;
+}
+
+.form h1{
+    font-size: 22px;
+    color: white;
+}
+
+.backLinkContainer{
+    width: 80%;
+    margin: auto;
+    margin-top: 5%;
+}
+.backLink{
+    width: 20%;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    text-align: center;
+    padding:10px;
+    
+}
+.backLinkStyle{
+    background-color: #FFC600;
+    border-color: #FFC600;
+}
+.backLinkStyle:hover{
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #1B5A3B;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 25vh;
+    }
+
+    .header h1 {
+        font-size: 4vh;
+    }
+
+    .recipe-table {
+        flex-direction: column;
+        padding-left: 0px;
+        height: 100%;
+        width: 95%;
+    }
+
+    .backLinkContainer{
+        width: 95%;
+    }
+
+    .btn-warning {
+        margin-bottom: 20px;
+    }
+
+    table thead tr th {
+        font-size: 20px;
+    }
+
+    tbody tr td {
+        font-size: 16px;
+    }
+
+    .form {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .form h2 {
+        font-size: 26px;
+        color: #FFC600;
+        margin-top: 5%;
+    }
+
+    .form h1 {
+        font-size: 18px;
+        color: white;
+    }
+
+    .btn-warning {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    .main {
+        padding: 20px;
+    }
+
+    table thead tr th {
+        font-size: 18px;
+    }
+
+    tbody tr td {
+        font-size: 16px;
+    }
+
+    .recipe-table{
+        border-radius: 30px;
+    }
+
+    .form{
+        border-radius: 0px;
+    }
+
+    .form h2 {
+        font-size: 20px;
+        color: #FFC600;
+    }
+
+    .form h1 {
+        font-size: 16px;
+        color: white;
+    }
+
+    .btn-warning{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    tbody tr td {
+        font-size: 15px;
+    }
+    .main {
+        padding: 20px;
+    }
+
+    table thead tr th {
+        font-size: 0.85em;
+    }
+
+    tbody tr td {
+        font-size: 0.8em;
+    }
+
+    .form h2 {
+        font-size: 16px;
+        color: #FFC600;
+        margin-top: 10%;
+    }
+
+    .form h1 {
+        font-size: 14px;
+        color: white;
+    }
+
+    .btn-warning {
+        font-size: 14px;
+    }
+
+    .recipe-table {
+        border-radius: 20px;
+    }
+
+    .form {
+        border-radius: 0px;
+    }
+}
