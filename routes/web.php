@@ -31,17 +31,17 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
-Route::get('/about-red', function () {
-  return view('cms.page.about-red', ['title' => 'UMN ECO 2021 - About RED']);
-})->name('about-red');
+// Route::get('/about-red', function () {
+//   return view('cms.page.about-red', ['title' => 'UMN ECO 2021 - About RED']);
+// })->name('about-red');
 Route::get('/about-greenate', function () {
   return view('cms.page.about-greenate', ['title' => 'UMN ECO 2021 - About GREENATE']);
 })->name('about-greenate');
 
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
-Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
-Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
+// Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
+// Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
 Route::get('/registration', [EcofriendController::class, 'registrationInternalView'])->name('registrationView');
 Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
@@ -49,11 +49,13 @@ Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 
 //submit link challange
-Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
+// Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
+
+//testing email order
 Route::get('/testSendEmail', [EcofriendController::class, 'sendEmailTest']);
 
 // mysteryQuest
-Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
+// Route::post('/mysteryQuest', [EcofriendController::class, 'mysteryQuest'])->name('mysteryQuest');
 
 // Twibbon
 Route::get('/twibbon', function () {return redirect('/twibbon/exhort');})->name('twibbon');
@@ -63,7 +65,7 @@ Route::get('/twibbon/tidbit', [TwibbonController::class, 'tidbit'])->name('twibb
 
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
-Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
+// Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
 Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 
 Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
@@ -86,6 +88,7 @@ Route::post('/ApproveUtopia', [ListEcoFriendController::class,'approveUtopia'])-
 Route::post('/ApproveUtile', [ListEcoFriendController::class,'approveUtile'])->name('apvUtile');
 Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconteur'])->name('apvRaconteur');
 
+//Greenate Menu and Shopping carts
 Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
 Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
 Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');

@@ -22,12 +22,13 @@ class ShoppingCart extends Model
         ->get();
     }
 
-    public function insertOrder($user_id, $dine_in, $takeaway_id, $ordered){
-        return DB::table('green_order')->insert([
-            'user_id' =>  $user_id,
+    public function insertOrder($user_id, $dine_in, $takeaway_id){
+        return DB::table('green_eco_friends')
+        ->where('id', $user_id)
+        ->update([
             'dine_in' => $dine_in,
             'takeaway_id' => $takeaway_id,
-            'ordered' => $ordered
-        ]);
+            'ordered' => TRUE
+        ]);;
     }
 }

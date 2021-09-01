@@ -54,6 +54,7 @@ body{
 }
 
 .section-1 .greenate-content button {
+    text-decoration: none;
     color: #1c5c3c;
     background-color: #ffcc3c;
     font-family: MADE Tommy Soft;

@@ -138,7 +138,7 @@
 
 
 .item-wrapper{
-    padding: 40px;
+    padding: 30px;
     border: 2px solid #1B5A3B;
     box-sizing: border-box;
     border-radius: 50px;
@@ -149,7 +149,7 @@
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 20px;
     text-align: center;
 
@@ -181,6 +181,21 @@
 
 .submit-twibbon-button button:focus{
     outline: none;
+}
+
+.logout{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 5px;
+    text-align:center;
+}
+
+.logout:hover{
+    text-decoration: none;
+    color: #e8d3d3;
 }
 
 @media (max-width: 1026px){

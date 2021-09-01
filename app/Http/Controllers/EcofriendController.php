@@ -53,9 +53,9 @@ class EcofriendController extends Controller
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-
+            $data->name = substr($data->full_name,0,strrpos($data->full_name," "));
             return view(
-                'cms.page.profile',
+                'cms.page.profile-greenate',
                 [
                     'title' => 'UMN ECO 2021 - Profile',
                     'data' => $data
@@ -82,6 +82,7 @@ class EcofriendController extends Controller
                 if ($check_data != null) {
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
+                        session()->put('userID', $check_data->id);
                         return redirect()->route('profileView')->with('status', 'Success');;
                     } else {
                         $error = array(
@@ -102,7 +103,12 @@ class EcofriendController extends Controller
     public function logout(Request $request)
     {
         if (session()->has('user')) {
-            $request->session()->pull('user', 'status');
+            $request->session()->pull('user');
+            $request->session()->pull('status');
+            $request->session()->pull('OrderTotal');
+            $request->session()->pull('DineIn');
+            $request->session()->pull('TakeAway');
+            $request->session()->pull('userID');
         }
         return redirect()->route('loginView');
     }
@@ -221,16 +227,5 @@ class EcofriendController extends Controller
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
-    }
-    public function sendEmailTest()
-    {
-        $details = [
-            'title' => '[GREENATE: ORDER SUCCESSFUL]',
-            'name' => 'Putu Pricillia',
-            'receipt' => 'https://i.imgur.com/08kIz9y.png'
-        ];
-        Mail::to("putu.putri@student.umn.ac.id")->send(new OrderEmail($details));
-
-        dd("done");
     }
 }
