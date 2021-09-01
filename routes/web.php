@@ -79,12 +79,9 @@ Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensati
 Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
 Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
 
-
-
-Route::get('/dummyProfile', [ShoppingCartController::class, 'profile'])->name('dummyProfile');
-Route::get('/dummyOrder', [ShoppingCartController::class, 'order'])->name('dummyOrder');
-Route::post('/dummyShoppingCart', [ShoppingCartController::class, 'shoppingCart'])->name('dummyShoppingCart');
-Route::post('/orderSubmit', [ShoppingCartController::class, 'orderSubmit'])->name('orderSubmit');
+Route::get('/GreenateMenu', [ShoppingCartController::class, 'menu'])->name('greenateMenu');
+Route::post('/GreenateShoppingCart', [ShoppingCartController::class, 'shoppingCart'])->name('greenateSC');
+Route::post('/GreenateOrderSubmit', [ShoppingCartController::class, 'orderSubmit'])->name('greenateOS');
 
 // Redirect home on random url
 Route::any(

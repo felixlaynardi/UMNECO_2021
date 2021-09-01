@@ -44,10 +44,13 @@ button{
 .add{
     text-align: center;
     width:200px;
+    margin-right: 5%;
+    cursor:pointer;
 }
 
 .tombol{
     width: 100%;
+    cursor:pointer;
 }
 
 .Notif{
@@ -364,19 +367,77 @@ label{
 }
 
 /* Style Java Script */
-.style{
+.styleDineIn{
     background-color:#FFC600;
+}
+
+.styleDineIn > label{
+    background-color: #ffffff;
+    color: #1B5A3B;
 }
 
 .styleTakeAway{
     background-color:#FFC600;
 }
 
-.bttn{
+.styleTakeAway > label{
     background-color: #ffffff;
     color: #1B5A3B;
 }
 
-.information{
+.styleTakeAway > p{
     color: #ffffff;
+}
+
+.styleDisableTakeAway{
+    background-color:white;
+}
+
+.styleDisableTakeAway > label{
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+.styleDisableTakeAway > p{
+    color: gray;
+}
+.styleDisableTakeAway > h3{
+    color: gray;
+}
+.styleDisableTakeAway > img{
+    filter: grayscale(100%);
+}
+
+.styleTakeAwaySmall{
+    background-color:#FFC600;
+}
+
+.styleTakeAwaySmall > div >label{
+    background-color: #ffffff;
+    color: #1B5A3B;
+}
+
+.styleTakeAwaySmall > div > p{
+    color: #ffffff;
+}
+
+.styleDisableTakeAwaySmall{
+    background-color:white;
+}
+
+.styleDisableTakeAwaySmall > div > label{
+    background-color: gray;
+    color: white;
+    cursor: not-allowed;
+}
+
+.styleDisableTakeAwaySmall > div > p{
+    color: gray;
+}
+.styleDisableTakeAwaySmall > div > h3{
+    color: gray;
+}
+.styleDisableTakeAwaySmall > div >img{
+    filter: grayscale(100%);
 }

@@ -7,25 +7,17 @@ use Illuminate\Http\Request;
 
 class ShoppingCartController extends Controller
 {
-    //
-    public function profile()
-    {
-        return view('cms.page.greenate.profile_dummy');
-    }
 
-    public function order()
+    public function menu()
     {
-        $shoppingCartModel = new ShoppingCart();
-        $result = $shoppingCartModel->getAllTakeaways();
-        return view('cms.page.greenate.order_dummy', [
-            'title' => 'Dummy Order Page',
-            'Takeaways_Result' => $result
+        return view('cms.page.greenate_menu', [
+            'title' => 'Greenate Menu'
         ]);
     }
 
     public function orderSubmit(Request $request)
     {
-        // dd($request->input());
+        dd($request->input());
         $shoppingCart = new ShoppingCart();
         $dineInStatus =  $request->input('dineIn');
         $takeAwayInput =  $request->input('takeAway');
@@ -69,7 +61,7 @@ class ShoppingCartController extends Controller
         $shoppingCart->insertOrder(1, $dineIn, $takeAway, TRUE);
         
         // return 'INPUT ORDER SUCCESS';
-        return redirect()->route('dummyProfile');
+        return redirect()->route('Profile');
     }
 
     //this one need validationr if both data is null
@@ -81,7 +73,7 @@ class ShoppingCartController extends Controller
         unset($allInput['_token']);
 
         foreach($allInput as $key=>$value){
-            if($key == "dineIn"){
+            if($key == "dineInOption"){
                 $dineIn = $value;
             }else{
                 $takeAway = $value;
@@ -90,24 +82,24 @@ class ShoppingCartController extends Controller
 
         
         if($dineIn != null && $takeAway != null){
-            $orders = [['MenuItem'=> $dineIn, 'Quantity'=>1, 'Subtotal'=>'1 SKKM'],['MenuItem'=> $takeAway, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']];
+            $orders = [['MenuItem'=> $dineIn],['MenuItem'=> $takeAway]];
             session(['OrderTotal' => 2]);
             session(['DineIn' => TRUE]);
             session(['TakeAway' => $takeAway]);
         }else if($dineIn != null && $dineIn){
-            $orders = [['MenuItem'=> $dineIn, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']] ;
+            $orders = [['MenuItem'=> $dineIn]];
             session(['OrderTotal' => 1]);
             session(['DineIn' => TRUE]);
             session(['TakeAway' => 'none']);
         }else if($takeAway != null){
-            $orders = [['MenuItem'=> $takeAway, 'Quantity'=>1, 'Subtotal'=>'1 SKKM']] ;
+            $orders = [['MenuItem'=> $takeAway]] ;
             session(['OrderTotal' => 1]);
             session(['DineIn' => FALSE]);
             session(['TakeAway' => $takeAway]);
         }
 
-        return view('cms.page.greenate.shopping_cart', [
-            'title' => 'Dummy ShoppingCart Page',
+        return view('cms.page.greenate_shopping_cart', [
+            'title' => 'Greenate Shopping Cart',
             'orders' => $orders,
             'takeAway' => $takeAway,
             'dineIn' => $dineIn

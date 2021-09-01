@@ -2,7 +2,7 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/recipe.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/receipt.css') }}">
 @endsection
 
 @section('content')
@@ -13,7 +13,6 @@
         </div>
 
         <div class="main">
-            {{-- ini table --}}
             <div class="recipe-table">
                 <table class="content-table">
                     <thead>
@@ -27,16 +26,16 @@
                         @foreach ($orders as $order)
                             <tr>
                                 <td>{{ $order["MenuItem"]; }}</td>
-                                <td>{{ $order["Quantity"]; }}</td>
-                                <td>{{ $order["Subtotal"]; }}</td>
+                                <td>1</td>
+                                <td>1 SKKM</td>
                             </tr>
                         @endforeach
                     </tbody>
                 </table>
                 
-                <form action="{{ route('orderSubmit') }}" method="post" class="form" >
+                <form action="{{ route('greenateOS') }}" method="post" class="form" >
                     <h2>ORDER SUBTOTAL</h2>
-                    <h1>2 SKKM</h1>
+                    <h1>{{ session('OrderTotal') }} SKKM</h1>
                     @csrf
                     @if($dineIn)
                         <input type="hidden" name="dineIn" value="True">
@@ -53,10 +52,15 @@
                 </form>
 
             </div>
+            <div class="backLinkContainer">
+                <a href="{{ route('greenateMenu') }}" class="backLink backLinkStyle">Back to Menu</a>
+            </div>
+
         </div>
     </div>
+    @include('cms.template.footer')
 @endsection
 
 @section('custom-js')
-{{-- <script src="{{ asset('js/cms/page/order-page.js') }}"></script> --}}
+
 @endsection
