@@ -2369,7 +2369,7 @@ body::-webkit-scrollbar-thumb {
 /* container */
 #time-countdown{
     background: linear-gradient(to right, #fc797d, #fd6c6e, #fe5e5f, #fd4f50, #fc3f3f);
-    border-radius: 50px;
+    border-radius: 0px;
     justify-content: center;
     display: none;
     color:white;

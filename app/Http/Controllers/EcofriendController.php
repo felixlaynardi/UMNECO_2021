@@ -53,7 +53,7 @@ class EcofriendController extends Controller
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            $data->name = substr($data->full_name,0,strrpos($data->full_name," "));
+            $data->name = Str::limit('Delvin Chianardi', 20, '...');;
             return view(
                 'cms.page.profile-greenate',
                 [
