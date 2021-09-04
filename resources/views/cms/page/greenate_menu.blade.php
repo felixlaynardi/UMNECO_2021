@@ -24,7 +24,7 @@
                         <div class="row justify-content-center" >
                             <div class="col-md-10 col-10 box1">
                                 <div class="dineIn active" id="dineIn">
-                                    <img src="{{ asset('images/order/Dine-In.png') }}" class="DineInLogo">
+                                    <img src="{{ asset('images/order/Dine-In.png') }}" class="DineInLogo pb-5">
                                     <h3 class="judul">Dine-In</h3>
                                     <p class="dinein">Webinar: <br>Digital for Food Waste Management</p>
                                     <input type="checkbox" id="dineInOption" name="dineInOption" value="Dine-In" class="addToCartNumberCheckbox" style="display:none">
@@ -44,21 +44,21 @@
                                 <h3 class="takeaway">Tidbit</h3>
                                 <p class="skkm" id="infoTidbit">1 SKKM Pengabdian</p>
                                 <input type="checkbox" id="tidbitOption" name="tidbitOption" value="Tidbit" class="takeAwayOption" style="display:none;">
-                                <label for="Tidbit" class="tombol" id="addTidbit"> Add to Cart</label><br>
+                                <label for="Tidbit" class="tombol addTidbit" id="addTidbit"> Add to Cart</label><br>
                             </div>
                             <div class="col-md-2 col-2 pilihan mx-auto" id="Exhort">
                                 <img src="{{ asset('images/order/Exhort.png') }}" class="images">    
                                 <h3 class="takeaway">Exhort</h3>
                                 <p class="skkm" id="infoExhort">1 SKKM Pengabdian</p>
                                 <input type="checkbox" id="exhortOption" name="exhortOption" value="Exhort" class="takeAwayOption" style="display:none;">
-                                <label for="Exhort" class="tombol" id="addExhort">Add to Cart</label><br>
+                                <label for="Exhort" class="tombol addExhort" id="addExhort">Add to Cart</label><br>
                             </div>
                             <div class="col-md-2 col-2 pilihan mx-auto" id="Alter">
                                 <img src="{{ asset('images/order/Alter.png') }}" class="images">
                                 <h3 class="takeaway">Alter</h3>
                                 <p class="skkm" id="infoAlter">1 SKKM Pengabdian</p>
                                 <input type="checkbox" id="alterOption" name="alterOption" value="Alter" class="takeAwayOption" style="display:none;">
-                                <label for="Alter" class="tombol" id="addAlter">Add to Cart</label><br>
+                                <label for="Alter" class="tombol addAlter" id="addAlter">Add to Cart</label><br>
                             </div>
                         </div>
                         
@@ -75,7 +75,7 @@
                                             <div class="col-lg-10 col-sm-10 info mx-auto">
                                                 <h3 class="title">Tidbit</h3>
                                                 <p class="skkm" id="infoTidbitSm">1 SKKM Pengabdian</p>
-                                                <label for="Tidbit" class="tombol" id="addTidbitSmall">Add to Cart</label><br>
+                                                <label for="Tidbit" class="tombol addTidbit" id="addTidbitSmall">Add to Cart</label><br>
                                             </div>
                                         </div>
                                         <div class="item carousel-item pilihan  box" data-bs-interval="1000000000" id="ExhortSmall">
@@ -85,7 +85,7 @@
                                             <div class="col-lg-10 col-sm-10 info mx-auto">
                                                 <h3 class="title">Exhort</h3>
                                                 <p class="skkm" id="infoExhortSm">1 SKKM Pengabdian</p>
-                                                <label for="Exhort" class="tombol" id="addExhortSmall">Add to Cart</label><br>
+                                                <label for="Exhort" class="tombol addExhort" id="addExhortSmall">Add to Cart</label><br>
                                             </div>
                                         </div>
                                         <div class="item carousel-item pilihan box" data-bs-interval="1000000000" id="AlterSmall">
@@ -95,7 +95,7 @@
                                             <div class="col-lg-10 col-sm-10 info mx-auto">
                                                 <h3 class="title">Alter</h3>
                                                 <p class="skkm" id="infoAlterSm">1 SKKM Pengabdian</p>
-                                                <label for="Alter" class="tombol" id="addAlterSmall">Add to Cart</label><br>
+                                                <label for="Alter" class="tombol addAlter" id="addAlterSmall">Add to Cart</label><br>
                                             </div>
                                         </div>
                                     </div>
@@ -194,7 +194,7 @@
             $("#scBtn").removeAttr("disabled");
         }
 
-        $("#add").on('click', function () {
+        $(".add").on('click', function () {
             if(!$("#dineInOption").prop('checked')) {
                 $("#dineInOption").attr('checked', true);
                 $("#cartNumber").text(++num);
@@ -203,12 +203,15 @@
                 $("#dineIn").toggleClass("styleDineIn");
 
                 $("#scBtn").removeAttr("disabled");
+                $(".add").html("Remove from Cart");
             }else{
                 $("#dineInOption").attr('checked', false);
                 $("#cartNumber").text(--num);
 
                 //style toggle
                 $("#dineIn").toggleClass("styleDineIn");
+
+                $(".add").html("Add to Cart");
 
                 if(num == 0){
                     $("#scBtn").prop("disabled", true);
@@ -232,6 +235,7 @@
                     $("#TidbitSmall").toggleClass("styleTakeAwaySmall");
                     $("#AlterSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#ExhortSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addTidbit").html("Remove from Cart");
                 }else{
                     $("#tidbitOption").attr('checked', false);
                     $("#cartNumber").text(--num);
@@ -245,6 +249,7 @@
                     $("#TidbitSmall").toggleClass("styleTakeAwaySmall");
                     $("#AlterSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#ExhortSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addTidbit").html("Add to Cart");
 
                     if(num == 0){
                         $("#scBtn").prop("disabled", true);
@@ -269,6 +274,7 @@
                     $("#ExhortSmall").toggleClass("styleTakeAwaySmall");
                     $("#AlterSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#TidbitSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addExhort").html("Remove from Cart");
                 }else{
                     $("#exhortOption").attr('checked', false);
                     $("#cartNumber").text(--num);
@@ -282,6 +288,7 @@
                     $("#ExhortSmall").toggleClass("styleTakeAwaySmall");
                     $("#AlterSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#TidbitSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addExhort").html("Add to Cart");
 
                     if(num == 0){
                         $("#scBtn").prop("disabled", true);
@@ -306,6 +313,7 @@
                     $("#AlterSmall").toggleClass("styleTakeAwaySmall");
                     $("#ExhortSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#TidbitSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addAlter").html("Remove from Cart");
                 }else{
                     $("#alterOption").attr('checked', false);
                     $("#cartNumber").text(--num);
@@ -319,6 +327,7 @@
                     $("#AlterSmall").toggleClass("styleTakeAwaySmall");
                     $("#ExhortSmall").toggleClass("styleDisableTakeAwaySmall");
                     $("#TidbitSmall").toggleClass("styleDisableTakeAwaySmall");
+                    $(".addAlter").html("Add to Cart");
 
                     if(num == 0){
                         $("#scBtn").prop("disabled", true);

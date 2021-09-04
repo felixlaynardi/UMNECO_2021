@@ -204,7 +204,9 @@
             maxHeight = height;
 
     });
-    divs.height(maxHeight);
+    $(window).load(function() {
+        divs.height(maxHeight);
+    });
 </script>
 
 <script>
@@ -228,7 +230,7 @@
     <script>
         Swal.fire({
             icon: 'success',
-            title: 'Welcome, user',
+            title: 'Welcome, {{$data->name}}',
             text: 'Hope these quests can be your new habit for a better Earth.',
         })
     </script>
