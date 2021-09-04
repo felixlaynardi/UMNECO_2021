@@ -204,7 +204,8 @@
             maxHeight = height;
 
     });
-    $(window).load(function() {
+    $(window).on('load', function() {
+        console.log("asdfasdf")
         divs.height(maxHeight);
     });
 </script>

@@ -297,7 +297,7 @@
     var x = window.matchMedia("(min-width: 1200px)");
     var y = window.matchMedia("(min-width: 1200px)");
     
-    $(window).load(function() {
+    $(window).on('load', function() {
         matchHeightChoices(x);
         matchHeightCarousel();
         matchHeightChoices2();
