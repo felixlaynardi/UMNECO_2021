@@ -159,6 +159,8 @@ class EcofriendController extends Controller
             );
         }
 
+        $data['Email'] = Str::lower($data['Email']);
+
         $messages = [
             'Full_name.required' => 'Kamu perlu mengisi nama kamu',
             'Full_name.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',

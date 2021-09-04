@@ -25,9 +25,9 @@
                     <tbody>
                         @foreach ($orders as $order)
                             <tr>
-                                <td>{{ $order["MenuItem"]; }}</td>
+                                <td>{{ $order["MenuItem"] }}</td>
                                 <td>1</td>
-                                <td>{{ $order["Subtotal"]; }} </td>
+                                <td>{{ $order["Subtotal"] }} </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -35,7 +35,7 @@
                 
                 <form action="{{ route('greenateOS') }}" method="post" class="form" >
                     <h2>ORDER SUBTOTAL</h2>
-                    <h1>{{ $orderTotal; }}</h1>
+                    <h1>{{ $orderTotal }}</h1>
                     @csrf
                     @if($dineIn)
                         <input type="hidden" name="dineIn" value="True">
