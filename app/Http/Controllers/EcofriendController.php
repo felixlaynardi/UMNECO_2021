@@ -55,6 +55,7 @@ class EcofriendController extends Controller
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
             $data->name = Str::limit($data->full_name, 20, '...');
+            session()->put('userID', $data->id);
             return view(
                 'cms.page.profile-greenate',
                 [
@@ -83,7 +84,7 @@ class EcofriendController extends Controller
                 if ($check_data != null) {
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
-                        session()->put('userID', $check_data->id);
+                        // session()->put('userID', $check_data->id);
                         return redirect()->route('profileView')->with('status', 'Success');
                     } else {
                         $error = array(
@@ -226,7 +227,7 @@ class EcofriendController extends Controller
     public function sendEmail($data)
     {
         $details = [
-            'title' => '[WELCOME TO RED, ' . $data['Full_name'] . ']',
+            'title' => 'WELCOME TO GREENATE, ' . $data['Full_name'],
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));

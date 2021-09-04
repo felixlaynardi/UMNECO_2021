@@ -17,6 +17,13 @@ class DatabaseSeeder extends Seeder
     {
         $model = new Mission();
         $data = array(
+            'id' => 4,
+            'name' => 'NONE',
+            'skkm' => 0,
+            'skkm_type' => 'NONE'
+        );
+        $model->addTakeaway($data);
+        $data = array(
             'id' => 1,
             'name' => 'EXHORT',
             'skkm' => 1,

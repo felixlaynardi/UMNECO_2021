@@ -98,7 +98,7 @@ class ShoppingCartController extends Controller
             }
         }else if($dineInStatus == "True" && $takeAwayInput == "none"){
             $dineIn = TRUE;
-            $takeAway = 0;
+            $takeAway = 4;
             if($ecoFriendData->is_internal){
                 $data['receiptImg'] = "https://i.imgur.com/iKMx3Jq.png";
             }else{
@@ -184,7 +184,7 @@ class ShoppingCartController extends Controller
     public function sendEmail($data)
     {
         $details = [
-            'title' => '[GREENATE: ORDER SUCCESSFUL]',
+            'title' => 'GREENATE: ORDER SUCCESSFUL',
             'name' => $data['userName'],
             'receipt' => $data['receiptImg']
         ];

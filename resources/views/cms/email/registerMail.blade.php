@@ -1,13 +1,18 @@
 <h3 style="color:black">Halo, <b>{{$details['name']}}!</b></h3>
 <p style="color:black">
-    Terima kasih karena telah mendaftar di kegiatan <b>Real Emergency Daily life UMN ECO!</b>🚨<br>
-    Dengan ini, kami nyatakan bahwa <b>{{$details['name']}}</b> telah berhasil menjadi bagian dari kegiatan<b style="color:red"> RED </b> yang akan berlangsung dari Senin, 26 April 2021 sampai dengan Jumat, 7 Mei 2021.
+    Terima kasih karena telah mendaftar di <b style="color:green">GREENATE!</b>🥑<br>
+    Dengan ini, kami nyatakan bahwa <b>{{$details['name']}}</b>  sudah bisa memesan menu<b style="color:green"> GREENATE </b> pilihan kamu.
     <br><br>
-    Untuk segala informasi mengenai detail dan regulasi kegiatan dapat <b> {{$details['name']}} </b> lihat melalui website eco.umn.ac.id atau Instagram <u>@umn_eco</u>.
+    Di <b style="color:green"> GREENATE </b>  kamu bisa memilih menu:<br>
+    ✨ <em>Dine-In</em> dengan santapan Webinar pada hari Senin, 13 September 2021 dan bonus reward  <em>e-certificate</em> <b>+2 SKKM Ilmiah dan Penalaran</b> bagi mahasiswa UMN.
     <br><br>
-    Untuk segala alat dan bahan yang diperlukan dalam menjalani kegiatan <b style="color:red"> RED </b> dapat <b>{{$details['name']}} siapkan sendiri </b> atau juga bisa langsung <b>{{$details['name']}}</b> beli melalui <b> ECO Store </b> di Instagram <u>@ecostore_umn</u>.
+    ✨ <em>Take-Away</em> dengan santapan Challenge pada hari Selasa, 14 September 2021 s.d. Jumat, 17 September 2021 dan bonus reward  <em>e-certificate</em> <b>+1 SKKM Pengabdian Masyarakat</b> bagi mahasiswa UMN.
     <br><br>
-    Jika ada kendala atau pertanyaan, <b>{{$details['name']}}</b> bisa langsung hubungi melalui LINE Official Account kami di <u>@bxd0023u</u>.
+    Pesanan menu dapat dilakukan mulai dari hari Senin, 6 September 2021 s.d. Minggu, 12 September 2021 untuk Dine-In dan sampai Jumat, 17 September 2021 untuk Take-Away melalui website resmi UMN ECO 2021 di <b>eco.umn.ac.id</b>.
+    <br><br>
+    Untuk segala informasi mengenai detail dan regulasi kegiatan dapat teman-teman lihat melalui website eco.umn.ac.id atau Instagram @umn_eco. 
+    <br><br>
+    Jika ada kendala atau pertanyaan, <b>{{$details['name']}}</b> bisa langsung hubungi melalui LINE Official Account kami di @bxd0023u.
     <br><br>
     Bersama-sama,<b><em> We Act for The Better Earth!</em></b>
     <br><br>

@@ -87,7 +87,7 @@
                         </div>
                     </div>
                     @endif
-                    @if($data->takeaway_id != NULL || $data->takeaway_id != 0)
+                    @if($data->takeaway_id != NULL || $data->takeaway_id != 4)
                         @if($data->takeaway_id == 1)
                             <div class="px-lg-5 px-1 py-4 col-lg-4 col-10 d-flex flex-column">
                                 <div class="item-wrapper ">
@@ -232,7 +232,7 @@
         Swal.fire({
             icon: 'success',
             title: 'Welcome, {{$data->name}}',
-            text: 'Hope these quests can be your new habit for a better Earth.',
+            text: "Let's save the Earth by being responsible with your food!",
         })
     </script>
 @endif
