@@ -54,7 +54,7 @@
 <script>
     window.onload = function(){
         $('.step-1-internal').addClass('active');
-        $('.step-1-external').removeClass('active');
+        $('.step-1-external').addClass('active');
         $('.form-internal').removeClass('active');
         $('.form-external').removeClass('active');
         $('.step-2').removeClass('active');
@@ -71,6 +71,7 @@
         }).then((result) => {
             /* Read more about isConfirmed, isDenied below */
             if (result.isConfirmed) {
+                $('.step-1-external').removeClass('active');
                 $('.step-1-internal').addClass('active');
                 $('#is_internal').val('1');
             } else{

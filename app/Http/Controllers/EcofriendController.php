@@ -84,7 +84,7 @@ class EcofriendController extends Controller
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
                         session()->put('userID', $check_data->id);
-                        return redirect()->route('profileView')->with('status', 'Success');;
+                        return redirect()->route('profileView')->with('status', 'Success');
                     } else {
                         $error = array(
                             'login' => "Email atau password salah"
@@ -217,7 +217,7 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            return redirect()->route('logout');
+            return redirect()->route('profileView')->with('status', 'Success');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
