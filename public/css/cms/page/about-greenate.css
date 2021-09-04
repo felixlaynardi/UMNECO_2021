@@ -559,7 +559,7 @@ body{
       }
     
       .menu-circle{
-        top: -200px;
+        top: -280px;
     }
 }
 
@@ -614,6 +614,9 @@ body{
       }
       .swiper-slide{
         padding-bottom: 30px;
+    }
+    .menu-circle{
+        top: -200px;
     }
 }
 

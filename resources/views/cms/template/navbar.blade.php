@@ -43,13 +43,17 @@
             <a class="menu__link" href="{{ route('home') }}">Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('about-greenate') }}">About RED</a>
+            <a class="menu__link" href="{{ route('about-greenate') }}">About Greenate</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('login') }}">Login</a>
+            @if(session()->has('user'))
+            <a class="menu__link" href="{{ route('profileView') }}">Profile</a>
+            @else
+            <a class="menu__link" href="{{ route('loginView') }}">Login</a>
+            @endif
         </li>
     </ul>
 </nav>
