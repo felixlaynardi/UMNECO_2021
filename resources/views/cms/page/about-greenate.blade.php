@@ -125,9 +125,9 @@
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide">
-                            <div class="choices exhort p">
+                            <div class="choices choices-2 exhort p">
                                 <div class="col d-flex flex-column p-3">
-                                    <div class="py-5 m-5 quest-logo "><img src="{{ asset('images/about-greenate/exhort.png') }}" alt="" width="50%"></div>
+                                    <div class="m-5 quest-logo "><img src="{{ asset('images/about-greenate/exhort.png') }}" alt="" width="100%"></div>
                                     <p class="pt-5"><b>[iɡˈzôrt]</b></p>
                                     <p><b>to try to influence (someone) by words or advice : to strongly urge (someone) to do something.</b> </p>
                                     <p>Pada kegiatan ini, ECO Friends akan menginfluence teman-temannya melalui media sosial dengan membuat video tentang tips bagaimana menyimpan makanan agar dapat bertahan lebih lama guna memerangi food waste.</p>
@@ -138,9 +138,9 @@
                             </div> 
                         </div>
                         <div class="swiper-slide">
-                            <div class="choices alter ">
+                            <div class="choices choices-2 alter ">
                                 <div class="col d-flex flex-column p-3">
-                                    <div class="py-5 m-5 quest-logo"><img src="{{ asset('images/about-greenate/alter.png') }}" alt="" width="50%"></div>
+                                    <div class="m-5 quest-logo"><img src="{{ asset('images/about-greenate/alter.png') }}" alt="" width="100%"></div>
                                     <p class="pt-5"><b>[ˈôltər]</b></p>
                                     <p><b>change or cause to change in character or composition, typically in a comparatively small but significant way / to make different in some way.</b> </p>
                                     <p>Pada kegiatan Alter, ECO Friends akan melakukan kegiatan sederhana yang dapat berdampak besar bagi bumi, yakni mengolah kembali sisa makanan menjadi hidangan baru. Dengan begitu, kita dapat memerangi food waste dengan menjadi lebih bertanggung jawab terhadap makanan.</p>
@@ -150,9 +150,9 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="choices tidbit ">
+                            <div class="choices choices-2 tidbit ">
                                 <div class="col d-flex flex-column p-3">
-                                    <div class="py-5 m-5 quest-logo"><img src="{{ asset('images/about-greenate/tidbit.png') }}" alt=""  width="50%"></div>
+                                    <div class="m-5 quest-logo"><img src="{{ asset('images/about-greenate/tidbit.png') }}" alt=""  width="100%"></div>
                                     <p class="pt-5"><b>[ˈtidˌbit]</b></p>
                                     <p><b>a small piece of interesting information, or a small dish of pleasant-tasting food.</b> </p>
                                     <p>Pada kegiatan Tidbit, ECO Friends akan membuat video yang memperlihatkan ECO Friends menghabiskan makanan hingga tidak tersisa, tujuannya agar sampah makanan tidak terus bertambah. Dengan begitu, ECO Friends dapat menciptakan berita gembira dengan ikut berdampak dalam mengurangi food waste.</p>
@@ -255,7 +255,7 @@
 <script>
   
 
-    function myFunction(x){
+    function matchHeightChoices(x){
         if(x.matches){
             var maxHeight = 0;
 
@@ -269,7 +269,21 @@
             divs.height(maxHeight);
         }        
     }
-    function matchHeight(x){
+    function matchHeightChoices2(x){
+        if(x.matches){
+            var maxHeight = 0;
+
+            var divs = jQuery(".swiper-slide .choices-2");
+            jQuery.each(divs, function(){
+                var height = jQuery(this).height();
+                if(maxHeight<height)
+                    maxHeight = height;
+
+            });
+            divs.height(maxHeight);
+        }        
+    }
+    function matchHeightCarousel(x){
         var maxHeight = 0;
 
         var divs = jQuery(".activity-carousel");
@@ -283,8 +297,11 @@
     var x = window.matchMedia("(min-width: 1200px)");
     var y = window.matchMedia("(min-width: 1200px)");
     
-    myFunction(x);
-    matchHeight();
+    $(window).load(function() {
+        matchHeightChoices(x);
+        matchHeightCarousel();
+        matchHeightChoices2();
+    });
 
 </script>
 
