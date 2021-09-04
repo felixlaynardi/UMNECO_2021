@@ -119,6 +119,8 @@ class ShoppingCartController extends Controller
 
     //this one need validationr if both data is null
     public function shoppingCart(Request $request){
+        $ecoFriend = new Ecofriends();
+        $ecoFriendData = $ecoFriend->getEcoFriendsByEmail($request->session()->get('user'));
         $shoppingCart = new ShoppingCart();
         $dineIn = null;
         $takeAway = null;
@@ -135,23 +137,39 @@ class ShoppingCartController extends Controller
 
         
         if($dineIn != null && $takeAway != null){
-            $orders = [['MenuItem'=> $dineIn,'Subtotal' => 2],['MenuItem'=> $takeAway, 'Subtotal' => 1]];
+            if($ecoFriendData->is_internal){
+                $orders = [['MenuItem'=> $dineIn,'Subtotal' => "2 SKKM"],['MenuItem'=> $takeAway, 'Subtotal' => "1 SKKM"]];
+                $orderTotal = "3 SKKM";
+            }else{
+                $orders = [['MenuItem'=> $dineIn,'Subtotal' => "1 Certificate"],['MenuItem'=> $takeAway, 'Subtotal' => "1 Certificate"]];
+                $orderTotal = "2 Certificate";
+            }
             session()->put('OrderTotal', 2);
             session()->put('DineIn', TRUE);
             session()->put('TakeAway', $takeAway);
-            $totalSKKM = 3;
+            
         }else if($dineIn != null && $dineIn){
-            $orders = [['MenuItem'=> $dineIn, 'Subtotal' => 1]];
+            if($ecoFriendData->is_internal){
+                $orders = [['MenuItem'=> $dineIn,'Subtotal' => "2 SKKM"]];
+                $orderTotal = "2 SKKM";
+            }else{
+                $orders = [['MenuItem'=> $dineIn,'Subtotal' => "1 Certificate"]];
+                $orderTotal = "1 Certificate";
+            }
             session()->put('OrderTotal', 1);
             session()->put('DineIn', TRUE);
             session()->put('TakeAway', 'none');
-            $totalSKKM = 2;
         }else if($takeAway != null){
-            $orders = [['MenuItem'=> $takeAway, 'Subtotal' => 1]] ;
+            if($ecoFriendData->is_internal){
+                $orders = [['MenuItem'=> $takeAway,'Subtotal' => "1 SKKM"]];
+                $orderTotal = "1 SKKM";
+            }else{
+                $orders = [['MenuItem'=> $takeAway,'Subtotal' => "1 Certificate"]];
+                $orderTotal = "1 Certificate";
+            }
             session()->put('OrderTotal', 1);
             session()->put('DineIn', FALSE);
             session()->put('TakeAway', $takeAway);
-            $totalSKKM = 1;
         }
 
         return view('cms.page.greenate_shopping_cart', [
@@ -159,7 +177,7 @@ class ShoppingCartController extends Controller
             'orders' => $orders,
             'takeAway' => $takeAway,
             'dineIn' => $dineIn,
-            'skkm' => $totalSKKM
+            'orderTotal' => $orderTotal
         ]);
     }
 

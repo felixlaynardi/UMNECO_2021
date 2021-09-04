@@ -26,7 +26,7 @@
                                 <div class="dineIn active" id="dineIn">
                                     <img src="{{ asset('images/order/Dine-In.png') }}" class="DineInLogo">
                                     <h3 class="judul">Dine-In</h3>
-                                    <p class="dinein">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit,<br> sed do eiusmod</p>
+                                    <p class="dinein">Webinar: <br>Digital for Food Waste Management</p>
                                     <input type="checkbox" id="dineInOption" name="dineInOption" value="Dine-In" class="addToCartNumberCheckbox" style="display:none">
                                     <label for="dine-in" id="add" class="add">Add to cart</label><br><br><br>
                                 </div>

@@ -6,6 +6,7 @@ use App\Mail\RegisterMail;
 use App\Mail\OrderEmail;
 use App\Models\Ecofriends;
 use App\Models\MissionProgress;
+use App\Models\ShoppingCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -53,7 +54,7 @@ class EcofriendController extends Controller
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            $data->name = Str::limit('Delvin Chianardi', 20, '...');;
+            $data->name = Str::limit($data->full_name, 20, '...');
             return view(
                 'cms.page.profile-greenate',
                 [
@@ -227,5 +228,18 @@ class EcofriendController extends Controller
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
+    }
+
+    public function submitLink(Request $request){
+        $data = $request->input();
+        $model = new ShoppingCart();
+        $userId = $request->session()->get('userID');
+
+        if($data['link'] == null){
+            return redirect()->route('profileView')->with('status', 'Failed');
+        }else{
+            $model->insertTaskLink($userId, $data['link']);
+            return redirect()->route('profileView')->with('status', 'Link Submitted');
+        }
     }
 }

@@ -30,6 +30,7 @@ class GreenEcoFriends extends Migration
             $table->unsignedBigInteger('takeaway_id')->nullable();
             $table->foreign('takeaway_id')->references('id')->on('green_takeaway');
             $table->boolean('ordered')->nullable();
+            $table->string('task_link')->nullable();
         });
     }
 

@@ -27,7 +27,7 @@
                             <tr>
                                 <td>{{ $order["MenuItem"]; }}</td>
                                 <td>1</td>
-                                <td>{{ $order["Subtotal"]; }} SKKM</td>
+                                <td>{{ $order["Subtotal"]; }} </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -35,7 +35,7 @@
                 
                 <form action="{{ route('greenateOS') }}" method="post" class="form" >
                     <h2>ORDER SUBTOTAL</h2>
-                    <h1>{{ $skkm; }} SKKM</h1>
+                    <h1>{{ $orderTotal; }}</h1>
                     @csrf
                     @if($dineIn)
                         <input type="hidden" name="dineIn" value="True">

@@ -29,6 +29,14 @@ class ShoppingCart extends Model
             'dine_in' => $dine_in,
             'takeaway_id' => $takeaway_id,
             'ordered' => TRUE
-        ]);;
+        ]);
+    }
+
+    public function insertTaskLink($user_id, $link){
+        return DB::table('green_eco_friends')
+        ->where('id', $user_id)
+        ->update([
+            'task_link' => $link
+        ]);
     }
 }

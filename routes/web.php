@@ -49,7 +49,7 @@ Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 
 //submit link challange
-// Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
+Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
 
 //testing email order
 Route::get('/testSendEmail', [EcofriendController::class, 'sendEmailTest']);

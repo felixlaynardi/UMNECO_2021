@@ -15,7 +15,7 @@
     <img src="{{ asset('images/about-greenate/chicken.png') }}" class="chicken">
     <img src="{{ asset('images/about-greenate/burger.png') }}" class="burger">
     <img src="{{ asset('images/about-greenate/fries.png') }}" class="fries">    
-    <div class="white-circle d-block"></div>
+    <!-- <div class=" d-block"></div> -->
 
     <div class="section-1 mb-5">
         
