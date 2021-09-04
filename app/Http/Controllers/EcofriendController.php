@@ -217,7 +217,7 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            return redirect()->route('logout');
+            return redirect()->route('profileView');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
