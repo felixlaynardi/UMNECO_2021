@@ -297,10 +297,10 @@ Cobain juga, yuk! Aku tunggu review dari kamu! (mention 3 orang teman)
         let flag = false;
         jcrop.listen('crop.update', (widget, e) => {
             const preview_canvas = document.getElementById('preview_canvas');
-            preview_canvas.width = 1000;
-            preview_canvas.height = 1000;
-            preview_canvas.getContext('2d').drawImage(canvas, widget.pos.x, widget.pos.y, widget.pos.w, widget.pos.h, 0, 0, 1000, 1000);
-            preview_canvas.getContext('2d').drawImage(img, 0, 0, 1000, 1000, 0, 0, 1000, 1000);
+            preview_canvas.width = 2251;
+            preview_canvas.height = 2251;
+            preview_canvas.getContext('2d').drawImage(canvas, widget.pos.x, widget.pos.y, widget.pos.w, widget.pos.h, 0, 0, 2251, 2251);
+            preview_canvas.getContext('2d').drawImage(img, 0, 0, 2251, 2251, 0, 0, 2251, 2251);
             flag = true;
         });
         if($downloadflag == false){
