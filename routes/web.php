@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\LoginAdminController;
 use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
+use App\Http\Controllers\Admin\GreenateAdminController;
 use App\Http\Controllers\ShoppingCartController;
 
 /*
@@ -66,27 +67,29 @@ Route::get('/twibbon/tidbit', [TwibbonController::class, 'tidbit'])->name('twibb
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
 // Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
-Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
+// Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 
 Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
 Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 
 Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
 
-Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
-Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
+Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
 
-Route::get('/admin-table', [OprecTableController::class, 'index'])->name('oprecTable');
+// Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
+// Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
 
-Route::post('/DisapproveRise', [ListEcoFriendController::class,'disapproveRise'])->name('disRise');
-Route::post('/DisapproveUtopia', [ListEcoFriendController::class,'disapproveUtopia'])->name('disUtopia');
-Route::post('/DisapproveUtile', [ListEcoFriendController::class,'disapproveUtile'])->name('disUtile');
-Route::post('/DisapproveRaconteur', [ListEcoFriendController::class,'disapproveRaconteur'])->name('disRaconteur');
+// Route::get('/admin-table', [OprecTableController::class, 'index'])->name('oprecTable');
 
-Route::post('/ApproveRise', [ListEcoFriendController::class,'approveRise'])->name('apvRise');
-Route::post('/ApproveUtopia', [ListEcoFriendController::class,'approveUtopia'])->name('apvUtopia');
-Route::post('/ApproveUtile', [ListEcoFriendController::class,'approveUtile'])->name('apvUtile');
-Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconteur'])->name('apvRaconteur');
+// Route::post('/DisapproveRise', [ListEcoFriendController::class,'disapproveRise'])->name('disRise');
+// Route::post('/DisapproveUtopia', [ListEcoFriendController::class,'disapproveUtopia'])->name('disUtopia');
+// Route::post('/DisapproveUtile', [ListEcoFriendController::class,'disapproveUtile'])->name('disUtile');
+// Route::post('/DisapproveRaconteur', [ListEcoFriendController::class,'disapproveRaconteur'])->name('disRaconteur');
+
+// Route::post('/ApproveRise', [ListEcoFriendController::class,'approveRise'])->name('apvRise');
+// Route::post('/ApproveUtopia', [ListEcoFriendController::class,'approveUtopia'])->name('apvUtopia');
+// Route::post('/ApproveUtile', [ListEcoFriendController::class,'approveUtile'])->name('apvUtile');
+// Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconteur'])->name('apvRaconteur');
 
 //Greenate Menu and Shopping carts
 Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
