@@ -63,14 +63,8 @@
 
 @section('custom-js')
     <script>
-        var counterBtn = 0;
-        $(document).ready(function () {
-            $("#orderSubmitBtn").click(function() {
-                if(counterBtn != 0){
-                    ("#orderSubmitBtn").prop('disabled','disabled');
-                }
-                $counterBtn++;
-            })
-        })
+        $('form').submit(function(){
+            $('#orderSubmitBtn', this).attr('disabled', 'disabled');
+        });
     </script>
 @endsection

@@ -22,31 +22,6 @@
         </a>
     </div>
     <div class="profile-container" style="min-height:100vh;">
-        <!-- <div class="row" style="margin-top:25vh;">
-            <div class="col-11 col-lg-10 mx-auto" id="day-count">
-                <p class="day-title">We're still preparing your order</p>
-                <p class="day-left" id="day-left">9 Days Left</p>
-            </div>
-            <div class="col-md-8 col-11" id="time-countdown">
-                <ul class="countdown">
-                    <div id="days" class="d-none">
-                        01
-                    </div>
-                    <li>
-                        <div class="num hours" id="">12</div>
-                        <div class="txt">hours</div>
-                    </li>
-                    <li>
-                        <div class="num minutes" id="">36</div>
-                        <div class="txt">minutes</div>
-                    </li>
-                    <li>
-                        <div class="num seconds" id="">48</div>
-                        <div class="txt">seconds</div>
-                    </li>
-                </ul>
-            </div>
-        </div> -->
         <!-- --------------------ORDER NOW------------------------------------------- -->
         @if($data->ordered == NULL || $data->ordered == FALSE)
         <div class="order-wrapper py-5">
@@ -81,8 +56,11 @@
                             Zoom Meetings</br>
                             13 September 2021</br>
                             </br>
-                            ID:</br>
-                            Pass:</br>
+                            ID: <b style="overflow-wrap: break-word;">TBA</b></br>
+                            Pass: <b style="overflow-wrap: break-word;">TBA</b></br>
+                            </p>
+                            <p>
+                                
                             </p>
                         </div>
                     </div>
@@ -145,68 +123,20 @@
 <!-- Javascript -->
 @section('custom-js')
 <script>
-    (function() {
-        const second = 1000,
-            minute = second * 60,
-            hour = minute * 60,
-            day = hour * 24;
+    function matchHeight(){
+        var maxHeight = 0;
 
-        var curr = new Date().getTime()
+        var divs = jQuery(".item-wrapper");
+        jQuery.each(divs, function(){
+            var height = jQuery(this).height();
+            if(maxHeight<height)
+                maxHeight = height;
 
-        var oprec = new Date();
-        oprec.setDate(oprec.getDate() + 1)
-        oprec.setHours(0, 0, 0, 0);
-        countDown = oprec.getTime(),
-
-            x = setInterval(function() {
-                let now = new Date().getTime(),
-                    distance = countDown - now ;
-
-                if (Math.floor((distance % day) / hour) >= 10) {
-                    h = Math.floor((distance % day) / hour)
-                } else {
-                    h = "0" + Math.floor((distance % day) / hour)
-                }
-
-                if (Math.floor((distance % hour) / minute) >= 10) {
-                    m = Math.floor((distance % hour) / minute)
-                } else {
-                    m = "0" + Math.floor((distance % hour) / minute)
-                }
-
-                if ((Math.floor((distance % minute) / second)) >= 10) {
-                    s = Math.floor((distance % minute) / second)
-                } else {
-                    s = "0" + Math.floor((distance % minute) / second)
-                }
-
-                ($(".days").html(Math.floor(distance / day))),
-                ($(".hours").html(h)),
-                ($(".minutes").html(m)),
-                ($(".seconds").html(s))
-
-                //do something later when date is reached
-                if (distance <= 1) {
-                    clearInterval(x);
-                    location.reload();
-                }
-                //seconds
-            }, 0);
-    })();
-</script>
-<script>
-    var maxHeight = 0;
-
-    var divs = jQuery(".item-wrapper");
-    jQuery.each(divs, function(){
-        var height = jQuery(this).height();
-        if(maxHeight<height)
-            maxHeight = height;
-
-    });
-    $(window).on('load', function() {
-        console.log("asdfasdf")
+        });
         divs.height(maxHeight);
+    }
+    $(window).on('load', function() {
+        matchHeight();
     });
 </script>
 
@@ -256,7 +186,6 @@
 @endif
 
 <script>
-    
     @if($eventStatus)
         @if($data->task_link == NULL)
             $(".submit-link").click(function() {

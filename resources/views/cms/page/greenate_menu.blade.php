@@ -124,6 +124,9 @@
 @section('custom-js')
 
 <script>
+    $('form').submit(function(){
+        $('#scBtn', this).attr('disabled', 'disabled');
+    });
     $(document).ready(function () {
         let num = parseInt($('#cartNumber').html());
 
