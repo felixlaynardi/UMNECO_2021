@@ -144,6 +144,7 @@
             $("#dineInOption").attr('checked', true);
             $("#dineIn").toggleClass("styleDineIn");
             $('#cartNumber').text(++num);
+            $(".add").html("Remove from Cart");
         @endif
         @if(session('TakeAway') != null && session('TakeAway') != "none")
             @if(session('TakeAway') == "Alter")
@@ -151,6 +152,7 @@
                 $("#alterOption").attr('checked', true);
                 $("#exhortOption").attr("disabled", true);
                 $("#tidbitOption").attr("disabled", true);
+                $(".addAlter").html("Remove from Cart");
 
                 //style toggle
                 $("#Alter").toggleClass("styleTakeAway");
@@ -164,6 +166,7 @@
                 $("#exhortOption").attr('checked', true);
                 $("#alterOption").attr("disabled", true);
                 $("#tidbitOption").attr("disabled", true);
+                $(".addExhort").html("Remove from Cart");
 
                 //style toggle
                 $("#Exhort").toggleClass("styleTakeAway");
@@ -177,6 +180,7 @@
                 $("#alterOption").attr("disabled", true);
                 $("#exhortOption").attr("disabled", true);
                 $('#cartNumber').text(++num);
+                $(".addTidbit").html("Remove from Cart");
 
                 //style toggle
                 $("#Tidbit").toggleClass("styleTakeAway");

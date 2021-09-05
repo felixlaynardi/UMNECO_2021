@@ -48,7 +48,7 @@
                         <input type="hidden" name="takeAway" value="none">
                     @endif
                     <input type="hidden" name="TotalOrdered" value="{{ session('OrderTotal') }}">
-                    <button type="submit" class="btn btn-warning">Order Now</button>
+                    <button type="submit" class="btn btn-warning" id="orderSubmitBtn">Order Now</button>
                 </form>
 
             </div>
@@ -62,5 +62,15 @@
 @endsection
 
 @section('custom-js')
-
+    <script>
+        var counterBtn = 0;
+        $(document).ready(function () {
+            $("#orderSubmitBtn").click(function() {
+                if(counterBtn != 0){
+                    ("#orderSubmitBtn").prop('disabled','disabled');
+                }
+                $counterBtn++;
+            })
+        })
+    </script>
 @endsection
