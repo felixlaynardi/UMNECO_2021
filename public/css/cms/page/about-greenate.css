@@ -445,10 +445,6 @@ body{
     width: 50%;
 }
 
-.zoom-container{
-    padding-top: 200px;
-}
-
 .zoom-logo{
     width: 150px;
 }
@@ -564,6 +560,9 @@ body{
 }
 
 @media (max-width: 594px){
+    .dine-in-text{
+        padding: 0px 20px;
+    }
     .leaf-4, .leaf-5{
         display: none;
     }
@@ -603,7 +602,7 @@ body{
 
 @media (max-width: 450px){
     .dine-in-text{
-        padding: 50px 60px;
+        padding: 0px 20px;
     }
     .section-1 .regulation-button{
         justify-content: space-between;

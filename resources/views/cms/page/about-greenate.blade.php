@@ -58,7 +58,7 @@
                 <div class="activity-carousel carousel-item " data-bs-interval="false" id="dine-in-carousel">
                     <img src="{{ asset('images/about-greenate/dine-in-resize.png') }}" class="d-block m-auto col-10 col-md-6 col-lg-3" alt="...">
                     <div class="carousel-caption d-block m-auto container pt-5 px-3">
-                        <p>Berbeda dengan Take-Away, pada menu Dine-In ini ECO Friends akan berkumpul bersama-sama dan langsung menikmati menu yang disajikan, yaitu Webinar.</p>
+                        <p>Webinar yang diselenggarakan pada GREENATE akan mengangkat topik food waste dengan tema Digitalization for Food Waste Management.</p>
                     </div>                    
                 </div>
             </div>
@@ -196,7 +196,7 @@
                     <p>Melalui Webinar ini, ECO Friends diharapkan dapat menyerap materi yang disampaikan dan mengimplementasikannya di dalam kehidupan sehari-hari untuk mengurangi food waste di Bumi kita.</p>
                 </div>
             </div>
-            <div class="row justify-content-center text-center mt-2 zoom-container">
+            <div class="row justify-content-center text-center mt-2 zoom-container pt-5">
                 <img src="{{ asset('images/about-greenate/zoom.png') }}" class="zoom-logo">
             </div>
         </div>
