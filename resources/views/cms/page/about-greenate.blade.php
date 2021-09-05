@@ -179,7 +179,7 @@
                 <h6>Not a member yet?</h6>
             </div>
             <div class="row justify-content-center text-center">
-                <a href="" class="py-3"><button class="become-eco-friends-button">Become ECO Friends</button></a>
+                <a href="{{ route('registrationView') }}" class="py-3"><button class="become-eco-friends-button">Become ECO Friends</button></a>
             </div>
         </div>
     </div>
@@ -304,5 +304,4 @@
     });
 
 </script>
-
 @endsection

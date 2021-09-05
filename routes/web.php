@@ -92,9 +92,9 @@ Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('gr
 // Route::post('/ApproveRaconteur', [ListEcoFriendController::class,'approveRaconteur'])->name('apvRaconteur');
 
 //Greenate Menu and Shopping carts
-Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
-Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
-Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
+// Route::post('/RiseCompensation', [ListEcoFriendController::class,'riseCompensation'])->name('riseComp');
+// Route::post('/UtopiaCompensation', [ListEcoFriendController::class,'utopiaCompensation'])->name('utopiaComp');
+// Route::post('/EFChangePassword', [ListEcoFriendController::class,'efChangePassword'])->name('efchngpw');
 
 Route::get('/greenate-menu', [ShoppingCartController::class, 'menu'])->name('greenateMenu');
 Route::post('/greenate-shopping-cart', [ShoppingCartController::class, 'shoppingCart'])->name('greenateSC');
