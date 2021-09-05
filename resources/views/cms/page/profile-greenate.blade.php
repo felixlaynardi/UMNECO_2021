@@ -73,7 +73,7 @@
                                         <img src="{{ asset('images/about-greenate/exhort.png') }}" alt="" width="100%">
                                     </div>
                                     <p>Pada kegiatan ini, ECO Friends akan membuat video tentang tips bagaimana menyimpan makanan agar dapat bertahan lebih lama.</p>
-                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link">Submit</button></div>
+                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link disabled" disabled>Submit</button></div>
                                     
                                     <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button id="exhortButton">Twibbon</button></div>
                                 </div>
@@ -85,7 +85,7 @@
                                         <img src="{{ asset('images/about-greenate/alter.png') }}" alt="" width="100%">
                                     </div>
                                     <p>Pada kegiatan ini, ECO Friends akan membuat video tentang bagaimana cara mengolah kembali sisa makanan menjadi hidangan baru.</p>
-                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link">Submit</button></div>
+                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link disabled" disabled>Submit</button></div>
                                     
                                     <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button id="alterButton">Twibbon</button></div>
                                 </div>
@@ -97,7 +97,7 @@
                                         <img src="{{ asset('images/about-greenate/tidbit.png') }}" alt="" width="100%">
                                     </div>
                                     <p>Pada kegiatan ini, ECO Friends akan merekam diri saat sedang makan dan menghabisinya hingga tidak tersisa, tujuannya agar sampah makanan tidak terus bertambah.</p>
-                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link">Submit</button></div>
+                                    <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"><button class="submit-link disabled" disabled>Submit</button></div>
                                     
                                     <div class="py-2 px-1 d-flex text-center justify-content-center submit-twibbon-button"> <button id="tidbitButton">Twibbon</button></div>
                                 </div>

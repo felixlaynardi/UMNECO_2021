@@ -265,6 +265,15 @@
 	text-transform: uppercase;
 }
 
+.disabled{
+    cursor: default!important;
+    background-color: #9cc4b0!important;
+}
+
+.disabled:hover{
+    color: white!important;
+}
+
 @media (max-width: 1026px){
 
     .soda{
