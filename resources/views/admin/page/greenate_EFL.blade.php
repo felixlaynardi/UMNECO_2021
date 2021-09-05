@@ -23,6 +23,8 @@
                             <th>Line ID</th>
                             <th>Phone Number</th>
                             <th>Internal</th>
+                            <th>Dine In</th>
+                            <th>Take Away</th>
                             <th>Task Link</th>
                         </tr>
                     </thead>
@@ -40,6 +42,21 @@
                                     <td>{{ $item->line_id }}</td>
                                     <td>{{ $item->phone_number }}</td>
                                     <td>YES</td>
+                                    @if($item->dine_in)
+                                        <td>Ordered</td>
+                                    @else
+                                        <td>Not Order</td>
+                                    @endif
+                                    @if($item->takeaway_id == 1)
+                                        <td>Exhort</td>
+                                    @elseif($item->takeaway_id == 2)
+                                        <td>Alter</td>
+                                    @elseif($item->takeaway_id == 3)
+                                        <td>Tidbit</td>
+                                    @elseif($item->takeaway_id == 4)
+                                        <td>None</td>
+                                    @endif
+                                    
                                     @if($item->task_link != NULL)
                                         <td>{{ $item->task_link }}</td>
                                     @else
