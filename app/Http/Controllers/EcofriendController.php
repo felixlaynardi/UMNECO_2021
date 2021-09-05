@@ -48,6 +48,7 @@ class EcofriendController extends Controller
 
     public function profileView(Request $request)
     {
+        
         if (!session()->has('user')) {
             return redirect()->route('loginView');
         } else {
@@ -55,12 +56,16 @@ class EcofriendController extends Controller
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
             $data->name = Str::limit($data->full_name, 20, '...');
+
+            $eventStatus = FALSE;
+
             session()->put('userID', $data->id);
             return view(
                 'cms.page.profile-greenate',
                 [
                     'title' => 'UMN ECO 2021 - Profile',
-                    'data' => $data
+                    'data' => $data,
+                    'eventStatus' => $eventStatus
                 ]
             );
         }
