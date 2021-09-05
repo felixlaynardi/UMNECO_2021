@@ -680,4 +680,9 @@ body{
     background: #ffcc3c;
     color: #1c5c3c;;
     transition-duration: 1s;
+    outline: none;
+}
+
+.become-eco-friends-button:focus{
+    outline: none;
 }

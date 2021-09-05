@@ -178,7 +178,7 @@
             <div class="row justify-content-center text-center mt-2">
                 <h6>Not a member yet?</h6>
             </div>
-            <div class="row justify-content-center text-center">
+            <div class="row justify-content-center text-center" style="z-index: 1;">
                 <a href="{{ route('registrationView') }}" class="py-3"><button class="become-eco-friends-button">Become ECO Friends</button></a>
             </div>
         </div>
@@ -269,19 +269,17 @@
             divs.height(maxHeight);
         }        
     }
-    function matchHeightChoices2(x){
-        if(x.matches){
-            var maxHeight = 0;
+    function matchHeightChoices2(){
+        var maxHeight = 0;
 
-            var divs = jQuery(".swiper-slide .choices-2");
-            jQuery.each(divs, function(){
-                var height = jQuery(this).height();
-                if(maxHeight<height)
-                    maxHeight = height;
+        var divs = jQuery(".swiper-slide .choices-2");
+        jQuery.each(divs, function(){
+            var height = jQuery(this).height();
+            if(maxHeight<height)
+                maxHeight = height;
 
-            });
-            divs.height(maxHeight);
-        }        
+        });
+        divs.height(maxHeight);
     }
     function matchHeightCarousel(x){
         var maxHeight = 0;
