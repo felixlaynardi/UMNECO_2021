@@ -22,14 +22,10 @@ class ShoppingCart extends Model
         ->get();
     }
 
-    public function insertOrder($user_id, $dine_in, $takeaway_id){
+    public function insertOrder($user_id, $order_data){
         return DB::table('green_eco_friends')
         ->where('id', $user_id)
-        ->update([
-            'dine_in' => $dine_in,
-            'takeaway_id' => $takeaway_id,
-            'ordered' => TRUE
-        ]);
+        ->update($order_data);
     }
 
     public function insertTaskLink($user_id, $link){

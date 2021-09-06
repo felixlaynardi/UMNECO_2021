@@ -22,25 +22,8 @@
         </a>
     </div>
     <div class="profile-container" style="min-height:100vh;">
-        <!-- --------------------ORDER NOW------------------------------------------- -->
-        @if($data->ordered == NULL || $data->ordered == FALSE)
-        <div class="order-wrapper py-5">
-            <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-2">
-            <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-3">
-            <div class="d-flex justify-content-center align-items-center container py-5">
-                
-                <div class="order-button d-flex text-center" id="orderNowBtn">
-                    <div class="d-inline-block text-start m-auto">
-                        <h2 class="">ORDER </br> NOW!</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        @endif
-        <!-- ----------------------------------------- -->
-
         <!-- Ordered-------------------------------------------------------------------- -->
-        @if($data->ordered != FALSE || $data->ordered != NULL)
+        @if($data->dine_in != null || $data->takeaway_id != null)
         <div class="order-wrapper py-5">
             <img src="{{ asset('images/profile-greenate/leaf.png') }}" class="leaf-4 d-none d-sm-block">
             <img src="{{ asset('images/profile-greenate/cutting-board.png') }}" class="cutting-board d-none d-sm-block">
@@ -105,6 +88,23 @@
                         @endif
                     @endif
                     
+                </div>
+            </div>
+        </div>
+        @endif
+        <!-- ----------------------------------------- -->
+
+        <!-- --------------------ORDER NOW------------------------------------------- -->
+        @if($data->dine_in == null || $data->takeaway_id == null)
+        <div class="order-wrapper py-5">
+            <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-2">
+            <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-3">
+            <div class="d-flex justify-content-center align-items-center container py-5">
+                
+                <div class="order-button d-flex text-center" id="orderNowBtn">
+                    <div class="d-inline-block text-start m-auto">
+                        <h2 class="">ORDER </br> NOW!</h2>
+                    </div>
                 </div>
             </div>
         </div>

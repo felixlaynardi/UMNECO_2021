@@ -20,7 +20,7 @@
                     @csrf
                     <h5 class="shoppingcart"><button type="submit" class="mx-auto" id="scBtn">My Shopping Cart </button><p class="Notif" id="cartNumber">0</p></h5>
                     <div class="main">
-
+                        @if(!$data->dine_in)
                         <div class="row justify-content-center" >
                             <div class="col-md-10 col-10 box1">
                                 <div class="dineIn active" id="dineIn">
@@ -32,10 +32,11 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                         <div class="col-md-12 col-12 row greenate">
                             <img src="{{ asset('images/order/Greenate.png') }}">
                         </div>
-
+                        @if($data->takeaway_id == null)
                         <!------------------- Desktop --------------------------->
 
                         <div class="col-md-10 col-10 row monitor justify-content-center">
@@ -110,6 +111,7 @@
                                 </div>
                             </div>
                         </div>
+                        @endif
                         <img src="{{ asset('images/order/Burger.png') }}" class="burger">
                         <img src="{{ asset('images/order/Kentang.png') }}" class="kentang">
                     </div>

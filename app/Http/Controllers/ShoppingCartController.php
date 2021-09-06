@@ -19,14 +19,14 @@ class ShoppingCartController extends Controller
         } else {
             $model = new Ecofriends();
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            if($data->ordered != TRUE){
+            if($data->dine_in == null || $data->takeaway_id == null){
                 return view('cms.page.greenate_menu', [
-                    'title' => 'Greenate Menu'
+                    'title' => 'Greenate Menu',
+                    'data' => $data
                 ]);
             }else{
                 return redirect()->route('profileView');
             }
-            
         }
     }
 
@@ -39,6 +39,7 @@ class ShoppingCartController extends Controller
         $dineInStatus =  $request->input('dineIn');
         $takeAwayInput =  $request->input('takeAway');
         $totalOrdered =  $request->input('TotalOrdered');
+
 
         if($dineInStatus == "True" && $takeAwayInput != "none"){
             $dineIn = TRUE;
@@ -69,7 +70,7 @@ class ShoppingCartController extends Controller
                     break;
             }
         }else if($takeAwayInput != "none" && $dineInStatus == "False"){
-            $dineIn = FALSE;
+            $dineIn = null;
             switch($takeAwayInput){
                 case "Alter":
                     $takeAway = 2;
@@ -97,8 +98,8 @@ class ShoppingCartController extends Controller
                     break;
             }
         }else if($dineInStatus == "True" && $takeAwayInput == "none"){
-            $dineIn = TRUE;
-            $takeAway = 4;
+            $dineIn = 1;
+            $takeAway = null;
             if($ecoFriendData->is_internal){
                 $data['receiptImg'] = "https://i.imgur.com/iKMx3Jq.png";
             }else{
@@ -106,11 +107,31 @@ class ShoppingCartController extends Controller
             }
         }
 
+        if($ecoFriendData->dine_in == 1){
+            $order_data = array(
+                "takeaway_id" => $takeAway,
+                "ordered" => TRUE
+            );
+        }else if($ecoFriendData->takeaway_id != null){
+            $order_data = array(
+                "dine_in" => $dineIn,
+                "ordered" => TRUE
+            );
+        }else{
+            $order_data = array(
+                "dine_in" => $dineIn,
+                "takeaway_id" => $takeAway,
+                "ordered" => TRUE
+            );
+        }
+
         $data['userName'] = $ecoFriendData->full_name;
         $data['email'] = $ecoFriendData->email;
 
+        
+
         //insert order to database
-        $shoppingCart->insertOrder($request->session()->get('userID'), $dineIn, $takeAway);
+        $shoppingCart->insertOrder($request->session()->get('userID'), $order_data);
 
         $this->sendEmail($data);
         // return to profile;
