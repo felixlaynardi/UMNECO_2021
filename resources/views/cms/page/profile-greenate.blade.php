@@ -37,10 +37,10 @@
                             </div>
                             <p>
                             Zoom Meetings</br>
-                            13 September 2021</br>
+                            13 September 2021, 17.00 WIB</br>
                             </br>
-                            ID: <b style="overflow-wrap: break-word;">TBA</b></br>
-                            Pass: <b style="overflow-wrap: break-word;">TBA</b></br>
+                            ID: <b style="overflow-wrap: break-word;">961 9360 6074</b></br>
+                            Pass: <b style="overflow-wrap: break-word;">790701</b></br>
                             </p>
                             <p>
                                 
