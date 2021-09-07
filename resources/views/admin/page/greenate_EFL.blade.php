@@ -35,7 +35,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($data as $item)
+                    @foreach($data as $item)
                             @if($item->is_internal)
                                 <tr>
                                     <td>{{ $item->full_name }}</td>
@@ -48,10 +48,10 @@
                                     <td>{{ $item->line_id }}</td>
                                     <td>{{ $item->phone_number }}</td>
                                     <td>YES</td>
-                                    @if($item->dine_in)
+                                    @if($item->dine_in && $item->dine_in != NULL)
                                         <td>Ordered</td>
                                     @else
-                                        <td>Not Order</td>
+                                        <td>-</td>
                                     @endif
                                     @if($item->takeaway_id == 1)
                                         <td>Exhort</td>
@@ -59,32 +59,46 @@
                                         <td>Alter</td>
                                     @elseif($item->takeaway_id == 3)
                                         <td>Tidbit</td>
-                                    @elseif($item->takeaway_id == 4)
-                                        <td>None</td>
+                                    @elseif($item->takeaway_id == 4 || $item->takeaway_id == NULL)
+                                        <td>-</td>
                                     @endif
                                     
                                     @if($item->task_link != NULL)
                                         <td>{{ $item->task_link }}</td>
                                     @else
-                                        <td>No Submission</td>
+                                        <td>-</td>
                                     @endif
                                 </tr>
                             @else
                                 <tr>
                                     <td>{{ $item->full_name }}</td>
                                     <td>{{ $item->email }}</td>
-                                    <td>Eksternal</td>
+                                    <td>-</td>
                                     <td>{{ $item->institution }}</td>
-                                    <td>Eksternal</td>
-                                    <td>Eksternal</td>
+                                    <td>-</td>
+                                    <td>-</td>
                                     <td>{{ $item->instagram_account }}</td>
                                     <td>{{ $item->line_id }}</td>
                                     <td>{{ $item->phone_number }}</td>
                                     <td>NO</td>
+									@if($item->dine_in && $item->dine_in != NULL)
+                                        <td>Ordered</td>
+                                    @else
+                                        <td>-</td>
+                                    @endif
+                                    @if($item->takeaway_id == 1)
+                                        <td>Exhort</td>
+                                    @elseif($item->takeaway_id == 2)
+                                        <td>Alter</td>
+                                    @elseif($item->takeaway_id == 3)
+                                        <td>Tidbit</td>
+                                    @elseif($item->takeaway_id == 4 || $item->takeaway_id == NULL)
+                                        <td>-</td>
+                                    @endif
                                     @if($item->task_link != NULL)
                                         <td>{{ $item->task_link }}</td>
                                     @else
-                                        <td>No Submission</td>
+                                        <td>-</td>
                                     @endif
                                 </tr>
                             @endif
