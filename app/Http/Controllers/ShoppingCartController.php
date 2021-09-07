@@ -128,7 +128,9 @@ class ShoppingCartController extends Controller
         $data['userName'] = $ecoFriendData->full_name;
         $data['email'] = $ecoFriendData->email;
 
-        
+        $request->session()->pull('OrderTotal');
+        $request->session()->pull('DineIn');
+        $request->session()->pull('TakeAway');
 
         //insert order to database
         $shoppingCart->insertOrder($request->session()->get('userID'), $order_data);
