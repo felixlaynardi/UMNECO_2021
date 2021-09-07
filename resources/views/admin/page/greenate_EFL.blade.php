@@ -1,6 +1,11 @@
 @extends('admin.template.admin')
 
 @section('content')
+<div class="col-sm-12 d-flex flex-row-reverse my-3 px-4">
+    <button class="d-sm-inline-block btn btn-sm btn-success shadow-sm" id="chngPass">
+        <i class="fas fa-cog fa-sm text-white-50"></i> Change Password
+    </button>
+</div>
 <!-- Begin Page Content -->
 <div class="container-fluid">
     <!-- DataTales -->
@@ -8,6 +13,7 @@
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-eco1">List Of Greenate Eco Friends</h6>
         </div>
+        
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="greenateEFL" width="100%" cellspacing="0">
@@ -68,7 +74,7 @@
                                     <td>{{ $item->full_name }}</td>
                                     <td>{{ $item->email }}</td>
                                     <td>Eksternal</td>
-                                    <td>Universitas Multimedia Nusantara</td>
+                                    <td>{{ $item->institution }}</td>
                                     <td>Eksternal</td>
                                     <td>Eksternal</td>
                                     <td>{{ $item->instagram_account }}</td>
@@ -94,10 +100,30 @@
 
 @section('custom-js')
 <script>
+    @if(session()->has('msg'))
+        Swal.fire('{{ session()->get('msg') }}');
+    @endif
     $(document).ready(function() {
         $('#greenateEFL').DataTable( {
             "scrollX": true
         } );
+
+        $("#chngPass").click(function() {
+            Swal.fire({
+                title: "Change password",
+                html: `
+                <form action="{{ route('changePass') }}" method="post">
+                    @csrf
+                    <input type="text" name="email" id="email" class="swal2-input" placeholder="Type the email here..."></input>
+                    <input type="text" name="password" id="password" class="swal2-input" placeholder="Type the new password here..."></input>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            `,
+                showCancelButton: false,
+                showConfirmButton: false,
+                focusConfirm: false
+            })
+        })
     } );
 </script>
 @endsection

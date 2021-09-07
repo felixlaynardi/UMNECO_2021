@@ -66,8 +66,8 @@ Route::get('/twibbon/tidbit', [TwibbonController::class, 'tidbit'])->name('twibb
 
 //admin side
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
-// Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
-// Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
+Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
+Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
 
 Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
 Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
@@ -75,6 +75,7 @@ Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
 
 Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
+Route::post('/ef-change-password', [GreenateAdminController::class,'change_pass'])->name('changePass');
 
 // Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
 // Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
