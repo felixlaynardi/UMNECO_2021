@@ -33,10 +33,12 @@
                             </div>
                         </div>
                         @endif
-                        <div class="col-md-12 col-12 row greenate">
+
+                        @if($data->takeaway_id == null)
+                        <div class="col-md-12 col-12 row greenate pt-5">
                             <img src="{{ asset('images/order/Greenate.png') }}">
                         </div>
-                        @if($data->takeaway_id == null)
+                        
                         <!------------------- Desktop --------------------------->
 
                         <div class="col-md-10 col-10 row monitor justify-content-center">

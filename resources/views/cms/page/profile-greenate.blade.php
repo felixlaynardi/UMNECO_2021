@@ -97,8 +97,10 @@
         <!-- --------------------ORDER NOW------------------------------------------- -->
         @if($data->dine_in == null || $data->takeaway_id == null)
         <div class="order-wrapper py-5">
+            @if($data->dine_in == null && $data->takeaway_id == null)
             <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-2">
             <img src="{{ asset('images/profile-greenate/leaf-2.png') }}" class="leaf-3">
+            @endif
             <div class="d-flex justify-content-center align-items-center container py-5">
                 
                 <div class="order-button d-flex text-center" id="orderNowBtn">
