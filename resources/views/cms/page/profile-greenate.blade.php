@@ -139,6 +139,50 @@
         matchHeight();
     });
 </script>
+<script>
+    Swal.queue([
+        {
+            title: '',
+            html: `
+            <div class="container">
+            <h2>THANK YOU, ECO FRIENDS!</h2>
+                <div class="background">
+                    <div class="sweet-alert-container">
+                        <div class="dinein-box">
+                            <img src="{{ asset('images/closegreenate/Dine In Logo.png') }}" />
+                        </div>
+                        <div class="takeaway-box">
+                            <img src="{{ asset('images/closegreenate/Takeaway.png') }}" />
+                        </div>
+                    </div>
+                </div>
+                <div class="sweet-container">
+                    <div class="Exhort-box">
+                                <img src="{{ asset('images/closegreenate/Exhort.png') }}" />
+                    </div>
+                    <div class="Alter-box">
+                                <img src="{{ asset('images/closegreenate/Alter.png') }}" />
+                    </div>
+                    <div class="Tidbit-box">
+                                <img src="{{ asset('images/closegreenate/Tidbit.png') }}" />
+                    </div>
+                </div>
+                <h6>Your participation in RED have brought a great amount of positive impacts for our Earth</h6>
+
+            </div>
+            
+            `,
+            confirmButtonText: 'Continue',
+            showCancelButton: false,
+        }
+    ])
+<script>
+    Swal.fire({
+        title: 'THANK YOU, ECO FRIENDS!',
+        text: 'We hope your participation in GREENATE will be a start in contributing to fight food waste on Earth',
+    });
+</script>
+
 
 <script>
     $(document).ready(function () {
