@@ -374,3 +374,52 @@
         color: white;
     }
 }
+/* -----modal----- */
+.dinein-box,
+.takeaway-box{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 40%;
+    display: inline-block;
+    height: auto;
+}
+h2,
+h6{
+    font-family: MADE Tommy Soft;
+}
+h6{
+    margin-top: 5%;
+}
+.sweet-alert-container{
+    background-image: url(../../../images/closegreenate/Thankyou.JFIF);
+    background-size: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+.sweet-alert-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.sweet-container{
+    background-size: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+.sweet-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.Alter-box,
+.Tidbit-box,
+.Exhort-box{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 20%;
+    display: inline-block;
+    height: auto;
+}
+
