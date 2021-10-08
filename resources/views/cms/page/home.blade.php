@@ -8,19 +8,19 @@
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
     <div id="scene-1" class="position-relative" style="">
-        <img src="{{ asset('images/home/left-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 left-pipe" id="left-pipe-id" style="">
-
-        <img src="{{ asset('images/home/hose.png')}}" alt="" class="position-fixed col-lg-3 hose" id="hose-id">
-
-        <img src="{{ asset('images/home/right-pipe.png')}}" alt="" class="position-fixed col-lg-3 col-md-6 col-12 right-pipe" id="right-pipe-id" style="">
-        
-        <div class="glass-section position-fixed col-12" style="text-align:center;">
-            <a href="#" id="glass-a">
-                <img src="{{ asset('images/home/glass-1.png')}}" alt="" class="col-md-3 col-8" id="glass" style="">
-                <span class="marker"></span>
-            </a>
-
-            <div class="glass-text" class="position-fixed col-md-3 col-8">BREAK TO ENTER</div>
+        <div class="landing-header" style="">
+            <img src="{{ asset('images/home/Daun 7.png')}}" alt="" class="position-fixed left-pipe" id="left-pipe-id" style="">
+            <img src="{{ asset('images/home/Daun 7.png')}}" alt="" class="position-fixed right-pipe" id="right-pipe-id" style="">    
+            <div class="glass-section position-fixed" style="text-align:center;">
+                <img src="{{ asset('images/home/Gabung WITH saos.png')}}" alt="" class="coffee" id="glass" style="">
+            </div>
+            
+            <a class="button p-lg-2 btn-getin" type="" href="{{ route('about-greenate' )}}" value="">GET IN</a>
+            <div class="landing-desc">
+                <div class="welcome">Welcome, <br></div>
+                <div class="we">We're <br></div>
+                <div class="open">Open!</div>  
+            </div>
         </div>
     </div>
     <div id="scene-2" class="position-relative mx-auto">

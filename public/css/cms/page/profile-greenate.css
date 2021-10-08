@@ -1,0 +1,472 @@
+.main{
+    flex-flow: column wrap;
+    overflow: hidden;
+    background-color: #F4F4F4;
+    display: flex;
+}
+
+.banner{
+    padding-top:40px;
+    min-height: 60vh;
+    background-image: linear-gradient(0deg, #1B5A3B, #1B5A3B);
+    position: relative;
+    flex-flow: column wrap;
+    overflow: hidden;
+    padding-left: 10%;
+}
+
+.banner-text{
+    padding-top: 200px;
+    bottom: 0;
+    padding-bottom: 30px;
+}
+
+.banner h3{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 56px;
+    text-align: left;
+    color: white;
+}
+
+.banner h1{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 82px;
+    line-height: 108px;
+    text-align: left;
+    color: white;
+}
+
+
+
+.order-wrapper{
+    position: relative;
+}
+
+.order-content{
+    z-index: 5;
+}
+
+.order-button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.2s ease-in-out;
+    background-color: #ffcc3c;
+    color: #1B5A3B;
+}
+
+.order-button{
+    background-color: #1B5A3B;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 34px;
+    padding: 100px;
+    color: #FFCF00;
+    transition: all 0.2s ease-in-out;
+}
+
+
+.order-button h2{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 60px;
+
+    
+}
+
+.leaf-1{
+    position: absolute;
+    mix-blend-mode: overlay;
+    width: 30%;
+    position: absolute;
+    width: 250px;
+    left: -10px;
+    bottom: 0;
+}
+
+.fries{
+    position: absolute;
+    opacity: 0.5;
+    right: -60px;
+    bottom: -120px;
+    width: 23%;
+}
+.soda{
+    position: absolute;
+    right: 14%;
+    bottom: -78%;
+    width: 19%;
+
+}
+
+.leaf-2{
+    position: absolute;
+    width: 30%;
+    opacity: 0.5;
+    transform: scaleX(-1);
+    left: -5%;
+    top: 20%;
+}
+.leaf-3{
+    position: absolute;
+    opacity: 0.5;
+    right: -4%;
+    width: 30%;
+    top: 30%;
+}
+
+.leaf-4{
+    position: absolute;
+    z-index: 1;
+    width: 30%;
+    opacity: 0.5;
+    bottom: -5%;
+    right: -5%;
+}
+
+.cutting-board{
+    position: absolute;
+    /* left: -15%; */
+    bottom: 0%;
+    opacity: 0.5;
+}
+
+
+.item-wrapper{
+    padding: 30px;
+    border: 2px solid #1B5A3B;
+    box-sizing: border-box;
+    border-radius: 50px;
+    
+}
+
+.order-list p{
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.order-list button:hover{
+    background-color: #e7e6e6;
+    color: #1c5c3c;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.order-list button{
+    transition: all 0.2s ease-in-out;
+    color: #F4F4F4;
+    background-color: #1c5c3c;
+    z-index: 10;
+    font-family: MADE Tommy Soft;
+    font-style: bold;
+    font-weight: 800;
+    border: none;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;    
+    line-height: 1;
+    padding: 20px;
+    width: 100%;
+}
+
+.submit-twibbon-button button:focus{
+    outline: none;
+}
+
+.logout{
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 5px;
+    text-align:center;
+}
+
+.logout:hover{
+    text-decoration: none;
+    color: #e8d3d3;
+}
+
+/* countdown */
+.countdown {
+	display: grid;
+	column-gap: 10px;
+    list-style: none;
+	grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+}
+.countdown li {
+	text-align: center;
+	position: relative;
+}
+.countdown li + li:before {
+	content: ":";
+	display: block;
+	font-size: 22px;
+	position: absolute;
+	top: 18%;
+	left: -8px;
+}
+.countdown .num {
+	margin-bottom: 8px;
+	font-size: 48px;
+	font-weight: bold;
+}
+.countdown .txt {
+	font-size: 12px;
+	text-transform: uppercase;
+}
+
+#count{
+    margin-top: 10%;
+}
+
+#day-count{
+    text-align: center;
+    font-family: 'Heavitas';
+    letter-spacing: 3px;
+}
+
+.day-title{
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.day-left{
+    font-size: 35px;
+    font-weight: 600;
+}
+/* container */
+#time-countdown{
+    background-color: #85FFBD;
+    background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+    border-radius: 20px;
+    justify-content: center;
+    /* display: none; */
+    color:black;
+    margin:auto;
+}
+#time-count h1 {
+	margin-bottom: 16px;
+	font-size: 24px;
+	letter-spacing: 5px;
+	white-space: nowrap;
+	text-transform: uppercase;
+}
+
+.disabled{
+    cursor: default!important;
+    background-color: #9cc4b0!important;
+}
+
+.disabled:hover{
+    color: white!important;
+}
+
+.profile-title{
+    font-family: 'Neufreit Extra Bold' ;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+
+    color: #1B5A3B;
+}
+
+.profile-subtitle, .profile-footer{
+    font-family: 'Neufreit Extra Bold' ;
+    text-align: center;
+}
+
+.profile-subtitle{
+    font-size: 26px;
+}
+
+.profile-footer{
+    font-size: 26px;
+    font-weight: bold;
+
+    color: #1B5A3B;
+}
+
+@media (max-width: 1200px){
+    .cutting-board{
+        left: -10%;
+    }
+}
+
+@media (max-width: 1026px){
+
+    .soda{
+        position: absolute;
+        right: 14%;
+        bottom: -42%;
+        width: 15%;
+    
+    }
+
+    .fries{
+        position: absolute;
+        opacity: 0.5;
+        right: -60px;
+        bottom: -90px;
+        width: 22%;
+    }
+
+    .cutting-board{
+        left: -20%;
+    }
+
+}
+
+@media (max-width: 890px){
+    .soda{
+        display: none;
+    }
+
+    .fries{
+        display: none;
+    }
+
+    .order-button{
+        padding: 60px;
+    }
+    .order-button h2{
+        font-size: 32px;
+        line-height: 44px;
+    }
+    
+    .cutting-board{
+        left: -40%;
+    }
+}
+
+@media (max-width: 768px){
+    
+    .cutting-board{
+        left: -55%;
+    }
+}
+
+
+@media (max-width: 512px){
+    .order-button{
+        padding: 40px;
+    }
+    .order-button h2{
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .banner h3{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 13px;
+        line-height: 30px;
+        text-align: left;
+        color: white;
+    }
+    
+    .banner h1{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 52px;
+        line-height: 88px;
+        text-align: left;
+        color: white;
+    }
+
+    .day-title{
+        font-size: 20px;
+    }
+    .day-left{
+        font-size: 15px;
+    }
+    .countdown .num{
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 350px){
+    .banner h3{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px!important;
+        line-height: 15px;
+        text-align: left;
+        color: white;
+    }
+    
+    .banner h1{
+        font-family: MADE Tommy Soft;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 50px;
+        text-align: left;
+        color: white;
+    }
+}
+/* -----modal----- */
+.dinein-box,
+.takeaway-box{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 40%;
+    display: inline-block;
+    height: auto;
+}
+h2,
+h6{
+    font-family: MADE Tommy Soft;
+}
+h6{
+    margin-top: 5%;
+}
+.sweet-alert-container{
+    background-image: url(../../../images/closegreenate/Thankyou.JFIF);
+    background-size: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+.sweet-alert-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.sweet-container{
+    background-size: 100%;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+}
+
+.sweet-container img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+.Alter-box,
+.Tidbit-box,
+.Exhort-box{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 20%;
+    display: inline-block;
+    height: auto;
+}
+
