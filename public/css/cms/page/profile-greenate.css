@@ -131,8 +131,8 @@
 
 .cutting-board{
     position: absolute;
-    left: -15%;
-    bottom: -30%;
+    /* left: -15%; */
+    bottom: 0%;
     opacity: 0.5;
 }
 
@@ -274,6 +274,38 @@
     color: white!important;
 }
 
+.profile-title{
+    font-family: 'Neufreit Extra Bold' ;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+
+    color: #1B5A3B;
+}
+
+.profile-subtitle, .profile-footer{
+    font-family: 'Neufreit Extra Bold' ;
+    text-align: center;
+}
+
+.profile-subtitle{
+    font-size: 26px;
+}
+
+.profile-footer{
+    font-size: 26px;
+    font-weight: bold;
+
+    color: #1B5A3B;
+}
+
+@media (max-width: 1200px){
+    .cutting-board{
+        left: -10%;
+    }
+}
+
 @media (max-width: 1026px){
 
     .soda{
@@ -290,6 +322,10 @@
         right: -60px;
         bottom: -90px;
         width: 22%;
+    }
+
+    .cutting-board{
+        left: -20%;
     }
 
 }
@@ -309,6 +345,17 @@
     .order-button h2{
         font-size: 32px;
         line-height: 44px;
+    }
+    
+    .cutting-board{
+        left: -40%;
+    }
+}
+
+@media (max-width: 768px){
+    
+    .cutting-board{
+        left: -55%;
     }
 }
 
