@@ -1,0 +1,60 @@
+body{
+    background-color: #489ca4;
+}
+
+.container{
+    background-color: #286474;
+    border-radius: 54px;
+}
+
+.container p{
+    font-family: MADE Tommy Soft;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: justify;
+    color: white;
+}
+
+.register-blue-button{
+    background: linear-gradient(180deg, #B9F0FC 14.58%, #73AFD1 100%);
+    padding: 12px 30px;
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+
+}
+
+.register-blue-button:focus{
+    outline: none;
+    border: none;
+}
+
+.register-blue-button:hover{
+    background: linear-gradient(180deg,#73AFD1 100%, #B9F0FC 14.58% );
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+@media(max-width:768px){
+    .container p{
+        font-family: MADE Tommy Soft;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: justify;
+        color: white;
+    }
+}
