@@ -99,7 +99,7 @@
         </div>
 
         <div class="row justify-content-around  py-4">
-            <div class="col-3">
+            <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
                 <button class="register-blue-button">
                     REGISTER NOW
                 </button>
