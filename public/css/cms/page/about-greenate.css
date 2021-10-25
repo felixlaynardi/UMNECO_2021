@@ -1,0 +1,688 @@
+body{
+    background-color: #1c5c3c;
+    overflow-x: hidden;
+}
+
+.main{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+}
+  
+.section-1{
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.section-1 .row{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.section-1 .greenate-content h1 {
+    font-family: MADE Tommy Soft;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100px;
+    letter-spacing: 0em;
+    
+    color: white;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content p{
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31px;
+    letter-spacing: 0em;    
+    text-align: justify;
+    top: 50%;
+    
+    color: white;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content ul{
+    color: white;
+    margin-bottom: 0;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content button {
+    text-decoration: none;
+    color: #1c5c3c;
+    background-color: #ffcc3c;
+    font-family: MADE Tommy Soft;
+    font-style: bold;
+    font-weight: 800;
+    border: none;
+    border-radius: 25px;
+    line-height: 1;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .greenate-content button:hover{
+    background: #FFE227;
+    transition-duration: 1s;
+}
+
+.section-1 .greenate-content button:focus {
+    border: none;
+    outline: none;
+    /* animation: slideup 2s linear; */
+}
+
+.section-1 .regulation-button{
+    justify-content: space-around;
+}
+
+.section-2 h1{
+    font-family: MADE Tommy Soft;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    margin-top: 30px;
+    color: #ffcc3c;
+}
+
+.section-2 .carousel-control-next{
+    padding: 15px;
+    border-radius: 100%;
+    width: auto;
+    top: 25%;
+    bottom: auto;
+    background-color: #083c24;
+    color: #ffcc3c;
+    border: none;
+    outline: none;
+    right: 20%;
+    left: auto;
+    overflow: hidden;
+}
+
+.section-2 .carousel-control-prev{
+    padding: 15px;
+    width: auto;
+    border-radius: 100%;
+    top: 25%;
+    left: 20%;
+    right: auto;
+    bottom: auto;
+    background-color: #083c24;
+    color: #ffcc3c;
+    border: 100%;
+    border: none;
+    outline: none;
+}
+
+.section-2 .carousel-control-next-icon{
+    color: #ffcc3c;
+}
+
+.section-2 .carousel-caption{
+    color: #ffcc3c;
+    text-align: justify;
+    position: relative;
+    font-size: 22px;
+    font-family: MADE Tommy Soft;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.content-2 p{
+    font-family: 'MADE Tommy Soft 2';
+    font-style: normal;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;    
+    text-align: justify;
+    
+    color: white;
+}
+
+.section-3{
+    display:none;
+}
+
+.section-3-active{
+    display: block;
+    transition-duration: 1s;
+}
+
+.dine-in-text p, .dine-in-text h1{
+    text-align: left;
+}
+
+.section-3 .container {
+    background-image: linear-gradient(180deg, #FCC306 0%, #FF9B0B 100%);
+    border-radius: 40px;
+    box-shadow: 0px 1px 3px #050505;
+    padding-bottom: 100px;
+    position: relative;
+    flex-flow: column wrap;
+    overflow: hidden;
+}
+
+.section-3 .container h1{
+    font-family: MADE Tommy Soft;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 122px;
+    letter-spacing: 0em;
+    margin-top: 30px;
+    color: #ffffff;
+}
+
+.section-3 .content-choice h2{
+    font-family: MADE Tommy Soft;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+}
+
+.section-3 .content-choice .choices{
+    font-family: MADE Tommy Soft;
+    font-size: auto;
+    font-style: normal;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    position: relative;
+    flex-flow: column wrap;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+.section-3 .content-choice .choices col{
+    z-index: 3;
+}
+
+.section-3 .quest-logo{
+    z-index: 10;
+}
+
+.section-3 .content-choice .choices p{
+    font-family: 'MADE Tommy Soft 2';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;    
+    text-align: left;
+    top: 50%;
+    color: white;
+}
+
+.section-3 button{
+    color: #ffcc3c;
+    background-color: #1c5c3c;
+    font-family: MADE Tommy Soft;
+    border: none;
+    border-radius: 13px;
+    line-height: 1;
+    font-size: x-large;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.section-3 h6{
+    font-family: MADE Tommy Soft;
+    font-size: 27px;
+    font-style: normal;
+    letter-spacing: 0em;
+    font-weight: lighter;
+    color: #1c5c3c;
+}
+
+.section-3 .carousel-indicators{
+    bottom: auto;
+    top: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.section-3 .carousel-indicators button{
+    background-color: #1c5c3c;
+    /* font-family: MADE Tommy Soft; */
+    border: none;
+    border-radius: 50%;
+    box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 5px;
+    margin-right:5px;
+    opacity: 0.4;
+}
+
+.section-3 .carousel-indicators button.active{
+    background-color: #1c5c3c;
+    opacity: 1;
+
+}
+
+
+.section-3 .carousel-item{
+    padding-top: 100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+}
+
+.exhort{
+    background-color: #ff9c0c;
+}
+
+.alter{
+    background-color: #f094e4;
+}
+
+.tidbit{
+    background-color: #089444;
+}
+
+.menu-circle{
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+    position: absolute;
+    background-color: #FFFFFF;
+    transform: scale(1.7);
+    top: -20%;
+    left: 0;
+    z-index: 1;
+}
+
+.leaf-1{
+    opacity: 0.3;
+    position: absolute;
+    mix-blend-mode: overlay;
+    z-index: -1;
+    width: 13%;
+    transform: scaleX(-1) rotate(29deg);
+    right: 0;
+    top: 7%;
+}
+
+.leaf-2{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    mix-blend-mode: overlay;
+    width: 13%;
+    transform: scaleX(-1) rotate(29deg);
+    right: 0;
+    top: 25%;
+}
+
+.leaf-3{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 10%;
+    transform: scaleX(-1) rotate(107deg);
+    right: 0;
+    top: 32%;
+    mix-blend-mode: overlay;
+}
+
+.leaf-4{
+    width: 35%;
+    position: absolute;
+    transform: rotate(8deg);
+    opacity: 1;
+    left: 10%;
+    mix-blend-mode: overlay;
+    bottom: -5%;
+}
+
+.leaf-5{
+    position: absolute;
+    right: 14%;
+    transform: scale(1.2) rotate(279deg);
+    bottom: 0%;
+    mix-blend-mode: overlay;
+}
+
+.white-circle {
+    transform: scale(0.8) translate(-55%,-20%);
+    position: absolute;
+    background-color: #DFDFDF;
+    z-index: -1;
+    border-radius: 50%;
+    width: 100%;
+    height: auto;
+    padding-top: 100%;
+    opacity: 0.3;
+}
+
+.chicken{
+    top: 47%;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    left: -8%;
+}
+
+.burger{
+    right: -7%;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 17%;
+    top: 70%;
+}
+
+.fries{
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+    width: 20%;
+    top: 85%;
+    left: -7%
+}
+
+.burger-menu{
+    opacity: 0.6;
+    position: absolute;
+    bottom: -10%;
+    right: 3%;
+    width: 50%;
+    mix-blend-mode: overlay;
+    bottom: 5%;
+    right: -10%;
+}
+
+.pudding {
+    opacity: 0.6;
+    position: absolute;
+    bottom: -10%;
+    right: 3%;
+    width: 50%;
+    mix-blend-mode: overlay;
+    bottom: 5%;
+    right: -10%;
+}
+
+.soda{
+    opacity: 0.3;
+    position: absolute;
+    bottom: -10%;
+    right: 3%;
+    width: 40%;
+    mix-blend-mode: overlay;
+}
+
+.dine-in-text{
+    padding: 50px 10px 20px 60px;
+}
+
+
+.dine-in-chicken{
+    position: absolute;
+    right: -10%;
+    top: 5%;
+    width: 50%;
+}
+
+.zoom-logo{
+    width: 150px;
+}
+
+.swiper {
+    max-width: 650px;
+    max-height: 1000px;
+    overflow-x: hidden;
+  }
+
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 15px!important; 
+}
+
+.swiper-button-prev, .swiper-button-next{
+    color: #ffcc3c!important;
+}
+
+.swiper .container-navi-swipe{
+    display: flex;
+    position: absolute;
+    width: 40px;
+    padding: 20px;
+    height: auto;
+    z-index: -1;
+    border-radius: 50%;
+    justify-content: center;
+    background-color: #1c5c3c;
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+    bottom: auto;
+    top: 0;
+    
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #089444!important;
+}
+
+#contact{
+    margin-top: 200px!important;
+}
+
+@media (max-width: 1204px){
+    .section-1 .greenate-content h1 {
+        font-size: 60px;
+        line-height: 80px;
+    }
+    .white-circle {
+        transform: scale(0.8) translate(-55%,-7%);
+    }
+    .menu-circle{
+        top: -500px;
+    }
+    .content-choice{
+        padding-top: 20px;
+    }
+    .swiper-slide{
+        padding-top: 50px;
+        padding-left: 40px!important;
+        padding-right: 40px!important;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 994px){
+    
+    .dine-in-text{
+        padding: 50px 90px;
+    }
+    
+    .dine-in-chicken{
+        position: absolute;
+        right: 10%;
+        top: 5%;
+        width: 20%;
+    }
+    .dine-in-text p{
+        font-size: 18px;
+    }
+    .white-circle {
+        top: 8%;
+        transform:translate(-50%,-50%);
+        left: 50%;
+    }
+    .section-1 .greenate-content h1 {
+        font-size: 50px;
+        text-align: center;
+        /* animation: slideup 2s linear; */
+    }
+    
+    .carousel-caption p{
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px){
+    .dine-in-text p{
+        font-size: 15px;
+        list-style: 5px;
+    }
+    .swiper {
+        max-width: 450px;
+        max-height: 1000px;
+      }
+    
+      .menu-circle{
+        top: -280px;
+    }
+}
+
+@media (max-width: 594px){
+    .dine-in-text{
+        padding: 0px 20px;
+    }
+    .leaf-4, .leaf-5{
+        display: none;
+    }
+    .white-circle {
+        top: 5%;
+        transform:translate(-50%,-50%);
+        left: 50%;
+        width: 150%;
+    }
+    .section-1 .greenate-content h1 {
+        font-size: 40px;
+        text-align: center;
+        line-height: 50px;
+        /* animation: slideup 2s linear; */
+    }
+
+    .section-1 .greenate-content p {
+        font-size: 14px;
+        line-height: 20px;
+        /* animation: slideup 2s linear; */
+    }
+    .carousel-caption p{
+        font-size: 15px;
+    }
+    .section-2 .carousel-control-next{
+        padding: 10px;
+        border-radius: 100%;
+        top: 100px;
+    }
+    
+    .section-2 .carousel-control-prev{
+        padding: 10px;
+        border-radius: 100%;
+        top: 100px;
+    }
+}
+
+@media (max-width: 450px){
+    .dine-in-text{
+        padding: 0px 20px;
+    }
+    .section-1 .regulation-button{
+        justify-content: space-between;
+    }
+    .swiper {
+        max-width: 380px;
+        max-height: 1000px;
+      }
+      .swiper-slide{
+        padding-bottom: 30px;
+    }
+    .menu-circle{
+        top: -200px;
+    }
+}
+
+@media (max-width: 394px){
+    .swiper {
+        max-width: 340px;
+        max-height: 980px;
+      }
+    .swiper-slide{
+        padding-top: 50px;
+        padding-left: 15px!important;
+        padding-right: 15px!important;
+        padding-bottom: 5px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        opacity: 0.8;
+    }
+}
+
+
+@media (max-width: 350px){
+    .swiper {
+        max-width: 290px;
+        max-height: 980px;
+      }
+    .swiper-slide{
+        padding-top: 50px;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+        padding-bottom: 5px;
+    }
+    .swiper-button-prev, .swiper-button-next{
+        opacity: 0.8;
+    }
+}
+
+/* Add ons */
+.greenate-logo{
+    width: 80%;
+}
+#contact{
+    margin-top: 10%;
+    background: #063920;
+}
+@media (max-width: 768px){
+    .section-2 .carousel-control-next{
+        top: 30%;
+        right: 0%;
+    }
+    
+    .section-2 .carousel-control-prev{
+        top: 30%;
+        left: 0%;
+    }
+}
+
+.become-eco-friends-button{
+    transition-duration: 0.6s;
+}
+
+.become-eco-friends-button:hover{
+    background: #ffcc3c;
+    color: #1c5c3c;;
+    transition-duration: 1s;
+    outline: none;
+}
+
+.become-eco-friends-button:focus{
+    outline: none;
+}

@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
+use App\Mail\OrderEmail;
 use App\Models\Ecofriends;
 use App\Models\MissionProgress;
+use App\Models\ShoppingCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
@@ -23,7 +25,7 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
-    public function registrationView()
+    public function registrationInternalView()
     {
         if (!session()->has('user')) {
             $model = new Ecofriends();
@@ -43,65 +45,27 @@ class EcofriendController extends Controller
         }
     }
 
+
     public function profileView(Request $request)
     {
+        
         if (!session()->has('user')) {
             return redirect()->route('loginView');
         } else {
             $model = new Ecofriends();
             //Set Session
             $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
+            $data->name = Str::limit($data->full_name, 20, '...');
 
-            //set mission day-N
-            //format date (YYYY, M, D)
-            Carbon::now()->timezone("Asia/Jakarta");
-            $startTime = Carbon::create(2021, 4, 26, 0, 0, 0, 'Asia/Jakarta');
+            $eventStatus = FALSE;
 
-            //currTime only used for debugging
-            $currTime = Carbon::create(2021, 4, 26);
-
-            //use $now for real case
-            $now = Carbon::now("Asia/Jakarta");
-            $misiKe_N = $now->diffInDays($startTime);
-            $misiKe_N++;
-
-            // dd($misiKe_N);
-
-            //check link submitted or no in that day
-            $progressModel = new MissionProgress();
-            $allMissionProgress = $progressModel->getMissionProgress($data->id, $misiKe_N);
-            // dd($allMissionProgress);
-
-            //data for display to progress bar
-            $percentageAllMission = $progressModel->getProgresBarPercentage($data->id);
-
-            //showing special sweet alert for raconteur and utile for user to choose
-            $ChooseSpecialMissionDate = Carbon::create(2021, 4, 29);
-            $specialMissionLaunch = $currTime->diffInDays($ChooseSpecialMissionDate);
-            // dd($specialMissionLaunch);
-
-            $current_time = Carbon::now("Asia/Jakarta");
-
-            $days = $current_time->isoFormat('D');
-            $months = $current_time->isoFormat('MMM');
-            $hours = $current_time->isoFormat('HH');
-            $minutes = $current_time->isoFormat('mm');
-            $seconds = $current_time->isoFormat('ss');
-
+            session()->put('userID', $data->id);
             return view(
-                'cms.page.profile',
+                'cms.page.profile-greenate',
                 [
                     'title' => 'UMN ECO 2021 - Profile',
                     'data' => $data,
-                    'misiKe_N' => $misiKe_N,
-                    'allMissionProgress' => $allMissionProgress,
-                    'percentageAllMission' => $percentageAllMission,
-                    'dateForSpecialMission' => $specialMissionLaunch,
-                    'day' => $days,
-                    'month' => $months,
-                    'hour' => $hours,
-                    'minute' => $minutes,
-                    'second' => $seconds,
+                    'eventStatus' => $eventStatus
                 ]
             );
         }
@@ -125,7 +89,8 @@ class EcofriendController extends Controller
                 if ($check_data != null) {
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
-                        return redirect()->route('profileView')->with('status', 'Success');;
+                        // session()->put('userID', $check_data->id);
+                        return redirect()->route('profileView')->with('status', 'Success');
                     } else {
                         $error = array(
                             'login' => "Email atau password salah"
@@ -145,7 +110,12 @@ class EcofriendController extends Controller
     public function logout(Request $request)
     {
         if (session()->has('user')) {
-            $request->session()->pull('user', 'status');
+            $request->session()->pull('user');
+            $request->session()->pull('status');
+            $request->session()->pull('OrderTotal');
+            $request->session()->pull('DineIn');
+            $request->session()->pull('TakeAway');
+            $request->session()->pull('userID');
         }
         return redirect()->route('loginView');
     }
@@ -155,37 +125,51 @@ class EcofriendController extends Controller
         $model = new Ecofriends();
         $data = $request->input();
         //Capitalize first letter of names and lowercases Line_id, IG Account and Email
-        $data['Firstname'] = ucwords(Str::lower($data['Firstname']));
-        $data['Lastname'] = ucwords(Str::lower($data['Lastname']));
-        $data['Line_id'] = Str::lower($data['Line_id']);
-        $data['Instagram_account'] = Str::lower($data['Instagram_account']);
+        $data['Full_name'] = ucwords(Str::lower($data['Full_name']));
         $data['Email'] = Str::lower($data['Email']);
+        $data['Instagram_account'] = Str::lower($data['Instagram_account']);
+        $data['Line_id'] = Str::lower($data['Line_id']);
 
-        //Cut the front 0 in Student_id (NIM) 
-        $data['Student_id'] = (int)$data['Student_id'];
 
         //Set rules for the form
-        $rule = array(
-            'Firstname' => 'required|regex:/^[\pL\s\-]+$/u',
-            'Lastname' => 'regex:/^[\pL\s\-]+$/u',
-            'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
-            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
-            'Major' => 'required',
-            'Generation' => 'required',
-            'Instagram_account' => 'required|unique:eco_friends,instagram_account',
-            'Line_id' => 'required|unique:eco_friends,line_id',
-            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
-            'Password' => 'required|min:8|max:25|confirmed',
-            'Password_confirmation' => 'required|min:8|max:25',
-            'Availability' => 'required|in:1'
-        );
+        if ($data['is_internal'] == true) {
+            //Cut the front 0 in Student_id (NIM) 
+            $data['Student_id'] = (int)$data['Student_id'];
+            $data['Email_external'] = '';
 
+            $rule = array(
+                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
+                'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
+                'Major' => 'required',
+                'Generation' => 'required',
+                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
+                'Line_id' => 'required|unique:eco_friends,line_id',
+                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
+                'Password' => 'required|min:8|max:25|confirmed',
+                'Password_confirmation' => 'required|min:8|max:25',
+                'Availability' => 'required|in:1'
+            );
+        } else if ($data['is_internal'] == false) {
+            $data['Email'] = $data['Email_external'];
+            $rule = array(
+                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
+                'Email' => 'required|email|unique:eco_friends,email',
+                'Institution' => 'required',
+                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
+                'Line_id' => 'required|unique:eco_friends,line_id',
+                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
+                'Password' => 'required|min:8|max:25|confirmed',
+                'Password_confirmation' => 'required|min:8|max:25',
+                'Availability' => 'required|in:1'
+            );
+        }
+
+        $data['Email'] = Str::lower($data['Email']);
 
         $messages = [
-            'Firstname.required' => 'Kamu perlu mengisi nama kamu',
-            'Firstname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
-
-            'Lastname.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
+            'Full_name.required' => 'Kamu perlu mengisi nama kamu',
+            'Full_name.regex' => 'Nama tidak boleh mengandung angka ataupun simbol',
 
             'Student_id.required' => 'Kamu perlu mengisi NIM kamu',
             'Student_id.unique' => 'NIM kamu sudah terdaftar',
@@ -197,6 +181,8 @@ class EcofriendController extends Controller
             'Email.ends_with' => 'Email harus menggunakan email student UMN atau email dari UMN',
 
             'Major.required' => 'Kamu perlu mengisi jurusan kamu',
+
+            'Institution.required' => 'Kamu perlu mengisi institusi kamu',
 
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
 
@@ -227,11 +213,7 @@ class EcofriendController extends Controller
         $validator = Validator::make($data, $rule, $messages);
 
         if (!$validator->fails()) {
-            unset($data['Password_confirmation'], $data['_token'], $data['Availability']);
-            //Compensation false = Haven't used any compensation
-            $data['utopia_compensation'] = false;
-            $data['rise_compensation'] = false;
-            $data['mystery_quest'] = 0;
+            unset($data['Password_confirmation'], $data['_token'], $data['Availability'], $data['Email_external']);
 
             $data['Password'] = Hash::make($request['Password']);
 
@@ -241,7 +223,7 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            return redirect()->route('profileView');
+            return redirect()->route('profileView')->with('status', 'Success');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
@@ -250,40 +232,22 @@ class EcofriendController extends Controller
     public function sendEmail($data)
     {
         $details = [
-            'title' => '[WELCOME TO RED, ' . $data['Firstname'] . ' ' . $data['Lastname'] . ']',
-            'name' => $data['Firstname'],
+            'title' => 'WELCOME TO GREENATE, ' . $data['Full_name'],
+            'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));
     }
 
-    public function submitLink(Request $request)
-    {
-        $progressModel = new MissionProgress();
-        $model = new Ecofriends();
-        $missionType = $request->input("type");
-        $submittedLink = $request->input("link");
-        $missionUtopiaID = $request->input("misiKe_N");
-        $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-        if ($progressModel->getSpecificProgress($data->id, $missionType, $missionUtopiaID) == null) {
-            $progressModel->insertMissionProgress($data->id, $missionType, $submittedLink, $missionUtopiaID);
-            return redirect()->route('profileView')->with('status', 'Submitted');
-        } else {
-            return redirect()->route('profileView')->with('status', 'UnSubmitted');
+    public function submitLink(Request $request){
+        $data = $request->input();
+        $model = new ShoppingCart();
+        $userId = $request->session()->get('userID');
+
+        if($data['link'] == null){
+            return redirect()->route('profileView')->with('status', 'Failed');
+        }else{
+            $model->insertTaskLink($userId, $data['link']);
+            return redirect()->route('profileView')->with('status', 'Link Submitted');
         }
-    }
-
-    public function mysteryQuest(Request $request)
-    {
-        //1 = Utile
-        //2 = Raconteur
-        //3 = skip
-        $progressMission = new MissionProgress();
-        $data = new Ecofriends();
-        $data = $data->getEcoFriendsByEmail($request->session()->get('user'));
-        $mysteryQuest = $request->mysteryQuest;
-
-        $progressMission->mysteryQuest($data->id, $mysteryQuest);
-
-        return redirect()->route('profileView');
     }
 }

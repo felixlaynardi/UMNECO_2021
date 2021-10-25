@@ -59,9 +59,9 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('listEF') }}">
+                <a class="nav-link" href="{{ route('greenateEFL') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>List Eco Friends</span></a>
+                    <span>List Greenate Eco Friends</span></a>
             </li>
 
             <!-- Divider -->

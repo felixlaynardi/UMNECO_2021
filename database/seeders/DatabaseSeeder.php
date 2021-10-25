@@ -16,31 +16,33 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $model = new Mission();
-        for ($i = 1; $i < 13; $i++) {
-            $data = array(
-                'mission_utopia_id' => $i,
-                'mission_desc' => 'Utopia' . $i
-            );
-            $model->addUtopia($data);
-        }
-        for ($i = 1; $i < 13; $i++) {
-            $data = array(
-                'mission_rise_id' => $i,
-                'mission_desc' => 'Rise' . $i
-            );
-            $model->addRise($data);
-        }
-
         $data = array(
-            'mission_utile_id' => 1,
-            'mission_desc' => 'Utopia' . 1
+            'id' => 4,
+            'name' => 'NONE',
+            'skkm' => 0,
+            'skkm_type' => 'NONE'
         );
-        $model->addUtile($data);
-
+        $model->addTakeaway($data);
         $data = array(
-            'mission_raconteur_id' => 1,
-            'mission_desc' => 'Utopia' . 1
+            'id' => 1,
+            'name' => 'EXHORT',
+            'skkm' => 1,
+            'skkm_type' => 'Pengabdian'
         );
-        $model->addRaconteur($data);
+        $model->addTakeaway($data);
+        $data = array(
+            'id' => 2,
+            'name' => 'ALTER',
+            'skkm' => 1,
+            'skkm_type' => 'Pengabdian'
+        );
+        $model->addTakeaway($data);
+        $data = array(
+            'id' => 3,
+            'name' => 'TIDBIT',
+            'skkm' => 1,
+            'skkm_type' => 'Pengabdian'
+        );
+        $model->addTakeaway($data);
     }
 }
