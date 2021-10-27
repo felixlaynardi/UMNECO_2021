@@ -2,12 +2,12 @@ body{
     background-color: #489ca4;
 }
 
-.container{
+.container-blue-home{
     background-color: #286474;
     border-radius: 54px;
 }
 
-.container p{
+.container-blue-home p{
     font-family: MADE Tommy Soft;
     font-size: 24px;
     font-style: normal;
@@ -47,7 +47,7 @@ body{
 }
 
 @media(max-width:768px){
-    .container p{
+    .container-blue-home p{
         font-family: MADE Tommy Soft;
         font-size: 18px;
         font-style: normal;

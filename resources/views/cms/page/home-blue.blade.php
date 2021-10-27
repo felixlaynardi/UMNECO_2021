@@ -1,13 +1,13 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/about-blue.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/home-blue.css') }}">
 
 @endsection
 
 @section('content')
 
-<div class="container p-sm-5 py-5 px-3 mb-5">
+<div class="container container-blue-home p-sm-5 py-5 px-3 mb-5">
     <div class="px-md-5 px-1 mt-5">
         <div class="row justify-content-around  py-4">
             <div class="col-lg-5 col-md-11 col-12 order-1">

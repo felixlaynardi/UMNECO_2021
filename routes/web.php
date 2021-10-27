@@ -39,9 +39,9 @@ Route::get('/about-greenate', function () {
   return view('cms.page.about-greenate', ['title' => 'UMN ECO 2021 - About GREENATE']);
 })->name('about-greenate');
 
-Route::get('/about-blue', function () {
-  return view('cms.page.about-blue', ['title' => 'UMN ECO 2021 - About BLUE']);
-})->name('about-blue');
+Route::get('/home', function () {
+  return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE']);
+})->name('home-blue');
 
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
