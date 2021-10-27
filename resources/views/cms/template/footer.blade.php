@@ -20,7 +20,7 @@
                     <div class="col-xl-3 col-md-4 col-sm-4 col-12 ml-xl-3">
                          <ul class="list-unstyled footer-menu mt-sm-0 mt-5" style="text-align:left;">
                              <a href="/#home" class="footer-menu-li"><li>Home</li></a>
-                             <a href="/about-greenate" class="footer-menu-li"><li>About Greenate</li></a>
+                             <a href="/about-blue" class="footer-menu-li"><li>Profile</li></a>
                              <a href="/our-team" class="footer-menu-li"><li>Our Team</li></a>
                          </ul>
                      </div>
