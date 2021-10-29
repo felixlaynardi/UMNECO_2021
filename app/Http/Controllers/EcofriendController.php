@@ -130,42 +130,20 @@ class EcofriendController extends Controller
         $data['Instagram_account'] = Str::lower($data['Instagram_account']);
         $data['Line_id'] = Str::lower($data['Line_id']);
 
-
-        //Set rules for the form
-        if ($data['is_internal'] == true) {
-            //Cut the front 0 in Student_id (NIM) 
-            $data['Student_id'] = (int)$data['Student_id'];
-            $data['Email_external'] = '';
-
-            $rule = array(
-                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
-                'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
-                'Major' => 'required',
-                'Generation' => 'required',
-                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
-                'Line_id' => 'required|unique:eco_friends,line_id',
-                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
-                'Password' => 'required|min:8|max:25|confirmed',
-                'Password_confirmation' => 'required|min:8|max:25',
-                'Availability' => 'required|in:1'
-            );
-        } else if ($data['is_internal'] == false) {
-            $data['Email'] = $data['Email_external'];
-            $rule = array(
-                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'Email' => 'required|email|unique:eco_friends,email',
-                'Institution' => 'required',
-                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
-                'Line_id' => 'required|unique:eco_friends,line_id',
-                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
-                'Password' => 'required|min:8|max:25|confirmed',
-                'Password_confirmation' => 'required|min:8|max:25',
-                'Availability' => 'required|in:1'
-            );
-        }
-
-        $data['Email'] = Str::lower($data['Email']);
+        $rule = array(
+            'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
+            'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
+            'Faculty' => 'required',
+            'Major' => 'required',
+            'Generation' => 'required',
+            'Instagram_account' => 'required|unique:eco_friends,instagram_account',
+            'Line_id' => 'required|unique:eco_friends,line_id',
+            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
+            'Password' => 'required|min:8|max:25|confirmed',
+            'Password_confirmation' => 'required|min:8|max:25',
+            'Availability' => 'required|in:1'
+        );
 
         $messages = [
             'Full_name.required' => 'Kamu perlu mengisi nama kamu',
@@ -180,9 +158,9 @@ class EcofriendController extends Controller
             'Email.unique' => 'Email kamu sudah terdaftar',
             'Email.ends_with' => 'Email harus menggunakan email student UMN atau email dari UMN',
 
-            'Major.required' => 'Kamu perlu mengisi jurusan kamu',
+            'Faculty.required' => 'Kamu perlu mengisi Fakultas kamu',
 
-            'Institution.required' => 'Kamu perlu mengisi institusi kamu',
+            'Major.required' => 'Kamu perlu mengisi jurusan kamu',
 
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
 
@@ -211,11 +189,13 @@ class EcofriendController extends Controller
         ];
 
         $validator = Validator::make($data, $rule, $messages);
-
+        
+        
         if (!$validator->fails()) {
             unset($data['Password_confirmation'], $data['_token'], $data['Availability'], $data['Email_external']);
 
             $data['Password'] = Hash::make($request['Password']);
+            $data['registration_time'] = Carbon::now('Asia/Jakarta');
 
             $this->sendEmail($data);
 
