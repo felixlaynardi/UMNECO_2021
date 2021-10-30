@@ -47,7 +47,7 @@ Route::get('/registration-blue', function () {
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 // Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 // Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
-Route::get('/registration', [EcofriendController::class, 'registrationInternalView'])->name('registrationView');
+Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
 Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');

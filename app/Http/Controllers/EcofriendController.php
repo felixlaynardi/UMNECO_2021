@@ -25,12 +25,12 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
-    public function registrationInternalView()
+    public function registrationView()
     {
         if (!session()->has('user')) {
             $model = new Ecofriends();
             $ecofriends = $model->getAllEcoFriends();
-            return view('cms.page.registration', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
+            return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
         } else {
             return redirect()->route('profileView');
         }
@@ -130,6 +130,18 @@ class EcofriendController extends Controller
         $data['Instagram_account'] = Str::lower($data['Instagram_account']);
         $data['Line_id'] = Str::lower($data['Line_id']);
 
+        if($data['Major'] == "Informatika" || $data['Major'] == "Teknik Komputer" || $data['Major'] == "Teknik Elektro" || $data['Major'] == "Teknik Fisika" || $data['Major'] == "Sistem Informasi"){
+            $data['Faculty'] = "Fakultas Teknik dan Informatika";
+        }else if ($data['Major'] == "Akuntansi" || $data['Major'] == "Manajemen"){
+            $data['Faculty'] = "Fakultas Bisnis";
+        }else if ($data['Major'] == "Komunikasi Strategis" || $data['Major'] == "Jurnalistik"){
+            $data['Faculty'] = "Fakultas Ilmu Komunikasi";
+        }else if ($data['Major'] == "Desain Komunikasi Visual" || $data['Major'] == "Arsitektur" || $data['Major'] == "Film & Animasi"){
+            $data['Faculty'] = "Fakultas Seni & Desain";
+        }else{
+            $data['Faculty'] = "D3 Perhotelan";
+        }
+
         $rule = array(
             'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
             'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
@@ -158,7 +170,7 @@ class EcofriendController extends Controller
             'Email.unique' => 'Email kamu sudah terdaftar',
             'Email.ends_with' => 'Email harus menggunakan email student UMN atau email dari UMN',
 
-            'Faculty.required' => 'Kamu perlu mengisi Fakultas kamu',
+            'Faculty.required' => 'Kamu perlu mengisi fakultas kamu',
 
             'Major.required' => 'Kamu perlu mengisi jurusan kamu',
 
