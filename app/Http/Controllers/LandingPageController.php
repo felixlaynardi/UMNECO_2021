@@ -12,6 +12,9 @@ class LandingPageController extends Controller
         if (!session()->has('user')) {
             return view('cms.page.login', ['title' => 'UMN ECO 2021 - Login Eco Friends']);
         } else {
+            $ecoFriend = new EcofriendController;
+            dd($ecoFriend);
+            // $userSubmitLinkStatus = getUserStatus()
             return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends']);
             // return redirect()->route('profileView');
         }

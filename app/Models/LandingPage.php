@@ -16,9 +16,9 @@ class LandingPage extends Model
         return DB::insert('insert into submit_link_blue (link, eco_friends_id) values (?, ?)', $data);
     }
 
-    public function getLinkBlue($data)
+    public function getLinkBlue($email)
     {
-        // DB::table('submit_link')->insert($data);
-        return DB::select('SELECT id FROM `submit_link_blue` WHERE ?', $data);
+        // DB::table('submit_link')->insert($email);
+        return DB::select('SELECT slb.id from `submit_link_blue` slb join `eco_friends` ec on slb.eco_friends_id = ec.id WHERE ec.email = (?)', $email);
     }
 }
