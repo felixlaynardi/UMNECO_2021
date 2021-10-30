@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
 use App\Http\Controllers\Admin\GreenateAdminController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ShoppingCartController;
 
 /*
@@ -103,6 +104,10 @@ Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('gr
 Route::get('/greenate-menu', [ShoppingCartController::class, 'menu'])->name('greenateMenu');
 Route::post('/greenate-shopping-cart', [ShoppingCartController::class, 'shoppingCart'])->name('greenateSC');
 Route::post('/greenate-order-submit', [ShoppingCartController::class, 'orderSubmit'])->name('greenateOS');
+
+//For Landing Page
+Route::get('/landing-page', [LandingPageController::class, 'LandingPage'])->name('LandingPage');
+Route::get('/submit_link_blue', [LandingPageController::class, 'SubmitLink'])->name('SubmitLink');
 
 // Redirect home on random url
 Route::any(
