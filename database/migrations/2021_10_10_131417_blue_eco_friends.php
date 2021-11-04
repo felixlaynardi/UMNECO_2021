@@ -27,7 +27,7 @@ class BlueEcoFriends extends Migration
             $table->string('password');
             $table->timestamp('registration_time')->nullable();
             $table->string('task_link')->nullable();
-            $table->timestamp('submission_time')->nullable();
+            $table->timestamp('submission_time', $precision = 0)->nullable();
         });
     }
 

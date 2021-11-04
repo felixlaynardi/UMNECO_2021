@@ -106,8 +106,8 @@ Route::post('/greenate-shopping-cart', [ShoppingCartController::class, 'shopping
 Route::post('/greenate-order-submit', [ShoppingCartController::class, 'orderSubmit'])->name('greenateOS');
 
 //For Landing Page
-Route::get('/landing-page', [LandingPageController::class, 'LandingPage'])->name('LandingPage');
-Route::get('/submit_link_blue', [LandingPageController::class, 'SubmitLink'])->name('SubmitLink');
+Route::get('/landing-page', [EcofriendController::class, 'LandingPage'])->name('LandingPage');
+Route::post('/submit_link_blue', [EcofriendController::class, 'SubmitLinkBlue'])->name('SubmitLink');
 
 // Redirect home on random url
 Route::any(

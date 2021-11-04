@@ -40,4 +40,22 @@ class EcoFriends extends Model
             ->where('student_id', $usersid)
             ->update(['password' => $password]);
     }
+
+    //inserting link by updating blue_eco_friends by id
+    public function insertLinkBlue($id, $task_link, $submission_time)
+    {
+        $affected = DB::table('blue_eco_friends')
+                    ->where('id', $id)
+                    ->update(['task_link' => $task_link, 'submission_time' => $submission_time]);
+    }
+    
+    //get status, for identify if user has submit link or not. this one for show/hide submit button
+    public function getSubmitStatus($id)
+    {
+        return DB::table('blue_eco_friends')
+                ->select('id')
+                ->where('id', $id)
+                ->whereNotNull('task_link')
+                ->get();
+    }
 }

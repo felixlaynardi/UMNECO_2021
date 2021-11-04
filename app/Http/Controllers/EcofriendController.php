@@ -242,4 +242,54 @@ class EcofriendController extends Controller
             return redirect()->route('profileView')->with('status', 'Link Submitted');
         }
     }
+
+    public function LandingPage(Request $request)
+    {
+        if (!session()->has('user')) {
+            return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'submit_status' => 'not_login']);
+        } else {
+            $submitStatus = getStatusSubmitLinkBlue($request);
+            return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'submit_status' => $submitStatus]);
+        }
+    }
+
+    public function SubmitLinkBlue(Request $request)
+    {
+        $model = new EcoFriends();
+        
+        //value 
+        $data = $request->input();
+        $current_timestamp = Carbon::now();
+        $userID = getUserId($request);
+
+        //insert submitlink
+        $model->insertLinkBlue($userID, $data["link"], $current_timestamp);
+
+        //get submit status
+        $submitStatus = getStatusSubmitLinkBlue($request);
+
+        // dd($submitStatus);
+        return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'submit_status' => $submitStatus]);
+    }
+
+}
+
+function getStatusSubmitLinkBlue(Request $request){
+    $model = new EcoFriends();
+    $getEcoFriendsID = getUserId($request);
+    //set return false if data not found, and return true is data found
+    $userSubmitLinkStatus = $model->getSubmitStatus($getEcoFriendsID);
+    // dd(sizeof($userSubmitLinkStatus));
+    if (sizeof($userSubmitLinkStatus) == 0) {
+        return false;
+    }
+    return true;
+}
+
+//this function return user ID from email user in session
+function getUserId(Request $request){
+    $model = new EcoFriends();
+    $email = $request->session()->get("user");
+    $getEcoFriendsID = $model->getEcoFriendsByEmail($email);
+    return $getEcoFriendsID->id;
 }
