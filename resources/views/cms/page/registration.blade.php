@@ -85,13 +85,14 @@
 @endif
 <header>
     <div class="col-md-6 col-10 mx-auto">
-        <h5>Greenate</h5>
-        <h1>REGISTRATION</h1>
-        <div class="header-deco">
-            <img class="image-leaf1" src="{{ asset('images/regis/Daun 3.png')}}">
-            <img class="image-leaf2" src="{{ asset('images/regis/Daun 3.png')}}">
-            <img class="image-header" src="{{ asset('images/regis/Ayam_1.png')}}">
+        <div class="header-font">
+            <p>BLUE</p>
+            <p>REGISTRATION</p>
         </div>
+
+        <img class="image-shell" src="{{ asset('images/regis/Kerang_2.png')}}">
+        <img class="image-coral" src="{{ asset('images/regis/Terumbu_1.png')}}">
+
     </div>
 </header>
 <div class="form col-md-6 col-10 mx-auto" id="form-page">
@@ -100,41 +101,41 @@
             <!-- Regulasi Internal -->
             <div class="step step-1-internal active">
                 <object class="regulation-obj mb-2 old" data="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
-                    <div class="regulasiGreenate">
+                    <div class="regulasiBlue">
                         <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Internal</a>
                     </div>
                 </object>
                 <div class="regulation-obj mb-2 new">
-                    <div class="regulasiGreenate">
+                    <div class="regulasiBlue">
                         <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Internal</a>
                     </div>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" id="regulation-internal" name="regulation-internal" value="1" value="{{ old('regulation-internal') }}">
-                    <label class="check mt-3 col-11" for="regulation-internal">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
+                    <label class="check mt-3 col-11" for="regulation-internal">I have read and agreed to the regulation</label>
                 </div>
                 <div class="next-button" style="text-align:center;">
-                    <button class="button p-2" type="button" id="next-btn-internal" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                    <button class="button p-2" type="button" id="next-btn-internal" type="submit" onclick="regulasiClick()">Go to Registration</button>
                 </div>
             </div>
             <!-- Regulasi External -->
             <div class="step step-1-external active">
                 <object class="regulation-obj mb-2 old" data="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
-                    <div class="regulasiGreenate">
+                    <div class="regulasiBlue">
                         <a href="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Eksternal</a>
                     </div>
                 </object>
                 <div class="regulation-obj mb-2 new">
-                    <div class="regulasiGreenate">
+                    <div class="regulasiBlue">
                         <a href="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Eksternal</a>
                     </div>
                 </div>
                 <div class="form-check mb-3">
                     <input type="checkbox" id="regulation-external" name="regulation-external" value="1" value="{{ old('regulation-external') }}">
-                    <label class="check mt-3 col-11" for="regulation-external">Saya telah membaca dan menyetujui regulasi yang ada dalam GREENATE</label>
+                    <label class="check mt-3 col-11" for="regulation-external">I have read and agreed to the regulation</label>
                 </div>
                 <div class="next-button" style="text-align:center;">
-                    <button class="button p-2" type="button" id="next-btn-external" type="submit" onclick="regulasiClick()">Menuju Registrasi</button>
+                    <button class="button p-2" type="button" id="next-btn-external" type="submit" onclick="regulasiClick()">Go to Registration</button>
                 </div>
             </div>
         </div>
@@ -256,7 +257,7 @@
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check check-2 mt-3 col-11" for="Availability">Bersedia menjalankan kegiatan Greenate beserta mematuhi regulasi yang diterapkan</label>
+                <label class="check check-2 mt-3 col-11" for="Availability" >I have read and agreed to the regulation</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif

@@ -1,35 +1,45 @@
+body{
+    background: linear-gradient(180deg, #27A4B5 0%, #3D858E 100%);
+}
 header {
     /* background-image: linear-gradient(to right, #7FC8A9, #fc3f3f); */
-    background-color: #1B5A3B;
+    background-color: #358690;
     margin-bottom: 2%;
     padding-top: 10rem;
     padding-bottom: 3rem;
     position: relative;
+    overflow: hidden;
 }
+.header-font p {
+    width: 100%;
+    padding-top: 0%;
+    color: seashell;
+    font-family: "MADE Tommy Soft";
+    font-size: 40px;
+}
+
 .header-deco{
     position: absolute;
     right: 10%;
     top: 35%;
     width: 13%;
 }
-.image-header {
+
+.image-coral{
     position: absolute;
-    width: 100%;
+    width: 15%;
+    top: 25%;
+    right: 12%;
 }
-.image-leaf1{
+
+.image-shell{
     position: absolute;
-    width: 100%;
-    transform: rotate(90deg);
-    left: 61%;
-    top: 40px;
+    width: 30%;
+    left: -2%;
+    top: 30%;
+    opacity: 0.2;
 }
-.image-leaf2{
-    position: absolute;
-    transform: rotate(279deg);
-    width: 100%;
-    right: 60%;
-    top: -20px;
-}
+
 .h2 {
     text-align: center;
 }
@@ -70,27 +80,16 @@ a:hover{
 .BG {
     width: 100%;
 }
-h5 {
-    width: 100%;
-    padding-top: 0%;
-    color: seashell;
-    font-family: "MADE Tommy Soft";
-    font-size: 28px;
-}
-h1 {
-    width: 100%;
-    color: seashell;
-    font-family: "MADE Tommy Soft";
-    font-size: 50px;
-}
+
 label {
     font-family: "MADE Tommy Soft";
     /* color: #92967d; */
     color: #545839;
 }
 .check {
-    color: #FFC600;
+    color: #fff;
     font-family: "MADE Tommy soft";
+    text-align: center;
 }
 .error {
     font-family: "Made Tommy soft 2";
@@ -125,19 +124,20 @@ label.error:not(.form-control) {
     font-size: 0.8em;
 }
 .button {
-    font-family: "MADE Tommy Soft 2";
+    font-family: "MADE Tommy Soft";
     font-weight: bold;
-    color: #FFFFFF;
-    background: #FFC600;
-    border: 1px solid;
+    color: #00C7E2;
+    background: #fff;
+    mix-blend-mode: normal;
     border-radius: 8px;
     outline: none;
     position: relative;
-    transition: 0.5s;
+    transition: 0.3s;    
 }
 
 .button:hover {
-    background: #FFE227;
+    background: #00C7E2;
+    color: #FFFFFF;
 }
 .button:focus {
     outline: none;
@@ -232,38 +232,115 @@ label.error:not(.form-control) {
     text-align: center;
 }
 
-.regulasiGreenate a{
+.regulasiBlue a{
     text-decoration: none;
-    color: #1c5c3c;
-    background-color: #ffcc3c;
+    color: #fff;
+    background-color: #00C7E2;
     font-family: MADE Tommy Soft;
     font-style: bold;
     font-weight: 800;
     border: none;
     border-radius: 25px;
     line-height: 1;
-}
+    mix-blend-mode: normal;
+}   
 
-.regulasiGreenate a:hover{
-    background: #FFE227;
+/* .regulasiBlue a:hover{
+    background: #00C7E2;
     transition-duration: 1s;
-}
+} */
 
-.regulasiGreenate a:focus {
+.regulasiBlue a:focus {
     border: none;
     outline: none;
     /* animation: slideup 2s linear; */
 }
+@media(max-width:2560px){
+    header{
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
+    .header-font p{
+        font-size: 60px;
+    }
+    .image-coral{
+        right: 15%;
+        width: 16%;
+    }
+    .image-shell{
+        left: 0%;
+        width: 33%;
+        opacity: 0.1;
+    }
+}
+@media(max-width:1840px){
+    header{
+        padding-bottom: 5rem;
+    }
+    .header-font p{
+        font-size: 50px;
+    }
+    .image-coral{
+        right: 10%;
+        width: 18%;
+    }
+    .image-shell{
+        left: -1%;
+        width: 34%;
+    }
+}
+@media (max-width: 1455px) {
+    header{
+        padding-bottom: 3rem;
+    }
+    .header-font p{
+        font-size: 40px;
+    }
+    .image-coral{
+        width: 18%;
+        top: 25%;
+        right: 11%;
+    }
+    
+    .image-shell{
+        width: 41%;
+        left: -5%;
+        top: 23%;
+    }
+}
 
 @media (max-width: 1250px) {
-    .check {
+    /* .check {
         vertical-align: middle;
+    } */
+    .image-coral{
+        width: 19%;
+        top: 30%;
+        right: 10%;
+    }
+    .image-shell{
+        left: -3%;
+        top: 33%;
+        width: 45%;
     }
 }
 .new{
     display: none;
 }
-@media (max-width: 800px) {
+@media (max-width:1024px){
+    .image-coral{
+        width: 23%;
+        top: 33%;
+        right: 7%;
+    }
+    .image-shell{
+        left: -4%;
+        top: 39%;
+        width: 48%;
+    }
+}
+
+@media (max-width: 769px) {
     .old{
         display: none;
     }
@@ -271,24 +348,52 @@ label.error:not(.form-control) {
         display: flex;
         height: 20vh;
     }
-    .header-deco{
+    header{
+        padding-top: 6rem;
+        padding-bottom: 2rem;
+    }
+    .header-font p{
+        font-size: 30px;
+    }
+    .image-coral {
         display: none;
     }
+    .image-shell{
+        left: 52%;
+        top: 36%;
+        width: 55%;
+    }
 }
-@media (max-width: 419px) {
+@media (max-width: 600px) {
+    .image-shell{
+        top: 30%;
+        width: 71%;
+        left: 42%;
+    }
+}
+@media (max-width: 426px) {
     div#form {
         width: 60%;
         padding-top: 40%;
         padding-left: 20%;
     }
-    h5 {
-        font-size: 0.9em;
-    }
-    h1 {
-        font-size: 2em;
+    .header-font p{
+        font-size: 25px;
     }
     label.check {
         font-size: 0.8em;
+    }
+    .image-shell{
+        top: 40%;
+        width: 74%;
+        left: 40%;
+    }
+}
+@media (max-width: 361px) {
+    .image-shell{
+        top: 41%;
+        width: 94%;
+        left: 45%;
     }
 }
 .swal2-html-container{
@@ -301,15 +406,4 @@ label.error:not(.form-control) {
 }
 #submit-btn{
     width: 30%;
-}
-@media (max-width: 1455px) {
-    .check-2 {
-        vertical-align: middle;
-    }
-}
-@media(min-width:2559px){
-    .header-deco{
-        right: 28%;
-        width: 6%;
-    }
 }
