@@ -34,7 +34,7 @@
 <body>
     <!-- Preloader -->
     <div id="preloader">
-        <lottie-player src="{{ asset('images/loading2.json') }}"   speed="1"  loop autoplay style="position:fixed;width:40%;top:50%;left:50%;transform: translate(-50%, -50%);text-align:center;"></lottie-player>
+        <lottie-player src="{{ asset('images/loading3.json') }}"   speed="1"  loop autoplay class="lottie-gif col-lg-2 col-sm-4 col-6"></lottie-player>
         <!-- <img src="{{ asset('images/gif-logo.gif') }}" class="loading-img" > -->
     </div>
 
