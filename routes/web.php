@@ -47,6 +47,10 @@ Route::get('/home', function () {
   return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE']);
 })->name('home-blue');
 
+// Route::get('/home', function () {
+//   return view('cms.page.home-blue-thank-you', ['title' => 'UMN ECO 2021 - Home BLUE']);
+// })->name('home-blue');
+
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 // Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
