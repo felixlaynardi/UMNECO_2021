@@ -40,4 +40,10 @@ class EcoFriends extends Model
             ->where('student_id', $usersid)
             ->update(['password' => $password]);
     }
+
+    public function changeEFPassword($email, $new_password){
+        DB::table('blue_eco_friends')
+                ->where('email', $email)
+                ->update(['password' => $new_password]);
+    }
 }

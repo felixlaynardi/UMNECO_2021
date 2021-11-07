@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
 use App\Http\Controllers\Admin\GreenateAdminController;
+use App\Http\Controllers\Admin\BlueAdminController;
 use App\Http\Controllers\ShoppingCartController;
 
 /*
@@ -82,7 +83,9 @@ Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 
 Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
 
-Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
+// Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
+Route::get('/EcoFriendList', [BlueAdminController::class,'index'])->name('blueEFL');
+Route::post('/EFChangePassword', [BlueAdminController::class,'change_pass'])->name('changePass');
 
 // Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
 // Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');
