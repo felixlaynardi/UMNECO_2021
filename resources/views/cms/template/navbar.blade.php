@@ -1,6 +1,9 @@
 <nav class="navbar navbar-expand-md navbar-fixed-top">
     <div class="container-fluid justify-content-centre">
-        <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo">
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo">
+        </a>
+        <!-- <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo"> -->
         <h6 class="hashtag">#BehoLDtheUndersEa</h4>
         <button class="navbar-toggler" type="button">
         </button>
