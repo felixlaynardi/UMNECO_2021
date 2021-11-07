@@ -2,7 +2,7 @@
 /* Bootstrap Navbar Changes */
 .navbar{
     /* backdrop-filter: saturate(180%) blur(20px); */
-    background: #1B5B3B;
+    background: #358690;
     /* padding:0; */
     position: fixed;
     width: 100%;
@@ -28,7 +28,7 @@
 .nav-link{
     font-family: 'Heavitas';
     text-transform: uppercase; 
-    color: #F4ECDC;
+    color: #F4EDDD;
     font-style: normal;
     font-weight: normal;
     line-height: 24px;
@@ -39,7 +39,7 @@
       1px 1px 0 #000; */
 }
 .nav-link:hover{
-    color: #D1B478 ;
+    color: #aaeaf2 ;
     transition: 0.3s;
 }
 
@@ -58,7 +58,7 @@
     right: 16px;
     height: 2rem;
     width: 2rem;
-    background: rgb(61, 92, 62);
+    background:#2B8592;
     border-radius: 10px;
     z-index: 999999999;
     top: 12px;
@@ -107,7 +107,7 @@
   transition: transform calc(var(--td) * 2) var(--td) var(--te);
   width: 100%;
   z-index: -100;
-  background: #1B5B3B;
+  background: #358690;
 }
 .nav-main::before {
   top: 0;
@@ -134,7 +134,7 @@
 }
 [id=main-navigation-toggle] ~ label span {
   display: none;
-  height: 2rem;
+  height: 2.4rem;
   padding: 0.5rem;
   position: relative;
   transition: transform calc(var(--td) * 3) var(--te);
@@ -257,7 +257,7 @@
   visibility: visible;
 }
 .menu__link {
-  color: #F4ECDC;
+  color: #F4EDDD;
   display: inline-block;
   font-weight: bold;
   overflow: hidden;
@@ -333,10 +333,34 @@
       opacity: 1!important;
     }
 }
-
 .green-nav::after {
-  background: #1B3627;
+  background: #358690;
 }
 .green-nav::before {
-  background: #1B3627;
+  background: #358690;
 }
+
+@media(max-width:768px){
+  .navbar-blue-logo{
+    width: 3rem;
+  }
+  .hashtag{
+    color: #F4EDDD;
+    font-family: 'MADE Tommy Soft';
+    margin: auto;
+  }
+}
+@media(min-width:768px){
+  .navbar-blue-logo{
+    display: none;
+  }
+  .hashtag{
+    display: none;
+  }
+}
+@media(max-width:330px){
+  .hashtag{
+    font-size: small;
+  }
+}
+

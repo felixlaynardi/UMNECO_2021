@@ -1,8 +1,8 @@
 
 .container-fluid-footer {
     overflow: hidden;
-    background: #1B5B3B;;
-    color: #F4ECDC !important;
+    background: #358690;
+    color: #FFFDE7 !important;
     margin-bottom: 0;
     padding-bottom: 0
 }
@@ -57,7 +57,7 @@ h3 {
     font-size: 36px;
     line-height: 45px;
 
-    color: #F4ECDC;
+    color: #FFFDE7;
 }
 .footer-address{
     font-family: 'MADE Tommy Soft 2';
@@ -66,16 +66,16 @@ h3 {
     font-size: 18px;
     line-height: 22px;
 
-    color: #F4ECDC;
+    color: #FFFDE7;
     vertical-align: middle;
 }
 .footer-menu-li{
     text-decoration:none;
-    color: #F4ECDC;
+    color: #FFFDE7;
 }
 .footer-menu-li:hover{
     font-weight: bold;
-    color: #F4ECDC;
+    color: #FFFDE7;
 }
 @media(max-width:670px){
     .footer-menu{
