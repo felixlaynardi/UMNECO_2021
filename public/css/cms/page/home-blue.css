@@ -235,7 +235,7 @@ body{
 
 
 .register-blue-button{
-    background: linear-gradient(180deg, #B9F0FC 14.58%, #73AFD1 100%);
+
     padding: 12px 30px;
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -247,6 +247,7 @@ body{
     outline: none;
     border: none;
     transition: 0.3s;
+    background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
 
 }
 

@@ -90,7 +90,7 @@
             <div class="col-lg-6 col-12 order-lg-3 order-1">
                 <img src="{{ asset('images/about-blue/picture4.png') }}" alt="" class="w-100">
             </div>
-            <div class="col-lg-6 col-12 order-lg-4 order-2 py-lg-0 py-4 text-content-5 d-flex flex-column justify-content-between">
+            <div class="col-lg-6 col-12 order-lg-4 order-2 py-lg-0 py-4 text-content-5 d-flex flex-column justify-content-xxl-around justify-content-between">
                 <p>Ditambah lagi, banyak sekali mikroplastik yang tidak sengaja terkonsumsi oleh teman-temanku, 
                     terkadang bisa mencapai <b>5kg</b> plastik setiap minggunya!</p>
                 <p class="sub"> Bentuknya yang serupa, 
@@ -109,7 +109,7 @@
             <div class="col-lg-6 col-12 order-lg-4 order-1">
                 <img src="{{ asset('images/about-blue/picture5.png') }}" alt="" class="w-100">
             </div>
-            <div class="col-lg-6 col-12 order-lg-3 order-2 py-lg-0 py-4 text-content-6 d-flex flex-column justify-content-between">
+            <div class="col-lg-6 col-12 order-lg-3 order-2 py-lg-0 py-4 text-content-6 d-flex flex-column justify-content-xxl-around justify-content-between">
                 <p> Lulu bingung nih harus minta tolong sama siapa... 
                     Bantu selamatkan tempat tinggal dan teman-teman Lulu ya, ECO Friends!
                     
