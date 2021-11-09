@@ -40,9 +40,9 @@ Route::get('/about-greenate', function () {
   return view('cms.page.about-greenate', ['title' => 'UMN ECO 2021 - About GREENATE']);
 })->name('about-greenate');
 
-Route::get('/registration-blue', function () {
-  return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - About GREENATE']);
-})->name('registration-blue');
+// Route::get('/registration-blue', function () {
+//   return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - About GREENATE']);
+// })->name('registration-blue');
 
 Route::get('/home', function () {
   return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE']);

@@ -30,7 +30,7 @@ class EcofriendController extends Controller
         if (!session()->has('user')) {
             $model = new Ecofriends();
             $ecofriends = $model->getAllEcoFriends();
-            return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
+            return view('cms.page.registration', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
         } else {
             return redirect()->route('profileView');
         }

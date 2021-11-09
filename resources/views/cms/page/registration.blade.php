@@ -36,11 +36,10 @@
 <script>
     window.onload = function(){
         Swal.fire("Mohon periksa kembali data yang di input", "Data yang di input tidak valid", "error");
-        $('.step-1-internal').removeClass('active');
-        $('.step-1-external').removeClass('active');
+        $('.step-1').removeClass('active');
         $('.step-2').addClass('active');
         $('.form-internal').hide();
-        $('.form-external').hide();
+        $('.form').hide();
         if(old('is_internal')){
             $('.form-internal').show();
             $('$is_internal').val("1");
@@ -48,38 +47,6 @@
             $('.form-external').show();
             $('$is_internal').val("0");
         }
-    }
-</script>
-@else
-<script>
-    window.onload = function(){
-        $('.step-1-internal').addClass('active');
-        $('.step-1-external').addClass('active');
-        $('.form-internal').removeClass('active');
-        $('.form-external').removeClass('active');
-        $('.step-2').removeClass('active');
-        Swal.fire({
-            title: 'Apakah kamu mahasiswa UMN?',
-            showCancelButton: true,
-            confirmButtonText: `Iya`,
-            cancelButtonText: `Tidak`,
-            allowOutsideClick: false,
-            allowEscapeKey: false,
-            confirmButtonColor: "#ffc600",
-            cancelButtonColor: "#ffc600",   
-            
-        }).then((result) => {
-            /* Read more about isConfirmed, isDenied below */
-            if (result.isConfirmed) {
-                $('.step-1-external').removeClass('active');
-                $('.step-1-internal').addClass('active');
-                $('#is_internal').val('1');
-            } else{
-                $('.step-1-internal').removeClass('active');
-                $('.step-1-external').addClass('active');
-                $('#is_internal').val('0');
-            }
-        })
     }
 </script>
 @endif
@@ -99,43 +66,23 @@
     <form class="Persetujuan">
         <div class="row">
             <!-- Regulasi Internal -->
-            <div class="step step-1-internal active">
+            <div class="step step-1 active">
                 <object class="regulation-obj mb-2 old" data="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Internal</a>
+                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Blue</a>
                     </div>
                 </object>
                 <div class="regulation-obj mb-2 new">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Internal</a>
+                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Blue</a>
                     </div>
                 </div>
                 <div class="form-check mb-3">
-                    <input type="checkbox" id="regulation-internal" name="regulation-internal" value="1" value="{{ old('regulation-internal') }}">
-                    <label class="check mt-3 col-11" for="regulation-internal">I have read and agreed to the regulation</label>
+                    <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
+                    <label class="check mt-3 col-11" for="regulation">I have read and agreed to the regulation</label>
                 </div>
                 <div class="next-button" style="text-align:center;">
-                    <button class="button p-2" type="button" id="next-btn-internal" type="submit" onclick="regulasiClick()">Go to Registration</button>
-                </div>
-            </div>
-            <!-- Regulasi External -->
-            <div class="step step-1-external active">
-                <object class="regulation-obj mb-2 old" data="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
-                    <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Eksternal</a>
-                    </div>
-                </object>
-                <div class="regulation-obj mb-2 new">
-                    <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_EKSTERNAL.pdf') }}" class="p-3" download>Regulasi Greenate Eksternal</a>
-                    </div>
-                </div>
-                <div class="form-check mb-3">
-                    <input type="checkbox" id="regulation-external" name="regulation-external" value="1" value="{{ old('regulation-external') }}">
-                    <label class="check mt-3 col-11" for="regulation-external">I have read and agreed to the regulation</label>
-                </div>
-                <div class="next-button" style="text-align:center;">
-                    <button class="button p-2" type="button" id="next-btn-external" type="submit" onclick="regulasiClick()">Go to Registration</button>
+                    <button class="button p-2" type="button" id="next-btn" type="submit">Go to Registration</button>
                 </div>
             </div>
         </div>
@@ -153,13 +100,6 @@
             <div class="form-group mb-3 form-internal">
                 <label for="Email" class="label">Email Student</label>
                 <input type="text" name="Email" id="Email" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
-                @if($errors->has('Email'))
-                <div class="error error-message">{{ $errors->first('Email') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3 form-external">
-                <label for="Email_external" class="label">Email</label>
-                <input type="text" name="Email_external" id="Email_external" placeholder="eco@umn.ac.id" value="{{ old('Email') }}" class="form-control mb-2" required>
                 @if($errors->has('Email'))
                 <div class="error error-message">{{ $errors->first('Email') }}</div>
                 @endif
@@ -190,8 +130,6 @@
                     <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
                     <option value="Arsitektur">Arsitektur</option>
                     <option value="Film & Animasi">Film & Animasi</option>
-
-                    <option value="Bukan Mahasiswa">Bukan Mahasiswa</option>
                 </select>
                 @if($errors->has('major'))
                 <div class="error error-message">{{ $errors->first('major') }}</div>
@@ -200,7 +138,6 @@
             <div class="form-group mb-3 form-internal">
                 <label for="Generation" class="label">Angkatan</label>
                 <select id="Generation" name="Generation" value="{{ old('Generation') }}" class="form-control mb-2" required>
-
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
@@ -211,13 +148,6 @@
                 </select>
                 @if($errors->has('Generation'))
                 <div class="error error-message">{{ $errors->first('Generation') }}</div>
-                @endif
-            </div>
-            <div class="form-group mb-3 form-external">
-                <label for="Institution" class="label">Institusi</label>
-                <input type="text" name="Institution" id="Institution" placeholder="Universitas Multimedia Nusantara" value="{{ old('Institusi') }}" class="form-control mb-2" required>
-                @if($errors->has('Institution'))
-                <div class="error error-message">{{ $errors->first('Institution') }}</div>
                 @endif
             </div>
             <div class="form-group mb-3">
@@ -257,16 +187,15 @@
             </div>
             <div class="form-check mb-3">
                 <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check check-2 mt-3 col-11" for="Availability" >I have read and agreed to the regulation</label>
+                <label class="check check-2 mt-3 col-11" for="Availability">I agree to participate in “BLUE” Event and  abide to the given regulations.</label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif
             </div>
 
             
-            <div class="tombol mt-2">
-                <input type="hidden" id="is_internal" name="is_internal" value="1">
-                <button type="submit" class="button p-2" onclick="checkValid()" id="submit-btn">Submit</button>
+            <div class="text-center py-2">
+                <button type="submit" class="submit-blue-btn p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
         </form>
     </div>
@@ -293,13 +222,13 @@
         }
     };
 
-    $("#next-btn-internal").click(function() {
-        var checkBox = document.getElementById("regulation-internal");
+    $("#next-btn").click(function() {
+        var checkBox = document.getElementById("regulation");
         
         if (checkBox.checked == true) {
-            $('.step-1-internal').removeClass('active');
+            $('.step-1').removeClass('active');
             $('.step-2').addClass('active');
-            $('.form-external').hide();
+            // $('.form-external').hide();
         } else {
             Swal.fire({
                 text: "Kamu perlu menyetujui ketentuan yang berlaku!",
@@ -310,22 +239,7 @@
         }
     });
 
-    $("#next-btn-external").click(function() {
-        var checkBox = document.getElementById("regulation-external");
-        
-        if (checkBox.checked == true) {
-            $('.step-1-external').removeClass('active');
-            $('.form-internal').hide();
-            $('.step-2').addClass('active');
-        } else {
-            Swal.fire({
-                text: "Kamu perlu menyetujui ketentuan yang berlaku!",
-                icon: 'warning',
-                confirmButtonColor: '#3085d6',
-                confirmButtonText: 'OK'
-            })
-        }
-    });
+    
 
     function validateNIM(evt) {
         var theEvent = evt || window.event;
