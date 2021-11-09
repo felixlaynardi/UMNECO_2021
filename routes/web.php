@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
 use App\Http\Controllers\Admin\GreenateAdminController;
+use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ShoppingCartController;
 
 /*
@@ -51,7 +52,7 @@ Route::get('/home', function () {
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 // Route::post('/open-recruitment', [OprecController::class, 'store'])->name('oprecPost');
 // Route::post('/open-recruitment-form', [OprecController::class, 'viewform'])->name('oprecForm');
-Route::get('/registration', [EcofriendController::class, 'registrationInternalView'])->name('registrationView');
+Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
 Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
 Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
@@ -107,6 +108,10 @@ Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('gr
 Route::get('/greenate-menu', [ShoppingCartController::class, 'menu'])->name('greenateMenu');
 Route::post('/greenate-shopping-cart', [ShoppingCartController::class, 'shoppingCart'])->name('greenateSC');
 Route::post('/greenate-order-submit', [ShoppingCartController::class, 'orderSubmit'])->name('greenateOS');
+
+//For Landing Page
+Route::get('/landing-page', [EcofriendController::class, 'LandingPage'])->name('LandingPage');
+Route::post('/submit_link_blue', [EcofriendController::class, 'SubmitLinkBlue'])->name('SubmitLink');
 
 // Redirect home on random url
 Route::any(
