@@ -263,3 +263,155 @@ body{
     transform: scale(1.02);
 }
 
+
+.wave{
+    width: 100%;
+}
+
+.bubble1{
+    position: absolute;
+    width: 10%;
+    transform: rotateY(180deg);
+    right: 5%;
+    top: 10%;
+    opacity: 0.5;
+    overflow: hidden;
+}
+.bubble2{
+    position: absolute;
+    width: 10%;
+    left: 5%;
+    top: 75%;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.welcome-section{
+    position: relative;
+    font-family: MADE Tommy Soft;
+    background-color: #40C6DA;
+    margin-top: -0.5%;
+}
+
+.welcome-section .hello{
+    color: #004462;
+    font-size: 70px;
+    line-height: 6rem;
+    padding-top: 5%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.welcome-section .ready{
+    color: #004462;
+    font-size: 45px;
+    width: 100%;
+    line-height: 3rem;; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-bottom: 5%;
+    text-align: justify;
+}
+
+.welcome-section .ecofriend-question{
+    color: #004462;
+    margin-top: 2%;
+    line-height: 2rem;
+    font-size: 30px;
+    text-align: justify;
+}
+
+
+.submit-blue-button{
+    background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
+    padding: 12px 30px;
+    font-family: MADE Tommy Soft;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    margin-top: 5%;
+    margin-bottom: 15%;
+}
+
+.submit-blue-button:focus{
+    outline: none;
+    border: none;
+}
+
+.submit-blue-button:hover{
+    /* background: linear-gradient(180deg, #B9F0FC 14.58%, #73AFD1 100%); */
+    background: linear-gradient(180deg,#73AFD1 100%, #B9F0FC 14.58% );
+    transition: 0.3s;
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+@media(min-width:1900PX){
+    .welcome-section .hello{
+        font-size: 90px;
+    }
+    
+    .welcome-section .ready{
+        font-size: 60px;
+    }
+    
+    .welcome-section .ecofriend-question{
+        font-size: 40px;
+        line-height: 3rem;
+    }
+}
+
+@media(min-width:1600px){
+    .submit-blue-button{
+        padding: 40px 80px 40px 80px;
+        font-size: 30px;
+    }
+
+}
+
+@media(max-width:768px){
+    .container-blue-home p{
+        font-family: MADE Tommy Soft;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: justify;
+        color: white;
+    }
+    .bubble1, .bubble2{
+        display: none;
+    }
+    .welcome-section .hello{
+        font-size: 47px;
+        line-height: 3rem;
+    }
+    
+    .welcome-section .ready{
+        font-size: 25px;  
+    }
+    .welcome-section .ecofriend-question{
+        margin-top: 10%;
+        font-size: 18px;
+        line-height: 2rem;
+    }
+}
+
+@media(max-width:426px){
+    .welcome-section .hello{
+        font-size: 36px;
+        line-height: 2.5rem;
+    }
+    .welcome-section .ready{  
+        font-size: 20px;
+        line-height: 2.5rem;
+    }
+    .welcome-section .ecofriend-question{
+        line-height: 1.6rem;
+    }
+}

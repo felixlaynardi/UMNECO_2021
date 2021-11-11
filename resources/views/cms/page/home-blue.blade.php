@@ -146,6 +146,35 @@
         </div>
     </div>
 </div>
+
+<div class="section-7">
+    <img src="{{ asset('images/about-blue/Biru wave wavey.png') }}" alt="" class="wave">
+    <div class="welcome-section">
+        <div class="row justify-content-around  py-4">
+            <img src="{{ asset('images/about-blue/bubbles.png') }}" alt="" class="bubble1">
+            <img src="{{ asset('images/about-blue/bubbles.png') }}" alt="" class="bubble2">    
+            <div class="col-8 order-1">      
+                <p class="hello">Hello, Nutun</p>
+                <p class="ready">Ready to embark on an amazing tale?</p>
+            </div>
+            
+        
+            <div class="col-8 order-1">
+                <img src="{{ asset('images/about-blue/Picture Extension Logged In.jpg') }}" alt="" class="w-100" style="border-radius: 15px">
+                <p class="ecofriend-question" >ECO Friends, apakah kalian sudah siap membantu Lulu untuk menyelamatkan rumah dan teman-teman Lulu?</p>
+            </div>
+        </div>
+        <div class="row justify-content-around  py-4">
+            <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
+                
+                <button class="submit-blue-button">
+                    Submit Now!
+                </button>
+                
+            </div>    
+        </div>
+    </div>   
+</div>
 @include('cms.template.footer')
 @endsection
 
