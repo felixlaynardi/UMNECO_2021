@@ -291,6 +291,7 @@ body{
     font-family: MADE Tommy Soft;
     background-color: #40C6DA;
     margin-top: -0.5%;
+    overflow: hidden;
 }
 
 .welcome-section .hello{
@@ -322,11 +323,11 @@ body{
 
 .submit-blue-button{
     background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
-    padding: 12px 30px;
+    padding: 1rem;
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;
@@ -335,6 +336,7 @@ body{
     transition: 0.3s;
     margin-top: 5%;
     margin-bottom: 15%;
+    border-radius: .2rem;
 }
 
 .submit-blue-button:focus{
@@ -365,10 +367,10 @@ body{
     }
 }
 
-@media(min-width:1600px){
+@media(min-width:769px){
     .submit-blue-button{
-        padding: 40px 80px 40px 80px;
-        font-size: 30px;
+        padding: 2rem;
+        font-size: 28px;
     }
 
 }
