@@ -44,9 +44,9 @@ Route::get('/profile_blue', function () {
 })->name('profile_blue');
 
 
-Route::get('/registration-blue', function () {
-  return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - About GREENATE']);
-})->name('registration-blue');
+// Route::get('/registration-blue', function () {
+//   return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - About GREENATE']);
+// })->name('registration-blue');
 
 Route::get('/home', function () {
   return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE']);
