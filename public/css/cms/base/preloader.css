@@ -5,7 +5,14 @@
     width: 100%;
     height: 100%;
     z-index: 9999999999999;
-    background: #ECDCBC;
+    background: linear-gradient(180deg, #00B09B 0%, #001420 100%);
+}
+.lottie-gif{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  text-align:center;
 }
 .boxes {
   position: fixed;
