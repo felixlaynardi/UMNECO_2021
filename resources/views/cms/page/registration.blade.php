@@ -67,14 +67,14 @@
         <div class="row">
             <!-- Regulasi Internal -->
             <div class="step step-1 active">
-                <object class="regulation-obj mb-2 old" data="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
+                <object class="regulation-obj mb-2 old" data="{{ asset('files/Regulasi_BLUE.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Blue</a>
+                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Regulasi Blue</a>
                     </div>
                 </object>
                 <div class="regulation-obj mb-2 new">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/REGULASI_GREENATE_INTERNAL.pdf') }}" class="p-3" download>Regulasi Blue</a>
+                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Regulasi Blue</a>
                     </div>
                 </div>
                 <div class="form-check mb-3">
@@ -193,7 +193,7 @@
                 @endif
             </div>
 
-            
+
             <div class="text-center py-2">
                 <button type="submit" class="submit-blue-btn p-2" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
@@ -213,8 +213,8 @@
 
 <script>
 
-    function checkValid() { 
-        if ($('#form-register').valid()) {   
+    function checkValid() {
+        if ($('#form-register').valid()) {
             $('#submit-btn').prop('disabled', 'disabled');
             $('#form-register').submit();
         } else {
@@ -224,7 +224,7 @@
 
     $("#next-btn").click(function() {
         var checkBox = document.getElementById("regulation");
-        
+
         if (checkBox.checked == true) {
             $('.step-1').removeClass('active');
             $('.step-2').addClass('active');
@@ -239,7 +239,7 @@
         }
     });
 
-    
+
 
     function validateNIM(evt) {
         var theEvent = evt || window.event;

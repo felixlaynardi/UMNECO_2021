@@ -25,6 +25,16 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
+    public function index(Request $request){
+
+        if (!session()->has('user')) {
+            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE', 'submit_status' =>'not_login']);
+        } else {
+            $submitStatus = getStatusSubmitLinkBlue($request);
+            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE', 'submit_status' =>$submitStatus]);
+        }
+    }
+
     public function registrationView()
     {
         if (!session()->has('user')) {
@@ -89,8 +99,8 @@ class EcofriendController extends Controller
                 if ($check_data != null) {
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
-                        // session()->put('userID', $check_data->id);
-                        return redirect()->route('profileView')->with('status', 'Success');
+                        session()->put('username', $check_data->full_name);
+                        return redirect()->route('home')->with('status', 'Success');
                     } else {
                         $error = array(
                             'login' => "Email atau password salah"
@@ -115,7 +125,8 @@ class EcofriendController extends Controller
             $request->session()->pull('OrderTotal');
             $request->session()->pull('DineIn');
             $request->session()->pull('TakeAway');
-            $request->session()->pull('userID');
+            // $request->session()->pull('userID');
+            $request->session()->pull('username');
         }
         return redirect()->route('loginView');
     }
@@ -268,7 +279,7 @@ class EcofriendController extends Controller
         //get submit status, for know if user has submit the link or not
         $submitStatus = getStatusSubmitLinkBlue($request);
 
-        return redirect()->route('LandingPage')->with('status', 'Blue Link Submitted');
+        return redirect()->route('home')->with('status', 'Blue Link Submitted');
     }
 
 }

@@ -14,14 +14,14 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('about-greenate') }}">Profile</a>
+                        <a class="nav-link" href="{{ route('profile_eco') }}">Profile</a>
                     </li>
                     <li class="nav-item col-3">
                         <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
                     </li>
                     <li class="nav-item col-3">
                         @if(session()->has('user'))
-                        <a class="nav-link" href="{{ route('profileView') }}">Profile</a>
+                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         @else
                         <a class="nav-link" href="{{ route('loginView') }}">Login</a>
                         @endif
@@ -46,14 +46,14 @@
             <a class="menu__link" href="{{ route('home') }}"> Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('about-greenate') }}">Profile</a>
+            <a class="menu__link" href="{{ route('profile_eco') }}">Profile</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
             @if(session()->has('user'))
-            <a class="menu__link" href="{{ route('profileView') }}">Profile</a>
+            <a class="menu__link" href="{{ route('logout') }}">Logout</a>
             @else
             <a class="menu__link" href="{{ route('loginView') }}">Login</a>
             @endif
