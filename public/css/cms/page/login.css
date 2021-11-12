@@ -10,7 +10,7 @@ h1{
     font-family: "MADE Tommy Soft";
 }
 label{
-    color:#ffc600;
+    color:black;
     font-family: "MADE Tommy Soft";
 
 }
@@ -29,31 +29,31 @@ label{
     transform: translate(-50%, 100%);
     left: 50%;
 }
-.greenate{
-    width: 100%;
+.blue{
+    width: 45%;
     position: absolute;
     transform: translate(-50%, -50%);
-    top: 50%;
+    top: 40%;
     left: 50%;
 }
-.sendok1{
+.bubble1{
     position: absolute;
     width: 15%;
-    height: 85%;
-    left: -5%;
+    /* height: 85%; */
+    left: 10%;
     top: 10%;
     mix-blend-mode: normal;
-    opacity: 0.1;
+    opacity: 0.6;
 }
-.sendok2{
+.bubble2{
     position: absolute;
     width: 15%;
-    height: 85%;
-    left: 15%;
-    top: -25%;
+    /* height: 85%; */
+    left: 77%;
+    top: 45%;
     mix-blend-mode: normal;
-    opacity: 0.1;
-    transform: rotate(180deg);
+    opacity: 0.6;
+    transform: scaleX(-1);
 }
 .form{
     height: 100%;
@@ -80,10 +80,10 @@ label.error:not(.form-control) {
     margin-right: 2%;
     width: 120px;
     font-weight: bold;
-    font-family:"MADE Tommy Soft 2";
+    font-family:"MADE Tommy Soft";
     font-size: 1em;
-    color: #ffc600;
-    background-color: #f8ede3 ;
+    color: #1E9EAF;
+    background-color: white ;
     border: 2px solid;
     border-radius: 15px;
     outline: none;
@@ -91,7 +91,7 @@ label.error:not(.form-control) {
 }
 .button:hover{
     color: white;
-    background:#ffc600;
+    background:#1E9EAF;
 }
 .button:focus{
     outline: none;
@@ -101,7 +101,7 @@ label.error:not(.form-control) {
     text-align: center;
 }
 .login-title{
-    color:#008c15;
+    color:#1E9EAF;
     font-size: 50px;
     font-family: 'Heavitas';
     letter-spacing: 2px;
@@ -128,7 +128,23 @@ label.error:not(.form-control) {
     text-align: center;
 }
 
+@media(max-width: 1024px) {
+    .blue{
+        width:50%;
+    }
+    .hydrant-shadow{
+        top: 60%;
+    }
+}
+
 @media(max-width:767px) {
+    body{
+        color: #1E9EAF;
+        background-color: #D7FAFF;
+    }
+    label{
+        color: #1E9EAF;
+    }
     .left-content{
         display: none;
     }

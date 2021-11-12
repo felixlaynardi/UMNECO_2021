@@ -1,0 +1,59 @@
+body{
+    background: linear-gradient(180deg, #00B09B 0%, #3D858E 100%)
+}
+.bubbles-1{
+    right: -5%;
+    top: 50%;
+    width: 5%;
+    position: absolute;
+    opacity: 0.6;
+}
+.bubbles-2{
+    left: -5%;
+    top: 75%;
+    width: 5%;
+    position: absolute;
+    opacity: 0.6;
+}
+.bubbles-3{
+    right: -5%;
+    top: 50%;
+    width: 5%;
+    position: absolute;
+    opacity: 0.4;
+}
+.thank-you-section{
+    min-height: 100vh;
+    display: flex;
+}
+.thank-you-image, .thank-you-text-title, .thank-you-text-content{
+    display: none;
+}
+.thank-you-text{
+    text-align: center;
+    font-family: 'Made Tommy Soft';
+    color: white;
+}
+.thank-you-text-title{
+    font-size: 4.5rem;
+    letter-spacing: 0.205em;
+}
+.thank-you-text-content{
+    font-size: 1.5rem;
+}
+@media (max-width:768px){
+    .thank-you-text-title{
+        font-size: 2.5rem;
+    }
+    .thank-you-text-content{
+        font-size: 1rem;
+    }
+}
+@media (max-width:354px){
+    .thank-you-text-title{
+        font-size: 2rem;
+    }
+    .thank-you-text-content{
+        font-size: .75rem;
+    }
+}

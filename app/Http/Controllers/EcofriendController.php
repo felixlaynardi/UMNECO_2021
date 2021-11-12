@@ -25,7 +25,7 @@ use Symfony\Component\Console\Input\Input;
 
 class EcofriendController extends Controller
 {
-    public function registrationInternalView()
+    public function registrationView()
     {
         if (!session()->has('user')) {
             $model = new Ecofriends();
@@ -48,7 +48,7 @@ class EcofriendController extends Controller
 
     public function profileView(Request $request)
     {
-        
+
         if (!session()->has('user')) {
             return redirect()->route('loginView');
         } else {
@@ -130,42 +130,32 @@ class EcofriendController extends Controller
         $data['Instagram_account'] = Str::lower($data['Instagram_account']);
         $data['Line_id'] = Str::lower($data['Line_id']);
 
-
-        //Set rules for the form
-        if ($data['is_internal'] == true) {
-            //Cut the front 0 in Student_id (NIM) 
-            $data['Student_id'] = (int)$data['Student_id'];
-            $data['Email_external'] = '';
-
-            $rule = array(
-                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
-                'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
-                'Major' => 'required',
-                'Generation' => 'required',
-                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
-                'Line_id' => 'required|unique:eco_friends,line_id',
-                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
-                'Password' => 'required|min:8|max:25|confirmed',
-                'Password_confirmation' => 'required|min:8|max:25',
-                'Availability' => 'required|in:1'
-            );
-        } else if ($data['is_internal'] == false) {
-            $data['Email'] = $data['Email_external'];
-            $rule = array(
-                'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
-                'Email' => 'required|email|unique:eco_friends,email',
-                'Institution' => 'required',
-                'Instagram_account' => 'required|unique:eco_friends,instagram_account',
-                'Line_id' => 'required|unique:eco_friends,line_id',
-                'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
-                'Password' => 'required|min:8|max:25|confirmed',
-                'Password_confirmation' => 'required|min:8|max:25',
-                'Availability' => 'required|in:1'
-            );
+        if($data['Major'] == "Informatika" || $data['Major'] == "Teknik Komputer" || $data['Major'] == "Teknik Elektro" || $data['Major'] == "Teknik Fisika" || $data['Major'] == "Sistem Informasi"){
+            $data['Faculty'] = "Fakultas Teknik dan Informatika";
+        }else if ($data['Major'] == "Akuntansi" || $data['Major'] == "Manajemen"){
+            $data['Faculty'] = "Fakultas Bisnis";
+        }else if ($data['Major'] == "Komunikasi Strategis" || $data['Major'] == "Jurnalistik"){
+            $data['Faculty'] = "Fakultas Ilmu Komunikasi";
+        }else if ($data['Major'] == "Desain Komunikasi Visual" || $data['Major'] == "Arsitektur" || $data['Major'] == "Film & Animasi"){
+            $data['Faculty'] = "Fakultas Seni & Desain";
+        }else{
+            $data['Faculty'] = "D3 Perhotelan";
         }
 
-        $data['Email'] = Str::lower($data['Email']);
+        $rule = array(
+            'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
+            'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
+            'Student_id' => 'required|unique:eco_friends,student_id|not_in:0',
+            'Faculty' => 'required',
+            'Major' => 'required',
+            'Generation' => 'required',
+            'Instagram_account' => 'required|unique:eco_friends,instagram_account',
+            'Line_id' => 'required|unique:eco_friends,line_id',
+            'Phone_number' => 'required|unique:eco_friends,phone_number|digits_between:11,13',
+            'Password' => 'required|min:8|max:25|confirmed',
+            'Password_confirmation' => 'required|min:8|max:25',
+            'Availability' => 'required|in:1'
+        );
 
         $messages = [
             'Full_name.required' => 'Kamu perlu mengisi nama kamu',
@@ -180,9 +170,9 @@ class EcofriendController extends Controller
             'Email.unique' => 'Email kamu sudah terdaftar',
             'Email.ends_with' => 'Email harus menggunakan email student UMN atau email dari UMN',
 
-            'Major.required' => 'Kamu perlu mengisi jurusan kamu',
+            'Faculty.required' => 'Kamu perlu mengisi fakultas kamu',
 
-            'Institution.required' => 'Kamu perlu mengisi institusi kamu',
+            'Major.required' => 'Kamu perlu mengisi jurusan kamu',
 
             'Generation.required' => 'Kamu perlu mengisi angkatan kamu',
 
@@ -212,10 +202,12 @@ class EcofriendController extends Controller
 
         $validator = Validator::make($data, $rule, $messages);
 
+
         if (!$validator->fails()) {
             unset($data['Password_confirmation'], $data['_token'], $data['Availability'], $data['Email_external']);
 
             $data['Password'] = Hash::make($request['Password']);
+            $data['registration_time'] = Carbon::now('Asia/Jakarta');
 
             $this->sendEmail($data);
 
@@ -250,4 +242,53 @@ class EcofriendController extends Controller
             return redirect()->route('profileView')->with('status', 'Link Submitted');
         }
     }
+
+    public function LandingPage(Request $request)
+    {
+        if (!session()->has('user')) {
+            return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'submit_status' =>'not_login']);
+        } else {
+            $submitStatus = getStatusSubmitLinkBlue($request);
+            return view('cms.page.landing_page', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'submit_status' => $submitStatus]);
+        }
+    }
+
+    public function SubmitLinkBlue(Request $request)
+    {
+        $model = new EcoFriends();
+
+        //value
+        $data = $request->input();
+        $current_timestamp = Carbon::now('Asia/Jakarta');
+        $userID = getUserId($request);
+
+        //insert submitlink
+        $model->insertLinkBlue($userID, $data["link"], $current_timestamp);
+
+        //get submit status, for know if user has submit the link or not
+        $submitStatus = getStatusSubmitLinkBlue($request);
+
+        return redirect()->route('LandingPage')->with('status', 'Blue Link Submitted');
+    }
+
+}
+
+function getStatusSubmitLinkBlue(Request $request){
+    $model = new EcoFriends();
+    $getEcoFriendsID = getUserId($request);
+    //set return false if data not found, and return true is data found
+    $userSubmitLinkStatus = $model->getSubmitStatus($getEcoFriendsID);
+    // dd(sizeof($userSubmitLinkStatus));
+    if (sizeof($userSubmitLinkStatus) == 0) {
+        return false;
+    }
+    return true;
+}
+
+//this function return user ID from email user in session
+function getUserId(Request $request){
+    $model = new EcoFriends();
+    $email = $request->session()->get("user");
+    $getEcoFriendsID = $model->getEcoFriendsByEmail($email);
+    return $getEcoFriendsID->id;
 }
