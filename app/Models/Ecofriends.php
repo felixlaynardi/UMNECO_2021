@@ -41,6 +41,13 @@ class EcoFriends extends Model
             ->update(['password' => $password]);
     }
 
+
+    public function changeEFPassword($email, $new_password){
+        DB::table('blue_eco_friends')
+                ->where('email', $email)
+                ->update(['password' => $new_password]);
+    }
+
     //inserting link by updating blue_eco_friends by id
     public function insertLinkBlue($id, $task_link, $submission_time)
     {

@@ -8,7 +8,6 @@
 @section('content')
 
 
-
 <div class="welcome-blue-section pt-5">
     <img src="{{ asset('images/about-blue/logo-bg.png') }}" alt="" class="logo-bg">
     <div class="welcome-blue-overlay"></div>

@@ -14,7 +14,7 @@
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="{{ asset('css/cms/base/fontawesome-5.15.2/css/all.min.css') }}">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="{{ asset('css/cms/base/font.css') }}">
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -59,9 +59,9 @@
 
             <!-- Nav Item - Tables -->
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('greenateEFL') }}">
+                <a class="nav-link" href="{{ route('blueEFL') }}">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>List Greenate Eco Friends</span></a>
+                    <span>List Blue Eco Friends</span></a>
             </li>
 
             <!-- Divider -->

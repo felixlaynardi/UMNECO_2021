@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\LogoutAdminController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\ListEcoFriendController;
 use App\Http\Controllers\Admin\GreenateAdminController;
+use App\Http\Controllers\Admin\BlueAdminController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\ShoppingCartController;
 
@@ -44,6 +45,7 @@ Route::get('/profile_blue', function () {
 })->name('profile_blue');
 
 
+
 // Route::get('/registration-blue', function () {
 //   return view('cms.page.registration-blue', ['title' => 'UMN ECO 2021 - About GREENATE']);
 // })->name('registration-blue');
@@ -55,6 +57,7 @@ Route::get('/home', function () {
 // Route::get('/home', function () {
 //   return view('cms.page.home-blue-thank-you', ['title' => 'UMN ECO 2021 - Home BLUE']);
 // })->name('home-blue');
+
 
 // Route::post('/registration', [RegistrationController::class, 'index']);
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
@@ -91,7 +94,9 @@ Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
 
 Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
 
-Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
+// Route::get('/EcoFriendList', [GreenateAdminController::class,'index'])->name('greenateEFL');
+Route::get('/EcoFriendList', [BlueAdminController::class,'index'])->name('blueEFL');
+Route::post('/EFChangePassword', [BlueAdminController::class,'change_pass'])->name('changePass');
 
 // Route::get('/EcoFriendList', [ListEcoFriendController::class,'index'])->name('listEF');
 // Route::get('/EcoFriendList/{id}', [ListEcoFriendController::class,'detail'])->name('detailEF');

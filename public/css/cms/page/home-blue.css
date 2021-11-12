@@ -1,6 +1,5 @@
 body{
     background: linear-gradient(180deg, #00B09B 0%, #001420 100%);
-
 }
 
 .welcome-blue-section{
@@ -238,7 +237,6 @@ body{
 
 
 .register-blue-button{
-
     padding: 12px 30px;
     font-family: MADE Tommy Soft;
     font-style: normal;
@@ -251,7 +249,6 @@ body{
     border: none;
     transition: 0.3s;
     background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
-
 }
 
 .register-blue-button:focus{
@@ -265,7 +262,6 @@ body{
     cursor: pointer;
     transform: scale(1.02);
 }
-
 
 .wave{
     width: 100%;
@@ -389,6 +385,7 @@ body{
         text-align: justify;
         color: white;
     }
+
     .bubble1, .bubble2{
         display: none;
     }
