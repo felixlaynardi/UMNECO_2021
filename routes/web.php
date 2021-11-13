@@ -34,9 +34,9 @@ Route::get('/', [EcofriendController::class, 'index'])->name('home');
 //For Landing Page
 // Route::get('/landing-page', [EcofriendController::class, 'LandingPage'])->name('LandingPage');
 
-Route::get('/profile-eco', function () {
-    return view('cms.page.profile_blue', ['title' => 'UMN ECO 2021 - Profile UMN Eco']);
-  })->name('profile_eco');
+Route::get('/about-us', function () {
+    return view('cms.page.about-us', ['title' => 'UMN ECO 2021 - About UMN Eco']);
+  })->name('about-us');
 
 //our team
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');

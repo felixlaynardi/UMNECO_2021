@@ -14,7 +14,7 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('profile_eco') }}">About Us</a>
+                        <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                     </li>
                     <li class="nav-item col-3">
                         <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
@@ -46,7 +46,7 @@
             <a class="menu__link" href="{{ route('home') }}"> Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('profile_eco') }}">About Us</a>
+            <a class="menu__link" href="{{ route('about-us') }}">About Us</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
