@@ -30,8 +30,20 @@ class EcofriendController extends Controller
         if (!session()->has('user')) {
             return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE', 'submit_status' =>'not_login']);
         } else {
+            $model = new Ecofriends();
+            //Set Session
+            $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
+            $data->name = Str::limit($data->full_name, 20, '...');
+
+            session()->put('userID', $data->id);
+            session()->put('username', $data->name);
+
             $submitStatus = getStatusSubmitLinkBlue($request);
-            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE', 'submit_status' =>$submitStatus]);
+            return view('cms.page.home-blue', 
+            [
+                'title' => 'UMN ECO 2021 - Home BLUE', 
+                'submit_status' =>$submitStatus
+            ]);
         }
     }
 
@@ -42,7 +54,7 @@ class EcofriendController extends Controller
             $ecofriends = $model->getAllEcoFriends();
             return view('cms.page.registration', ['title' => 'UMN ECO 2021 - Join Eco Friends', 'ecofriends' => $ecofriends]);
         } else {
-            return redirect()->route('profileView');
+            return redirect()->route('home')->with('status', 'Success');
         }
     }
 
@@ -51,7 +63,7 @@ class EcofriendController extends Controller
         if (!session()->has('user')) {
             return view('cms.page.login', ['title' => 'UMN ECO 2021 - Login Eco Friends']);
         } else {
-            return redirect()->route('profileView');
+            return redirect()->route('home')->with('status', 'Success');
         }
     }
 
@@ -152,7 +164,8 @@ class EcofriendController extends Controller
         }else{
             $data['Faculty'] = "D3 Perhotelan";
         }
-
+        
+        $data['Student_id'] = (int)$data['Student_id'];
         $rule = array(
             'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',
             'Email' => 'required|email|unique:eco_friends,email|ends_with:@student.umn.ac.id,@umn.ac.id,@lecturer.umn.ac.id',
@@ -226,7 +239,7 @@ class EcofriendController extends Controller
 
             session()->put('user', $data['Email']);
 
-            return redirect()->route('profileView')->with('status', 'Success');
+            return redirect()->route('home')->with('status', 'Success');
         } else {
             return Redirect::back()->withErrors($validator)->withInput($request->input())->with('status', 'Success');;
         }
@@ -247,10 +260,10 @@ class EcofriendController extends Controller
         $userId = $request->session()->get('userID');
 
         if($data['link'] == null){
-            return redirect()->route('profileView')->with('status', 'Failed');
+            return redirect()->route('home')->with('status', 'Failed');
         }else{
             $model->insertTaskLink($userId, $data['link']);
-            return redirect()->route('profileView')->with('status', 'Link Submitted');
+            return redirect()->route('home')->with('status', 'Link Submitted');
         }
     }
 

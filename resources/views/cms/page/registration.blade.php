@@ -65,24 +65,25 @@
 <div class="form col-md-6 col-10 mx-auto" id="form-page">
     <form class="Persetujuan">
         <div class="row">
-            <!-- Regulasi Internal -->
             <div class="step step-1 active">
                 <object class="regulation-obj mb-2 old" data="{{ asset('files/Regulasi_BLUE.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Regulasi Blue</a>
+                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Download Regulasi Blue</a>
                     </div>
                 </object>
                 <div class="regulation-obj mb-2 new">
                     <div class="regulasiBlue">
-                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Regulasi Blue</a>
+                        <a href="{{ asset('files/Regulasi_BLUE.pdf') }}" class="p-3" download>Download Regulasi Blue</a>
                     </div>
                 </div>
                 <div class="form-check mb-3">
-                    <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
-                    <label class="check mt-3 col-11" for="regulation">I have read and agreed to the regulation</label>
+                    <label class="check mt-3 col-11 row" for="regulation">
+                        <input type="checkbox" id="regulation" name="regulation" value="1" value="{{ old('regulation') }}">
+                        I have read and agreed to the regulation
+                    </label>
                 </div>
                 <div class="next-button" style="text-align:center;">
-                    <button class="button p-2" type="button" id="next-btn" type="submit">Go to Registration</button>
+                    <button class="registration-button" type="button" id="next-btn" type="submit">Go to Registration</button>
                 </div>
             </div>
         </div>
@@ -186,8 +187,10 @@
                 @endif
             </div>
             <div class="form-check mb-3">
-                <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
-                <label class="check check-2 mt-3 col-11" for="Availability">I agree to participate in “BLUE” Event and  abide to the given regulations.</label>
+                <label class="check check-2 mt-3 col-11 row" for="Availability">
+                    <input type="checkbox" id="Availability" name="Availability" value="1" value="{{ old('Availability') }}">
+                    I agree to participate in “BLUE” Event and  abide to the given regulations.
+                </label>
                 @if($errors->has('Availability'))
                 <div class="error error-message">{{ $errors->first('Availability') }}</div>
                 @endif
@@ -195,7 +198,7 @@
 
 
             <div class="text-center py-2">
-                <button type="submit" class="submit-blue-btn p-2" onclick="checkValid()" id="submit-btn">Submit</button>
+                <button type="submit" class="submit-blue-btn" onclick="checkValid()" id="submit-btn">Submit</button>
             </div>
         </form>
     </div>

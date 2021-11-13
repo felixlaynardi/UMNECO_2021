@@ -4,7 +4,7 @@
             <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo">
         </a>
         <!-- <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo"> -->
-        <h6 class="hashtag">#BehoLDtheUndersEa</h4>
+        <h6 class="hashtag">#BeholdTheUnderSea</h4>
         <button class="navbar-toggler" type="button">
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -14,7 +14,7 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('profile_eco') }}">Profile</a>
+                        <a class="nav-link" href="{{ route('profile_eco') }}">About Us</a>
                     </li>
                     <li class="nav-item col-3">
                         <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
@@ -46,7 +46,7 @@
             <a class="menu__link" href="{{ route('home') }}"> Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('profile_eco') }}">Profile</a>
+            <a class="menu__link" href="{{ route('profile_eco') }}">About Us</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
