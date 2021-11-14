@@ -124,10 +124,10 @@
                 </div>
                 <div class="col-12 order-2 py-4 text-content-7">
                     <p>
-                        ECO Friends mau membantu Lulu kan? 
+                        ECO Friends mau membantu Lulu kan?
                     </p>
                     <p class="sub">
-                        Lulu punya solusi mudah nih untuk ECO Friends agar bisa membantu menyelamatkan lautan dan isinya! 
+                        Lulu punya solusi mudah nih untuk ECO Friends agar bisa membantu menyelamatkan lautan dan isinya!
                         ECO Friends bisa mendapatkan informasi lebih banyak tentang solusi Lulu dengan meng click tombol dibawah ini.
                     </p>
                 </div>
@@ -169,13 +169,19 @@
             </div>
             <div class="row justify-content-around  py-4">
                 <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
-                    @if(!$submit_status)
-                        <button id="submit-link-blue-btn" class="submit-blue-button">
-                            Submit Now!
-                        </button>
+                    @if(!$isStarted)
+                        @if(!$submit_status)
+                            <button id="submit-link-blue-btn" class="submit-blue-button">
+                                Submit Now!
+                            </button>
+                        @else
+                            <button class="submit-blue-button submitted">
+                                Submitted!
+                            </button>
+                        @endif
                     @else
                         <button class="submit-blue-button submitted">
-                            Submitted!
+                            Submission starts from 23rd Nov
                         </button>
                     @endif
                 </div>
@@ -183,49 +189,6 @@
         </div>
     </div>
     @endif
-        <!-- <div class="row justify-content-around  py-4">
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
-                <button class="regulation-blue-button bottom-blue-button">
-                    REGULATION
-                </button>
-            </div>
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
-                <button class="register-blue-button bottom-blue-button">
-                    REGISTER NOW
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="section-7">
-    <img src="{{ asset('images/about-blue/Biru wave wavey.png') }}" alt="" class="wave">
-    <div class="welcome-section">
-        <div class="row justify-content-around pt-4 pb-1">
-            <img src="{{ asset('images/about-blue/bubbles.png') }}" alt="" class="bubble1">
-            <img src="{{ asset('images/about-blue/bubbles.png') }}" alt="" class="bubble2">    
-            <div class="col-12 col-md-10 col-lg-9 order-1 px-5">      
-                <p class="hello">Hello, Nutun</p>
-                <p class="ready">Ready to embark on an amazing tale?</p>
-            </div>
-            
-        
-            <div class="col-12 col-md-10 col-lg-9 order-1 px-5">
-                <img src="{{ asset('images/about-blue/Picture Extension Logged In.jpg') }}" alt="" class="w-100" style="border-radius: 15px">
-                <p class="ecofriend-question" >ECO Friends, apakah kalian sudah siap membantu Lulu untuk menyelamatkan rumah dan teman-teman Lulu?</p>
-            </div>
-        </div>
-        <div class="row justify-content-around pt-4">
-            <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
-                
-                <button class="submit-blue-button">
-                    Submit Now!
-                </button>
-                
-            </div>    
-        </div>
-    </div>   
-</div> -->
     @include('cms.template.footer')
 @endsection
 
@@ -233,11 +196,27 @@
 @section('custom-js')
     @if(session('status') == 'Blue Link Submitted')
         <script>
-            Swal.fire(
-            'Link Submitted',
-            'You had submitted a link',
-            'success'
-            )
+            Swal.fire({
+                title: '',
+                html: `
+                <div class="container">
+                    <div class="background">
+                        <div class="sweet-alert-container">
+                            <div class="dinein-box">
+                                <img src="{{ asset('images/about-blue/SubmittedOverlay.jpg') }}" />
+                            </div>
+                        </div>
+                    </div>
+                    <h6 style="font-family: 'Neufreit Extra Bold';">
+                        Terima kasih telah membantu Lulu, ECO Friends!</br></br>
+                        Semoga apa yang dilakukan pada kegiatan BLUE dapat kamu terapkan di kehidupan sehari-hari sehingga kebersihan laut terus terjaga ya!
+                    </h6>
+                </div>
+
+                `,
+                confirmButtonText: 'CONTINUE',
+                showCancelButton: false,
+            })
         </script>
     @endif
     @if($submit_status !== 'not_login')
@@ -251,7 +230,7 @@
 
             $("#submit-link-blue-btn").click(function() {
                 Swal.fire({
-                    title: 'Submit Link',
+                    title: 'Bantuan ECO Friends sangat berarti bagi Lulu!',
                     html: `
                     <form action="./submit_link_blue" method="POST" id="submit-link-blue">
                         @csrf

@@ -1,18 +1,23 @@
-<h3 style="color:black">Halo, <b>{{$details['name']}}!</b></h3>
+<h3 style="color:black"><b>IT'S LULU HERE, WELCOME TO</b> <b style="color:blue">BLUE!</b></h3>
 <p style="color:black">
-    Terima kasih karena telah mendaftar di <b style="color:green">GREENATE!</b>🥑<br>
-    Dengan ini, kami nyatakan bahwa <b>{{$details['name']}}</b>  sudah bisa memesan menu<b style="color:green"> GREENATE </b> pilihan kamu.
+    Halo, ECO Friends!👋🏻
     <br><br>
-    Di <b style="color:green"> GREENATE </b>  kamu bisa memilih menu:<br>
-    ✨ <em>Dine-In</em> dengan santapan Webinar pada hari Senin, 13 September 2021 dan bonus reward  <em>e-certificate</em> <b>+2 SKKM Ilmiah dan Penalaran</b> bagi mahasiswa UMN.
+    Terima kasih ya sudah bersedia membantu Lulu untuk menyelamatkan tempat tinggal dan teman-teman Lulu!<br>
+    Dengan ini, Lulu menyatakan bahwa ECO Friends telah berhasil melakukan registrasi dan siap untuk mengikuti kegiatan <b style="color:blue">BLUE</b>.
     <br><br>
-    ✨ <em>Take-Away</em> dengan santapan Challenge pada hari Selasa, 14 September 2021 s.d. Jumat, 17 September 2021 dan bonus reward  <em>e-certificate</em> <b>+1 SKKM Pengabdian Masyarakat</b> bagi mahasiswa UMN.
+    <b>ECO Friends</b> dapat melaksanakan kegiatan <b style="color:blue">BLUE</b> mulai dari hari Selasa, 23 November 2021 sampai dengan Jumat, 26 November 2021.
     <br><br>
-    Pesanan menu dapat dilakukan mulai dari hari Senin, 6 September 2021 s.d. Minggu, 12 September 2021 untuk Dine-In dan sampai Jumat, 17 September 2021 untuk Take-Away melalui website resmi UMN ECO 2021 di <b>eco.umn.ac.id</b>.
+    Untuk regulasi kegiatan, ECO Friends dapat mengakses melalui website UMN ECO atau langsung click link di bawah ini ya!
+    <br><br>\
+    https://bit.ly/RegulasiBLUE
     <br><br>
-    Untuk segala informasi mengenai detail dan regulasi kegiatan dapat teman-teman lihat melalui website eco.umn.ac.id atau Instagram @umn_eco. 
+    Jangan lupa untuk membuat video <b style="color:blue">BLUE</b> sesuai dengan regulasi yang sudah ditentukan dan lakukan submit di website UMN ECO.
     <br><br>
-    Jika ada kendala atau pertanyaan, <b>{{$details['name']}}</b> bisa langsung hubungi melalui LINE Official Account kami di @bxd0023u.
+    Untuk segala informasi mengenai detail dan regulasi kegiatan dapat teman-teman lihat melalui website <b>eco.umn.ac.id</b> atau Instagram <b>@umn_eco</b>.
+    <br><br>
+    Jika ada kendala atau pertanyaan, <b>ECO Friends</b> bisa langsung hubungi Lulu melalui LINE Official Account di @bxd0023u.
+    <br><br>
+    <b>Let’s dive in with Lulu!</b>🌊
     <br><br>
     Bersama-sama,<b><em> We Act for The Better Earth!</em></b>
     <br><br>

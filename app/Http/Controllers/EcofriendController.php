@@ -38,11 +38,16 @@ class EcofriendController extends Controller
             session()->put('userID', $data->id);
             session()->put('username', $data->name);
 
+            $date = Carbon::createFromFormat('Y-m-d H:i:s', '2021-11-23 00:00:01', 'Asia/Jakarta');
+            $current_timestamp = Carbon::now('Asia/Jakarta');
+            $result = $current_timestamp->gt($date);
+
             $submitStatus = getStatusSubmitLinkBlue($request);
-            return view('cms.page.home-blue', 
+            return view('cms.page.home-blue',
             [
-                'title' => 'UMN ECO 2021 - Home BLUE', 
-                'submit_status' =>$submitStatus
+                'title' => 'UMN ECO 2021 - Home BLUE',
+                'submit_status' =>$submitStatus,
+                'isStarted' => $result
             ]);
         }
     }
@@ -164,7 +169,7 @@ class EcofriendController extends Controller
         }else{
             $data['Faculty'] = "D3 Perhotelan";
         }
-        
+
         $data['Student_id'] = (int)$data['Student_id'];
         $rule = array(
             'Full_name' => 'required|regex:/^[\pL\s\-]+$/u',

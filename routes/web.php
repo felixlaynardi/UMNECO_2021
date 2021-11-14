@@ -31,9 +31,6 @@ use App\Http\Controllers\ShoppingCartController;
 //Active Link
 Route::get('/', [EcofriendController::class, 'index'])->name('home');
 
-//For Landing Page
-// Route::get('/landing-page', [EcofriendController::class, 'LandingPage'])->name('LandingPage');
-
 Route::get('/about-us', function () {
     return view('cms.page.about-us', ['title' => 'UMN ECO 2021 - About UMN Eco']);
   })->name('about-us');
@@ -48,9 +45,6 @@ Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView
 Route::post('/login', [EcofriendController::class, 'login'])->name('login');
 Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
 Route::post('/submit_link_blue', [EcofriendController::class, 'SubmitLinkBlue'])->name('SubmitLink');
-
-//submit link challange
-// Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
 
 // Admin
 Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
@@ -70,10 +64,18 @@ Route::any(
 
 
 
+
 //not used link
 // Route::get('/', function () {
 //   return view('cms.page.home', ['title' => 'UMN ECO 2021']);
 // })->name('home');
+
+//For Landing Page
+// Route::get('/landing-page', [EcofriendController::class, 'LandingPage'])->name('LandingPage');
+
+
+//submit link challange
+// Route::post('/submitLink', [EcofriendController::class, 'submitLink'])->name('submitLink');
 
 // Route::get('/profile', [EcofriendController::class, 'profileView'])->name('profileView');
 // Route::get('/about-red', function () {
