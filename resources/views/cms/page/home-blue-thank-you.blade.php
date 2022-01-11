@@ -12,12 +12,12 @@
 
     <div class="thank-you-section my-auto">
         <div class="row justify-content-around my-auto py-4">
-            <div class="col-12 order-1 thank-you-image">
-                <img src="{{ asset('images/about-blue/SubmittedOverlay.jpg') }}" alt="" class="w-100">
+            <div class="col-12 order-1 thank-you-image px-3 mt-5">
+                <img src="{{ asset('images/about-blue/SubmittedOverlay.jpg') }}" alt="" class="w-100" style="border-radius:.5rem;">
             </div>
-            <div class="col-12 order-2 py-4 thank-you-text">
+            <div class="col-12 order-2 py-4 thank-you-text mt-4">
                 <h1 class="thank-you-text-title">Terima kasih telah membantu Lulu, ECO Friends!</h1>
-                <p class="thank-you-text-content">Semoga apa yang dilakukan pada kegiatan BLUE dapat kamu terapkan di kehidupan sehari-hari sehingga kebersihan laut terus terjaga ya!</p>
+                <p class="thank-you-text-content mt-4">Semoga apa yang dilakukan pada kegiatan BLUE dapat kamu terapkan di kehidupan sehari-hari sehingga kebersihan laut terus terjaga ya!</p>
             </div>
         </div>
     </div>

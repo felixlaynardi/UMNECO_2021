@@ -54,6 +54,13 @@ Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('
 Route::get('/EcoFriendList', [BlueAdminController::class,'index'])->name('blueEFL');
 Route::post('/EFChangePassword', [BlueAdminController::class,'change_pass'])->name('changePass');
 
+// Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
+// Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
+
+// Route::get('/home', function () {
+//   return view('cms.page.home-blue-thank-you', ['title' => 'UMN ECO 2021 - Home BLUE']);
+// })->name('home-blue');
+
 // Redirect home on random url
 Route::any(
     '{query}',

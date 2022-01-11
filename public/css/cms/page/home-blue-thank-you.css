@@ -35,15 +35,16 @@ body{
     color: white;
 }
 .thank-you-text-title{
-    font-size: 4.5rem;
+    font-size: 2.5rem;
     letter-spacing: 0.205em;
 }
 .thank-you-text-content{
     font-size: 1.5rem;
+    font-family: 'MADE Tommy Soft 2';
 }
 @media (max-width:768px){
     .thank-you-text-title{
-        font-size: 2.5rem;
+        font-size: 1.5rem;
     }
     .thank-you-text-content{
         font-size: 1rem;
@@ -51,7 +52,7 @@ body{
 }
 @media (max-width:354px){
     .thank-you-text-title{
-        font-size: 2rem;
+        font-size: 1.25rem;
     }
     .thank-you-text-content{
         font-size: .75rem;

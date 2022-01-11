@@ -38,6 +38,7 @@ body{
 .section-1 {
     position: relative;
     padding-top: 70px;
+    overflow: hidden;
 }
 
 .bubbles-1{
@@ -46,7 +47,7 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.6;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .bubbles-2{
@@ -55,7 +56,7 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.6;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .bubbles-3{
@@ -64,7 +65,7 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.4;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .text-content-1 p{
@@ -96,6 +97,7 @@ body{
 
 .section-2, .section-3, .section-4, .section-5, .section-6 {
     position: relative;
+    overflow: hidden;
     /* padding-top: 70px; */
 }
 
@@ -313,7 +315,7 @@ body{
 .submit-blue-button{
     background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
     padding: 1.5rem;
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-style: normal;
     font-weight: bold;
     font-size: 28px;
@@ -322,8 +324,6 @@ body{
     outline: none;
     border: none;
     transition: 0.3s;
-    margin-top: 5%;
-    margin-bottom: 15%;
     border-radius: .2rem;
 }
 
@@ -383,6 +383,12 @@ h6{
     }
 }
 
+@media(max-width:575px){
+    .text-content-1 p, .text-content-2 .third-text, .text-content-3 p, .text-content-4 p, .text-content-7 .sub, .welcome-section .ecofriend-question{
+        text-align: left;
+    }
+}
+
 @media(max-width:768px){
     .container-blue-home p{
         font-family: MADE Tommy Soft;
@@ -397,6 +403,10 @@ h6{
     .bubble1, .bubble2{
         display: none;
     }
+}
+
+.swal2-popup{
+    font-family: 'MADE Tommy Soft 3'!important;
 }
 
 @media(max-width:576PX){

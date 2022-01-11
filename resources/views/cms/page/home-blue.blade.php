@@ -72,7 +72,7 @@
                     <p>
                     Akibat ulah manusia, teman-teman ku bingung membedakan mana yang makanan dan mana yang bukan,
                     karena bau dan bentuk yang dihasilkan sama.
-                    Rumahku Juga tercemar mikroplastik yang menghasilkan polutan seperti <b>PCB</b> dan
+                    Rumahku juga tercemar mikroplastik yang menghasilkan polutan seperti <b>PCB</b> dan
                     <b>pestisida</b> sehingga kotor dan membuat teman-temanku sakit!
                     </p>
                 </div>
@@ -128,7 +128,7 @@
                     </p>
                     <p class="sub">
                         Lulu punya solusi mudah nih untuk ECO Friends agar bisa membantu menyelamatkan lautan dan isinya!
-                        ECO Friends bisa mendapatkan informasi lebih banyak tentang solusi Lulu dengan meng click tombol dibawah ini.
+                        ECO Friends bisa mendapatkan informasi lebih banyak tentang solusi Lulu dengan klik tombol dibawah ini.
                     </p>
                 </div>
 
@@ -167,20 +167,20 @@
                     <p class="ecofriend-question" >ECO Friends, apakah kalian sudah siap membantu Lulu untuk menyelamatkan rumah dan teman-teman Lulu?</p>
                 </div>
             </div>
-            <div class="row justify-content-around  py-4">
-                <div class="col-lg-3 col-md-5 col-sm-6 col-12 d-flex justify-content-center">
-                    @if(!$isStarted)
+            <div class="row justify-content-around  py-4 mb-3">
+                <div class="d-flex justify-content-center mb-5">
+                    @if($isStarted)
                         @if(!$submit_status)
-                            <button id="submit-link-blue-btn" class="submit-blue-button">
+                            <button id="submit-link-blue-btn" class="submit-blue-button mx-3">
                                 Submit Now!
                             </button>
                         @else
-                            <button class="submit-blue-button submitted">
+                            <button class="submit-blue-button submitted mx-3">
                                 Submitted!
                             </button>
                         @endif
                     @else
-                        <button class="submit-blue-button submitted">
+                        <button class="submit-blue-button submitted mx-3">
                             Submission starts from 23rd Nov
                         </button>
                     @endif
@@ -214,7 +214,7 @@
                 </div>
 
                 `,
-                confirmButtonText: 'CONTINUE',
+                confirmButtonText: 'Continue',
                 showCancelButton: false,
             })
         </script>
@@ -234,7 +234,7 @@
                     html: `
                     <form action="./submit_link_blue" method="POST" id="submit-link-blue">
                         @csrf
-                        <input type="url" name="link" id="task-link" class="swal2-input" placeholder="Insert Link">
+                        <input type="url" name="link" id="task-link" class="swal2-input" placeholder="https://www.instagram.com/umn_eco/">
                     </form>
                     `,
                     showCancelButton: false,

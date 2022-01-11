@@ -28,7 +28,7 @@ class EcofriendController extends Controller
     public function index(Request $request){
 
         if (!session()->has('user')) {
-            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021 - Home BLUE', 'submit_status' =>'not_login']);
+            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021', 'submit_status' =>'not_login']);
         } else {
             $model = new Ecofriends();
             //Set Session
@@ -45,7 +45,7 @@ class EcofriendController extends Controller
             $submitStatus = getStatusSubmitLinkBlue($request);
             return view('cms.page.home-blue',
             [
-                'title' => 'UMN ECO 2021 - Home BLUE',
+                'title' => 'UMN ECO 2021',
                 'submit_status' =>$submitStatus,
                 'isStarted' => $result
             ]);
@@ -113,10 +113,11 @@ class EcofriendController extends Controller
             } else {
                 $data['email'] = Str::lower($data['email']);
                 $check_data = $model->getEcoFriendsByEmail($data['email']);
+                $check_data->name = Str::limit($check_data->full_name, 20, '...');
                 if ($check_data != null) {
                     if ($check_data->email == $data['email'] && Hash::check($data['password'], $check_data->password)) {
                         session()->put('user', $data['email']);
-                        session()->put('username', $check_data->full_name);
+                        session()->put('username', $check_data->name);
                         return redirect()->route('home')->with('status', 'Success');
                     } else {
                         $error = array(
@@ -253,7 +254,7 @@ class EcofriendController extends Controller
     public function sendEmail($data)
     {
         $details = [
-            'title' => 'WELCOME TO GREENATE, ' . $data['Full_name'],
+            'title' => 'WELCOME TO BLUE, ' . $data['Full_name'],
             'name' => $data['Full_name'],
         ];
         Mail::to($data['Email'])->send(new RegisterMail($details));

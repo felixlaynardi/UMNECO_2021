@@ -93,6 +93,7 @@ label {
     vertical-align: middle;
     font-size: 1.25rem;
     flex-wrap: inherit;
+    cursor: pointer;
 }
 [id=main-navigation-toggle] ~ label {
     position: absolute;
