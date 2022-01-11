@@ -153,15 +153,17 @@ ScrollTrigger.create({
   end: "+=100",
   scrub: 3
 });
-scene_2_6.to(".navbar", { display: 'block' }, 0);
-scene_2_6.to(".navbar", { opacity: '1' }, 0);
+scene_2_6.to(".navbar", { backgroundColor: '#1B3627' }, 0);
 scene_2_6.to(".scroll-icon", { display: 'none' }, 0);
 if($( window ).width() <= 767){
   scene_2_6.to(".navigation-toggle-span", { display: 'block' }, 0);
   scene_2_6.to(".navigation-toggle-span", { opacity: '1' }, 0);
   scene_2_6.to(".toggler-container", { display: 'block' }, 0);
   scene_2_6.to(".toggler-container", { opacity: '1' }, 0);
-
+  scene_2_6.to(".hashtag", { display: 'block' }, 0);
+  scene_2_6.to(".navbar-blue-logo", { display: 'block' }, 0);
+  scene_2_6.to(".hashtag", { opacity: '1' }, 0);
+  scene_2_6.to(".navbar-blue-logo", { opacity: '1' }, 0);
 }
 // Z-index
 let scene_2_z = gsap.timeline();

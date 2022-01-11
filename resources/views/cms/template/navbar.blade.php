@@ -4,7 +4,7 @@
             <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo">
         </a>
         <!-- <img src="{{ asset('images/BlueLogo.png')}}" class="navbar-blue-logo"> -->
-        <h6 class="hashtag">#BehoLDtheUndersEa</h4>
+        <h6 class="hashtag">#BeholdTheUnderSea</h4>
         <button class="navbar-toggler" type="button">
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -14,14 +14,14 @@
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
                     <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('about-greenate') }}">Profile</a>
+                        <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
                     </li>
                     <li class="nav-item col-3">
                         <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
                     </li>
                     <li class="nav-item col-3">
                         @if(session()->has('user'))
-                        <a class="nav-link" href="{{ route('profileView') }}">Profile</a>
+                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
                         @else
                         <a class="nav-link" href="{{ route('loginView') }}">Login</a>
                         @endif
@@ -46,14 +46,14 @@
             <a class="menu__link" href="{{ route('home') }}"> Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('about-greenate') }}">Profile</a>
+            <a class="menu__link" href="{{ route('about-us') }}">About Us</a>
         </li>
         <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
         </li>
         <li class="menu__item">
             @if(session()->has('user'))
-            <a class="menu__link" href="{{ route('profileView') }}">Profile</a>
+            <a class="menu__link" href="{{ route('logout') }}">Logout</a>
             @else
             <a class="menu__link" href="{{ route('loginView') }}">Login</a>
             @endif

@@ -14,8 +14,9 @@ header {
     width: 100%;
     padding-top: 0%;
     color: seashell;
-    font-family: "MADE Tommy Soft";
+    font-family: "MADE Tommy Soft 3";
     font-size: 40px;
+    margin: 0;
 }
 
 .header-deco{
@@ -87,12 +88,12 @@ label {
     color: #545839;
 }
 .check {
-    color: #fff;
-    font-family: "MADE Tommy soft";
-    text-align: center;
-}
-.error {
-    font-family: "Made Tommy soft 2";
+    color: #FFFFFF;
+    font-family: "MADE Tommy soft 3"!important;
+    vertical-align: middle;
+    font-size: 1.25rem;
+    flex-wrap: inherit;
+    cursor: pointer;
 }
 [id=main-navigation-toggle] ~ label {
     position: absolute;
@@ -110,7 +111,7 @@ label {
 }
 .form-control {
     background-color: #fff5f5;
-    font-family: "MADE Tommy soft 2";
+    font-family: "MADE Tommy soft 3";
 }
 .has-error .form-control,
 .form-control.error {
@@ -119,27 +120,28 @@ label {
     border-color: #eb5e28;
 }
 label.error:not(.form-control) {
-    color: #eb5e28;
-    font-weight: 300;
-    font-size: 0.8em;
+    color: #ffadad;
+    font-size: 0.9em;
+    text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
-.button {
+.registration-button {
     font-family: "MADE Tommy Soft";
     font-weight: bold;
-    color: #00C7E2;
-    background: #fff;
+    color: #FFFFFF;
+    background: #00C7E2;
     mix-blend-mode: normal;
     border-radius: 8px;
     outline: none;
     position: relative;
-    transition: 0.3s;    
+    transition: 0.3s;
+    border: none;
 }
 
-.button:hover {
-    background: #00C7E2;
-    color: #FFFFFF;
+.registration-button:hover {
+    background: #fff;
+    color: #00C7E2;
 }
-.button:focus {
+.registration-button:focus {
     outline: none;
 }
 .tombol {
@@ -147,7 +149,7 @@ label.error:not(.form-control) {
     text-align: center;
 }
 #next-btn {
-    width: 200px;
+    padding: 1rem 1.5rem;
 }
 /* #footer {
     margin-top: 10%;
@@ -237,10 +239,9 @@ label.error:not(.form-control) {
     color: #fff;
     background-color: #00C7E2;
     font-family: MADE Tommy Soft;
-    font-style: bold;
     font-weight: 800;
     border: none;
-    border-radius: 25px;
+    border-radius: 15px;
     line-height: 1;
     mix-blend-mode: normal;
 }   
@@ -405,7 +406,7 @@ label.error:not(.form-control) {
     color: #1B5A3B;
 }
 #submit-btn{
-    width: 30%;
+    padding: 0.75rem 4.5rem;
 }
 
 .submit-blue-btn{
@@ -420,7 +421,6 @@ label.error:not(.form-control) {
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 45px;
     letter-spacing: 0em;
     transition: 0.5s;
 }
@@ -440,10 +440,44 @@ label.error:not(.form-control) {
     /* color: #92967d; */
     color: #FFFFFF;
 }
-.check {
-    color: #FFFFFF;
-    font-family: "MADE Tommy soft";
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0;
+  
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    padding: 0;
+  
+    display: grid;
+    place-content: center;
+    margin-top: 0.3rem;
+    margin-right: 1rem;
 }
-.error {
-    font-family: "Made Tommy soft 2";
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 50ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    /* Windows High Contrast Mode */
+    background-color: wheat;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
 }

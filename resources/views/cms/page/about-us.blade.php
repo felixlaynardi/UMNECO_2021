@@ -1,16 +1,10 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/profile_blue.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/cms/page/about-us.css') }}">
 @endsection
 
 @section('content')
-<!-- <div class="scroll-downs">
-  <div class="mousey">
-    <div class="scroller"></div>
-  </div>
-</div> -->
-<!-- <div class="scroll-text">Scroll Down Slowly</div> -->
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
     <div id="scene-1" class="position-relative mx-auto">
@@ -20,9 +14,6 @@
         <div id="lower-lava" style="background:url({{ asset('images/home/lower-lava.png')}});" class="position-fixed assets">
 
         </div>
-        <!-- <img src="{{ asset('images/home/upper-lava.png')}}" alt="" class="position-fixed w-100"> -->
-        <!-- <img src="{{ asset('images/home/lower-lava.png')}}" alt="" class="position-fixed w-100" style="top:20%"> -->
-
         <div id="lava-flow" style="background:url({{ asset('images/home/lava-flow.png')}});" class="position-fixed assets">
             
         </div>
@@ -30,9 +21,6 @@
             
         </div>
         <img src="{{ asset('images/home/about_umn_eco.png')}}" alt="" class="position-fixed oprec-text col-12 col-lg-4 col-md-6" style="">
-        <!-- <div id="scene-2" style="background:url({{ asset('images/home/sky.png')}});"> -->
-
-        <!-- </div> -->
     </div>
     <div id="scene-2" class="position-relative mx-auto">
         <div class="fixed-wrapper">
@@ -48,9 +36,6 @@
             <div id="mountain-right" style="background:url({{ asset('images/home/mountain-right.png')}});" class="position-fixed assets">
             
             </div>
-            <!-- <div id="foreground-2" style="background:url({{ asset('images/home/foreground.png')}});" class="position-fixed assets">
-            
-            </div> -->
             <div id="foreground" style="background:url({{ asset('images/home/foreground.png')}});" class="position-fixed assets">
             
             </div>
@@ -98,7 +83,7 @@
                     </div>
                 </div>
             </div>
-            <div class="home-theme container row mx-auto" style="padding-top:10rem;padding-bottom:10rem;">
+            <div class="home-theme container row mx-auto py-5">
                 <div class="home-theme-left col-12 col-lg-7 position-relative">
                     <img src="{{ asset('images/home/graphics_3.png') }}" alt="" class="graph3">
                     <div class="home-theme-title position-relative">
@@ -106,18 +91,6 @@
                     </div>
                     <div class="home-theme-content mt-3 pb-5 position-relative">
                         Di tahun 2021, UMN ECO akan mengangkat tema <em>‘Environmental Compassion for Our Nation’</em> sebagai agenda dasar utama. Tema tersebut mencerminkan rasa keprihatinan secara mendalam yang ingin diberikan terhadap bangsa terutama dalam ranah lingkungan, yang mana didalamnya terdapat komponen biotik dan abiotik yang saling berhubungan secara timbal balik.
-                        <!-- <div class="home-theme-point mt-4 mb-1">
-                            ENVIRONMENTAL
-                        </div>
-                        Kondisi alam tempat manusia, hewan, dan tumbuhan terhubung dengan lingkungan. 
-                        <div class="home-theme-point mt-4 mb-1">
-                            OUR NATION
-                        </div>
-                        Bangsa kita, yaitu bangsa Indonesia yang terdiri dari banyak manusia yang beragam dan memiliki perannya masing-masing
-                        <div class="home-theme-point mt-4 mb-1">
-                            COMPASSION
-                        </div>
-                        Perasaan simpati yang kuat terhadap suatu keprihatinan sehingga memunculkan keinginan untuk membantu merubah keprihatinan tersebut.  -->
                     </div>
                 </div>
                 <div class="home-theme-right col-lg-5 col-12 position-relative" style="margin-top: -10%;">
@@ -169,7 +142,7 @@
 @endsection
 
 @section('custom-js')
-    <script src="{{ asset('js/cms/page/profile_blue.js') }}"></script>
+    <script src="{{ asset('js/cms/page/about-us.js') }}"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script> -->
 
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>

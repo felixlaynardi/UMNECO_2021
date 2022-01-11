@@ -38,6 +38,7 @@ body{
 .section-1 {
     position: relative;
     padding-top: 70px;
+    overflow: hidden;
 }
 
 .bubbles-1{
@@ -46,7 +47,7 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.6;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .bubbles-2{
@@ -55,7 +56,7 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.6;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .bubbles-3{
@@ -64,15 +65,14 @@ body{
     width: 5%;
     position: absolute;
     opacity: 0.4;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .text-content-1 p{
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: justify;
     color: white;
@@ -83,10 +83,9 @@ body{
     font-size: 24px;
     font-style: normal;
     font-weight: 900;
-    line-height: 31px;
     letter-spacing: 0em;
     text-align: justify;
-    color: #0D5E6A;
+    color: #0d3b53;
 }
 
 
@@ -98,6 +97,7 @@ body{
 
 .section-2, .section-3, .section-4, .section-5, .section-6 {
     position: relative;
+    overflow: hidden;
     /* padding-top: 70px; */
 }
 
@@ -106,49 +106,43 @@ body{
     font-size: 36px;
     font-style: normal;
     font-weight: 700;
-    line-height: 45px;
     letter-spacing: 0em;
     text-align: left;
-    color: #0D5E6A;
-
+    color: #0d3b53;
 }
 .text-content-2 .second-text{
     font-family: MADE Tommy Soft;
     font-size: 64px;
     font-style: normal;
     font-weight: 700;
-    line-height: 80px;
     letter-spacing: 0em;
     text-align: left;
     color: white;
 }
 .text-content-2 .third-text{
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
-    line-height: 30px;
     letter-spacing: 0em;
     text-align: justify;
     color: white;
 }
 
 .text-content-3 {
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 30px;
     text-align: justify;
     color: white;
 }
 
 .text-content-4{
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 30px;
     text-align: justify;
     color: white;
 }
@@ -158,7 +152,6 @@ body{
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 30px;
     text-align: justify;
 
     color: #FFACA0;
@@ -202,14 +195,14 @@ body{
 }
 
 .text-content-6 .sub{
-    font-family: MADE Tommy Soft;
+    font-family: 'MADE Tommy Soft 3';
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0em;
     text-align: justify;
-    
+
     color: #FFFFFF;
 }
 
@@ -230,19 +223,18 @@ body{
     font-size: 24px;
     line-height: 30px;
     text-align: justify;
-    
+
     color: #FFFFFF;
-    
+
 }
 
-
-.register-blue-button{
-    padding: 12px 30px;
+.bottom-blue-button{
+    padding: 1.5rem;
+    border-radius: .15rem;
     font-family: MADE Tommy Soft;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-    line-height: 30px;
     text-align: center;
     color: #FFFFFF;
     outline: none;
@@ -251,16 +243,16 @@ body{
     background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
 }
 
-.register-blue-button:focus{
+.bottom-blue-button:focus{
     outline: none;
     border: none;
 }
 
-.register-blue-button:hover{
-    background: linear-gradient(180deg,#73AFD1 100%, #B9F0FC 14.58% );
-    transition: 0.3s;
+.bottom-blue-button:hover{
+    background: #40C6DA;
     cursor: pointer;
     transform: scale(1.02);
+    color: #004462;
 }
 
 .wave{
@@ -299,22 +291,22 @@ body{
     line-height: 6rem;
     padding-top: 5%;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow-wrap: break-word;
 }
 
 .welcome-section .ready{
     color: #004462;
     font-size: 45px;
     width: 100%;
-    line-height: 3rem;; 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding-bottom: 5%;
     text-align: justify;
 }
 
 .welcome-section .ecofriend-question{
+    font-family: 'MADE Tommy Soft 3';
     color: #004462;
     margin-top: 2%;
-    line-height: 2rem;
     font-size: 30px;
     text-align: justify;
 }
@@ -322,19 +314,16 @@ body{
 
 .submit-blue-button{
     background: linear-gradient(180deg, #5494A6 0%, #5494A6 14.58%, #004361 100%);
-    padding: 1rem;
-    font-family: MADE Tommy Soft;
+    padding: 1.5rem;
+    font-family: 'MADE Tommy Soft 3';
     font-style: normal;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 28px;
     text-align: center;
     color: #FFFFFF;
     outline: none;
     border: none;
     transition: 0.3s;
-    margin-top: 5%;
-    margin-bottom: 15%;
     border-radius: .2rem;
 }
 
@@ -344,34 +333,60 @@ body{
 }
 
 .submit-blue-button:hover{
-    /* background: linear-gradient(180deg, #B9F0FC 14.58%, #73AFD1 100%); */
-    background: linear-gradient(180deg,#73AFD1 100%, #B9F0FC 14.58% );
-    transition: 0.3s;
+    background: #73AFD1;
     cursor: pointer;
     transform: scale(1.02);
+}
+
+.submitted{
+    background: linear-gradient(180deg, #CCCCCC 14.58%, #6D6D6D 100%);
+    box-shadow: 3px 2px 4px rgb(0 0 0 / 25%);
+    cursor: default;
+}
+
+.submitted:hover{
+    background: linear-gradient(180deg, #CCCCCC 14.58%, #6D6D6D 100%);
+    cursor: default;
+}
+
+h6{
+    margin-top: 5%;
+}
+
+.dinein-box{
+    width: 100%;
+    display: inline-block;
+    height: 50%;
+    border-radius: 5px;
+}
+.dinein-box img{
+    border-radius: 5px;
+}
+
+.sweet-alert-container img {
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
 }
 
 @media(min-width:1900PX){
     .welcome-section .hello{
         font-size: 90px;
     }
-    
+
     .welcome-section .ready{
         font-size: 60px;
     }
-    
+
     .welcome-section .ecofriend-question{
         font-size: 40px;
-        line-height: 3rem;
     }
 }
 
-@media(min-width:769px){
-    .submit-blue-button{
-        padding: 2rem;
-        font-size: 28px;
+@media(max-width:575px){
+    .text-content-1 p, .text-content-2 .third-text, .text-content-3 p, .text-content-4 p, .text-content-7 .sub, .welcome-section .ecofriend-question{
+        text-align: left;
     }
-
 }
 
 @media(max-width:768px){
@@ -380,7 +395,6 @@ body{
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        line-height: 25px;
         letter-spacing: 0em;
         text-align: justify;
         color: white;
@@ -389,31 +403,41 @@ body{
     .bubble1, .bubble2{
         display: none;
     }
-    .welcome-section .hello{
-        font-size: 47px;
-        line-height: 3rem;
+}
+
+.swal2-popup{
+    font-family: 'MADE Tommy Soft 3'!important;
+}
+
+@media(max-width:576PX){
+    .regulation-blue-button{
+        margin-bottom: 2rem;
     }
-    
+    .welcome-section .hello{
+        font-size: 60px;
+        line-height: 4rem;
+    }
     .welcome-section .ready{
-        font-size: 25px;  
+        font-size: 36px;
     }
     .welcome-section .ecofriend-question{
         margin-top: 10%;
-        font-size: 18px;
-        line-height: 2rem;
+        font-size: 25px;
+    }
+    .submit-blue-button{
+        font-size: 24px;
     }
 }
 
 @media(max-width:426px){
     .welcome-section .hello{
-        font-size: 36px;
-        line-height: 2.5rem;
+        font-size: 55px;
     }
-    .welcome-section .ready{  
-        font-size: 20px;
-        line-height: 2.5rem;
+    .welcome-section .ready{
+        font-size: 30px;
     }
     .welcome-section .ecofriend-question{
-        line-height: 1.6rem;
+        margin-top: 10%;
+        font-size: 23px;
     }
 }
