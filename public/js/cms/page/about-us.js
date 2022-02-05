@@ -31,7 +31,8 @@ ScrollTrigger.create({
   end: "+=500",
   scrub: 3
 });
-scene_1_3.to("#lava-flow", { top: '60vh' }, 0);
+scene_1_3.to("#lava-flow", { top: '-100vh' }, 0);
+scene_1_3.to("#lava-flow-2", { top: '-100vh' }, 0);
 // Fourth Frame
 let scene_1_4 = gsap.timeline();
 ScrollTrigger.create({
@@ -53,7 +54,7 @@ ScrollTrigger.create({
 });
 scene_1_5.to("#scene-1", { backgroundColor: 'black' }, 0);
 scene_1_5.to("#lower-lava", { opacity: '0.4' }, 0);
-scene_1_5.to("#upper-lava", { opacity: '0.2' }, 0);
+// scene_1_5.to("#upper-lava", { opacity: '0.2' }, 0);
 // Sixth Frame
 let scene_1_6 = gsap.timeline();
 ScrollTrigger.create({
@@ -64,8 +65,7 @@ ScrollTrigger.create({
   scrub: 1
 });
 scene_1_6.to(".oprec-text", { opacity: '0', zIndex:'-1' }, 0);
-scene_1_6.to("#lava-flow", { opacity: '0' }, 0);
-scene_1_6.to("#lava-flow-2", { top: '-100vh' }, 0);
+// scene_1_6.to("#lava-flow", { opacity: '0' }, 0);
 
 // Scene 2
 // First Frame

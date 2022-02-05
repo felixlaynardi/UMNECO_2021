@@ -10,21 +10,11 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav col-12">
                 <div class="nav-item-container mx-auto w-100 row">
-                    <li class="nav-item col-3">
+                    <li class="nav-item col-6">
                         <a class="nav-link active" href="{{ route('home') }}">Home</a>
                     </li>
-                    <li class="nav-item col-3">
-                        <a class="nav-link" href="{{ route('about-us') }}">About Us</a>
-                    </li>
-                    <li class="nav-item col-3">
+                    <li class="nav-item col-6">
                         <a class="nav-link" href="{{ route('ourteam') }}">Our Team</a>
-                    </li>
-                    <li class="nav-item col-3">
-                        @if(session()->has('user'))
-                        <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-                        @else
-                        <a class="nav-link" href="{{ route('loginView') }}">Login</a>
-                        @endif
                     </li>
                 </div>
             </ul>
@@ -46,17 +36,7 @@
             <a class="menu__link" href="{{ route('home') }}"> Home</a>
         </li>
         <li class="menu__item">
-            <a class="menu__link" href="{{ route('about-us') }}">About Us</a>
-        </li>
-        <li class="menu__item">
             <a class="menu__link" href="{{ route('ourteam') }}">Our Team</a>
-        </li>
-        <li class="menu__item">
-            @if(session()->has('user'))
-            <a class="menu__link" href="{{ route('logout') }}">Logout</a>
-            @else
-            <a class="menu__link" href="{{ route('loginView') }}">Login</a>
-            @endif
         </li>
     </ul>
 </nav>

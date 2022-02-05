@@ -24,7 +24,7 @@ body, html {
     scroll-behavior: smooth;
 }
 #scene-1{
-    min-height: 4000px;
+    min-height: 2500px;
     padding-top: 3rem;
 }
 .assets{
@@ -36,11 +36,20 @@ body, html {
     top: 20vw;
     height:100vh;
 }
-#lava-flow, #lava-flow-2{
-    top: 120vh;
-    min-height: 200vh;
+#lava-flow-2{
+    background-position: 50% 0 !important;
+    background-size: cover!important;
+    background-repeat: no-repeat;
+
+    top: 70vh;
+    min-height: 100vh;
     left: -10px;
     width: 105%;
+    z-index:2;
+}
+#lava-flow{
+    top: 100vh;
+    min-height: 200vh;
     z-index:2;
 }
 .oprec-text{
@@ -49,10 +58,57 @@ body, html {
     left:50%;
     z-index:1;
 }
+.bye-text{
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    z-index:1;
+
+    text-align: center;
+
+    font-family: 'Heavitas';
+    color: #F4ECDC;
+}
+.top-text{
+    font-size: 3rem;
+}
+.top-subtitle{
+    font-size: 2rem;
+}
+.bottom-text, .bottom-subtitle{
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+.bottom-button-left, .bottom-button-right{
+    margin-top: 1rem;
+
+    background: #E9E5CB;
+    border-radius: 7px;
+    width: 12rem;
+    height: 4rem;
+
+    border: 0px;
+    
+    color: #91A272;
+}
+.bottom-button-left:hover{
+    background-color: white;
+    transition: 1s;
+}
+.bottom-button-right:hover{
+    background-color: white;
+    transition: 1s;
+}
+.bottom-button-left{
+    float: left;
+}
+.bottom-button-right{
+    float: right;
+}
 /* Scene 2 */
 #scene-2{
     min-height: 3000px;
-    background: linear-gradient(180deg, #FFED7F 0%, #66C8CF 43.23%, #66C8CF 46.84%);
+    background: linear-gradient(180deg, #f5eddd 0%, #66C8CF 43.23%, #66C8CF 46.84%);
     z-index:2;
 }
 #scene-2::before {
@@ -306,9 +362,20 @@ img{
     left: 10%;
     top: 10%;
 }
+@media(max-width:1200px) {
+    .bottom-button-left, .bottom-button-right {
+        height: 4rem;
+        width: 10rem;
+    }
+}
 @media(max-width:954px) and (min-width:768px){ 
     .tagline-subtitle{
         font-size: 20px;
+    }
+}
+@media(max-width:900px){
+    #lava-flow-2{
+        background-size: contain!important;
     }
 }
 @media(min-width:768px){
@@ -364,10 +431,39 @@ img{
     .join-us-button{
         font-size: 32px;
     }
+    .top-text{
+        font-size: 2.5rem;
+    }
+    .top-subtitle{
+        font-size: 1.5rem;
+    }
+    .bottom-text, .bottom-subtitle{
+        font-size: 0.65rem;
+    }
+    .bottom-button-left, .bottom-button-right {
+        font-size: .8rem;
+        height: 3rem;
+        width: 9rem;
+    }
 }
 @media(max-width:650px){
     #foreground, #foreground-2{
         background-position:center bottom!important;
+    }
+}
+@media(max-width:350px){
+    .bottom-button-left, .bottom-button-right {
+        font-size: .65rem;
+        height: 2.5rem;
+        width: 7rem;
+    }
+}
+@media(max-height:700px){
+    #lava-flow-2{
+        top: 80vh;
+    }
+    #lava-flow{
+        top: 100vh;
     }
 }
 
@@ -435,4 +531,9 @@ img{
         transform: rotate(-45deg) translate(-20px, 20px);
         opacity: 0;
     }
+}
+
+#upper-lava{
+    height: 110vh;
+    top: -10%;
 }

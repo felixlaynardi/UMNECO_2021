@@ -8,19 +8,36 @@
 <span class="scroll-icon"></span>
 <div id="home" style="background-color:#301414;height:auto;position:relative;">
     <div id="scene-1" class="position-relative mx-auto">
-        <div id="upper-lava" style="background:url({{ asset('images/home/upper-lava.png')}});" class="position-fixed assets">
+        <div id="upper-lava" style="background:url({{ asset('images/home-final/backdrop-top.png')}});" class="position-fixed assets">
             
         </div>
-        <div id="lower-lava" style="background:url({{ asset('images/home/lower-lava.png')}});" class="position-fixed assets">
+        <!-- <div id="lower-lava" style="background:url({{ asset('images/home/lower-lava.png')}});" class="position-fixed assets">
 
-        </div>
-        <div id="lava-flow" style="background:url({{ asset('images/home/lava-flow.png')}});" class="position-fixed assets">
+        </div> -->
+        <div id="lava-flow" style="background:#f5eddd;" class="position-fixed assets">
             
         </div>
-        <div id="lava-flow-2" style="background:url({{ asset('images/home/lava-flow.png')}});" class="position-fixed assets">
+        <div id="lava-flow-2" style="background:url({{ asset('images/home-final/cloud-solid-2.png')}});" class="position-fixed assets">
             
         </div>
-        <img src="{{ asset('images/home/about_umn_eco.png')}}" alt="" class="position-fixed oprec-text col-12 col-lg-4 col-md-6" style="">
+        <div class="position-fixed bye-text col-10 col-lg-4 col-md-6">
+            <div class="top-text">
+                UMN ECO 2021
+            </div>
+            <div class="top-subtitle">
+                Pamit Undur Diri
+            </div>
+            <div class="bottom-text">
+                Terima kasih sudah mau menjadi bagian dari perjalanan kami, ECO Friends. Mari terus lanjutkan dampak yangtelah diberikan untuk Bumi kita, ya!
+            </div>
+            <div class="bottom-subtitle">
+                #WeActForTheBetterEarth
+            </div>
+            <div class="bottom-buttons">
+                <a href="https://www.instagram.com/umn_eco/"><button class="bottom-button-left">Visit Our Instagram</button></a>
+                <a href="{{ asset('files/RILIS_PERS_BLUE.pdf') }}"><button class="bottom-button-right">Press Release</button></a>
+            </div>
+        </div>
     </div>
     <div id="scene-2" class="position-relative mx-auto">
         <div class="fixed-wrapper">

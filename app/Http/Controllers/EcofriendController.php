@@ -26,30 +26,7 @@ use Symfony\Component\Console\Input\Input;
 class EcofriendController extends Controller
 {
     public function index(Request $request){
-
-        if (!session()->has('user')) {
-            return view('cms.page.home-blue', ['title' => 'UMN ECO 2021', 'submit_status' =>'not_login']);
-        } else {
-            $model = new Ecofriends();
-            //Set Session
-            $data = $model->getEcoFriendsByEmail($request->session()->get('user'));
-            $data->name = Str::limit($data->full_name, 20, '...');
-
-            session()->put('userID', $data->id);
-            session()->put('username', $data->name);
-
-            $date = Carbon::createFromFormat('Y-m-d H:i:s', '2021-11-23 00:00:01', 'Asia/Jakarta');
-            $current_timestamp = Carbon::now('Asia/Jakarta');
-            $result = $current_timestamp->gt($date);
-
-            $submitStatus = getStatusSubmitLinkBlue($request);
-            return view('cms.page.home-blue',
-            [
-                'title' => 'UMN ECO 2021',
-                'submit_status' =>$submitStatus,
-                'isStarted' => $result
-            ]);
-        }
+        return view('cms.page.about-us', ['title' => 'UMN ECO 2021']);
     }
 
     public function registrationView()

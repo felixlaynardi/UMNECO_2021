@@ -31,28 +31,28 @@ use App\Http\Controllers\ShoppingCartController;
 //Active Link
 Route::get('/', [EcofriendController::class, 'index'])->name('home');
 
-Route::get('/about-us', function () {
-    return view('cms.page.about-us', ['title' => 'UMN ECO 2021 - About UMN Eco']);
-  })->name('about-us');
+// Route::get('/about-us', function () {
+//     return view('cms.page.about-us', ['title' => 'UMN ECO 2021 - About UMN Eco']);
+//   })->name('about-us');
 
 //our team
 Route::get('/our-team', [OprecController::class, 'index'])->name('ourteam');
 
 //User
-Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
-Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
-Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
-Route::post('/login', [EcofriendController::class, 'login'])->name('login');
-Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
-Route::post('/submit_link_blue', [EcofriendController::class, 'SubmitLinkBlue'])->name('SubmitLink');
+// Route::get('/registration', [EcofriendController::class, 'registrationView'])->name('registrationView');
+// Route::post('/registration', [EcofriendController::class, 'register'])->name('registration');
+// Route::get('/login', [EcofriendController::class, 'loginView'])->name('loginView');
+// Route::post('/login', [EcofriendController::class, 'login'])->name('login');
+// Route::get('/logout', [EcofriendController::class, 'logout'])->name('logout');
+// Route::post('/submit_link_blue', [EcofriendController::class, 'SubmitLinkBlue'])->name('SubmitLink');
 
 // Admin
-Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
-Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
-Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
-Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
-Route::get('/EcoFriendList', [BlueAdminController::class,'index'])->name('blueEFL');
-Route::post('/EFChangePassword', [BlueAdminController::class,'change_pass'])->name('changePass');
+// Route::post('/xAdmin', [LogoutAdminController::class, 'store'])->name('logoutAdmin');
+// Route::get('/loginAdmin', [LoginAdminController::class, 'index'])->name('loginAdmin');
+// Route::post('/loginAdmin', [LoginAdminController::class, 'store']);
+// Route::get('/AdminDashboard', [AdminDashboardController::class,'index'])->name('AdminDashboard');
+// Route::get('/EcoFriendList', [BlueAdminController::class,'index'])->name('blueEFL');
+// Route::post('/EFChangePassword', [BlueAdminController::class,'change_pass'])->name('changePass');
 
 // Route::get('/registerAdmin', [RegisterAdminController::class, 'index'])->name('registerAdmin');
 // Route::post('/registerAdmin', [RegisterAdminController::class, 'store']);
