@@ -73,7 +73,7 @@
                 </div>
                 
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="genta">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick">Pendaftaran Telah Ditutup!</button>
@@ -106,7 +106,7 @@
                 </div>
 
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="gantar">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -139,7 +139,7 @@
                 </div>
 
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="orta">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -172,7 +172,7 @@
                 </div>
             
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="lua">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -205,7 +205,7 @@
                 </div>
                
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="anta">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -238,7 +238,7 @@
                 </div>
                
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="liku">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -271,7 +271,7 @@
                 </div>
                
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="bacarita">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -304,7 +304,7 @@
                 </div>
                
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="arto">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
@@ -337,7 +337,7 @@
                 </div>
             
             </div>
-            <form action="{{ route('oprecForm') }}" method="post">
+            <form action="{{ route('oprecform') }}" method="post">
                 @csrf
                 <input type="hidden" name="tim" value="lawang">
                 <button type="submit" class="button button--aylen button--round-l button--text-thick" disabled>Pendaftaran Telah Ditutup!</button>
