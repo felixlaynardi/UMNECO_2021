@@ -1,8 +1,8 @@
 @extends('cms.template.app')
 
 @section('custom-css')
-    <link rel="stylesheet" href="{{ asset('css/cms/page/form-wizard.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cms/page/oprec_form.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/cms/page/form-wizard.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/cms/page/oprec_form.css') }}">
 @endsection
 
 @section('content')
@@ -238,7 +238,7 @@
                                         </div>
                                         <div id="form-pr" class="">
                                             <div class="img-question">
-                                                <img src="{{ asset('images/oprec/question-genta.png') }}" class="img-fluid">
+                                                <img src="{{ secure_asset('images/oprec/question-genta.png') }}" class="img-fluid">
                                             </div>
                                             <div class="form-group mb-2">
                                                 <label>Buatlah caption untuk gambar tersebut!<span class="text-danger">*</span></label>
@@ -427,9 +427,9 @@
 @endsection
 
 @section('custom-js')
-    <script src="{{ asset('js/cms/base/jquery/jquery-ui.min.js') }}"></script>
-    <script src="{{ asset('js/cms/page/jquery.validate.min.js') }}"></script>
-    <script src="{{ asset('js/cms/page/form-wizard.js') }}"></script>
+    <script src="{{ secure_asset('js/cms/base/jquery/jquery-ui.min.js') }}"></script>
+    <script src="{{ secure_asset('js/cms/page/jquery.validate.min.js') }}"></script>
+    <script src="{{ secure_asset('js/cms/page/form-wizard.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     
     <script>

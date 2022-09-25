@@ -231,7 +231,7 @@
                                                 </h2>
                                             </div>
                                             <div class="foto-p">
-                                                <img src="{{ asset($item->photo) }}" alt="" class="image-fluid">
+                                                <img src="{{ secure_asset($item->photo) }}" alt="" class="image-fluid">
                                             </div>
                                             <p class="header-text">Email Student</p>
                                             <p class="text-content">{{ $item->email }}</p>

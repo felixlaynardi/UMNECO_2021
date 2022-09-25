@@ -3,46 +3,46 @@
 @section('custom-css')
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Cuprum&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/cms/page/oprec.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/cms/page/modal.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/cms/page/oprec.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('css/cms/page/modal.css') }}">
 @endsection
 
 @section('content')
     <div id="main" class="main-container pt-5">
         <section id="oprec" class="container">
             <div class="oprec-logo">
-                <img src="{{ asset('images/oprec/oprec-text.png') }}" alt="" class="image-fluid">
+                <img src="{{ secure_asset('images/oprec/oprec-text.png') }}" alt="" class="image-fluid">
             </div>
             <div class="oprec-text">
                 <h1>Registration Closed</h1>
             </div>
             <div class="logo row mx-auto">
                 <div class="logo-tim">
-                    <a href="#0" class="open-popup"><img src="{{ asset('images/oprec/logo/GENTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#0" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/GENTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#1" class="open-popup"><img src="{{ asset('images/oprec/logo/GANTAR.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#1" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/GANTAR.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#2" class="open-popup"><img src="{{ asset('images/oprec/logo/ORTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#2" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/ORTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#3" class="open-popup"><img src="{{ asset('images/oprec/logo/LUA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#3" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/LUA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#4" class="open-popup"><img src="{{ asset('images/oprec/logo/ANTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#4" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/ANTA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#5" class="open-popup"><img src="{{ asset('images/oprec/logo/LIKU.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#5" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/LIKU.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#6" class="open-popup"><img src="{{ asset('images/oprec/logo/BACARITA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#6" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/BACARITA.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#7" class="open-popup"><img src="{{ asset('images/oprec/logo/ARTO.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#7" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/ARTO.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
                 <div class="logo-tim">
-                    <a href="#8" class="open-popup"><img src="{{ asset('images/oprec/logo/LAWANG.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
+                    <a href="#8" class="open-popup"><img src="{{ secure_asset('images/oprec/logo/LAWANG.png') }}" alt="" class="image-fluid" onclick="mBlur();"></a>
                 </div>
             </div>
         </section>
@@ -56,7 +56,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/GENTA.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/GENTA.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">GENTA</h2>
@@ -89,7 +89,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/GANTAR.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/GANTAR.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">GANTAR</h2>
@@ -122,7 +122,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/ORTA.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/ORTA.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">ORTA</h2>
@@ -155,7 +155,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/LUA.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/LUA.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">LUA</h2>
@@ -188,7 +188,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/ANTA.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/ANTA.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">ANTA</h2>
@@ -221,7 +221,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/LIKU.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/LIKU.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">LIKU</h2>
@@ -254,7 +254,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/BACARITA.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/BACARITA.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">BACARITA</h2>
@@ -287,7 +287,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/ARTO.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/ARTO.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">ARTO</h2>
@@ -320,7 +320,7 @@
             <div class="popup__content">
                 <div class="row infologo">
                     <div class="pop-img">
-                        <img src="{{ asset('images/oprec/logo/LAWANG.png') }}" alt="" class="image-fluid">
+                        <img src="{{ secure_asset('images/oprec/logo/LAWANG.png') }}" alt="" class="image-fluid">
                     </div>
                     <div class="infologo-text">
                         <h2 class="text-color1">LAWANG</h2>
